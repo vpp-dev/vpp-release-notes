@@ -9,7 +9,7 @@ More than 153 commits since the previous release, including 82 fixes.
 
 
 
-This is another great release in the making.
+REMINDER: this is work in progress..
 
 
 
