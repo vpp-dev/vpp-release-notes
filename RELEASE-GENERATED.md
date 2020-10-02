@@ -4,8 +4,7 @@ More than 153 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-:::DELETE-ME::: These are the *DRAFT* release notes for the upcoming VPP 21.01 release,
-:::DELETE-ME::: generated as of Fri Oct  2 17:19:06 UTC 2020.
+:::DELETE-ME::: These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Oct  2 18:33:02 UTC 2020.
 
 HIGHLIGHTS-PLACEHOLDER
 
