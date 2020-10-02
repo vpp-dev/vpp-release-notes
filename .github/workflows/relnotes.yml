@@ -54,6 +54,6 @@ jobs:
          git config user.name  "Andrew Yourtchenko (ghjobs)"
          git add README.md || true
          git commit -a -m "Auto-update at $(date)"
-         ssh-agent bash -c 'ssh-add secret_ssh_key; git push origin master'
+         ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin master'
 
 
