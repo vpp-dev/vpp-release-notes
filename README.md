@@ -35,6 +35,9 @@ Just do: "git fetch; git rebase FETCH\_HEAD" if your push fails.
 
 Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
+# Draft Release Notes below
+
+
 @page release_notes_2101 Release notes for VPP 21.01
 
 More than 153 commits since the previous release, including 82 fixes.
