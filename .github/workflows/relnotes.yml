@@ -41,6 +41,8 @@ jobs:
         ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-release-notes.git'
     - name: Make the release notes
       run: |
+        sudo mkdir /run/user/$(id -u)
+        sudo chown $(whoami) /run/user/$(id -u)
         cd vpp
         export VPP_CHECK_API=yes
         perl ../vpp-relops/make-relnotes.pl >../vpp-release-notes/RELEASE-GENERATED.md
