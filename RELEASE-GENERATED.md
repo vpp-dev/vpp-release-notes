@@ -1,11 +1,11 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 152 commits since the previous release, including 82 fixes.
+More than 153 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release,
-generated as of Fri Oct  2 15:45:52 UTC 2020.
+:::DELETE-ME::: These are the *DRAFT* release notes for the upcoming VPP 21.01 release,
+:::DELETE-ME::: generated as of Fri Oct  2 17:19:06 UTC 2020.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -50,6 +50,16 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+cnat_get_snat_addresses                                      | only in image
+cnat_get_snat_addresses_reply                                | only in image
+cnat_session_details                                         | definition changed
+cnat_set_snat_addresses                                      | definition changed
+cnat_translation_details                                     | definition changed
+cnat_translation_update                                      | definition changed
+
+Found 6 api message signature differences
 
 
 ### Newly deprecated API messages
