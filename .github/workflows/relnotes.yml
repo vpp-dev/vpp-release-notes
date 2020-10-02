@@ -38,6 +38,7 @@ jobs:
         git clone https://github.com/ayourtch/vpp-relops
         git clone https://github.com/vpp-dev/vpp-release-notes
         echo "$SECRET_SSH_KEY" >secret_ssh_key
+        chmod 600 secret_ssh_key
         ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-release-notes.git'
     - name: Make the release notes
       run: |
