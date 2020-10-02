@@ -1,0 +1,48 @@
+name: Generate Draft Release Notes
+
+on:
+  schedule:
+  - cron:  '15 1 * * *'
+
+#  - cron:  '0 5 * * *'
+  
+# - push
+
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the release notes
+      env:
+         SECRET_SSH_KEY: ${{ secrets.VPP_RELNOTES_PRIVATE_SSH_KEY }}
+      run: |
+        sudo apt-get install -y --allow-downgrades libllvm6.0=1:6.0-1ubuntu2
+        sudo apt-get install clang-format-6.0
+        sudo apt-get update
+        sudo apt-get install -y coreutils jq
+        git clone https://github.com/FDio/vpp
+        git clone https://github.com/ayourtch/vpp-relops
+        git clone https://github.com/vpp-dev/vpp-release-notes
+        echo "$SECRET_SSH_KEY" >secret_ssh_key
+        ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-release-notes.git'
+    - name: Make the release notes
+      run: |
+        cd vpp
+        perl ../vpp-relops/make-relnotes.pl >../vpp-release-notes/README.md
+        cd ..
+        
+    - name: Push the new release note
+      env:
+         SECRET_SSH_KEY: ${{ secrets.VPP_RELNOTES_PRIVATE_SSH_KEY }}
+      run: |
+         cd vpp-release-notes
+         git add README.md || true
+         git commit -a -m "Auto-update at $(date)"
+         ssh-agent bash -c 'ssh-add secret_ssh_key; git push origin master'
+          
+           
