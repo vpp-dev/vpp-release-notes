@@ -42,6 +42,7 @@ jobs:
     - name: Make the release notes
       run: |
         cd vpp
+        export VPP_CHECK_API=yes
         perl ../vpp-relops/make-relnotes.pl >../vpp-release-notes/README.md
         cd ..
 
