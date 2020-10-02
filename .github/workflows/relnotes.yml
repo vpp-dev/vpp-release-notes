@@ -30,6 +30,8 @@ jobs:
       env:
          SECRET_SSH_KEY: ${{ secrets.VPP_RELNOTES_PRIVATE_SSH_KEY }}
       run: |
+        sudo mkdir /run/user/$(id -u)
+        sudo chown $(whoami) /run/user/$(id -u)
         sudo apt-get install -y --allow-downgrades libllvm6.0=1:6.0-1ubuntu2
         sudo apt-get install clang-format-6.0
         sudo apt-get update
@@ -41,8 +43,6 @@ jobs:
         ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-release-notes.git'
     - name: Make the release notes
       run: |
-        sudo mkdir /run/user/$(id -u)
-        sudo chown $(whoami) /run/user/$(id -u)
         cd vpp
         export VPP_CHECK_API=yes
         perl ../vpp-relops/make-relnotes.pl >../vpp-release-notes/RELEASE-GENERATED.md
