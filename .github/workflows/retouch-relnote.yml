@@ -1,8 +1,8 @@
-name: Generate Draft Release Notes
+name: Retouch Release Notes
 
 on:
   schedule:
-  - cron:  '15 1 * * *'
+  - cron:  '18 1 * * *'
 
 #  - cron:  '0 5 * * *'
 
@@ -26,25 +26,27 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build the release notes
+    - name: Check out the release notes
       env:
          SECRET_SSH_KEY: ${{ secrets.VPP_RELNOTES_PRIVATE_SSH_KEY }}
       run: |
-        sudo apt-get install -y --allow-downgrades libllvm6.0=1:6.0-1ubuntu2
-        sudo apt-get install clang-format-6.0
-        sudo apt-get update
-        sudo apt-get install -y coreutils jq
         git clone https://github.com/FDio/vpp
         git clone https://github.com/ayourtch/vpp-relops
         echo "$SECRET_SSH_KEY" >secret_ssh_key
         chmod 600 secret_ssh_key
         ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-release-notes.git'
-    - name: Make the release notes
+    - name: Retouch the release notes
       run: |
         cd vpp
-        export VPP_CHECK_API=yes
-        perl ../vpp-relops/make-relnotes.pl >../vpp-release-notes/RELEASE-GENERATED.md
+        VERSION=$(git describe --long HEAD | sed -e 's/-[^-]\+-[^-]\+$//g' -e 's/^\(v[0-9]\+.[0-9]\+\)-.*$/\1/')
         cd ..
+        cd vpp-release-notes
+        SED_FILE="${VERSION}.sed"
+        if [ -e ${SED_FILE} ]; then
+                sed -f ${SED_FILE} RELEASE-GENERATED.md >README.md
+        else
+                cp RELEASE-GENERATED.md README.md
+        fi
 
     - name: Push the new release note
       env:
@@ -53,8 +55,8 @@ jobs:
          cd vpp-release-notes
          git config user.email "ayourtch+ghjobs@gmail.com"
          git config user.name  "Andrew Yourtchenko (ghjobs)"
-         git add RELEASE-GENERATED.md || true
-         git commit -a -m "Auto-update at $(date)"
+         git add README.md || true
+         git commit -a -m "Retouch at $(date)"
          ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin master'
 
 
