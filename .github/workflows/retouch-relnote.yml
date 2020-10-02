@@ -1,12 +1,7 @@
 name: Retouch Release Notes
 
 on:
-  schedule:
-  - cron:  '18 1 * * *'
-
-#  - cron:  '0 5 * * *'
-
-# - push
+  push:
   workflow_dispatch:
     inputs:
       logLevel:
@@ -53,10 +48,13 @@ jobs:
          SECRET_SSH_KEY: ${{ secrets.VPP_RELNOTES_PRIVATE_SSH_KEY }}
       run: |
          cd vpp-release-notes
-         git config user.email "ayourtch+ghjobs@gmail.com"
-         git config user.name  "Andrew Yourtchenko (ghjobs)"
-         git add README.md || true
-         git commit -a -m "Retouch at $(date)"
-         ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin master'
+         DIFFS_LINES=$(git diff | wc -l)
+         if [ "$DIFFS_LINES" != "0" ]; then
+                git config user.email "ayourtch+ghjobs@gmail.com"
+                git config user.name  "Andrew Yourtchenko (ghjobs)"
+                git add README.md || true
+                git commit -a -m "Retouch at $(date)"
+                ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin master'
+         fi
 
 
