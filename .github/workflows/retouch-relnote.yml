@@ -38,10 +38,11 @@ jobs:
         cd vpp-release-notes
         SED_FILE="${VERSION}.sed"
         if [ -e ${SED_FILE} ]; then
-                sed -f ${SED_FILE} RELEASE-GENERATED.md >README.md
+                sed -f ${SED_FILE} RELEASE-GENERATED.md >RELEASE.md
         else
-                cp RELEASE-GENERATED.md README.md
+                cp RELEASE-GENERATED.md RELEASE.md
         fi
+        cat HOW-IT-WORKS.md RELEASE.md > README.md
 
     - name: Push the new release note
       env:
@@ -52,6 +53,7 @@ jobs:
          if [ "$DIFFS_LINES" != "0" ]; then
                 git config user.email "ayourtch+ghjobs@gmail.com"
                 git config user.name  "Andrew Yourtchenko (ghjobs)"
+                git add RELEASE.md || true
                 git add README.md || true
                 git commit -a -m "Retouch at $(date)"
                 ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin master'
