@@ -50,6 +50,8 @@ jobs:
          SECRET_SSH_KEY: ${{ secrets.VPP_RELNOTES_PRIVATE_SSH_KEY }}
       run: |
          cd vpp-release-notes
+         git config user.email "ayourtch+ghjobs@gmail.com"
+         git config user.name  "Andrew Yourtchenko (ghjobs)"
          git add README.md || true
          git commit -a -m "Auto-update at $(date)"
          ssh-agent bash -c 'ssh-add secret_ssh_key; git push origin master'
