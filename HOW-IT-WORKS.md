@@ -35,3 +35,6 @@ Just do: "git fetch; git rebase FETCH\_HEAD" if your push fails.
 
 Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
+# Draft Release Notes below
+
+
