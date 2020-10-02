@@ -5,7 +5,13 @@ More than 152 commits since the previous release, including 82 fixes.
 ## Release Highlights
 
 These are the *DRAFT* release notes for the upcoming VPP 21.01 release,
-generated as of Fri Oct  2 14:43:01 UTC 2020.
+generated as of Fri Oct  2 15:45:52 UTC 2020.
+
+
+
+This is another great release in the making.
+
+
 
 ## Features
 
@@ -22,11 +28,11 @@ generated as of Fri Oct  2 14:43:01 UTC 2020.
     - Add show commands for params and list of interfaces for recording (d1146f6dd)
 - VNET
   - Native Virtio Drivers
-    - Add packet buffering on tx (e347acbc3)
+    - Add packet buffering on transmit path (e347acbc3)
   - Session Layer
-    - Add unix socket api for app attachment (61ae056bd)
+    - Add unix socket API for app attachment (61ae056bd)
 - VPP Comms Library
-  - Add support for app socket api (935ce75cb)
+  - Add support for app socket API (935ce75cb)
   - Provide apps access to fifo chunks (d68faf855)
 
 ## Known issues
@@ -304,7 +310,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/devices/virtio/virtio.api ||
 | ------- | ------- |
-| [e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3) | virtio: add packet buffering on tx |
+| [e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3) | virtio: add packet buffering on transmit path |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
 | @c src/vnet/ipsec/ipsec.api ||
