@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 155 commits since the previous release, including 82 fixes.
+More than 157 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-:::DELETE-ME::: These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Mon Oct  5 01:37:20 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Mon Oct  5 14:17:42 UTC 2020.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -19,6 +19,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add DHCP support (af897c5e3)
   - DPDK
     - Call the meson-based build instead of Makefiles (4c4633cad)
+  - Internet Key Exchange (IKEv2) Protocol
+    - Support ipv6 traffic selectors & overlay (84962d19b)
   - Flowprobe
     - Add show commands for params and list of interfaces for recording (d1146f6dd)
 - VNET
@@ -57,8 +59,13 @@ cnat_session_details                                         | definition change
 cnat_set_snat_addresses                                      | definition changed
 cnat_translation_details                                     | definition changed
 cnat_translation_update                                      | definition changed
+ikev2_profile_details                                        | definition changed
+ikev2_profile_set_ts                                         | definition changed
+ikev2_sa_details                                             | definition changed
+ikev2_set_responder                                          | definition changed
+ikev2_traffic_selector_details                               | definition changed
 
-Found 6 api message signature differences
+Found 11 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -268,6 +275,14 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/l2tp/l2tp.api ||
 | ------- | ------- |
 | [6810a77da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6810a77da) | misc: Move l2tp to plugin |
+
+| @c src/plugins/ikev2/ikev2_types.api ||
+| ------- | ------- |
+| [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
+
+| @c src/plugins/ikev2/ikev2.api ||
+| ------- | ------- |
+| [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
 
 | @c src/plugins/nsim/nsim.api ||
 | ------- | ------- |
