@@ -4,7 +4,7 @@ More than 158 commits since the previous release, including 83 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Oct  6 01:36:58 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Oct  6 11:38:59 UTC 2020.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -12,25 +12,25 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Plugins
   - CNat
-    - Disable default scanner process (d63f73b83)
-    - Ip ICMP error support (ece39214b)
-    - Add support for SNat ICMP (613b2c3c7)
-    - Introduce parametric source policy (ce25b60de)
-    - Add DHCP support (af897c5e3)
+    - Disable default scanner process ([d63f73b83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d63f73b83))
+    - Ip ICMP error support ([ece39214b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ece39214b))
+    - Add support for SNat ICMP ([613b2c3c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=613b2c3c7))
+    - Introduce parametric source policy ([ce25b60de](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ce25b60de))
+    - Add DHCP support ([af897c5e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af897c5e3))
   - DPDK
-    - Call the meson-based build instead of Makefiles (4c4633cad)
+    - Call the meson-based build instead of Makefiles ([4c4633cad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4c4633cad))
   - Internet Key Exchange (IKEv2) Protocol
-    - Support ipv6 traffic selectors & overlay (84962d19b)
+    - Support ipv6 traffic selectors & overlay ([84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b))
   - Flowprobe
-    - Add show commands for params and list of interfaces for recording (d1146f6dd)
+    - Add show commands for params and list of interfaces for recording ([d1146f6dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1146f6dd))
 - VNET
   - Native Virtio Drivers
-    - Add packet buffering on tx (e347acbc3)
+    - Add packet buffering on tx ([e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3))
   - Session Layer
-    - Add unix socket api for app attachment (61ae056bd)
+    - Add unix socket api for app attachment ([61ae056bd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61ae056bd))
 - VPP Comms Library
-  - Add support for app socket api (935ce75cb)
-  - Provide apps access to fifo chunks (d68faf855)
+  - Add support for app socket api ([935ce75cb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=935ce75cb))
+  - Provide apps access to fifo chunks ([d68faf855](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d68faf855))
 
 ## Known issues
 
