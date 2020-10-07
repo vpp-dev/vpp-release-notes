@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 158 commits since the previous release, including 83 fixes.
+More than 161 commits since the previous release, including 83 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Oct  6 11:38:59 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Oct  7 01:37:44 UTC 2020.
 
 
 
@@ -68,6 +68,8 @@ REMINDER: this is work in progress..
   - Flowprobe
     - Add show commands for params and list of interfaces for recording ([d1146f6dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1146f6dd))
 - VNET
+  - Feature Arcs
+    - Add packet trace API ([c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450))
   - Native Virtio Drivers
     - Add packet buffering on transmit path ([e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3))
   - Session Layer
@@ -103,13 +105,23 @@ cnat_session_details                                         | definition change
 cnat_set_snat_addresses                                      | definition changed
 cnat_translation_details                                     | definition changed
 cnat_translation_update                                      | definition changed
+graph_node_details                                           | only in image
+graph_node_get                                               | only in image
+graph_node_get_reply                                         | only in image
 ikev2_profile_details                                        | definition changed
 ikev2_profile_set_ts                                         | definition changed
 ikev2_sa_details                                             | definition changed
 ikev2_set_responder                                          | definition changed
 ikev2_traffic_selector_details                               | definition changed
+trace_capture_packets                                        | only in image
+trace_capture_packets_reply                                  | only in image
+trace_clear_capture                                          | only in image
+trace_clear_capture_reply                                    | only in image
+trace_details                                                | definition changed
+trace_set_filters                                            | only in image
+trace_set_filters_reply                                      | only in image
 
-Found 11 api message signature differences
+Found 21 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -290,9 +302,15 @@ please collaborate with the feature maintainer on their productization.
 - sr_policies_with_sl_index_dump
 - sw_interface_set_vxlan_gbp_bypass
 - sw_interface_set_vxlan_gbp_bypass_reply
+- trace_capture_packets
+- trace_capture_packets_reply
+- trace_clear_capture
+- trace_clear_capture_reply
 - trace_details
 - trace_dump
 - trace_dump_reply
+- trace_set_filters
+- trace_set_filters_reply
 - vxlan_gbp_tunnel_add_del
 - vxlan_gbp_tunnel_add_del_reply
 - vxlan_gbp_tunnel_details
@@ -339,6 +357,14 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/geneve/geneve.api ||
 | ------- | ------- |
 | [3a6adc52f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a6adc52f) | geneve: Move to plugin |
+
+| @c src/plugins/tracedump/graph.api ||
+| ------- | ------- |
+| [c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450) | feature: Add packet trace API |
+
+| @c src/plugins/tracedump/tracedump.api ||
+| ------- | ------- |
+| [c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450) | feature: Add packet trace API |
 
 | @c src/plugins/lisp/lisp-cp/lisp_types.api ||
 | ------- | ------- |
