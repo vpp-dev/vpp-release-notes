@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 161 commits since the previous release, including 83 fixes.
+More than 165 commits since the previous release, including 84 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Oct  7 01:37:44 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Thu Oct  8 01:27:00 UTC 2020.
 
 
 
@@ -105,6 +105,7 @@ cnat_session_details                                         | definition change
 cnat_set_snat_addresses                                      | definition changed
 cnat_translation_details                                     | definition changed
 cnat_translation_update                                      | definition changed
+det44_plugin_enable_disable                                  | definition changed
 graph_node_details                                           | only in image
 graph_node_get                                               | only in image
 graph_node_get_reply                                         | only in image
@@ -113,6 +114,12 @@ ikev2_profile_set_ts                                         | definition change
 ikev2_sa_details                                             | definition changed
 ikev2_set_responder                                          | definition changed
 ikev2_traffic_selector_details                               | definition changed
+nat64_get_timeouts                                           | only in image
+nat64_get_timeouts_reply                                     | only in image
+nat64_plugin_enable_disable                                  | only in image
+nat64_plugin_enable_disable_reply                            | only in image
+nat64_set_timeouts                                           | only in image
+nat64_set_timeouts_reply                                     | only in image
 trace_capture_packets                                        | only in image
 trace_capture_packets_reply                                  | only in image
 trace_clear_capture                                          | only in image
@@ -121,7 +128,7 @@ trace_details                                                | definition change
 trace_set_filters                                            | only in image
 trace_set_filters_reply                                      | only in image
 
-Found 21 api message signature differences
+Found 28 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -130,6 +137,9 @@ These messages are still there in the API, but can and probably
 will disappear in the next release.
 
 - geneve_add_del_tunnel
+- nat_show_config_2
+- nat_show_config_2_reply
+- nat_show_config_reply
 
 ### In-progress API messages
 
@@ -292,6 +302,8 @@ please collaborate with the feature maintainer on their productization.
 - mdata_enable_disable_reply
 - nat44_add_del_static_mapping_v2
 - nat44_add_del_static_mapping_v2_reply
+- nat64_plugin_enable_disable
+- nat64_plugin_enable_disable_reply
 - oddbuf_enable_disable
 - oddbuf_enable_disable_reply
 - pg_interface_enable_disable_coalesce
@@ -386,9 +398,18 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [af897c5e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af897c5e3) | cnat: Add DHCP support |
 
+| @c src/plugins/nat/nat.api ||
+| ------- | ------- |
+| [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
+
 | @c src/plugins/nat/det44/det44.api ||
 | ------- | ------- |
+| [d1762e614](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1762e614) | nat: det44 plugin fix style and api cleanup |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
+
+| @c src/plugins/nat/nat64/nat64.api ||
+| ------- | ------- |
+| [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
 
 | @c src/vnet/crypto/crypto.api ||
 | ------- | ------- |
