@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 247 commits since the previous release, including 125 fixes.
+More than 273 commits since the previous release, including 139 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Oct 21 01:44:48 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Thu Oct 22 01:46:36 UTC 2020.
 
 
 
@@ -72,6 +72,8 @@ REMINDER: this is work in progress..
 - VNET
   - Feature Arcs
     - Add packet trace API ([c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450))
+  - IPSec
+    - Support for multipoint on ipsec interfaces ([6ba4e41d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ba4e41d3))
   - Native Virtio Drivers
     - Add packet buffering on transmit path ([e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3))
   - Session Layer
@@ -116,6 +118,8 @@ ikev2_profile_set_ts                                         | definition change
 ikev2_sa_details                                             | definition changed
 ikev2_set_responder                                          | definition changed
 ikev2_traffic_selector_details                               | definition changed
+ip_mroute_add_del                                            | definition changed
+ip_mroute_details                                            | definition changed
 nat64_get_timeouts                                           | only in image
 nat64_get_timeouts_reply                                     | only in image
 nat64_plugin_enable_disable                                  | only in image
@@ -130,7 +134,7 @@ trace_details                                                | definition change
 trace_set_filters                                            | only in image
 trace_set_filters_reply                                      | only in image
 
-Found 28 api message signature differences
+Found 30 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -344,9 +348,17 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/ipsec/ipsec.api ||
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [990f69450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=990f69450) | ip: convert u32 entry_flags to vl_api_mfib_entry_flags_t on mroute API |
+
+| @c src/vnet/cop/cop.api ||
 | ------- | ------- |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
+
+| @c src/vnet/mfib/mfib_types.api ||
+| ------- | ------- |
+| [990f69450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=990f69450) | ip: convert u32 entry_flags to vl_api_mfib_entry_flags_t on mroute API |
 
 | @c src/vnet/devices/virtio/virtio.api ||
 | ------- | ------- |
@@ -357,7 +369,7 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [8c91b2ae2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8c91b2ae2) | crypto: Crypto set handler API to support set all as CLI |
 
-| @c src/vnet/cop/cop.api ||
+| @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
@@ -365,62 +377,25 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b468773aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b468773aa) | vxlan-gbp: Mark APIs as in-progress |
 
-| @c src/plugins/nat/nat.api ||
+| @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
-| [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
-
-| @c src/plugins/nat/det44/det44.api ||
-| ------- | ------- |
-| [d1762e614](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1762e614) | nat: det44 plugin fix style and api cleanup |
-| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
-
-| @c src/plugins/nat/nat64/nat64.api ||
-| ------- | ------- |
-| [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
-
-| @c src/plugins/geneve/geneve.api ||
-| ------- | ------- |
-| [3a6adc52f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a6adc52f) | geneve: Move to plugin |
+| [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
 
 | @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
 | [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
 
-| @c src/plugins/ikev2/ikev2_types.api ||
+| @c src/plugins/nsim/nsim.api ||
 | ------- | ------- |
-| [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
-
-| @c src/plugins/lisp/lisp-gpe/lisp_gpe.api ||
-| ------- | ------- |
-| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
-
-| @c src/plugins/lisp/lisp-cp/one.api ||
-| ------- | ------- |
-| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
-
-| @c src/plugins/lisp/lisp-cp/lisp.api ||
-| ------- | ------- |
-| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
-
-| @c src/plugins/lisp/lisp-cp/lisp_types.api ||
-| ------- | ------- |
-| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
-
-| @c src/plugins/cnat/cnat.api ||
-| ------- | ------- |
-| [af897c5e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af897c5e3) | cnat: Add DHCP support |
-
-| @c src/plugins/lldp/lldp.api ||
-| ------- | ------- |
-| [3f9fdd984](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f9fdd984) | lldp: Move to plugin |
+| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
 | @c src/plugins/l2tp/l2tp.api ||
 | ------- | ------- |
 | [6810a77da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6810a77da) | misc: Move l2tp to plugin |
 
-| @c src/plugins/nsim/nsim.api ||
+| @c src/plugins/lldp/lldp.api ||
 | ------- | ------- |
-| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
+| [3f9fdd984](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f9fdd984) | lldp: Move to plugin |
 
 | @c src/plugins/tracedump/tracedump.api ||
 | ------- | ------- |
@@ -434,5 +409,43 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [148c7b768](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=148c7b768) | stats: counters data model |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
+
+| @c src/plugins/nat/nat64/nat64.api ||
+| ------- | ------- |
+| [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
+
+| @c src/plugins/nat/nat.api ||
+| ------- | ------- |
+| [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
+
+| @c src/plugins/nat/det44/det44.api ||
+| ------- | ------- |
+| [d1762e614](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1762e614) | nat: det44 plugin fix style and api cleanup |
+| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
+
+| @c src/plugins/lisp/lisp-gpe/lisp_gpe.api ||
+| ------- | ------- |
+| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
+
+| @c src/plugins/lisp/lisp-cp/lisp_types.api ||
+| ------- | ------- |
+| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
+
+| @c src/plugins/lisp/lisp-cp/one.api ||
+| ------- | ------- |
+| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
+
+| @c src/plugins/lisp/lisp-cp/lisp.api ||
+| ------- | ------- |
+| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
+
+| @c src/plugins/cnat/cnat.api ||
+| ------- | ------- |
+| [2082835fe](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2082835fe) | cnat: allow max_u16 translation backends |
+| [af897c5e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af897c5e3) | cnat: Add DHCP support |
+
+| @c src/plugins/geneve/geneve.api ||
+| ------- | ------- |
+| [3a6adc52f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a6adc52f) | geneve: Move to plugin |
 
 
