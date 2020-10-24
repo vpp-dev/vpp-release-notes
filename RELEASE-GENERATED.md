@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 281 commits since the previous release, including 145 fixes.
+More than 288 commits since the previous release, including 147 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Oct 23 01:47:02 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Sat Oct 24 01:46:56 UTC 2020.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -76,6 +76,8 @@ ikev2_set_responder                                          | definition change
 ikev2_traffic_selector_details                               | definition changed
 ip_mroute_add_del                                            | definition changed
 ip_mroute_details                                            | definition changed
+nat44_plugin_enable_disable                                  | only in image
+nat44_plugin_enable_disable_reply                            | only in image
 nat64_get_timeouts                                           | only in image
 nat64_get_timeouts_reply                                     | only in image
 nat64_plugin_enable_disable                                  | only in image
@@ -90,7 +92,7 @@ trace_details                                                | definition change
 trace_set_filters                                            | only in image
 trace_set_filters_reply                                      | only in image
 
-Found 30 api message signature differences
+Found 32 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -372,6 +374,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/nat.api ||
 | ------- | ------- |
+| [5f4f2081c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f4f2081c) | nat: nat44 enable/disable dynamic config |
 | [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
 
 | @c src/plugins/nat/det44/det44.api ||
