@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 288 commits since the previous release, including 147 fixes.
+More than 299 commits since the previous release, including 150 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Sat Oct 24 01:46:56 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Sun Oct 25 01:49:38 UTC 2020.
 
 
 
@@ -15,6 +15,8 @@ REMINDER: this is work in progress..
 ## Features
 
 - Plugins
+  - AF\_XDP driver
+    - Add option to claim all available rx queues ([d4e109138](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d4e109138))
   - CNat
     - Disable default scanner process ([d63f73b83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d63f73b83))
     - Ip ICMP error support ([ece39214b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ece39214b))
@@ -25,6 +27,10 @@ REMINDER: this is work in progress..
     - Call the meson-based build instead of Makefiles ([4c4633cad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4c4633cad))
   - Internet Key Exchange (IKEv2) Protocol
     - Support ipv6 traffic selectors & overlay ([84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b))
+  - RDMA (ibverb) driver
+    - Add RSS support for IPv6 and TCP ([91603958d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91603958d))
+  - VRRP
+    - Asynchronous events on VR state change ([78f487e11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=78f487e11))
   - Flowprobe
     - Add show commands for params and list of interfaces for recording ([d1146f6dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1146f6dd))
 - Statistics Segment
@@ -88,6 +94,10 @@ nat64_plugin_enable_disable                                  | only in image
 nat64_plugin_enable_disable_reply                            | only in image
 nat64_set_timeouts                                           | only in image
 nat64_set_timeouts_reply                                     | only in image
+pppoe_add_del_cp                                             | only in image
+pppoe_add_del_cp_reply                                       | only in image
+sw_vmxnet3_interface_details                                 | only in image
+sw_vmxnet3_interface_dump                                    | only in image
 trace_capture_packets                                        | only in image
 trace_capture_packets_reply                                  | only in image
 trace_clear_capture                                          | only in image
@@ -95,8 +105,11 @@ trace_clear_capture_reply                                    | only in image
 trace_details                                                | definition changed
 trace_set_filters                                            | only in image
 trace_set_filters_reply                                      | only in image
+vrrp_vr_event                                                | only in image
+want_vrrp_vr_events                                          | only in image
+want_vrrp_vr_events_reply                                    | only in image
 
-Found 32 api message signature differences
+Found 39 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -108,6 +121,7 @@ will disappear in the next release.
 - nat_show_config_2
 - nat_show_config_2_reply
 - nat_show_config_reply
+- vmxnet3_dump
 
 ### In-progress API messages
 
@@ -367,6 +381,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450) | feature: Add packet trace API |
 
+| @c src/plugins/vrrp/vrrp.api ||
+| ------- | ------- |
+| [78f487e11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=78f487e11) | vrrp: asynchronous events on VR state change |
+
 | @c src/plugins/map/map.api ||
 | ------- | ------- |
 | [148c7b768](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=148c7b768) | stats: counters data model |
@@ -386,6 +404,14 @@ please collaborate with the feature maintainer on their productization.
 | [d1762e614](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1762e614) | nat: det44 plugin fix style and api cleanup |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
+| @c src/plugins/vmxnet3/vmxnet3.api ||
+| ------- | ------- |
+| [490e077fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=490e077fb) | vmxnet3: add sw_if_index filter to vmxnet3 interface dump |
+
+| @c src/plugins/pppoe/pppoe.api ||
+| ------- | ------- |
+| [340b10a38](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=340b10a38) | pppoe: make pppoe plugin work with dot1q subinterfaces |
+
 | @c src/plugins/lisp/lisp-gpe/lisp_gpe.api ||
 | ------- | ------- |
 | [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
@@ -401,6 +427,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/lisp/lisp-cp/lisp.api ||
 | ------- | ------- |
 | [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [d4e109138](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d4e109138) | af_xdp: add option to claim all available rx queues |
 
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
