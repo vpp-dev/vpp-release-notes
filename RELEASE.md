@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 324 commits since the previous release, including 163 fixes.
+More than 328 commits since the previous release, including 165 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Mon Nov  2 01:21:51 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Nov  3 01:23:45 UTC 2020.
 
 
 
@@ -27,6 +27,7 @@ REMINDER: this is work in progress..
     - Call the meson-based build instead of Makefiles ([4c4633cad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4c4633cad))
   - Internet Key Exchange (IKEv2) Protocol
     - Support ipv6 traffic selectors & overlay ([84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b))
+    - Cli for disabling dead peer detection ([af4a414eb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af4a414eb))
   - RDMA (ibverb) driver
     - Add RSS support for IPv6 and TCP ([91603958d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91603958d))
   - VRRP
@@ -40,6 +41,7 @@ REMINDER: this is work in progress..
     - Add packet trace API ([c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450))
   - IPSec
     - Support for multipoint on ipsec interfaces ([6ba4e41d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ba4e41d3))
+    - Tunnel SA DSCP behaviour ([041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1))
   - Native Virtio Drivers
     - Add packet buffering on transmit path ([e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3))
   - Session Layer
@@ -87,6 +89,10 @@ ikev2_set_responder                                          | definition change
 ikev2_traffic_selector_details                               | definition changed
 ip_mroute_add_del                                            | definition changed
 ip_mroute_details                                            | definition changed
+ipsec_sa_v2_details                                          | only in image
+ipsec_sa_v2_dump                                             | only in image
+ipsec_sad_entry_add_del_v2                                   | only in image
+ipsec_sad_entry_add_del_v2_reply                             | only in image
 nat44_plugin_enable_disable                                  | only in image
 nat44_plugin_enable_disable_reply                            | only in image
 nat64_get_timeouts                                           | only in image
@@ -110,7 +116,7 @@ vrrp_vr_event                                                | only in image
 want_vrrp_vr_events                                          | only in image
 want_vrrp_vr_events_reply                                    | only in image
 
-Found 39 api message signature differences
+Found 43 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -346,8 +352,13 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [8c91b2ae2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8c91b2ae2) | crypto: Crypto set handler API to support set all as CLI |
 
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1) | ipsec: Tunnel SA DSCP behaviour |
+
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
+| [041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1) | ipsec: Tunnel SA DSCP behaviour |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
 | @c src/vnet/vxlan-gbp/vxlan_gbp.api ||
