@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 330 commits since the previous release, including 165 fixes.
+More than 351 commits since the previous release, including 175 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Nov  4 01:24:52 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Nov  6 01:28:30 UTC 2020.
 
 
 
@@ -68,6 +68,7 @@ REMINDER: this is work in progress..
   - Internet Key Exchange (IKEv2) Protocol
     - Support ipv6 traffic selectors & overlay ([84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b))
     - Cli for disabling dead peer detection ([af4a414eb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af4a414eb))
+    - Add option to disable NAT traversal ([d7fc12f07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7fc12f07))
   - RDMA (ibverb) driver
     - Add RSS support for IPv6 and TCP ([91603958d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91603958d))
   - VRRP
@@ -87,6 +88,8 @@ REMINDER: this is work in progress..
   - Session Layer
     - Add unix socket API for app attachment ([61ae056bd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61ae056bd))
     - Per worker state for ct sessions ([2d0e3de14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d0e3de14))
+  - TAP Drivers
+    - Allow change of carrier state on host ([bd50ed18d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bd50ed18d))
 - VPP Comms Library
   - Add support for app socket API ([935ce75cb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=935ce75cb))
   - Provide apps access to fifo chunks ([d68faf855](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d68faf855))
@@ -123,6 +126,8 @@ graph_node_details                                           | only in image
 graph_node_get                                               | only in image
 graph_node_get_reply                                         | only in image
 ikev2_profile_details                                        | definition changed
+ikev2_profile_disable_natt                                   | only in image
+ikev2_profile_disable_natt_reply                             | only in image
 ikev2_profile_set_ts                                         | definition changed
 ikev2_sa_details                                             | definition changed
 ikev2_set_responder                                          | definition changed
@@ -156,7 +161,7 @@ vrrp_vr_event                                                | only in image
 want_vrrp_vr_events                                          | only in image
 want_vrrp_vr_events_reply                                    | only in image
 
-Found 43 api message signature differences
+Found 45 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -296,6 +301,8 @@ please collaborate with the feature maintainer on their productization.
 - ikev2_profile_add_del
 - ikev2_profile_add_del_reply
 - ikev2_profile_details
+- ikev2_profile_disable_natt
+- ikev2_profile_disable_natt_reply
 - ikev2_profile_dump
 - ikev2_profile_set_auth
 - ikev2_profile_set_auth_reply
@@ -407,10 +414,12 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
+| [d7fc12f07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7fc12f07) | ikev2: add option to disable NAT traversal |
 | [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
 
 | @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
+| [d7fc12f07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7fc12f07) | ikev2: add option to disable NAT traversal |
 | [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
 
 | @c src/plugins/nsim/nsim.api ||
