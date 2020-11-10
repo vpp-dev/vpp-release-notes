@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 353 commits since the previous release, including 176 fixes.
+More than 366 commits since the previous release, including 181 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Mon Nov  9 01:33:13 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Nov 10 01:35:18 UTC 2020.
 
 
 
@@ -50,6 +50,7 @@ REMINDER: this is work in progress..
     - Per worker state for ct sessions ([2d0e3de14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d0e3de14))
   - TAP Drivers
     - Allow change of carrier state on host ([bd50ed18d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bd50ed18d))
+    - Add function to set speed ([a6c34a19d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a6c34a19d))
 - VPP Comms Library
   - Add support for app socket API ([935ce75cb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=935ce75cb))
   - Provide apps access to fifo chunks ([d68faf855](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d68faf855))
