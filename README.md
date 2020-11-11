@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 366 commits since the previous release, including 181 fixes.
+More than 373 commits since the previous release, including 185 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Nov 10 01:35:18 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Nov 11 01:21:16 UTC 2020.
 
 
 
@@ -85,6 +85,8 @@ REMINDER: this is work in progress..
     - Tunnel SA DSCP behaviour ([041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1))
   - Native Virtio Drivers
     - Add packet buffering on transmit path ([e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3))
+  - Segment Routing (IPv6 and MPLS)
+    - Show IPv6 address used as SRv6 Encaps source ([448bc81d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=448bc81d3))
   - Session Layer
     - Add unix socket API for app attachment ([61ae056bd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61ae056bd))
     - Per worker state for ct sessions ([2d0e3de14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d0e3de14))
@@ -94,6 +96,8 @@ REMINDER: this is work in progress..
 - VPP Comms Library
   - Add support for app socket API ([935ce75cb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=935ce75cb))
   - Provide apps access to fifo chunks ([d68faf855](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d68faf855))
+- VPP Executable
+  - Use VPP heap for libc ([ec4749a20](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ec4749a20))
 
 ## Known issues
 
