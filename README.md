@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 379 commits since the previous release, including 189 fixes.
+More than 394 commits since the previous release, including 198 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Nov 13 01:24:30 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Sat Nov 14 01:24:53 UTC 2020.
 
 
 
@@ -87,6 +87,7 @@ REMINDER: this is work in progress..
     - Add packet buffering on transmit path ([e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3))
   - Segment Routing (IPv6 and MPLS)
     - Show IPv6 address used as SRv6 Encaps source ([448bc81d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=448bc81d3))
+    - Show the hop-limit value used for SRv6 encapsulation ([80f0b88fc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=80f0b88fc))
   - Session Layer
     - Add unix socket API for app attachment ([61ae056bd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61ae056bd))
     - Per worker state for ct sessions ([2d0e3de14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d0e3de14))
@@ -145,6 +146,8 @@ ipsec_sad_entry_add_del_v2                                   | only in image
 ipsec_sad_entry_add_del_v2_reply                             | only in image
 nat44_plugin_enable_disable                                  | only in image
 nat44_plugin_enable_disable_reply                            | only in image
+nat44_show_running_config                                    | only in image
+nat44_show_running_config_reply                              | only in image
 nat64_get_timeouts                                           | only in image
 nat64_get_timeouts_reply                                     | only in image
 nat64_plugin_enable_disable                                  | only in image
@@ -153,6 +156,8 @@ nat64_set_timeouts                                           | only in image
 nat64_set_timeouts_reply                                     | only in image
 pppoe_add_del_cp                                             | only in image
 pppoe_add_del_cp_reply                                       | only in image
+rdma_create_v2                                               | only in image
+rdma_create_v2_reply                                         | only in image
 sw_vmxnet3_interface_details                                 | only in image
 sw_vmxnet3_interface_dump                                    | only in image
 trace_capture_packets                                        | only in image
@@ -166,7 +171,7 @@ vrrp_vr_event                                                | only in image
 want_vrrp_vr_events                                          | only in image
 want_vrrp_vr_events_reply                                    | only in image
 
-Found 45 api message signature differences
+Found 49 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -175,9 +180,27 @@ These messages are still there in the API, but can and probably
 will disappear in the next release.
 
 - geneve_add_del_tunnel
+- nat44_forwarding_enable_disable
+- nat44_forwarding_enable_disable_reply
+- nat44_forwarding_is_enabled
+- nat44_forwarding_is_enabled_reply
+- nat44_session_cleanup
+- nat44_session_cleanup_reply
+- nat_control_ping
+- nat_control_ping_reply
+- nat_get_timeouts
+- nat_get_timeouts_reply
+- nat_ipfix_enable_disable
+- nat_ipfix_enable_disable_reply
+- nat_set_log_level
+- nat_set_log_level_reply
+- nat_set_timeouts
+- nat_set_timeouts_reply
+- nat_show_config
 - nat_show_config_2
 - nat_show_config_2_reply
 - nat_show_config_reply
+- rdma_create
 - vmxnet3_dump
 
 ### In-progress API messages
@@ -343,6 +366,8 @@ please collaborate with the feature maintainer on their productization.
 - mdata_enable_disable_reply
 - nat44_add_del_static_mapping_v2
 - nat44_add_del_static_mapping_v2_reply
+- nat44_show_running_config
+- nat44_show_running_config_reply
 - nat64_plugin_enable_disable
 - nat64_plugin_enable_disable_reply
 - oddbuf_enable_disable
@@ -460,15 +485,23 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
 
-| @c src/plugins/nat/nat.api ||
-| ------- | ------- |
-| [5f4f2081c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f4f2081c) | nat: nat44 enable/disable dynamic config |
-| [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
-
 | @c src/plugins/nat/det44/det44.api ||
 | ------- | ------- |
 | [d1762e614](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1762e614) | nat: det44 plugin fix style and api cleanup |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
+
+| @c src/plugins/nat/nat44.api ||
+| ------- | ------- |
+| [25fd8ad03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25fd8ad03) | nat: cleanup & reorganization |
+| [b227aa699](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b227aa699) | nat: api,cli and test update & cleanup |
+
+| @c src/plugins/nat/nat_types.api ||
+| ------- | ------- |
+| [25fd8ad03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25fd8ad03) | nat: cleanup & reorganization |
+
+| @c src/plugins/rdma/rdma.api ||
+| ------- | ------- |
+| [798267aaa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=798267aaa) | rdma: implement multiseg rx without striding rq |
 
 | @c src/plugins/vmxnet3/vmxnet3.api ||
 | ------- | ------- |
