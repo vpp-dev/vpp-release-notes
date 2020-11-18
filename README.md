@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 406 commits since the previous release, including 199 fixes.
+More than 409 commits since the previous release, including 200 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Nov 17 01:28:52 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Nov 18 01:28:44 UTC 2020.
 
 
 
@@ -85,6 +85,7 @@ REMINDER: this is work in progress..
     - Tunnel SA DSCP behaviour ([041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1))
   - Native Virtio Drivers
     - Add packet buffering on transmit path ([e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3))
+    - Virtio: implement packed queues from virtio 1.1 ([b977d3f7c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b977d3f7c))
   - Segment Routing (IPv6 and MPLS)
     - Show IPv6 address used as SRv6 Encaps source ([448bc81d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=448bc81d3))
     - Show the hop-limit value used for SRv6 encapsulation ([80f0b88fc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=80f0b88fc))
