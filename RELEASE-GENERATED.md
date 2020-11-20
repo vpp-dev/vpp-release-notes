@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 411 commits since the previous release, including 202 fixes.
+More than 424 commits since the previous release, including 207 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Thu Nov 19 01:32:06 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Nov 20 01:29:54 UTC 2020.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -21,6 +21,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add DHCP support ([af897c5e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af897c5e3))
   - DPDK
     - Call the meson-based build instead of Makefiles ([4c4633cad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4c4633cad))
+    - Telemetry thread is off by default. ([83f37fc3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83f37fc3b))
   - Internet Key Exchange (IKEv2) Protocol
     - Support ipv6 traffic selectors & overlay ([84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b))
     - Cli for disabling dead peer detection ([af4a414eb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af4a414eb))
@@ -76,59 +77,6 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
-Message Name                                                 | Result
--------------------------------------------------------------|------------------
-cnat_get_snat_addresses                                      | only in image
-cnat_get_snat_addresses_reply                                | only in image
-cnat_session_details                                         | definition changed
-cnat_set_snat_addresses                                      | definition changed
-cnat_translation_details                                     | definition changed
-cnat_translation_update                                      | definition changed
-det44_plugin_enable_disable                                  | definition changed
-graph_node_details                                           | only in image
-graph_node_get                                               | only in image
-graph_node_get_reply                                         | only in image
-ikev2_profile_details                                        | definition changed
-ikev2_profile_disable_natt                                   | only in image
-ikev2_profile_disable_natt_reply                             | only in image
-ikev2_profile_set_ts                                         | definition changed
-ikev2_sa_details                                             | definition changed
-ikev2_set_responder                                          | definition changed
-ikev2_traffic_selector_details                               | definition changed
-ip_mroute_add_del                                            | definition changed
-ip_mroute_details                                            | definition changed
-ipsec_sa_v2_details                                          | only in image
-ipsec_sa_v2_dump                                             | only in image
-ipsec_sad_entry_add_del_v2                                   | only in image
-ipsec_sad_entry_add_del_v2_reply                             | only in image
-nat44_plugin_enable_disable                                  | only in image
-nat44_plugin_enable_disable_reply                            | only in image
-nat44_show_running_config                                    | only in image
-nat44_show_running_config_reply                              | only in image
-nat64_get_timeouts                                           | only in image
-nat64_get_timeouts_reply                                     | only in image
-nat64_plugin_enable_disable                                  | only in image
-nat64_plugin_enable_disable_reply                            | only in image
-nat64_set_timeouts                                           | only in image
-nat64_set_timeouts_reply                                     | only in image
-pppoe_add_del_cp                                             | only in image
-pppoe_add_del_cp_reply                                       | only in image
-rdma_create_v2                                               | only in image
-rdma_create_v2_reply                                         | only in image
-sw_vmxnet3_interface_details                                 | only in image
-sw_vmxnet3_interface_dump                                    | only in image
-trace_capture_packets                                        | only in image
-trace_capture_packets_reply                                  | only in image
-trace_clear_capture                                          | only in image
-trace_clear_capture_reply                                    | only in image
-trace_details                                                | definition changed
-trace_set_filters                                            | only in image
-trace_set_filters_reply                                      | only in image
-vrrp_vr_event                                                | only in image
-want_vrrp_vr_events                                          | only in image
-want_vrrp_vr_events_reply                                    | only in image
-
-Found 49 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -365,6 +313,10 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/vxlan-gbp/vxlan_gbp.api ||
+| ------- | ------- |
+| [b468773aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b468773aa) | vxlan-gbp: Mark APIs as in-progress |
+
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [990f69450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=990f69450) | ip: convert u32 entry_flags to vl_api_mfib_entry_flags_t on mroute API |
@@ -372,6 +324,19 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/cop/cop.api ||
 | ------- | ------- |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
+
+| @c src/vnet/crypto/crypto.api ||
+| ------- | ------- |
+| [8c91b2ae2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8c91b2ae2) | crypto: Crypto set handler API to support set all as CLI |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1) | ipsec: Tunnel SA DSCP behaviour |
+| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
+
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1) | ipsec: Tunnel SA DSCP behaviour |
 
 | @c src/vnet/mfib/mfib_types.api ||
 | ------- | ------- |
@@ -382,65 +347,13 @@ please collaborate with the feature maintainer on their productization.
 | [e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3) | virtio: add packet buffering on tx |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
-| @c src/vnet/crypto/crypto.api ||
-| ------- | ------- |
-| [8c91b2ae2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8c91b2ae2) | crypto: Crypto set handler API to support set all as CLI |
-
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1) | ipsec: Tunnel SA DSCP behaviour |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1) | ipsec: Tunnel SA DSCP behaviour |
-| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
-
-| @c src/vnet/vxlan-gbp/vxlan_gbp.api ||
-| ------- | ------- |
-| [b468773aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b468773aa) | vxlan-gbp: Mark APIs as in-progress |
-
-| @c src/plugins/ikev2/ikev2_types.api ||
-| ------- | ------- |
-| [d7fc12f07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7fc12f07) | ikev2: add option to disable NAT traversal |
-| [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
-
-| @c src/plugins/ikev2/ikev2.api ||
-| ------- | ------- |
-| [d7fc12f07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7fc12f07) | ikev2: add option to disable NAT traversal |
-| [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
-
-| @c src/plugins/nsim/nsim.api ||
-| ------- | ------- |
-| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
-
-| @c src/plugins/l2tp/l2tp.api ||
-| ------- | ------- |
-| [6810a77da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6810a77da) | misc: Move l2tp to plugin |
-
-| @c src/plugins/lldp/lldp.api ||
-| ------- | ------- |
-| [3f9fdd984](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f9fdd984) | lldp: Move to plugin |
-
-| @c src/plugins/tracedump/tracedump.api ||
-| ------- | ------- |
-| [c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450) | feature: Add packet trace API |
-
-| @c src/plugins/tracedump/graph.api ||
-| ------- | ------- |
-| [c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450) | feature: Add packet trace API |
-
-| @c src/plugins/vrrp/vrrp.api ||
-| ------- | ------- |
-| [78f487e11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=78f487e11) | vrrp: asynchronous events on VR state change |
-
-| @c src/plugins/map/map.api ||
-| ------- | ------- |
-| [148c7b768](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=148c7b768) | stats: counters data model |
-| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
-
 | @c src/plugins/nat/nat64/nat64.api ||
 | ------- | ------- |
 | [1f36023d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f36023d2) | nat: move nat64 to a subfeature |
+
+| @c src/plugins/nat/nat_types.api ||
+| ------- | ------- |
+| [25fd8ad03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25fd8ad03) | nat: cleanup & reorganization |
 
 | @c src/plugins/nat/det44/det44.api ||
 | ------- | ------- |
@@ -452,29 +365,60 @@ please collaborate with the feature maintainer on their productization.
 | [25fd8ad03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25fd8ad03) | nat: cleanup & reorganization |
 | [b227aa699](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b227aa699) | nat: api,cli and test update & cleanup |
 
-| @c src/plugins/nat/nat_types.api ||
+| @c src/plugins/l2tp/l2tp.api ||
 | ------- | ------- |
-| [25fd8ad03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25fd8ad03) | nat: cleanup & reorganization |
+| [6810a77da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6810a77da) | misc: Move l2tp to plugin |
 
-| @c src/plugins/rdma/rdma.api ||
+| @c src/plugins/tracedump/graph.api ||
 | ------- | ------- |
-| [798267aaa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=798267aaa) | rdma: implement multiseg rx without striding rq |
+| [c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450) | feature: Add packet trace API |
 
-| @c src/plugins/vmxnet3/vmxnet3.api ||
+| @c src/plugins/tracedump/tracedump.api ||
 | ------- | ------- |
-| [490e077fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=490e077fb) | vmxnet3: add sw_if_index filter to vmxnet3 interface dump |
+| [c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450) | feature: Add packet trace API |
+
+| @c src/plugins/vrrp/vrrp.api ||
+| ------- | ------- |
+| [78f487e11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=78f487e11) | vrrp: asynchronous events on VR state change |
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [d4e109138](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d4e109138) | af_xdp: add option to claim all available rx queues |
+
+| @c src/plugins/geneve/geneve.api ||
+| ------- | ------- |
+| [3a6adc52f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a6adc52f) | geneve: Move to plugin |
+
+| @c src/plugins/nsim/nsim.api ||
+| ------- | ------- |
+| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
 | @c src/plugins/pppoe/pppoe.api ||
 | ------- | ------- |
 | [340b10a38](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=340b10a38) | pppoe: make pppoe plugin work with dot1q subinterfaces |
 
-| @c src/plugins/lisp/lisp-gpe/lisp_gpe.api ||
+| @c src/plugins/map/map.api ||
 | ------- | ------- |
-| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
+| [148c7b768](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=148c7b768) | stats: counters data model |
+| [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
-| @c src/plugins/lisp/lisp-cp/lisp_types.api ||
+| @c src/plugins/vmxnet3/vmxnet3.api ||
 | ------- | ------- |
-| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
+| [490e077fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=490e077fb) | vmxnet3: add sw_if_index filter to vmxnet3 interface dump |
+
+| @c src/plugins/lldp/lldp.api ||
+| ------- | ------- |
+| [3f9fdd984](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f9fdd984) | lldp: Move to plugin |
+
+| @c src/plugins/ikev2/ikev2_types.api ||
+| ------- | ------- |
+| [d7fc12f07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7fc12f07) | ikev2: add option to disable NAT traversal |
+| [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
+
+| @c src/plugins/ikev2/ikev2.api ||
+| ------- | ------- |
+| [d7fc12f07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7fc12f07) | ikev2: add option to disable NAT traversal |
+| [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
 
 | @c src/plugins/lisp/lisp-cp/one.api ||
 | ------- | ------- |
@@ -484,17 +428,21 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
 
-| @c src/plugins/af_xdp/af_xdp.api ||
+| @c src/plugins/lisp/lisp-cp/lisp_types.api ||
 | ------- | ------- |
-| [d4e109138](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d4e109138) | af_xdp: add option to claim all available rx queues |
+| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
+
+| @c src/plugins/lisp/lisp-gpe/lisp_gpe.api ||
+| ------- | ------- |
+| [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
 
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
 | [2082835fe](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2082835fe) | cnat: allow max_u16 translation backends |
 | [af897c5e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af897c5e3) | cnat: Add DHCP support |
 
-| @c src/plugins/geneve/geneve.api ||
+| @c src/plugins/rdma/rdma.api ||
 | ------- | ------- |
-| [3a6adc52f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a6adc52f) | geneve: Move to plugin |
+| [798267aaa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=798267aaa) | rdma: implement multiseg rx without striding rq |
 
 
