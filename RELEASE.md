@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 427 commits since the previous release, including 208 fixes.
+More than 432 commits since the previous release, including 210 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Mon Nov 23 01:32:32 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Nov 24 01:32:44 UTC 2020.
 
 
 
@@ -23,6 +23,8 @@ REMINDER: this is work in progress..
     - Add support for SNat ICMP ([613b2c3c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=613b2c3c7))
     - Introduce parametric source policy ([ce25b60de](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ce25b60de))
     - Add DHCP support ([af897c5e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af897c5e3))
+  - Crypto - ipsecmb
+    - Bump to intel-ipsec-mb version 0.55 ([b5df85e24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b5df85e24))
   - DPDK
     - Call the meson-based build instead of Makefiles ([4c4633cad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4c4633cad))
     - Telemetry thread is off by default. ([83f37fc3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83f37fc3b))
