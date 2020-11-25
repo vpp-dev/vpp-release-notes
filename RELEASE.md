@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 432 commits since the previous release, including 210 fixes.
+More than 439 commits since the previous release, including 212 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Nov 24 01:32:44 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Nov 25 01:33:33 UTC 2020.
 
 
 
@@ -38,6 +38,8 @@ REMINDER: this is work in progress..
     - Asynchronous events on VR state change ([78f487e11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=78f487e11))
   - Flowprobe
     - Add show commands for params and list of interfaces for recording ([d1146f6dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1146f6dd))
+- SVM Library
+  - Support for multi-segment enqueues ([c95cfa218](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c95cfa218))
 - Statistics Segment
   - Counters data model ([148c7b768](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=148c7b768))
 - VNET
@@ -63,6 +65,8 @@ REMINDER: this is work in progress..
   - Provide apps access to fifo chunks ([d68faf855](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d68faf855))
 - VPP Executable
   - Use VPP heap for libc ([ec4749a20](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ec4749a20))
+- Vector Library - Buffer Management
+  - Add page-size config ([61559029d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61559029d))
 
 ## Known issues
 
