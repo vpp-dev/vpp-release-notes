@@ -1,15 +1,17 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 439 commits since the previous release, including 212 fixes.
+More than 451 commits since the previous release, including 220 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Nov 25 01:33:33 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Thu Nov 26 01:33:44 UTC 2020.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Binary API Libraries
+  - Vat2 and json autogeneration for api messages ([df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092))
 - Plugins
   - AF\_XDP driver
     - Add option to claim all available rx queues ([d4e109138](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d4e109138))
@@ -91,6 +93,7 @@ These messages are still there in the API, but can and probably
 will disappear in the next release.
 
 - geneve_add_del_tunnel
+- ip_neighbor_event
 - nat44_forwarding_enable_disable
 - nat44_forwarding_enable_disable_reply
 - nat44_forwarding_is_enabled
@@ -113,6 +116,8 @@ will disappear in the next release.
 - nat_show_config_reply
 - rdma_create
 - vmxnet3_dump
+- want_ip_neighbor_events
+- want_ip_neighbor_events_reply
 
 ### In-progress API messages
 
@@ -323,8 +328,21 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b468773aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b468773aa) | vxlan-gbp: Mark APIs as in-progress |
 
+| @c src/vnet/mpls/mpls.api ||
+| ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
+
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
+
+| @c src/vnet/ip-neighbor/ip_neighbor.api ||
+| ------- | ------- |
+| [4ac36bcb1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4ac36bcb1) | ip-neighbor: Send API event when neighbor is removed |
+
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
 | [990f69450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=990f69450) | ip: convert u32 entry_flags to vl_api_mfib_entry_flags_t on mroute API |
 
 | @c src/vnet/cop/cop.api ||
@@ -368,6 +386,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/nat44.api ||
 | ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
 | [25fd8ad03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25fd8ad03) | nat: cleanup & reorganization |
 | [b227aa699](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b227aa699) | nat: api,cli and test update & cleanup |
 
@@ -395,6 +414,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [3a6adc52f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a6adc52f) | geneve: Move to plugin |
 
+| @c src/plugins/lb/lb.api ||
+| ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
+
 | @c src/plugins/nsim/nsim.api ||
 | ------- | ------- |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
@@ -408,9 +431,25 @@ please collaborate with the feature maintainer on their productization.
 | [148c7b768](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=148c7b768) | stats: counters data model |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
+| @c src/plugins/dns/dns.api ||
+| ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
+
+| @c src/plugins/flowprobe/flowprobe.api ||
+| ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
+
+| @c src/plugins/acl/acl.api ||
+| ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
+
 | @c src/plugins/vmxnet3/vmxnet3.api ||
 | ------- | ------- |
 | [490e077fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=490e077fb) | vmxnet3: add sw_if_index filter to vmxnet3 interface dump |
+
+| @c src/plugins/stn/stn.api ||
+| ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
 
 | @c src/plugins/lldp/lldp.api ||
 | ------- | ------- |
@@ -446,6 +485,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [2082835fe](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2082835fe) | cnat: allow max_u16 translation backends |
 | [af897c5e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af897c5e3) | cnat: Add DHCP support |
+
+| @c src/plugins/gbp/gbp.api ||
+| ------- | ------- |
+| [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
 
 | @c src/plugins/rdma/rdma.api ||
 | ------- | ------- |
