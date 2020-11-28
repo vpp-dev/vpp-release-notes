@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 467 commits since the previous release, including 226 fixes.
+More than 469 commits since the previous release, including 227 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Nov 27 01:36:46 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Sat Nov 28 01:36:46 UTC 2020.
 
 
 
@@ -348,6 +348,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
 | [990f69450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=990f69450) | ip: convert u32 entry_flags to vl_api_mfib_entry_flags_t on mroute API |
+
+| @c src/vnet/ip/ip_types.api ||
+| ------- | ------- |
+| [6dc0c8d14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6dc0c8d14) | ip: Sub Address Family types. Feature enable for each SAFI |
 
 | @c src/vnet/cop/cop.api ||
 | ------- | ------- |
