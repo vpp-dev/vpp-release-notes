@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 473 commits since the previous release, including 229 fixes.
+More than 480 commits since the previous release, including 229 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Dec  1 01:45:11 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Dec  2 01:42:36 UTC 2020.
 
 
 
@@ -38,6 +38,8 @@ REMINDER: this is work in progress..
     - Add RSS support for IPv6 and TCP ([91603958d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91603958d))
   - VRRP
     - Asynchronous events on VR state change ([78f487e11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=78f487e11))
+  - Wireguard
+    - Return public key in api ([de22111b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=de22111b5))
   - Flowprobe
     - Add show commands for params and list of interfaces for recording ([d1146f6dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1146f6dd))
 - SVM Library
@@ -378,6 +380,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3) | virtio: add packet buffering on transmit path |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
+
+| @c src/plugins/wireguard/wireguard.api ||
+| ------- | ------- |
+| [de22111b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=de22111b5) | wireguard: return public key in api |
 
 | @c src/plugins/nat/nat64/nat64.api ||
 | ------- | ------- |
