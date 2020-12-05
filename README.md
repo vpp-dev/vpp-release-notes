@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 497 commits since the previous release, including 239 fixes.
+More than 511 commits since the previous release, including 250 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Dec  4 01:45:08 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Sat Dec  5 01:46:38 UTC 2020.
 
 
 
@@ -82,6 +82,8 @@ REMINDER: this is work in progress..
     - Return public key in api ([de22111b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=de22111b5))
   - Flowprobe
     - Add show commands for params and list of interfaces for recording ([d1146f6dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1146f6dd))
+- Python binding for the VPP API
+  -  add support for enumflag part 1 of 2 ([3825d93af](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3825d93af))
 - SVM Library
   - Support for multi-segment enqueues ([c95cfa218](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c95cfa218))
 - Statistics Segment
@@ -451,6 +453,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/lisp/lisp-cp/lisp.api ||
 | ------- | ------- |
+| [068ad25c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=068ad25c1) | lisp: .api dont set defaults in reply messages |
 | [2b202bc4b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2b202bc4b) | lisp: Move to plugin |
 
 | @c src/plugins/lisp/lisp-cp/lisp_types.api ||
@@ -531,6 +534,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/lldp/lldp.api ||
 | ------- | ------- |
 | [3f9fdd984](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f9fdd984) | lldp: Move to plugin |
+
+| @c src/plugins/memif/memif.api ||
+| ------- | ------- |
+| [6223766f9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6223766f9) | libmemif: clean up typos |
 
 | @c src/plugins/dns/dns.api ||
 | ------- | ------- |
