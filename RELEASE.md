@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 518 commits since the previous release, including 252 fixes.
+More than 528 commits since the previous release, including 257 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Dec  8 01:50:25 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Dec  9 01:52:43 UTC 2020.
 
 
 
@@ -49,6 +49,9 @@ REMINDER: this is work in progress..
 - Statistics Segment
   - Counters data model ([148c7b768](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=148c7b768))
 - VNET
+  - FIB
+    - Source Address Selection ([e2fe09742](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e2fe09742))
+    - Adjacency flag for midchain to perfom flow hash (on inner packet) ([5c544c8c3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c544c8c3))
   - Feature Arcs
     - Add packet trace API ([c0b195450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0b195450))
   - IPSec
@@ -348,6 +351,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
 | [041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1) | ipsec: Tunnel SA DSCP behaviour |
+
+| @c src/vnet/ipfix-export/ipfix_export.api ||
+| ------- | ------- |
+| [f6cf57ceb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f6cf57ceb) | misc: fix api in ipfix_classify_table_add/details |
 
 | @c src/vnet/mfib/mfib_types.api ||
 | ------- | ------- |
