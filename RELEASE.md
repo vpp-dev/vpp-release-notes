@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 528 commits since the previous release, including 257 fixes.
+More than 531 commits since the previous release, including 258 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Dec  9 01:52:43 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Thu Dec 10 01:55:46 UTC 2020.
 
 
 
@@ -339,6 +339,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
 
+| @c src/vnet/ipip/ipip.api ||
+| ------- | ------- |
+| [33c45f56a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=33c45f56a) | fib: supporting inner flow hash on tunnels |
+
 | @c src/vnet/vxlan-gbp/vxlan_gbp.api ||
 | ------- | ------- |
 | [b468773aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b468773aa) | vxlan-gbp: Mark APIs as in-progress |
@@ -352,6 +356,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [041add7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041add7d1) | ipsec: Tunnel SA DSCP behaviour |
 
+| @c src/vnet/tunnel/tunnel_types.api ||
+| ------- | ------- |
+| [33c45f56a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=33c45f56a) | fib: supporting inner flow hash on tunnels |
+
 | @c src/vnet/ipfix-export/ipfix_export.api ||
 | ------- | ------- |
 | [f6cf57ceb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f6cf57ceb) | misc: fix api in ipfix_classify_table_add/details |
@@ -359,6 +367,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/mfib/mfib_types.api ||
 | ------- | ------- |
 | [990f69450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=990f69450) | ip: convert u32 entry_flags to vl_api_mfib_entry_flags_t on mroute API |
+
+| @c src/vnet/gre/gre.api ||
+| ------- | ------- |
+| [33c45f56a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=33c45f56a) | fib: supporting inner flow hash on tunnels |
 
 | @c src/vnet/ip/ip_types.api ||
 | ------- | ------- |
