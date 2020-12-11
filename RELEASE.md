@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 531 commits since the previous release, including 258 fixes.
+More than 535 commits since the previous release, including 259 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Thu Dec 10 01:55:46 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Dec 11 01:55:20 UTC 2020.
 
 
 
