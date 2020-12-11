@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 535 commits since the previous release, including 259 fixes.
+More than 540 commits since the previous release, including 262 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Dec 11 01:55:20 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Dec 11 12:53:07 UTC 2020.
 
 
 
@@ -96,6 +96,64 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+cnat_get_snat_addresses                                      | only in image
+cnat_get_snat_addresses_reply                                | only in image
+cnat_session_details                                         | definition changed
+cnat_set_snat_addresses                                      | definition changed
+cnat_translation_details                                     | definition changed
+cnat_translation_update                                      | definition changed
+det44_plugin_enable_disable                                  | definition changed
+graph_node_details                                           | only in image
+graph_node_get                                               | only in image
+graph_node_get_reply                                         | only in image
+ikev2_profile_details                                        | definition changed
+ikev2_profile_disable_natt                                   | only in image
+ikev2_profile_disable_natt_reply                             | only in image
+ikev2_profile_set_ts                                         | definition changed
+ikev2_sa_details                                             | definition changed
+ikev2_set_responder                                          | definition changed
+ikev2_traffic_selector_details                               | definition changed
+ip_mroute_add_del                                            | definition changed
+ip_mroute_details                                            | definition changed
+ip_neighbor_event_v2                                         | only in image
+ipsec_sa_v2_details                                          | only in image
+ipsec_sa_v2_dump                                             | only in image
+ipsec_sad_entry_add_del_v2                                   | only in image
+ipsec_sad_entry_add_del_v2_reply                             | only in image
+nat44_plugin_enable_disable                                  | only in image
+nat44_plugin_enable_disable_reply                            | only in image
+nat44_show_running_config                                    | only in image
+nat44_show_running_config_reply                              | only in image
+nat64_get_timeouts                                           | only in image
+nat64_get_timeouts_reply                                     | only in image
+nat64_plugin_enable_disable                                  | only in image
+nat64_plugin_enable_disable_reply                            | only in image
+nat64_set_timeouts                                           | only in image
+nat64_set_timeouts_reply                                     | only in image
+pppoe_add_del_cp                                             | only in image
+pppoe_add_del_cp_reply                                       | only in image
+rdma_create_v2                                               | only in image
+rdma_create_v2_reply                                         | only in image
+sw_vmxnet3_interface_details                                 | only in image
+sw_vmxnet3_interface_dump                                    | only in image
+trace_capture_packets                                        | only in image
+trace_capture_packets_reply                                  | only in image
+trace_clear_capture                                          | only in image
+trace_clear_capture_reply                                    | only in image
+trace_details                                                | definition changed
+trace_set_filters                                            | only in image
+trace_set_filters_reply                                      | only in image
+vrrp_vr_event                                                | only in image
+want_ip_neighbor_events_v2                                   | only in image
+want_ip_neighbor_events_v2_reply                             | only in image
+want_vrrp_vr_events                                          | only in image
+want_vrrp_vr_events_reply                                    | only in image
+wireguard_interface_create                                   | definition changed
+wireguard_interface_details                                  | definition changed
+
+Found 54 api message signature differences
 
 
 ### Newly deprecated API messages
