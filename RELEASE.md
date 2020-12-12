@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 540 commits since the previous release, including 262 fixes.
+More than 547 commits since the previous release, including 265 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Fri Dec 11 12:53:07 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Sat Dec 12 01:55:34 UTC 2020.
 
 
 
@@ -30,6 +30,7 @@ REMINDER: this is work in progress..
   - DPDK
     - Call the meson-based build instead of Makefiles ([4c4633cad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4c4633cad))
     - Telemetry thread is off by default. ([83f37fc3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83f37fc3b))
+    - Bump to DPDK 20.11 ([f0419a0c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0419a0c8))
   - Internet Key Exchange (IKEv2) Protocol
     - Support ipv6 traffic selectors & overlay ([84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b))
     - Cli for disabling dead peer detection ([af4a414eb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af4a414eb))
@@ -365,6 +366,10 @@ please collaborate with the feature maintainer on their productization.
 - sr_policies_with_sl_index_dump
 - sw_interface_set_vxlan_gbp_bypass
 - sw_interface_set_vxlan_gbp_bypass_reply
+- test_enum
+- test_enum_reply
+- test_prefix
+- test_prefix_reply
 - trace_capture_packets
 - trace_capture_packets_reply
 - trace_clear_capture
@@ -392,6 +397,10 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/vat2/test/vat2_test.api ||
+| ------- | ------- |
+| [793be4632](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=793be4632) | api: fromjson/tojson enum flag support |
 
 | @c src/vnet/mpls/mpls.api ||
 | ------- | ------- |
@@ -445,6 +454,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/cop/cop.api ||
 | ------- | ------- |
+| [6c8cdf78b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6c8cdf78b) | misc: cop - clean up stray doxygen block |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
 | @c src/vnet/crypto/crypto.api ||
