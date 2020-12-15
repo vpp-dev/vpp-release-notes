@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 548 commits since the previous release, including 266 fixes.
+More than 557 commits since the previous release, including 271 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Mon Dec 14 01:59:54 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Dec 15 02:03:24 UTC 2020.
 
 
 
@@ -438,6 +438,10 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vpp/api/vpe_types.api ||
+| ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
+
 | @c src/vat2/test/vat2_test.api ||
 | ------- | ------- |
 | [793be4632](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=793be4632) | api: fromjson/tojson enum flag support |
@@ -465,6 +469,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/tunnel/tunnel_types.api ||
 | ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
 | [33c45f56a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=33c45f56a) | fib: supporting inner flow hash on tunnels |
 
 | @c src/vnet/ipfix-export/ipfix_export.api ||
@@ -473,6 +478,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/mfib/mfib_types.api ||
 | ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
 | [990f69450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=990f69450) | ip: convert u32 entry_flags to vl_api_mfib_entry_flags_t on mroute API |
 
 | @c src/vnet/gre/gre.api ||
@@ -487,6 +493,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
 | [990f69450](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=990f69450) | ip: convert u32 entry_flags to vl_api_mfib_entry_flags_t on mroute API |
+
+| @c src/vnet/ethernet/ethernet_types.api ||
+| ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
 
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
@@ -506,9 +516,21 @@ please collaborate with the feature maintainer on their productization.
 | [e347acbc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e347acbc3) | virtio: add packet buffering on transmit path |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
+| @c src/vnet/interface_types.api ||
+| ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
+
 | @c src/vnet/ip-neighbor/ip_neighbor.api ||
 | ------- | ------- |
 | [4ac36bcb1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4ac36bcb1) | ip-neighbor: Send API event when neighbor is removed |
+
+| @c src/vnet/policer/policer_types.api ||
+| ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
+
+| @c src/vnet/srv6/sr_types.api ||
+| ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
 
 | @c src/plugins/map/map.api ||
 | ------- | ------- |
@@ -555,6 +577,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [f916414b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f916414b3) | api: clean up use of deprecated flag |
 
+| @c src/plugins/lb/lb_types.api ||
+| ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
+
 | @c src/plugins/lb/lb.api ||
 | ------- | ------- |
 | [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
@@ -583,6 +609,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [df87f8092](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df87f8092) | api: vat2 and json autogeneration for api messages |
 
+| @c src/plugins/acl/acl_types.api ||
+| ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
+
 | @c src/plugins/rdma/rdma.api ||
 | ------- | ------- |
 | [798267aaa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=798267aaa) | rdma: implement multiseg rx without striding rq |
@@ -594,6 +624,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
+| [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
 | [d7fc12f07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7fc12f07) | ikev2: add option to disable NAT traversal |
 | [84962d19b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84962d19b) | ikev2: support ipv6 traffic selectors & overlay |
 
