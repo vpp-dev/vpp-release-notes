@@ -1,10 +1,10 @@
 @page release_notes_2101 Release notes for VPP 21.01
 
-More than 557 commits since the previous release, including 271 fixes.
+More than 562 commits since the previous release, including 274 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Tue Dec 15 02:03:24 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.01 release, generated as on Wed Dec 16 01:59:37 UTC 2020.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -95,6 +95,18 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+classify_pcap_get_tables                                     | only in image
+classify_pcap_get_tables_reply                               | only in image
+classify_pcap_lookup_table                                   | only in image
+classify_pcap_lookup_table_reply                             | only in image
+classify_pcap_set_table                                      | only in image
+classify_pcap_set_table_reply                                | only in image
+classify_trace_get_tables                                    | only in image
+classify_trace_get_tables_reply                              | only in image
+classify_trace_lookup_table                                  | only in image
+classify_trace_lookup_table_reply                            | only in image
+classify_trace_set_table                                     | only in image
+classify_trace_set_table_reply                               | only in image
 cnat_get_snat_addresses                                      | only in image
 cnat_get_snat_addresses_reply                                | only in image
 cnat_session_details                                         | definition changed
@@ -150,7 +162,7 @@ want_vrrp_vr_events_reply                                    | only in image
 wireguard_interface_create                                   | definition changed
 wireguard_interface_details                                  | definition changed
 
-Found 54 api message signature differences
+Found 66 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -400,6 +412,8 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vat2/test/vat2_test.api ||
 | ------- | ------- |
+| [58a6e7725](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a6e7725) | api: crchcecker ignore version < 1.0.0 and outside of src directory |
+| [510aaa891](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=510aaa891) | api: crchcecker ignore version < 1.0.0 and outside of src directory |
 | [793be4632](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=793be4632) | api: fromjson/tojson enum flag support |
 
 | @c src/vnet/mpls/mpls.api ||
@@ -427,6 +441,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [dc01471be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc01471be) | api: add missing version info |
 | [33c45f56a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=33c45f56a) | fib: supporting inner flow hash on tunnels |
+
+| @c src/vnet/classify/classify.api ||
+| ------- | ------- |
+| [5c1e48c01](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c1e48c01) | classify: add pcap/trace classfier mgmt API calls |
 
 | @c src/vnet/ipfix-export/ipfix_export.api ||
 | ------- | ------- |
