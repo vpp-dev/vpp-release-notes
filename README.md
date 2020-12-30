@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 36 commits since the previous release, including 11 fixes.
+More than 38 commits since the previous release, including 11 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Dec 29 02:18:53 UTC 2020.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Dec 30 02:20:08 UTC 2020.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Rebase cryptodev engine for DPDK 20.11 ([25f371ee0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25f371ee0))
   - Performance counter
     - New perfmon plugin ([8b60fb0fe](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b60fb0fe))
+- SVM Library
+  - Allow mq attachments at random offsets ([b46241889](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b46241889))
 
 ## Known issues
 
