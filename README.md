@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 45 commits since the previous release, including 14 fixes.
+More than 51 commits since the previous release, including 18 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Jan  6 02:31:02 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Jan  7 02:33:26 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -57,6 +57,9 @@ HIGHLIGHTS-PLACEHOLDER
     - New perfmon plugin ([8b60fb0fe](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b60fb0fe))
 - SVM Library
   - Allow mq attachments at random offsets ([b46241889](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b46241889))
+- VNET
+  - L2
+    - Add per bridge domain learn limit ([5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f))
 
 ## Known issues
 
@@ -79,7 +82,12 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+bridge_domain_set_default_learn_limit                        | only in image
+bridge_domain_set_default_learn_limit_reply                  | only in image
+bridge_domain_set_learn_limit                                | only in image
+bridge_domain_set_learn_limit_reply                          | only in image
+
+Found 4 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -87,6 +95,7 @@ No api message signature differences found.
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- ipsec_tunnel_if_add_del_reply
 
 ### In-progress API messages
 
@@ -296,5 +305,13 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [95f59f380](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95f59f380) | ipsec: Mark the interface create reply deprecated |
 
 
