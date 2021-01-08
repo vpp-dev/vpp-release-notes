@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 51 commits since the previous release, including 18 fixes.
+More than 54 commits since the previous release, including 19 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Jan  7 02:33:26 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Jan  8 02:34:12 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -18,6 +18,8 @@ HIGHLIGHTS-PLACEHOLDER
 - SVM Library
   - Allow mq attachments at random offsets ([b46241889](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b46241889))
 - VNET
+  - IPIP
+    - Support MPLS over IP ([e294de6f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e294de6f8))
   - L2
     - Add per bridge domain learn limit ([5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f))
 
@@ -46,8 +48,12 @@ bridge_domain_set_default_learn_limit                        | only in image
 bridge_domain_set_default_learn_limit_reply                  | only in image
 bridge_domain_set_learn_limit                                | only in image
 bridge_domain_set_learn_limit_reply                          | only in image
+ipsec_tunnel_if_add_del                                      | only in file
+ipsec_tunnel_if_add_del_reply                                | only in file
+ipsec_tunnel_if_set_sa                                       | only in file
+ipsec_tunnel_if_set_sa_reply                                 | only in file
 
-Found 4 api message signature differences
+Found 8 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -55,7 +61,10 @@ Found 4 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- ipsec_tunnel_if_add_del_reply
+- application_tls_cert_add
+- application_tls_cert_add_reply
+- application_tls_key_add
+- application_tls_key_add_reply
 
 ### In-progress API messages
 
@@ -272,6 +281,11 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
+| [a9e2774f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a9e2774f5) | ipsec: Deprecated the old IPsec Tunnel interface |
 | [95f59f380](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95f59f380) | ipsec: Mark the interface create reply deprecated |
+
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [a5a9efd4d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5a9efd4d) | vcl session: switch to generic cert key apis |
 
 
