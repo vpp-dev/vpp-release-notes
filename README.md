@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 54 commits since the previous release, including 19 fixes.
+More than 60 commits since the previous release, including 22 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Jan  8 02:34:12 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat Jan  9 02:34:58 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -62,6 +62,9 @@ HIGHLIGHTS-PLACEHOLDER
     - Support MPLS over IP ([e294de6f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e294de6f8))
   - L2
     - Add per bridge domain learn limit ([5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f))
+    - Separating scan-delay and learn-limit into a separate API from want\_l2\_macs\_events ([0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035))
+  - Vhost User Driver
+    - Add event index for interrupt notification to driver ([27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a))
 
 ## Known issues
 
@@ -88,12 +91,20 @@ bridge_domain_set_default_learn_limit                        | only in image
 bridge_domain_set_default_learn_limit_reply                  | only in image
 bridge_domain_set_learn_limit                                | only in image
 bridge_domain_set_learn_limit_reply                          | only in image
+create_vhost_user_if_v2                                      | only in image
+create_vhost_user_if_v2_reply                                | only in image
 ipsec_tunnel_if_add_del                                      | only in file
 ipsec_tunnel_if_add_del_reply                                | only in file
 ipsec_tunnel_if_set_sa                                       | only in file
 ipsec_tunnel_if_set_sa_reply                                 | only in file
+l2fib_set_scan_delay                                         | only in image
+l2fib_set_scan_delay_reply                                   | only in image
+modify_vhost_user_if_v2                                      | only in image
+modify_vhost_user_if_v2_reply                                | only in image
+want_l2_macs_events2                                         | only in image
+want_l2_macs_events2_reply                                   | only in image
 
-Found 8 api message signature differences
+Found 16 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -105,6 +116,12 @@ will disappear in the next release.
 - application_tls_cert_add_reply
 - application_tls_key_add
 - application_tls_key_add_reply
+- create_vhost_user_if
+- create_vhost_user_if_reply
+- modify_vhost_user_if
+- modify_vhost_user_if_reply
+- want_l2_macs_events
+- want_l2_macs_events_reply
 
 ### In-progress API messages
 
@@ -317,6 +334,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
+| [0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035) | l2: Separating scan-delay and learn-limit into a separate API from want_l2_macs_events |
 | [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
 
 | @c src/vnet/ipsec/ipsec.api ||
@@ -327,5 +345,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
 | [a5a9efd4d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5a9efd4d) | vcl session: switch to generic cert key apis |
+
+| @c src/vnet/devices/virtio/vhost_user.api ||
+| ------- | ------- |
+| [27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a) | vhost: Add event index for interrupt notification to driver |
 
 
