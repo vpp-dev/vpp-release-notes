@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 70 commits since the previous release, including 29 fixes.
+More than 74 commits since the previous release, including 31 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Jan 14 02:54:10 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Jan 15 02:50:27 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -293,15 +293,15 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/l2/l2.api ||
-| ------- | ------- |
-| [0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035) | l2: Separating scan-delay and learn-limit into a separate API from want_l2_macs_events |
-| [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
-
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [a9e2774f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a9e2774f5) | ipsec: Deprecated the old IPsec Tunnel interface |
 | [95f59f380](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95f59f380) | ipsec: Mark the interface create reply deprecated |
+
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035) | l2: Separating scan-delay and learn-limit into a separate API from want_l2_macs_events |
+| [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
