@@ -40,16 +40,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 79 commits since the previous release, including 36 fixes.
+More than 82 commits since the previous release, including 36 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Mon Jan 18 02:51:35 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Jan 19 02:53:52 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Build System
+  - Make rpath optional ([2c91922eb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c91922eb))
 - Plugins
   - DPDK
     - Rebase cryptodev engine for DPDK 20.11 ([25f371ee0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25f371ee0))
@@ -61,6 +63,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - IPIP
     - Support MPLS over IP ([e294de6f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e294de6f8))
+  - IPSec
+    - Support MPLS over IPSec[46] interface ([4a58e49cf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4a58e49cf))
   - L2
     - Add per bridge domain learn limit ([5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f))
     - Separating scan-delay and learn-limit into a separate API from want\_l2\_macs\_events ([0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035))
