@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 82 commits since the previous release, including 36 fixes.
+More than 83 commits since the previous release, including 37 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Jan 19 02:53:52 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Jan 20 02:55:17 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
