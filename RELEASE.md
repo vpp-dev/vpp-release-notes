@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 83 commits since the previous release, including 37 fixes.
+More than 101 commits since the previous release, including 47 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Jan 20 02:55:17 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Jan 21 02:55:25 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -12,10 +12,14 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Build System
   - Make rpath optional ([2c91922eb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c91922eb))
+- Infrastructure Library
+  - Add option to use libexecinfo ([67d7acd05](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=67d7acd05))
 - Plugins
   - DPDK
     - Rebase cryptodev engine for DPDK 20.11 ([25f371ee0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25f371ee0))
     - Allow configure individual VMBUS devices ([982272974](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=982272974))
+  - Internet Key Exchange (IKEv2) Protocol
+    - Use new counters data model & add more counters ([fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39))
   - Performance counter
     - New perfmon plugin ([8b60fb0fe](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b60fb0fe))
 - SVM Library
@@ -25,6 +29,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Support MPLS over IP ([e294de6f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e294de6f8))
   - IPSec
     - Support MPLS over IPSec[46] interface ([4a58e49cf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4a58e49cf))
+  - IPv4 LPM
+    - Add API to retrieve IPv6 link-layer address ([58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5))
   - L2
     - Add per bridge domain learn limit ([5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f))
     - Separating scan-delay and learn-limit into a separate API from want\_l2\_macs\_events ([0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035))
@@ -66,10 +72,12 @@ l2fib_set_scan_delay                                         | only in image
 l2fib_set_scan_delay_reply                                   | only in image
 modify_vhost_user_if_v2                                      | only in image
 modify_vhost_user_if_v2_reply                                | only in image
+sw_interface_ip6_get_link_local_address                      | only in image
+sw_interface_ip6_get_link_local_address_reply                | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 16 api message signature differences
+Found 18 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -297,15 +305,19 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/ipsec/ipsec.api ||
+| @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
-| [a9e2774f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a9e2774f5) | ipsec: Deprecated the old IPsec Tunnel interface |
-| [95f59f380](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95f59f380) | ipsec: Mark the interface create reply deprecated |
+| [fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39) | ikev2: use new counters data model & add more counters |
 
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
 | [0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035) | l2: Separating scan-delay and learn-limit into a separate API from want_l2_macs_events |
 | [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [a9e2774f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a9e2774f5) | ipsec: Deprecated the old IPsec Tunnel interface |
+| [95f59f380](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95f59f380) | ipsec: Mark the interface create reply deprecated |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
@@ -314,5 +326,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/devices/virtio/vhost_user.api ||
 | ------- | ------- |
 | [27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a) | vhost: Add event index for interrupt notification to driver |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5) | ip: add API to retrieve IPv6 link-layer address |
 
 
