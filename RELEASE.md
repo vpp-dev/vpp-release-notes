@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 101 commits since the previous release, including 47 fixes.
+More than 124 commits since the previous release, including 55 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Jan 21 02:55:25 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Jan 22 02:55:17 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -14,12 +14,15 @@ HIGHLIGHTS-PLACEHOLDER
   - Make rpath optional ([2c91922eb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c91922eb))
 - Infrastructure Library
   - Add option to use libexecinfo ([67d7acd05](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=67d7acd05))
+  - Add bihash with 32 byte key ([f613a4402](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f613a4402))
 - Plugins
   - DPDK
     - Rebase cryptodev engine for DPDK 20.11 ([25f371ee0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25f371ee0))
     - Allow configure individual VMBUS devices ([982272974](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=982272974))
   - Internet Key Exchange (IKEv2) Protocol
     - Use new counters data model & add more counters ([fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39))
+  - Memif device driver
+    - Adapt to new rxq framework ([755941865](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755941865))
   - Performance counter
     - New perfmon plugin ([8b60fb0fe](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b60fb0fe))
 - SVM Library
@@ -72,12 +75,14 @@ l2fib_set_scan_delay                                         | only in image
 l2fib_set_scan_delay_reply                                   | only in image
 modify_vhost_user_if_v2                                      | only in image
 modify_vhost_user_if_v2_reply                                | only in image
+set_ip_flow_hash_v2                                          | only in image
+set_ip_flow_hash_v2_reply                                    | only in image
 sw_interface_ip6_get_link_local_address                      | only in image
 sw_interface_ip6_get_link_local_address_reply                | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 18 api message signature differences
+Found 20 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -93,6 +98,8 @@ will disappear in the next release.
 - create_vhost_user_if_reply
 - modify_vhost_user_if
 - modify_vhost_user_if_reply
+- set_ip_flow_hash
+- set_ip_flow_hash_reply
 - want_l2_macs_events
 - want_l2_macs_events_reply
 
@@ -329,6 +336,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
+| [f2984bbb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2984bbb0) | ip: use IPv6 flowlabel in flow hash computation |
 | [58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5) | ip: add API to retrieve IPv6 link-layer address |
 
 
