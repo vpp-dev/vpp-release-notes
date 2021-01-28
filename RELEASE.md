@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 138 commits since the previous release, including 59 fixes.
+More than 141 commits since the previous release, including 60 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Jan 27 02:08:59 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Jan 28 02:09:10 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -21,6 +21,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Allow configure individual VMBUS devices ([982272974](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=982272974))
   - Internet Key Exchange (IKEv2) Protocol
     - Use new counters data model & add more counters ([fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39))
+    - Add per SA stats ([68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356))
   - QUIC protocol
     - Quicly v0.1.2 update ([2e4523816](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e4523816))
   - Memif device driver
@@ -69,6 +70,7 @@ bridge_domain_set_learn_limit                                | only in image
 bridge_domain_set_learn_limit_reply                          | only in image
 create_vhost_user_if_v2                                      | only in image
 create_vhost_user_if_v2_reply                                | only in image
+ikev2_sa_details                                             | definition changed
 ipsec_tunnel_if_add_del                                      | only in file
 ipsec_tunnel_if_add_del_reply                                | only in file
 ipsec_tunnel_if_set_sa                                       | only in file
@@ -84,7 +86,7 @@ sw_interface_ip6_get_link_local_address_reply                | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 20 api message signature differences
+Found 21 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -314,8 +316,13 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/ikev2/ikev2_types.api ||
+| ------- | ------- |
+| [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
+
 | @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
+| [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
 | [fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39) | ikev2: use new counters data model & add more counters |
 
 | @c src/vnet/l2/l2.api ||
