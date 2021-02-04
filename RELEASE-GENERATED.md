@@ -1,15 +1,17 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 176 commits since the previous release, including 73 fixes.
+More than 179 commits since the previous release, including 74 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Feb  3 02:02:15 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Feb  4 01:51:04 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Binary API Compiler for Python
+  - Support an 'autoendian' keyword for message definitions in .api files ([9302cfea9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9302cfea9))
 - Build System
   - Make rpath optional ([2c91922eb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c91922eb))
 - Infrastructure Library
@@ -342,6 +344,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
 | [a5a9efd4d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5a9efd4d) | vcl session: switch to generic cert key apis |
+
+| @c src/plugins/map/map.api ||
+| ------- | ------- |
+| [9302cfea9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9302cfea9) | vppapigen: Support an 'autoendian' keyword for message definitions in .api files |
 
 | @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
