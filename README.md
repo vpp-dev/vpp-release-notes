@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 179 commits since the previous release, including 74 fixes.
+More than 190 commits since the previous release, including 78 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Feb  4 01:51:04 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Feb  5 01:54:34 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -58,6 +58,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Add option to use libexecinfo ([67d7acd05](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=67d7acd05))
   - Add bihash with 32 byte key ([f613a4402](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f613a4402))
 - Plugins
+  - Crypto - ipsecmb
+    - Add support for AES CTR ([fe7ff320b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe7ff320b))
   - DPDK
     - Rebase cryptodev engine for DPDK 20.11 ([25f371ee0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25f371ee0))
     - Allow configure individual VMBUS devices ([982272974](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=982272974))
@@ -66,6 +68,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add per SA stats ([68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356))
   - QUIC protocol
     - Quicly v0.1.2 update ([2e4523816](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e4523816))
+  - Linux-cp
+    - Linux Interface Mirroring for Control Plane Integration ([44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef))
   - Memif device driver
     - Adapt to new rxq framework ([755941865](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755941865))
   - Performance counter
@@ -397,5 +401,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
 | [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef) | linux-cp: Linux Interface Mirroring for Control Plane Integration |
 
 
