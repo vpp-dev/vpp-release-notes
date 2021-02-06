@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 190 commits since the previous release, including 78 fixes.
+More than 205 commits since the previous release, including 84 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Feb  5 01:54:34 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat Feb  6 01:49:59 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -66,6 +66,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Internet Key Exchange (IKEv2) Protocol
     - Use new counters data model & add more counters ([fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39))
     - Add per SA stats ([68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356))
+  - NAT
+    - 1:1 policy NAT ([18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d))
   - QUIC protocol
     - Quicly v0.1.2 update ([2e4523816](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e4523816))
   - Linux-cp
@@ -81,14 +83,19 @@ HIGHLIGHTS-PLACEHOLDER
     - Support MPLS over IP ([e294de6f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e294de6f8))
   - IPSec
     - Support MPLS over IPSec[46] interface ([4a58e49cf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4a58e49cf))
+    - Add support for AES CTR ([490b92738](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=490b92738))
   - IPv4 LPM
     - Add API to retrieve IPv6 link-layer address ([58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5))
     - Router ID included in flow hash ([3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82))
+  - Interface Common
+    - RX/TX direction type in API ([6a999d67d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a999d67d))
   - L2
     - Add per bridge domain learn limit ([5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f))
     - Separating scan-delay and learn-limit into a separate API from want\_l2\_macs\_events ([0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035))
   - Vhost User Driver
     - Add event index for interrupt notification to driver ([27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a))
+- Libmemif
+  - Set next free buffer ([47e68de22](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47e68de22))
 
 ## Known issues
 
@@ -126,16 +133,38 @@ l2fib_set_scan_delay                                         | only in image
 l2fib_set_scan_delay_reply                                   | only in image
 modify_vhost_user_if_v2                                      | only in image
 modify_vhost_user_if_v2_reply                                | only in image
+nat_set_fq_options                                           | only in image
+nat_set_fq_options_reply                                     | only in image
+nat_show_fq_options                                          | only in image
+nat_show_fq_options_reply                                    | only in image
+pnat_binding_add                                             | only in image
+pnat_binding_add_reply                                       | only in image
+pnat_binding_attach                                          | only in image
+pnat_binding_attach_reply                                    | only in image
+pnat_binding_del                                             | only in image
+pnat_binding_del_reply                                       | only in image
+pnat_binding_detach                                          | only in image
+pnat_binding_detach_reply                                    | only in image
+pnat_bindings_details                                        | only in image
+pnat_bindings_get                                            | only in image
+pnat_bindings_get_reply                                      | only in image
+pnat_interfaces_details                                      | only in image
+pnat_interfaces_get                                          | only in image
+pnat_interfaces_get_reply                                    | only in image
 set_ip_flow_hash_router_id                                   | only in image
 set_ip_flow_hash_router_id_reply                             | only in image
 set_ip_flow_hash_v2                                          | only in image
 set_ip_flow_hash_v2_reply                                    | only in image
 sw_interface_ip6_get_link_local_address                      | only in image
 sw_interface_ip6_get_link_local_address_reply                | only in image
+vxlan_add_del_tunnel_v2                                      | only in image
+vxlan_add_del_tunnel_v2_reply                                | only in image
+vxlan_tunnel_v2_details                                      | only in image
+vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 23 api message signature differences
+Found 45 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -323,10 +352,28 @@ please collaborate with the feature maintainer on their productization.
 - nat44_show_running_config_reply
 - nat64_plugin_enable_disable
 - nat64_plugin_enable_disable_reply
+- nat_set_fq_options
+- nat_set_fq_options_reply
+- nat_show_fq_options
+- nat_show_fq_options_reply
 - oddbuf_enable_disable
 - oddbuf_enable_disable_reply
 - pg_interface_enable_disable_coalesce
 - pg_interface_enable_disable_coalesce_reply
+- pnat_binding_add
+- pnat_binding_add_reply
+- pnat_binding_attach
+- pnat_binding_attach_reply
+- pnat_binding_del
+- pnat_binding_del_reply
+- pnat_binding_detach
+- pnat_binding_detach_reply
+- pnat_bindings_details
+- pnat_bindings_get
+- pnat_bindings_get_reply
+- pnat_interfaces_details
+- pnat_interfaces_get
+- pnat_interfaces_get_reply
 - sample_macswap_enable_disable
 - sample_macswap_enable_disable_reply
 - sr_policies_with_sl_index_details
@@ -385,6 +432,14 @@ please collaborate with the feature maintainer on their productization.
 | [0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035) | l2: Separating scan-delay and learn-limit into a separate API from want_l2_macs_events |
 | [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
 
+| @c src/vnet/interface_types.api ||
+| ------- | ------- |
+| [6a999d67d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a999d67d) | interface: RX/TX direction type in API |
+
+| @c src/vnet/vxlan/vxlan.api ||
+| ------- | ------- |
+| [839dcc0fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839dcc0fb) | vxlan: add udp-port configuration support |
+
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
 | [a5a9efd4d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5a9efd4d) | vcl session: switch to generic cert key apis |
@@ -405,5 +460,13 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef) | linux-cp: Linux Interface Mirroring for Control Plane Integration |
+
+| @c src/plugins/nat/pnat/pnat.api ||
+| ------- | ------- |
+| [18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d) | nat: 1:1 policy NAT |
+
+| @c src/plugins/nat/nat44.api ||
+| ------- | ------- |
+| [e345ee5cb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e345ee5cb) | nat: configurable handoff frame queue size |
 
 
