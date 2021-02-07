@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 205 commits since the previous release, including 84 fixes.
+More than 206 commits since the previous release, including 84 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat Feb  6 01:49:59 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sun Feb  7 01:52:28 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -44,6 +44,7 @@ HIGHLIGHTS-PLACEHOLDER
   - IPSec
     - Support MPLS over IPSec[46] interface ([4a58e49cf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4a58e49cf))
     - Add support for AES CTR ([490b92738](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=490b92738))
+    - CLI improvement for udp port encap ([048189e7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=048189e7a))
   - IPv4 LPM
     - Add API to retrieve IPv6 link-layer address ([58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5))
     - Router ID included in flow hash ([3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82))
