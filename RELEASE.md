@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 208 commits since the previous release, including 86 fixes.
+More than 220 commits since the previous release, including 91 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Mon Feb  8 01:52:11 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Feb  9 01:56:52 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -45,6 +45,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Support MPLS over IPSec[46] interface ([4a58e49cf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4a58e49cf))
     - Add support for AES CTR ([490b92738](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=490b92738))
     - CLI improvement for udp port encap ([048189e7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=048189e7a))
+    - Use the new tunnel API types to add flow label and TTL copy support ([c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f))
   - IPv4 LPM
     - Add API to retrieve IPv6 link-layer address ([58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5))
     - Router ID included in flow hash ([3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82))
@@ -55,8 +56,11 @@ HIGHLIGHTS-PLACEHOLDER
     - Separating scan-delay and learn-limit into a separate API from want\_l2\_macs\_events ([0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035))
   - Vhost User Driver
     - Add event index for interrupt notification to driver ([27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a))
+  - Tunnel
+    - Support copying TTL and flow label from inner to outer ([a91cb4590](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a91cb4590))
 - Libmemif
   - Set next free buffer ([47e68de22](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47e68de22))
+  - Set data offset for memif buffer ([1421748e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1421748e3))
 
 ## Known issues
 
@@ -86,6 +90,10 @@ bridge_domain_set_learn_limit_reply                          | only in image
 create_vhost_user_if_v2                                      | only in image
 create_vhost_user_if_v2_reply                                | only in image
 ikev2_sa_details                                             | definition changed
+ipsec_sa_v3_details                                          | only in image
+ipsec_sa_v3_dump                                             | only in image
+ipsec_sad_entry_add_del_v3                                   | only in image
+ipsec_sad_entry_add_del_v3_reply                             | only in image
 ipsec_tunnel_if_add_del                                      | only in file
 ipsec_tunnel_if_add_del_reply                                | only in file
 ipsec_tunnel_if_set_sa                                       | only in file
@@ -125,7 +133,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 45 api message signature differences
+Found 49 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -139,6 +147,10 @@ will disappear in the next release.
 - application_tls_key_add_reply
 - create_vhost_user_if
 - create_vhost_user_if_reply
+- ipsec_sa_details
+- ipsec_sa_dump
+- ipsec_sad_entry_add_del
+- ipsec_sad_entry_add_del_reply
 - modify_vhost_user_if
 - modify_vhost_user_if_reply
 - set_ip_flow_hash
@@ -373,8 +385,17 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/tunnel/tunnel_types.api ||
+| ------- | ------- |
+| [a91cb4590](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a91cb4590) | tunnel: support copying TTL and flow label from inner to outer |
+
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
+
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
+| [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
 | [a9e2774f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a9e2774f5) | ipsec: Deprecated the old IPsec Tunnel interface |
 | [95f59f380](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95f59f380) | ipsec: Mark the interface create reply deprecated |
 
