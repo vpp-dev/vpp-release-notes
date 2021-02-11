@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 233 commits since the previous release, including 98 fixes.
+More than 240 commits since the previous release, including 99 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Feb 10 01:50:36 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Feb 11 01:51:35 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -88,6 +88,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for AES CTR ([490b92738](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=490b92738))
     - CLI improvement for udp port encap ([048189e7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=048189e7a))
     - Use the new tunnel API types to add flow label and TTL copy support ([c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f))
+    - Use the new tunnel API types to add flow label and TTL copy support ([9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26))
   - IPv4 LPM
     - Add API to retrieve IPv6 link-layer address ([58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5))
     - Router ID included in flow hash ([3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82))
@@ -134,6 +135,10 @@ bridge_domain_set_learn_limit_reply                          | only in image
 create_vhost_user_if_v2                                      | only in image
 create_vhost_user_if_v2_reply                                | only in image
 ikev2_sa_details                                             | definition changed
+ipsec_sa_v3_details                                          | only in image
+ipsec_sa_v3_dump                                             | only in image
+ipsec_sad_entry_add_del_v3                                   | only in image
+ipsec_sad_entry_add_del_v3_reply                             | only in image
 ipsec_tunnel_if_add_del                                      | only in file
 ipsec_tunnel_if_add_del_reply                                | only in file
 ipsec_tunnel_if_set_sa                                       | only in file
@@ -173,7 +178,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 45 api message signature differences
+Found 49 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -187,6 +192,10 @@ will disappear in the next release.
 - application_tls_key_add_reply
 - create_vhost_user_if
 - create_vhost_user_if_reply
+- ipsec_sa_details
+- ipsec_sa_dump
+- ipsec_sad_entry_add_del
+- ipsec_sad_entry_add_del_reply
 - modify_vhost_user_if
 - modify_vhost_user_if_reply
 - set_ip_flow_hash
@@ -427,11 +436,13 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
+| [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
 | [751bb131e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=751bb131e) | Revert "ipsec: Use the new tunnel API types to add flow label and TTL copy" |
 | [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
+| [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
 | [751bb131e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=751bb131e) | Revert "ipsec: Use the new tunnel API types to add flow label and TTL copy" |
 | [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
 | [a9e2774f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a9e2774f5) | ipsec: Deprecated the old IPsec Tunnel interface |
