@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 240 commits since the previous release, including 99 fixes.
+More than 245 commits since the previous release, including 101 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Feb 11 01:51:35 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Feb 12 01:52:18 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -362,6 +362,10 @@ please collaborate with the feature maintainer on their productization.
 - test_enum_reply
 - test_prefix
 - test_prefix_reply
+- test_string
+- test_string2
+- test_string2_reply
+- test_string_reply
 - trace_capture_packets
 - trace_capture_packets_reply
 - trace_clear_capture
@@ -390,15 +394,26 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/devices/virtio/vhost_user.api ||
+| ------- | ------- |
+| [27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a) | vhost: Add event index for interrupt notification to driver |
+
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [a5a9efd4d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5a9efd4d) | vcl session: switch to generic cert key apis |
+
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035) | l2: Separating scan-delay and learn-limit into a separate API from want_l2_macs_events |
+| [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
+
 | @c src/vnet/tunnel/tunnel_types.api ||
 | ------- | ------- |
 | [a91cb4590](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a91cb4590) | tunnel: support copying TTL and flow label from inner to outer |
 
-| @c src/vnet/ipsec/ipsec_types.api ||
+| @c src/vnet/interface_types.api ||
 | ------- | ------- |
-| [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
-| [751bb131e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=751bb131e) | Revert "ipsec: Use the new tunnel API types to add flow label and TTL copy" |
-| [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
+| [6a999d67d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a999d67d) | interface: RX/TX direction type in API |
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
@@ -408,9 +423,11 @@ please collaborate with the feature maintainer on their productization.
 | [a9e2774f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a9e2774f5) | ipsec: Deprecated the old IPsec Tunnel interface |
 | [95f59f380](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95f59f380) | ipsec: Mark the interface create reply deprecated |
 
-| @c src/vnet/devices/virtio/vhost_user.api ||
+| @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
-| [27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a) | vhost: Add event index for interrupt notification to driver |
+| [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
+| [751bb131e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=751bb131e) | Revert "ipsec: Use the new tunnel API types to add flow label and TTL copy" |
+| [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
@@ -418,46 +435,37 @@ please collaborate with the feature maintainer on their productization.
 | [f2984bbb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2984bbb0) | ip: use IPv6 flowlabel in flow hash computation |
 | [58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5) | ip: add API to retrieve IPv6 link-layer address |
 
-| @c src/vnet/l2/l2.api ||
-| ------- | ------- |
-| [0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035) | l2: Separating scan-delay and learn-limit into a separate API from want_l2_macs_events |
-| [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
-
-| @c src/vnet/interface_types.api ||
-| ------- | ------- |
-| [6a999d67d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a999d67d) | interface: RX/TX direction type in API |
-
 | @c src/vnet/vxlan/vxlan.api ||
 | ------- | ------- |
 | [839dcc0fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839dcc0fb) | vxlan: add udp-port configuration support |
 
-| @c src/vnet/session/session.api ||
-| ------- | ------- |
-| [a5a9efd4d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5a9efd4d) | vcl session: switch to generic cert key apis |
-
 | @c src/plugins/map/map.api ||
 | ------- | ------- |
 | [9302cfea9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9302cfea9) | vppapigen: Support an 'autoendian' keyword for message definitions in .api files |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef) | linux-cp: Linux Interface Mirroring for Control Plane Integration |
+
+| @c src/plugins/nat/nat44.api ||
+| ------- | ------- |
+| [e345ee5cb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e345ee5cb) | nat: configurable handoff frame queue size |
+
+| @c src/plugins/nat/pnat/pnat.api ||
+| ------- | ------- |
+| [18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d) | nat: 1:1 policy NAT |
+
+| @c src/plugins/ikev2/ikev2_types.api ||
+| ------- | ------- |
+| [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
 
 | @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
 | [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
 | [fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39) | ikev2: use new counters data model & add more counters |
 
-| @c src/plugins/ikev2/ikev2_types.api ||
+| @c src/vat2/test/vat2_test.api ||
 | ------- | ------- |
-| [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef) | linux-cp: Linux Interface Mirroring for Control Plane Integration |
-
-| @c src/plugins/nat/pnat/pnat.api ||
-| ------- | ------- |
-| [18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d) | nat: 1:1 policy NAT |
-
-| @c src/plugins/nat/nat44.api ||
-| ------- | ------- |
-| [e345ee5cb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e345ee5cb) | nat: configurable handoff frame queue size |
+| [fb0afab7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fb0afab7f) | vppapigen: fix fromjson coverity errors in generation |
 
 
