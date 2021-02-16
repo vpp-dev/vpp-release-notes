@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 254 commits since the previous release, including 104 fixes.
+More than 274 commits since the previous release, including 113 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Mon Feb 15 01:53:36 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Feb 16 01:52:52 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -52,8 +52,10 @@ HIGHLIGHTS-PLACEHOLDER
   - IPv4 LPM
     - Add API to retrieve IPv6 link-layer address ([58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5))
     - Router ID included in flow hash ([3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82))
+    - Path MTU ([8f5fef2c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8f5fef2c7))
   - Interface Common
     - RX/TX direction type in API ([6a999d67d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a999d67d))
+    - Add promisc on/off in api ([fd0b399ff](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd0b399ff))
   - L2
     - Add per bridge domain learn limit ([5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f))
     - Separating scan-delay and learn-limit into a separate API from want\_l2\_macs\_events ([0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035))
@@ -95,6 +97,15 @@ bridge_domain_set_learn_limit_reply                          | only in image
 create_vhost_user_if_v2                                      | only in image
 create_vhost_user_if_v2_reply                                | only in image
 ikev2_sa_details                                             | definition changed
+ip_path_mtu_details                                          | only in image
+ip_path_mtu_get                                              | only in image
+ip_path_mtu_get_reply                                        | only in image
+ip_path_mtu_replace_begin                                    | only in image
+ip_path_mtu_replace_begin_reply                              | only in image
+ip_path_mtu_replace_end                                      | only in image
+ip_path_mtu_replace_end_reply                                | only in image
+ip_path_mtu_update                                           | only in image
+ip_path_mtu_update_reply                                     | only in image
 ipsec_sa_v3_details                                          | only in image
 ipsec_sa_v3_dump                                             | only in image
 ipsec_sad_entry_add_del_v3                                   | only in image
@@ -125,12 +136,16 @@ pnat_bindings_get_reply                                      | only in image
 pnat_interfaces_details                                      | only in image
 pnat_interfaces_get                                          | only in image
 pnat_interfaces_get_reply                                    | only in image
+policer_bind                                                 | only in image
+policer_bind_reply                                           | only in image
 set_ip_flow_hash_router_id                                   | only in image
 set_ip_flow_hash_router_id_reply                             | only in image
 set_ip_flow_hash_v2                                          | only in image
 set_ip_flow_hash_v2_reply                                    | only in image
 sw_interface_ip6_get_link_local_address                      | only in image
 sw_interface_ip6_get_link_local_address_reply                | only in image
+sw_interface_set_promisc                                     | only in image
+sw_interface_set_promisc_reply                               | only in image
 vxlan_add_del_tunnel_v2                                      | only in image
 vxlan_add_del_tunnel_v2_reply                                | only in image
 vxlan_tunnel_v2_details                                      | only in image
@@ -138,7 +153,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 49 api message signature differences
+Found 62 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -429,6 +444,14 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [c5299ff30](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c5299ff30) | policer: remove SSE2 prefix |
 
+| @c src/vnet/policer/policer.api ||
+| ------- | ------- |
+| [48e26367c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=48e26367c) | policer: add api to bind policer to worker |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [fd0b399ff](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd0b399ff) | interface: Add promisc on/off in api |
+
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
@@ -445,6 +468,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
+| [8f5fef2c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8f5fef2c7) | ip: Path MTU |
 | [3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82) | ip: Router ID included in flow hash |
 | [f2984bbb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2984bbb0) | ip: use IPv6 flowlabel in flow hash computation |
 | [58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5) | ip: add API to retrieve IPv6 link-layer address |
