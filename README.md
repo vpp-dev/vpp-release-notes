@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 292 commits since the previous release, including 126 fixes.
+More than 301 commits since the previous release, including 129 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Feb 19 01:53:20 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat Feb 20 01:52:31 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -178,6 +178,8 @@ pnat_interfaces_get                                          | only in image
 pnat_interfaces_get_reply                                    | only in image
 policer_bind                                                 | only in image
 policer_bind_reply                                           | only in image
+policer_input                                                | only in image
+policer_input_reply                                          | only in image
 set_ip_flow_hash_router_id                                   | only in image
 set_ip_flow_hash_router_id_reply                             | only in image
 set_ip_flow_hash_v2                                          | only in image
@@ -193,7 +195,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 62 api message signature differences
+Found 64 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -496,6 +498,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/policer/policer.api ||
 | ------- | ------- |
+| [b04683017](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b04683017) | policer: add api to configure input policing |
 | [48e26367c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=48e26367c) | policer: add api to bind policer to worker |
 
 | @c src/vnet/interface.api ||
