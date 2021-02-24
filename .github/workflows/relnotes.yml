@@ -32,7 +32,7 @@ jobs:
       run: |
         sudo mkdir /run/user/$(id -u)
         sudo chown $(whoami) /run/user/$(id -u)
-        sudo apt-get install -y --allow-downgrades libllvm6.0=1:6.0-1ubuntu2
+        # sudo apt-get install -y --allow-downgrades libllvm6.0=1:6.0-1ubuntu2
         sudo apt-get install clang-format-6.0
         sudo apt-get update
         sudo apt-get install -y coreutils jq
