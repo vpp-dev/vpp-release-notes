@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 320 commits since the previous release, including 143 fixes.
+More than 322 commits since the previous release, including 143 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Feb 24 16:20:13 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Feb 25 01:56:19 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -118,10 +118,83 @@ l2fib_set_scan_delay                                         | only in image
 l2fib_set_scan_delay_reply                                   | only in image
 modify_vhost_user_if_v2                                      | only in image
 modify_vhost_user_if_v2_reply                                | only in image
-nat_set_fq_options                                           | only in image
-nat_set_fq_options_reply                                     | only in image
-nat_show_fq_options                                          | only in image
-nat_show_fq_options_reply                                    | only in image
+nat44_ed_set_fq_options                                      | only in image
+nat44_ed_set_fq_options_reply                                | only in image
+nat44_ed_show_fq_options                                     | only in image
+nat44_ed_show_fq_options_reply                               | only in image
+nat44_ei_add_del_address_range                               | only in image
+nat44_ei_add_del_address_range_reply                         | only in image
+nat44_ei_add_del_identity_mapping                            | only in image
+nat44_ei_add_del_identity_mapping_reply                      | only in image
+nat44_ei_add_del_interface_addr                              | only in image
+nat44_ei_add_del_interface_addr_reply                        | only in image
+nat44_ei_add_del_static_mapping                              | only in image
+nat44_ei_add_del_static_mapping_reply                        | only in image
+nat44_ei_address_details                                     | only in image
+nat44_ei_address_dump                                        | only in image
+nat44_ei_del_session                                         | only in image
+nat44_ei_del_session_reply                                   | only in image
+nat44_ei_del_user                                            | only in image
+nat44_ei_del_user_reply                                      | only in image
+nat44_ei_forwarding_enable_disable                           | only in image
+nat44_ei_forwarding_enable_disable_reply                     | only in image
+nat44_ei_get_addr_and_port_alloc_alg                         | only in image
+nat44_ei_get_addr_and_port_alloc_alg_reply                   | only in image
+nat44_ei_get_mss_clamping                                    | only in image
+nat44_ei_get_mss_clamping_reply                              | only in image
+nat44_ei_ha_flush                                            | only in image
+nat44_ei_ha_flush_reply                                      | only in image
+nat44_ei_ha_get_failover                                     | only in image
+nat44_ei_ha_get_failover_reply                               | only in image
+nat44_ei_ha_get_listener                                     | only in image
+nat44_ei_ha_get_listener_reply                               | only in image
+nat44_ei_ha_resync                                           | only in image
+nat44_ei_ha_resync_completed_event                           | only in image
+nat44_ei_ha_resync_reply                                     | only in image
+nat44_ei_ha_set_failover                                     | only in image
+nat44_ei_ha_set_failover_reply                               | only in image
+nat44_ei_ha_set_listener                                     | only in image
+nat44_ei_ha_set_listener_reply                               | only in image
+nat44_ei_identity_mapping_details                            | only in image
+nat44_ei_identity_mapping_dump                               | only in image
+nat44_ei_interface_add_del_feature                           | only in image
+nat44_ei_interface_add_del_feature_reply                     | only in image
+nat44_ei_interface_add_del_output_feature                    | only in image
+nat44_ei_interface_add_del_output_feature_reply              | only in image
+nat44_ei_interface_addr_details                              | only in image
+nat44_ei_interface_addr_dump                                 | only in image
+nat44_ei_interface_details                                   | only in image
+nat44_ei_interface_dump                                      | only in image
+nat44_ei_interface_output_feature_details                    | only in image
+nat44_ei_interface_output_feature_dump                       | only in image
+nat44_ei_ipfix_enable_disable                                | only in image
+nat44_ei_ipfix_enable_disable_reply                          | only in image
+nat44_ei_plugin_enable_disable                               | only in image
+nat44_ei_plugin_enable_disable_reply                         | only in image
+nat44_ei_set_addr_and_port_alloc_alg                         | only in image
+nat44_ei_set_addr_and_port_alloc_alg_reply                   | only in image
+nat44_ei_set_fq_options                                      | only in image
+nat44_ei_set_fq_options_reply                                | only in image
+nat44_ei_set_log_level                                       | only in image
+nat44_ei_set_log_level_reply                                 | only in image
+nat44_ei_set_mss_clamping                                    | only in image
+nat44_ei_set_mss_clamping_reply                              | only in image
+nat44_ei_set_timeouts                                        | only in image
+nat44_ei_set_timeouts_reply                                  | only in image
+nat44_ei_set_workers                                         | only in image
+nat44_ei_set_workers_reply                                   | only in image
+nat44_ei_show_fq_options                                     | only in image
+nat44_ei_show_fq_options_reply                               | only in image
+nat44_ei_show_running_config                                 | only in image
+nat44_ei_show_running_config_reply                           | only in image
+nat44_ei_static_mapping_details                              | only in image
+nat44_ei_static_mapping_dump                                 | only in image
+nat44_ei_user_details                                        | only in image
+nat44_ei_user_dump                                           | only in image
+nat44_ei_user_session_details                                | only in image
+nat44_ei_user_session_dump                                   | only in image
+nat44_ei_worker_details                                      | only in image
+nat44_ei_worker_dump                                         | only in image
 pnat_binding_add                                             | only in image
 pnat_binding_add_reply                                       | only in image
 pnat_binding_attach                                          | only in image
@@ -155,7 +228,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 64 api message signature differences
+Found 137 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -175,6 +248,48 @@ will disappear in the next release.
 - ipsec_sad_entry_add_del_reply
 - modify_vhost_user_if
 - modify_vhost_user_if_reply
+- nat44_ei_add_del_identity_mapping
+- nat44_ei_add_del_identity_mapping_reply
+- nat44_ei_add_del_interface_addr
+- nat44_ei_add_del_interface_addr_reply
+- nat44_ei_get_addr_and_port_alloc_alg
+- nat44_ei_get_addr_and_port_alloc_alg_reply
+- nat44_ei_get_mss_clamping
+- nat44_ei_get_mss_clamping_reply
+- nat44_ei_ha_get_failover
+- nat44_ei_ha_get_failover_reply
+- nat44_ei_ha_get_listener
+- nat44_ei_ha_get_listener_reply
+- nat44_ei_identity_mapping_details
+- nat44_ei_identity_mapping_dump
+- nat44_ei_interface_add_del_output_feature
+- nat44_ei_interface_add_del_output_feature_reply
+- nat44_ei_interface_addr_details
+- nat44_ei_interface_addr_dump
+- nat44_ei_interface_output_feature_details
+- nat44_ei_interface_output_feature_dump
+- nat44_ei_set_log_level
+- nat44_ei_set_log_level_reply
+- nat44_forwarding_enable_disable
+- nat44_forwarding_enable_disable_reply
+- nat44_forwarding_is_enabled
+- nat44_forwarding_is_enabled_reply
+- nat44_session_cleanup
+- nat44_session_cleanup_reply
+- nat_control_ping
+- nat_control_ping_reply
+- nat_get_timeouts
+- nat_get_timeouts_reply
+- nat_ipfix_enable_disable
+- nat_ipfix_enable_disable_reply
+- nat_set_log_level
+- nat_set_log_level_reply
+- nat_set_timeouts
+- nat_set_timeouts_reply
+- nat_show_config
+- nat_show_config_2
+- nat_show_config_2_reply
+- nat_show_config_reply
 - set_ip_flow_hash
 - set_ip_flow_hash_reply
 - want_l2_macs_events
@@ -343,14 +458,65 @@ please collaborate with the feature maintainer on their productization.
 - mdata_enable_disable_reply
 - nat44_add_del_static_mapping_v2
 - nat44_add_del_static_mapping_v2_reply
+- nat44_ed_set_fq_options
+- nat44_ed_set_fq_options_reply
+- nat44_ed_show_fq_options
+- nat44_ed_show_fq_options_reply
+- nat44_ei_add_del_address_range
+- nat44_ei_add_del_address_range_reply
+- nat44_ei_add_del_static_mapping
+- nat44_ei_add_del_static_mapping_reply
+- nat44_ei_address_details
+- nat44_ei_address_dump
+- nat44_ei_del_session
+- nat44_ei_del_session_reply
+- nat44_ei_del_user
+- nat44_ei_del_user_reply
+- nat44_ei_forwarding_enable_disable
+- nat44_ei_forwarding_enable_disable_reply
+- nat44_ei_ha_flush
+- nat44_ei_ha_flush_reply
+- nat44_ei_ha_resync
+- nat44_ei_ha_resync_completed_event
+- nat44_ei_ha_resync_reply
+- nat44_ei_ha_set_failover
+- nat44_ei_ha_set_failover_reply
+- nat44_ei_ha_set_listener
+- nat44_ei_ha_set_listener_reply
+- nat44_ei_interface_add_del_feature
+- nat44_ei_interface_add_del_feature_reply
+- nat44_ei_interface_details
+- nat44_ei_interface_dump
+- nat44_ei_ipfix_enable_disable
+- nat44_ei_ipfix_enable_disable_reply
+- nat44_ei_plugin_enable_disable
+- nat44_ei_plugin_enable_disable_reply
+- nat44_ei_set_addr_and_port_alloc_alg
+- nat44_ei_set_addr_and_port_alloc_alg_reply
+- nat44_ei_set_fq_options
+- nat44_ei_set_fq_options_reply
+- nat44_ei_set_mss_clamping
+- nat44_ei_set_mss_clamping_reply
+- nat44_ei_set_timeouts
+- nat44_ei_set_timeouts_reply
+- nat44_ei_set_workers
+- nat44_ei_set_workers_reply
+- nat44_ei_show_fq_options
+- nat44_ei_show_fq_options_reply
+- nat44_ei_show_running_config
+- nat44_ei_show_running_config_reply
+- nat44_ei_static_mapping_details
+- nat44_ei_static_mapping_dump
+- nat44_ei_user_details
+- nat44_ei_user_dump
+- nat44_ei_user_session_details
+- nat44_ei_user_session_dump
+- nat44_ei_worker_details
+- nat44_ei_worker_dump
 - nat44_show_running_config
 - nat44_show_running_config_reply
 - nat64_plugin_enable_disable
 - nat64_plugin_enable_disable_reply
-- nat_set_fq_options
-- nat_set_fq_options_reply
-- nat_show_fq_options
-- nat_show_fq_options_reply
 - oddbuf_enable_disable
 - oddbuf_enable_disable_reply
 - pg_interface_enable_disable_coalesce
@@ -448,13 +614,33 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
 
-| @c src/plugins/nat/nat44.api ||
+| @c src/plugins/nat/lib/nat_types.api ||
 | ------- | ------- |
-| [e345ee5cb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e345ee5cb) | nat: configurable handoff frame queue size |
+| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
+
+| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
+| ------- | ------- |
+| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
+
+| @c src/plugins/nat/det44/det44.api ||
+| ------- | ------- |
+| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
+
+| @c src/plugins/nat/nat66/nat66.api ||
+| ------- | ------- |
+| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
 
 | @c src/plugins/nat/pnat/pnat.api ||
 | ------- | ------- |
 | [18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d) | nat: 1:1 policy NAT |
+
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
+
+| @c src/plugins/nat/nat64/nat64.api ||
+| ------- | ------- |
+| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
 
 | @c src/plugins/map/map.api ||
 | ------- | ------- |
