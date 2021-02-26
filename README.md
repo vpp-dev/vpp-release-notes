@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 322 commits since the previous release, including 143 fixes.
+More than 332 commits since the previous release, including 146 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Feb 25 01:56:19 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Feb 26 01:56:45 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -58,6 +58,9 @@ HIGHLIGHTS-PLACEHOLDER
   - Add option to use libexecinfo ([67d7acd05](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=67d7acd05))
   - Add bihash with 32 byte key ([f613a4402](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f613a4402))
 - Plugins
+  - CNat
+    - Add maglev support ([4d237874e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4d237874e))
+    - Add input feature node ([cc9a1a0d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cc9a1a0d3))
   - Crypto - ipsecmb
     - Add support for AES CTR ([fe7ff320b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe7ff320b))
   - DPDK
@@ -134,6 +137,11 @@ bridge_domain_set_default_learn_limit                        | only in image
 bridge_domain_set_default_learn_limit_reply                  | only in image
 bridge_domain_set_learn_limit                                | only in image
 bridge_domain_set_learn_limit_reply                          | only in image
+cnat_session_details                                         | definition changed
+cnat_set_snat_policy                                         | only in image
+cnat_set_snat_policy_reply                                   | only in image
+cnat_translation_details                                     | definition changed
+cnat_translation_update                                      | definition changed
 create_vhost_user_if_v2                                      | only in image
 create_vhost_user_if_v2_reply                                | only in image
 ikev2_sa_details                                             | definition changed
@@ -268,7 +276,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 137 api message signature differences
+Found 142 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -373,6 +381,8 @@ please collaborate with the feature maintainer on their productization.
 - cnat_session_purge_reply
 - cnat_set_snat_addresses
 - cnat_set_snat_addresses_reply
+- cnat_set_snat_policy
+- cnat_set_snat_policy_reply
 - cnat_translation_del
 - cnat_translation_del_reply
 - cnat_translation_details
@@ -689,6 +699,12 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef) | linux-cp: Linux Interface Mirroring for Control Plane Integration |
+
+| @c src/plugins/cnat/cnat.api ||
+| ------- | ------- |
+| [cc9a1a0d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cc9a1a0d3) | cnat: add input feature node |
+| [4d237874e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4d237874e) | cnat: Add maglev support |
+| [27647a27c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27647a27c) | cnat: fixes & prepare maglev |
 
 | @c src/vnet/devices/virtio/vhost_user.api ||
 | ------- | ------- |
