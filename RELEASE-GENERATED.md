@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 332 commits since the previous release, including 146 fixes.
+More than 342 commits since the previous release, including 152 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Feb 26 01:56:45 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat Feb 27 01:56:25 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -126,6 +126,8 @@ l2fib_set_scan_delay                                         | only in image
 l2fib_set_scan_delay_reply                                   | only in image
 modify_vhost_user_if_v2                                      | only in image
 modify_vhost_user_if_v2_reply                                | only in image
+nat44_ed_plugin_enable_disable                               | only in image
+nat44_ed_plugin_enable_disable_reply                         | only in image
 nat44_ed_set_fq_options                                      | only in image
 nat44_ed_set_fq_options_reply                                | only in image
 nat44_ed_show_fq_options                                     | only in image
@@ -236,7 +238,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 142 api message signature differences
+Found 144 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -282,6 +284,8 @@ will disappear in the next release.
 - nat44_forwarding_enable_disable_reply
 - nat44_forwarding_is_enabled
 - nat44_forwarding_is_enabled_reply
+- nat44_plugin_enable_disable
+- nat44_plugin_enable_disable_reply
 - nat44_session_cleanup
 - nat44_session_cleanup_reply
 - nat_control_ping
@@ -468,6 +472,8 @@ please collaborate with the feature maintainer on their productization.
 - mdata_enable_disable_reply
 - nat44_add_del_static_mapping_v2
 - nat44_add_del_static_mapping_v2_reply
+- nat44_ed_plugin_enable_disable
+- nat44_ed_plugin_enable_disable_reply
 - nat44_ed_set_fq_options
 - nat44_ed_set_fq_options_reply
 - nat44_ed_show_fq_options
@@ -646,6 +652,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
+| [e7a80a98b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e7a80a98b) | nat: NAT44ED fail if using old plugin option |
 | [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
 
 | @c src/plugins/nat/nat64/nat64.api ||
