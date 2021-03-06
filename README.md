@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 375 commits since the previous release, including 174 fixes.
+More than 389 commits since the previous release, including 180 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Mar  5 02:00:25 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat Mar  6 01:59:51 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -74,6 +74,8 @@ HIGHLIGHTS-PLACEHOLDER
     - 1:1 policy NAT ([18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d))
   - QUIC protocol
     - Quicly v0.1.2 update ([2e4523816](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e4523816))
+  - TCP MSS Clamping
+    - TCP MSS clamping plugin ([bf55e9931](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bf55e9931))
   - Linux-cp
     - Linux Interface Mirroring for Control Plane Integration ([44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef))
   - Memif device driver
@@ -95,6 +97,7 @@ HIGHLIGHTS-PLACEHOLDER
     - CLI improvement for udp port encap ([048189e7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=048189e7a))
     - Use the new tunnel API types to add flow label and TTL copy support ([c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f))
     - Use the new tunnel API types to add flow label and TTL copy support ([9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26))
+    - Support async mode per-SA ([f16e9a550](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f16e9a550))
   - IPv4 LPM
     - Add API to retrieve IPv6 link-layer address ([58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5))
     - Router ID included in flow hash ([3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82))
@@ -175,6 +178,11 @@ l2fib_set_scan_delay                                         | only in image
 l2fib_set_scan_delay_reply                                   | only in image
 modify_vhost_user_if_v2                                      | only in image
 modify_vhost_user_if_v2_reply                                | only in image
+mss_clamp_details                                            | only in image
+mss_clamp_enable_disable                                     | only in image
+mss_clamp_enable_disable_reply                               | only in image
+mss_clamp_get                                                | only in image
+mss_clamp_get_reply                                          | only in image
 nat44_ed_plugin_enable_disable                               | only in image
 nat44_ed_plugin_enable_disable_reply                         | only in image
 nat44_ed_set_fq_options                                      | only in image
@@ -287,7 +295,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 150 api message signature differences
+Found 155 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -668,6 +676,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef) | linux-cp: Linux Interface Mirroring for Control Plane Integration |
 
+| @c src/plugins/mss_clamp/mss_clamp.api ||
+| ------- | ------- |
+| [bf55e9931](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bf55e9931) | mss_clamp: TCP MSS clamping plugin |
+
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
 | [e7a80a98b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e7a80a98b) | nat: NAT44ED fail if using old plugin option |
@@ -720,6 +732,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vat2/test/vat2_test.api ||
 | ------- | ------- |
+| [ab9f57355](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab9f57355) | api: crchcecker ignore version < 1.0.0 and outside of src directory |
 | [71134f26a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=71134f26a) | vat2: jsonconvert return checking - coverity |
 | [93c4b1bb3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=93c4b1bb3) | vppapigen: more _fromjson autogeneration coverity fixes |
 | [316967cfa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=316967cfa) | vppapigen: fix coverity issues in jsonconvert |
@@ -750,6 +763,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
+| [f16e9a550](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f16e9a550) | ipsec: Support async mode per-SA |
 | [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
 | [751bb131e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=751bb131e) | Revert "ipsec: Use the new tunnel API types to add flow label and TTL copy" |
 | [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
