@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 410 commits since the previous release, including 193 fixes.
+More than 411 commits since the previous release, including 193 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sun Mar 14 02:05:14 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Mon Mar 15 02:04:51 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -102,6 +102,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add API to retrieve IPv6 link-layer address ([58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5))
     - Router ID included in flow hash ([3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82))
     - Path MTU ([8f5fef2c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8f5fef2c7))
+    - Extend punt CLI for exception packets ([45723b8d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=45723b8d3))
   - Interface Common
     - RX/TX direction type in API ([6a999d67d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a999d67d))
     - Add promisc on/off in api ([fd0b399ff](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd0b399ff))
