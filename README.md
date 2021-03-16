@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 411 commits since the previous release, including 193 fixes.
+More than 423 commits since the previous release, including 199 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Mon Mar 15 02:04:51 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Mar 16 02:04:49 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -67,11 +67,14 @@ HIGHLIGHTS-PLACEHOLDER
   - DPDK
     - Rebase cryptodev engine for DPDK 20.11 ([25f371ee0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25f371ee0))
     - Allow configure individual VMBUS devices ([982272974](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=982272974))
+    - Implement interrupt mode ([19ff0c369](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=19ff0c369))
   - Internet Key Exchange (IKEv2) Protocol
     - Use new counters data model & add more counters ([fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39))
     - Add per SA stats ([68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356))
+    - Support responder hostname ([af2cc6425](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af2cc6425))
   - NAT
     - 1:1 policy NAT ([18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d))
+    - Pnat copy and clear byte instructions ([ab3151c52](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab3151c52))
   - QUIC protocol
     - Quicly v0.1.2 update ([2e4523816](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e4523816))
   - TCP MSS Clamping
@@ -140,6 +143,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+bfd_udp_session_event                                        | only in image
 bridge_domain_set_default_learn_limit                        | only in image
 bridge_domain_set_default_learn_limit_reply                  | only in image
 bridge_domain_set_learn_limit                                | only in image
@@ -162,6 +166,8 @@ cop_whitelist_enable_disable_reply                           | only in file
 create_vhost_user_if_v2                                      | only in image
 create_vhost_user_if_v2_reply                                | only in image
 ikev2_sa_details                                             | definition changed
+ikev2_set_responder_hostname                                 | only in image
+ikev2_set_responder_hostname_reply                           | only in image
 ip_path_mtu_details                                          | only in image
 ip_path_mtu_get                                              | only in image
 ip_path_mtu_get_reply                                        | only in image
@@ -300,7 +306,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 159 api message signature differences
+Found 162 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -523,6 +529,8 @@ please collaborate with the feature maintainer on their productization.
 - ikev2_set_local_key
 - ikev2_set_local_key_reply
 - ikev2_set_responder
+- ikev2_set_responder_hostname
+- ikev2_set_responder_hostname_reply
 - ikev2_set_responder_reply
 - ikev2_set_sa_lifetime
 - ikev2_set_sa_lifetime_reply
@@ -679,6 +687,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
+| [4376ab2a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4376ab2a9) | tests: use socket transport instead of shared memory |
 | [44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef) | linux-cp: Linux Interface Mirroring for Control Plane Integration |
 
 | @c src/plugins/mss_clamp/mss_clamp.api ||
@@ -704,6 +713,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/pnat/pnat.api ||
 | ------- | ------- |
+| [ab3151c52](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab3151c52) | nat: pnat copy and clear byte instructions |
 | [18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d) | nat: 1:1 policy NAT |
 
 | @c src/plugins/nat/nat66/nat66.api ||
@@ -728,6 +738,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
+| [af2cc6425](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af2cc6425) | ikev2: support responder hostname |
 | [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
 | [fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39) | ikev2: use new counters data model & add more counters |
 
@@ -743,10 +754,6 @@ please collaborate with the feature maintainer on their productization.
 | [316967cfa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=316967cfa) | vppapigen: fix coverity issues in jsonconvert |
 | [cf0102b3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cf0102b3b) | vppapigen: coverity issues in autogenerated code pass 3. |
 | [fb0afab7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fb0afab7f) | vppapigen: fix fromjson coverity errors in generation |
-
-| @c src/vnet/cop/cop.api ||
-| ------- | ------- |
-| [aa479bb91](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=aa479bb91) | misc: remove cop API support (part 1) |
 
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
@@ -799,6 +806,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/vxlan/vxlan.api ||
 | ------- | ------- |
 | [839dcc0fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839dcc0fb) | vxlan: add udp-port configuration support |
+
+| @c src/vnet/bfd/bfd.api ||
+| ------- | ------- |
+| [4376ab2a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4376ab2a9) | tests: use socket transport instead of shared memory |
 
 | @c src/vnet/interface_types.api ||
 | ------- | ------- |
