@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 423 commits since the previous release, including 199 fixes.
+More than 430 commits since the previous release, including 202 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Mar 16 02:04:49 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Mar 17 02:05:53 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -52,6 +52,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Crypto Infra
     - Add support for aes-ctr+sha-1 chains ([40ee2003b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40ee2003b))
+  - FIB
+    - Allow the creation of new source on the API ([976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be))
   - IPIP
     - Support MPLS over IP ([e294de6f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e294de6f8))
   - IPSec
@@ -125,6 +127,10 @@ cop_whitelist_enable_disable                                 | only in file
 cop_whitelist_enable_disable_reply                           | only in file
 create_vhost_user_if_v2                                      | only in image
 create_vhost_user_if_v2_reply                                | only in image
+fib_source_add                                               | only in image
+fib_source_add_reply                                         | only in image
+fib_source_details                                           | only in image
+fib_source_dump                                              | only in image
 ikev2_sa_details                                             | definition changed
 ikev2_set_responder_hostname                                 | only in image
 ikev2_set_responder_hostname_reply                           | only in image
@@ -137,6 +143,12 @@ ip_path_mtu_replace_end                                      | only in image
 ip_path_mtu_replace_end_reply                                | only in image
 ip_path_mtu_update                                           | only in image
 ip_path_mtu_update_reply                                     | only in image
+ip_route_add_del_v2                                          | only in image
+ip_route_add_del_v2_reply                                    | only in image
+ip_route_lookup_v2                                           | only in image
+ip_route_lookup_v2_reply                                     | only in image
+ip_route_v2_details                                          | only in image
+ip_route_v2_dump                                             | only in image
 ipsec_sa_v3_details                                          | only in image
 ipsec_sa_v3_dump                                             | only in image
 ipsec_sad_entry_add_del_v3                                   | only in image
@@ -266,7 +278,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 162 api message signature differences
+Found 172 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -498,6 +510,12 @@ please collaborate with the feature maintainer on their productization.
 - ikev2_set_tunnel_interface_reply
 - ikev2_traffic_selector_details
 - ikev2_traffic_selector_dump
+- ip_route_add_del_v2
+- ip_route_add_del_v2_reply
+- ip_route_lookup_v2
+- ip_route_lookup_v2_reply
+- ip_route_v2_details
+- ip_route_v2_dump
 - l2_emulation
 - l2_emulation_reply
 - mdata_enable_disable
@@ -756,8 +774,17 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [fd0b399ff](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd0b399ff) | interface: Add promisc on/off in api |
 
+| @c src/vnet/fib/fib.api ||
+| ------- | ------- |
+| [976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be) | fib: Allow the creation of new source on the API |
+
+| @c src/vnet/fib/fib_types.api ||
+| ------- | ------- |
+| [976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be) | fib: Allow the creation of new source on the API |
+
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
+| [976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be) | fib: Allow the creation of new source on the API |
 | [8f5fef2c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8f5fef2c7) | ip: Path MTU |
 | [3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82) | ip: Router ID included in flow hash |
 | [f2984bbb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2984bbb0) | ip: use IPv6 flowlabel in flow hash computation |
