@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 465 commits since the previous release, including 218 fixes.
+More than 472 commits since the previous release, including 218 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Mar 26 03:17:39 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat Mar 27 02:16:52 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -18,6 +18,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Add option to use libexecinfo ([67d7acd05](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=67d7acd05))
   - Add bihash with 32 byte key ([f613a4402](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f613a4402))
 - Plugins
+  - AVF Device driver
+    - Add avf flow framework ([ffe9a5489](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ffe9a5489))
   - CNat
     - Add maglev support ([4d237874e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4d237874e))
     - Add input feature node ([cc9a1a0d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cc9a1a0d3))
