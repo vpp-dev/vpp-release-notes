@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 474 commits since the previous release, including 219 fixes.
+More than 477 commits since the previous release, including 220 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Mon Mar 29 02:18:52 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Mar 30 02:16:36 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -91,6 +91,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Expose vpp\_papi version to client ([b552ff2e9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b552ff2e9))
 - SVM Library
   - Allow mq attachments at random offsets ([b46241889](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b46241889))
+  - Per app rx message queues ([41d5f541d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=41d5f541d))
 - VNET
   - Crypto Infra
     - Add support for aes-ctr+sha-1 chains ([40ee2003b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40ee2003b))
