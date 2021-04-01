@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 485 commits since the previous release, including 226 fixes.
+More than 496 commits since the previous release, including 233 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Mar 31 02:15:52 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Apr  1 02:22:50 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -70,6 +70,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Rebase cryptodev engine for DPDK 20.11 ([25f371ee0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=25f371ee0))
     - Allow configure individual VMBUS devices ([982272974](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=982272974))
     - Implement interrupt mode ([19ff0c369](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=19ff0c369))
+  - IPv6 Segment Routing Flow-Based Dynamic Proxy
+    - SRv6 Per-Flow Dynamic Proxy ([ed7c62a30](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ed7c62a30))
   - Internet Key Exchange (IKEv2) Protocol
     - Use new counters data model & add more counters ([fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39))
     - Add per SA stats ([68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356))
@@ -288,6 +290,8 @@ nat44_ei_user_session_details                                | only in image
 nat44_ei_user_session_dump                                   | only in image
 nat44_ei_worker_details                                      | only in image
 nat44_ei_worker_dump                                         | only in image
+nat66_plugin_enable_disable                                  | only in image
+nat66_plugin_enable_disable_reply                            | only in image
 pnat_binding_add                                             | only in image
 pnat_binding_add_reply                                       | only in image
 pnat_binding_attach                                          | only in image
@@ -321,7 +325,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 172 api message signature differences
+Found 174 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -825,6 +829,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/nat66/nat66.api ||
 | ------- | ------- |
+| [ed2ee5e57](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ed2ee5e57) | nat: NAT66 plugin enable&disable calls update |
 | [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
 
 | @c src/plugins/nat/det44/det44.api ||
