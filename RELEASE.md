@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 507 commits since the previous release, including 237 fixes.
+More than 511 commits since the previous release, including 238 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Apr  2 02:31:36 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat Apr  3 02:17:16 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -18,6 +18,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Add option to use libexecinfo ([67d7acd05](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=67d7acd05))
   - Add bihash with 32 byte key ([f613a4402](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f613a4402))
 - Plugins
+  - ARPing CLI
+    - Add arping command ([a77ae4708](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a77ae4708))
   - AVF Device driver
     - Add avf flow framework ([ffe9a5489](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ffe9a5489))
   - CNat
@@ -111,6 +113,8 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+arping                                                       | only in image
+arping_reply                                                 | only in image
 bfd_udp_session_event                                        | only in image
 bridge_domain_set_default_learn_limit                        | only in image
 bridge_domain_set_default_learn_limit_reply                  | only in image
@@ -286,7 +290,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 174 api message signature differences
+Found 176 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -762,6 +766,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
 | [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
+
+| @c src/plugins/arping/arping.api ||
+| ------- | ------- |
+| [a77ae4708](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a77ae4708) | arping: add arping command |
 
 | @c src/plugins/mss_clamp/mss_clamp.api ||
 | ------- | ------- |
