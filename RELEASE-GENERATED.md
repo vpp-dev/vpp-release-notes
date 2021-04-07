@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 516 commits since the previous release, including 241 fixes.
+More than 519 commits since the previous release, including 241 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Apr  6 02:21:20 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Apr  7 02:22:15 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -82,6 +82,8 @@ HIGHLIGHTS-PLACEHOLDER
   - L2
     - Add per bridge domain learn limit ([5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f))
     - Separating scan-delay and learn-limit into a separate API from want\_l2\_macs\_events ([0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035))
+  - Session Layer
+    - Basic support for interrupt mode ([7da8829d8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7da8829d8))
   - TLS and TLS engine plugins
     - Dtls initial implementation ([4b47ee26c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b47ee26c))
   - Vhost User Driver
