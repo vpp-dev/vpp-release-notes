@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 534 commits since the previous release, including 250 fixes.
+More than 547 commits since the previous release, including 258 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Apr 14 02:14:38 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Apr 15 02:13:57 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -84,6 +84,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Separating scan-delay and learn-limit into a separate API from want\_l2\_macs\_events ([0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035))
   - Session Layer
     - Basic support for interrupt mode ([7da8829d8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7da8829d8))
+    - Api to update connection attributes ([04ae8273f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=04ae8273f))
   - TLS and TLS engine plugins
     - Dtls initial implementation ([4b47ee26c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b47ee26c))
   - Vhost User Driver
@@ -143,6 +144,7 @@ fib_source_add                                               | only in image
 fib_source_add_reply                                         | only in image
 fib_source_details                                           | only in image
 fib_source_dump                                              | only in image
+flow_add                                                     | definition changed
 ikev2_sa_details                                             | definition changed
 ikev2_set_responder_hostname                                 | only in image
 ikev2_set_responder_hostname_reply                           | only in image
@@ -292,7 +294,7 @@ vxlan_tunnel_v2_dump                                         | only in image
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 176 api message signature differences
+Found 177 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -684,6 +686,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/devices/virtio/vhost_user.api ||
 | ------- | ------- |
 | [27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a) | vhost: Add event index for interrupt notification to driver |
+
+| @c src/vnet/flow/flow_types.api ||
+| ------- | ------- |
+| [91f102ed8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91f102ed8) | flow: The type of vni in VxLAN flow should be u32 |
 
 | @c src/vnet/tunnel/tunnel_types.api ||
 | ------- | ------- |
