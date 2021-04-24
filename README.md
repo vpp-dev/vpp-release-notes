@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 588 commits since the previous release, including 274 fixes.
+More than 596 commits since the previous release, including 279 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri Apr 23 02:24:47 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat Apr 24 02:19:37 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -589,6 +589,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/vxlan/vxlan.api ||
 | ------- | ------- |
+| [3e38422ab](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3e38422ab) | vxlan: Fix L3 mode |
 | [839dcc0fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839dcc0fb) | vxlan: add udp-port configuration support |
 
 | @c src/vnet/bfd/bfd.api ||
