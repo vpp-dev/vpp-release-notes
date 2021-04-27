@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 599 commits since the previous release, including 279 fixes.
+More than 605 commits since the previous release, including 281 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Mon Apr 26 02:30:09 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue Apr 27 02:18:44 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -624,6 +624,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/nat/det44/det44.api ||
 | ------- | ------- |
 | [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
+
+| @c src/plugins/gbp/gbp.api ||
+| ------- | ------- |
+| [dc22c839f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc22c839f) | tests: clean up gbp calls from vpp_papi_provider |
 
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
