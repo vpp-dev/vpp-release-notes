@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 620 commits since the previous release, including 288 fixes.
+More than 629 commits since the previous release, including 291 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed Apr 28 02:19:46 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu Apr 29 02:18:41 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -614,10 +614,12 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/nat44-ei/nat44_ei.api ||
 | ------- | ------- |
+| [e3f078fcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3f078fcf) | nat: fix byte order on ipfix message fields |
 | [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
+| [e3f078fcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3f078fcf) | nat: fix byte order on ipfix message fields |
 | [e7a80a98b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e7a80a98b) | nat: NAT44ED fail if using old plugin option |
 | [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
 
