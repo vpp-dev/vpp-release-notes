@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 648 commits since the previous release, including 299 fixes.
+More than 658 commits since the previous release, including 301 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue May  4 02:19:57 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed May  5 02:15:40 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -84,6 +84,8 @@ HIGHLIGHTS-PLACEHOLDER
   - QUIC protocol
     - Quicly v0.1.2 update ([2e4523816](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e4523816))
     - Update quicly to v0.1.3 ([db36fda74](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db36fda74))
+  - RDMA (ibverb) driver
+    - Add support for RSS configuration ([f5a45680e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f5a45680e))
   - TCP MSS Clamping
     - TCP MSS clamping plugin ([bf55e9931](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bf55e9931))
   - Linux-cp
@@ -97,6 +99,8 @@ HIGHLIGHTS-PLACEHOLDER
 - SVM Library
   - Allow mq attachments at random offsets ([b46241889](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b46241889))
   - Per app rx message queues ([41d5f541d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=41d5f541d))
+- Statistics Segment
+  - Adding symlinks for nodes and interfaces in the stat segment ([db0238090](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db0238090))
 - VNET
   - Crypto Infra
     - Add support for aes-ctr+sha-1 chains ([40ee2003b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40ee2003b))
@@ -222,6 +226,7 @@ will disappear in the next release.
 - nat_show_config_2
 - nat_show_config_2_reply
 - nat_show_config_reply
+- rdma_create_v2
 - set_ip_flow_hash
 - set_ip_flow_hash_reply
 - want_l2_macs_events
@@ -693,6 +698,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/mss_clamp/mss_clamp.api ||
 | ------- | ------- |
 | [bf55e9931](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bf55e9931) | mss_clamp: TCP MSS clamping plugin |
+
+| @c src/plugins/rdma/rdma.api ||
+| ------- | ------- |
+| [f5a45680e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f5a45680e) | rdma: add support for RSS configuration |
 
 | @c src/plugins/map/map.api ||
 | ------- | ------- |
