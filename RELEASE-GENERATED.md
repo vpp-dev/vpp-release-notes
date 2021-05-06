@@ -1,10 +1,10 @@
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 658 commits since the previous release, including 301 fixes.
+More than 672 commits since the previous release, including 308 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed May  5 02:15:40 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Thu May  6 02:16:20 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -64,6 +64,7 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Crypto Infra
     - Add support for aes-ctr+sha-1 chains ([40ee2003b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40ee2003b))
+    - Support hashing operations ([06111a837](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06111a837))
   - FIB
     - Allow the creation of new source on the API ([976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be))
   - FLOW
@@ -551,6 +552,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/interface_types.api ||
 | ------- | ------- |
 | [6a999d67d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a999d67d) | interface: RX/TX direction type in API |
+
+| @c src/vnet/ipfix-export/ipfix_export.api ||
+| ------- | ------- |
+| [baa18701b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=baa18701b) | misc: ipfix process node wait time adjustment |
 
 | @c src/vnet/vxlan/vxlan.api ||
 | ------- | ------- |
