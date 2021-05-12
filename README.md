@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 703 commits since the previous release, including 324 fixes.
+More than 709 commits since the previous release, including 326 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue May 11 02:23:34 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed May 12 02:23:20 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -57,6 +57,7 @@ HIGHLIGHTS-PLACEHOLDER
 - Infrastructure Library
   - Add option to use libexecinfo ([67d7acd05](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=67d7acd05))
   - Add bihash with 32 byte key ([f613a4402](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f613a4402))
+  - Add missing %o ([04a14133c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=04a14133c))
 - Plugins
   - ARPing CLI
     - Add arping command ([a77ae4708](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a77ae4708))
