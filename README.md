@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 739 commits since the previous release, including 340 fixes.
+More than 741 commits since the previous release, including 340 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue May 18 02:33:30 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue May 18 10:12:25 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -169,30 +169,30 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-abf_policy_add_del                                           | definition changed
-abf_policy_details                                           | definition changed
-acl_add_replace                                              | definition changed
-acl_details                                                  | definition changed
+abf_policy_add_del                                           | message CRC32 fix
+abf_policy_details                                           | message CRC32 fix
+acl_add_replace                                              | message CRC32 fix
+acl_details                                                  | message CRC32 fix
 arping                                                       | only in image
 arping_reply                                                 | only in image
-bd_ip_mac_add_del                                            | definition changed
-bd_ip_mac_details                                            | definition changed
-bfd_udp_add                                                  | definition changed
-bfd_udp_auth_activate                                        | definition changed
-bfd_udp_auth_deactivate                                      | definition changed
-bfd_udp_del                                                  | definition changed
-bfd_udp_get_echo_source_reply                                | definition changed
-bfd_udp_mod                                                  | definition changed
-bfd_udp_session_details                                      | definition changed
+bd_ip_mac_add_del                                            | message CRC32 fix
+bd_ip_mac_details                                            | message CRC32 fix
+bfd_udp_add                                                  | message CRC32 fix
+bfd_udp_auth_activate                                        | message CRC32 fix
+bfd_udp_auth_deactivate                                      | message CRC32 fix
+bfd_udp_del                                                  | message CRC32 fix
+bfd_udp_get_echo_source_reply                                | message CRC32 fix
+bfd_udp_mod                                                  | message CRC32 fix
+bfd_udp_session_details                                      | message CRC32 fix
 bfd_udp_session_event                                        | only in image
-bfd_udp_session_set_flags                                    | definition changed
-bier_disp_entry_add_del                                      | definition changed
-bier_disp_entry_details                                      | definition changed
-bier_route_add_del                                           | definition changed
-bier_route_details                                           | definition changed
-bond_create                                                  | definition changed
-bond_enslave                                                 | definition changed
-bridge_domain_details                                        | definition changed
+bfd_udp_session_set_flags                                    | message CRC32 fix
+bier_disp_entry_add_del                                      | message CRC32 fix
+bier_disp_entry_details                                      | message CRC32 fix
+bier_route_add_del                                           | message CRC32 fix
+bier_route_details                                           | message CRC32 fix
+bond_create                                                  | message CRC32 fix
+bond_enslave                                                 | message CRC32 fix
+bridge_domain_details                                        | message CRC32 fix
 bridge_domain_set_default_learn_limit                        | only in image
 bridge_domain_set_default_learn_limit_reply                  | only in image
 bridge_domain_set_learn_limit                                | only in image
@@ -212,74 +212,74 @@ cop_interface_enable_disable                                 | only in file
 cop_interface_enable_disable_reply                           | only in file
 cop_whitelist_enable_disable                                 | only in file
 cop_whitelist_enable_disable_reply                           | only in file
-create_subif                                                 | definition changed
+create_subif                                                 | message CRC32 fix
 create_vhost_user_if_v2                                      | only in image
 create_vhost_user_if_v2_reply                                | only in image
-dhcp6_pd_reply_event                                         | definition changed
-dhcp6_pd_send_client_message                                 | definition changed
-dhcp6_reply_event                                            | definition changed
-dhcp6_send_client_message                                    | definition changed
-dhcp_client_config                                           | definition changed
-dhcp_client_details                                          | definition changed
-dhcp_compl_event                                             | definition changed
-dhcp_proxy_config                                            | definition changed
-dhcp_proxy_details                                           | definition changed
-dslite_add_del_pool_addr_range                               | definition changed
-dslite_get_aftr_addr_reply                                   | definition changed
-dslite_get_b4_addr_reply                                     | definition changed
-dslite_set_aftr_addr                                         | definition changed
-dslite_set_b4_addr                                           | definition changed
+dhcp6_pd_reply_event                                         | message CRC32 fix
+dhcp6_pd_send_client_message                                 | message CRC32 fix
+dhcp6_reply_event                                            | message CRC32 fix
+dhcp6_send_client_message                                    | message CRC32 fix
+dhcp_client_config                                           | message CRC32 fix
+dhcp_client_details                                          | message CRC32 fix
+dhcp_compl_event                                             | message CRC32 fix
+dhcp_proxy_config                                            | message CRC32 fix
+dhcp_proxy_details                                           | message CRC32 fix
+dslite_add_del_pool_addr_range                               | message CRC32 fix
+dslite_get_aftr_addr_reply                                   | message CRC32 fix
+dslite_get_b4_addr_reply                                     | message CRC32 fix
+dslite_set_aftr_addr                                         | message CRC32 fix
+dslite_set_b4_addr                                           | message CRC32 fix
 fib_source_add                                               | only in image
 fib_source_add_reply                                         | only in image
 fib_source_details                                           | only in image
 fib_source_dump                                              | only in image
 flow_add                                                     | definition changed
-gbp_bridge_domain_add                                        | definition changed
-gbp_bridge_domain_details                                    | definition changed
-gbp_contract_add_del                                         | definition changed
-gbp_contract_details                                         | definition changed
-gbp_endpoint_add                                             | definition changed
-gbp_endpoint_details                                         | definition changed
-gbp_endpoint_group_add                                       | definition changed
-gbp_endpoint_group_details                                   | definition changed
-gbp_ext_itf_add_del                                          | definition changed
-gbp_ext_itf_details                                          | definition changed
-gbp_route_domain_add                                         | definition changed
-gbp_route_domain_details                                     | definition changed
-gbp_subnet_add_del                                           | definition changed
-gbp_subnet_details                                           | definition changed
-geneve_add_del_tunnel                                        | definition changed
-geneve_tunnel_details                                        | definition changed
-gpe_add_del_fwd_entry                                        | definition changed
-gpe_add_del_native_fwd_rpath                                 | definition changed
-gpe_fwd_entries_get_reply                                    | definition changed
-gpe_fwd_entry_path_details                                   | definition changed
-gpe_native_fwd_rpaths_get_reply                              | definition changed
-gre_tunnel_add_del                                           | definition changed
-gre_tunnel_details                                           | definition changed
-gtpu_add_del_tunnel                                          | definition changed
-gtpu_tunnel_details                                          | definition changed
-gtpu_tunnel_update_tteid                                     | definition changed
-igmp_details                                                 | definition changed
-igmp_event                                                   | definition changed
-igmp_group_prefix_details                                    | definition changed
-igmp_group_prefix_set                                        | definition changed
-igmp_listen                                                  | definition changed
+gbp_bridge_domain_add                                        | message CRC32 fix
+gbp_bridge_domain_details                                    | message CRC32 fix
+gbp_contract_add_del                                         | message CRC32 fix
+gbp_contract_details                                         | message CRC32 fix
+gbp_endpoint_add                                             | message CRC32 fix
+gbp_endpoint_details                                         | message CRC32 fix
+gbp_endpoint_group_add                                       | message CRC32 fix
+gbp_endpoint_group_details                                   | message CRC32 fix
+gbp_ext_itf_add_del                                          | message CRC32 fix
+gbp_ext_itf_details                                          | message CRC32 fix
+gbp_route_domain_add                                         | message CRC32 fix
+gbp_route_domain_details                                     | message CRC32 fix
+gbp_subnet_add_del                                           | message CRC32 fix
+gbp_subnet_details                                           | message CRC32 fix
+geneve_add_del_tunnel                                        | message CRC32 fix
+geneve_tunnel_details                                        | message CRC32 fix
+gpe_add_del_fwd_entry                                        | message CRC32 fix
+gpe_add_del_native_fwd_rpath                                 | message CRC32 fix
+gpe_fwd_entries_get_reply                                    | message CRC32 fix
+gpe_fwd_entry_path_details                                   | message CRC32 fix
+gpe_native_fwd_rpaths_get_reply                              | message CRC32 fix
+gre_tunnel_add_del                                           | message CRC32 fix
+gre_tunnel_details                                           | message CRC32 fix
+gtpu_add_del_tunnel                                          | message CRC32 fix
+gtpu_tunnel_details                                          | message CRC32 fix
+gtpu_tunnel_update_tteid                                     | message CRC32 fix
+igmp_details                                                 | message CRC32 fix
+igmp_event                                                   | message CRC32 fix
+igmp_group_prefix_details                                    | message CRC32 fix
+igmp_group_prefix_set                                        | message CRC32 fix
+igmp_listen                                                  | message CRC32 fix
 ikev2_sa_details                                             | definition changed
 ikev2_set_responder_hostname                                 | only in image
 ikev2_set_responder_hostname_reply                           | only in image
-ioam_export_ip6_enable_disable                               | definition changed
-ip6_add_del_address_using_prefix                             | definition changed
-ip6_ra_event                                                 | definition changed
-ip6nd_proxy_add_del                                          | definition changed
-ip6nd_proxy_details                                          | definition changed
-ip_address_details                                           | definition changed
-ip_container_proxy_add_del                                   | definition changed
-ip_container_proxy_details                                   | definition changed
-ip_neighbor_add_del                                          | definition changed
-ip_neighbor_details                                          | definition changed
-ip_neighbor_dump                                             | definition changed
-ip_neighbor_event                                            | definition changed
+ioam_export_ip6_enable_disable                               | message CRC32 fix
+ip6_add_del_address_using_prefix                             | message CRC32 fix
+ip6_ra_event                                                 | message CRC32 fix
+ip6nd_proxy_add_del                                          | message CRC32 fix
+ip6nd_proxy_details                                          | message CRC32 fix
+ip_address_details                                           | message CRC32 fix
+ip_container_proxy_add_del                                   | message CRC32 fix
+ip_container_proxy_details                                   | message CRC32 fix
+ip_neighbor_add_del                                          | message CRC32 fix
+ip_neighbor_details                                          | message CRC32 fix
+ip_neighbor_dump                                             | message CRC32 fix
+ip_neighbor_event                                            | message CRC32 fix
 ip_path_mtu_details                                          | only in image
 ip_path_mtu_get                                              | only in image
 ip_path_mtu_get_reply                                        | only in image
@@ -289,101 +289,101 @@ ip_path_mtu_replace_end                                      | only in image
 ip_path_mtu_replace_end_reply                                | only in image
 ip_path_mtu_update                                           | only in image
 ip_path_mtu_update_reply                                     | only in image
-ip_punt_redirect                                             | definition changed
-ip_punt_redirect_details                                     | definition changed
-ip_reassembly_enable_disable                                 | definition changed
-ip_route_add_del                                             | definition changed
+ip_punt_redirect                                             | message CRC32 fix
+ip_punt_redirect_details                                     | message CRC32 fix
+ip_reassembly_enable_disable                                 | message CRC32 fix
+ip_route_add_del                                             | message CRC32 fix
 ip_route_add_del_v2                                          | only in image
 ip_route_add_del_v2_reply                                    | only in image
-ip_route_details                                             | definition changed
-ip_route_lookup                                              | definition changed
-ip_route_lookup_reply                                        | definition changed
+ip_route_details                                             | message CRC32 fix
+ip_route_lookup                                              | message CRC32 fix
+ip_route_lookup_reply                                        | message CRC32 fix
 ip_route_lookup_v2                                           | only in image
 ip_route_lookup_v2_reply                                     | only in image
 ip_route_v2_details                                          | only in image
 ip_route_v2_dump                                             | only in image
-ip_source_and_port_range_check_add_del                       | definition changed
-ip_unnumbered_details                                        | definition changed
-ipfix_exporter_details                                       | definition changed
-ipip_6rd_add_tunnel                                          | definition changed
-ipip_add_tunnel                                              | definition changed
-ipip_tunnel_details                                          | definition changed
-ipsec_sa_details                                             | definition changed
+ip_source_and_port_range_check_add_del                       | message CRC32 fix
+ip_unnumbered_details                                        | message CRC32 fix
+ipfix_exporter_details                                       | message CRC32 fix
+ipip_6rd_add_tunnel                                          | message CRC32 fix
+ipip_add_tunnel                                              | message CRC32 fix
+ipip_tunnel_details                                          | message CRC32 fix
+ipsec_sa_details                                             | message CRC32 fix
 ipsec_sa_v3_details                                          | only in image
 ipsec_sa_v3_dump                                             | only in image
-ipsec_sad_entry_add_del                                      | definition changed
+ipsec_sad_entry_add_del                                      | message CRC32 fix
 ipsec_sad_entry_add_del_v3                                   | only in image
 ipsec_sad_entry_add_del_v3_reply                             | only in image
-ipsec_spd_details                                            | definition changed
-ipsec_spd_entry_add_del                                      | definition changed
+ipsec_spd_details                                            | message CRC32 fix
+ipsec_spd_entry_add_del                                      | message CRC32 fix
 ipsec_tunnel_if_add_del                                      | only in file
 ipsec_tunnel_if_add_del_reply                                | only in file
 ipsec_tunnel_if_set_sa                                       | only in file
 ipsec_tunnel_if_set_sa_reply                                 | only in file
-ipsec_tunnel_protect_del                                     | definition changed
-ipsec_tunnel_protect_details                                 | definition changed
-ipsec_tunnel_protect_update                                  | definition changed
-l2_arp_term_event                                            | definition changed
-l2_fib_table_details                                         | definition changed
-l2_interface_pbb_tag_rewrite                                 | definition changed
-l2_macs_event                                                | definition changed
-l2_patch_add_del                                             | definition changed
-l2_xconnect_details                                          | definition changed
-l2fib_add_del                                                | definition changed
+ipsec_tunnel_protect_del                                     | message CRC32 fix
+ipsec_tunnel_protect_details                                 | message CRC32 fix
+ipsec_tunnel_protect_update                                  | message CRC32 fix
+l2_arp_term_event                                            | message CRC32 fix
+l2_fib_table_details                                         | message CRC32 fix
+l2_interface_pbb_tag_rewrite                                 | message CRC32 fix
+l2_macs_event                                                | message CRC32 fix
+l2_patch_add_del                                             | message CRC32 fix
+l2_xconnect_details                                          | message CRC32 fix
+l2fib_add_del                                                | message CRC32 fix
 l2fib_set_scan_delay                                         | only in image
 l2fib_set_scan_delay_reply                                   | only in image
-l2tpv3_create_tunnel                                         | definition changed
-l3xc_details                                                 | definition changed
-l3xc_update                                                  | definition changed
-lb_add_del_as                                                | definition changed
-lb_add_del_vip                                               | definition changed
-lb_as_details                                                | definition changed
-lb_conf                                                      | definition changed
-lb_vip_details                                               | definition changed
-lb_vip_dump                                                  | definition changed
-lisp_add_del_adjacency                                       | definition changed
-lisp_add_del_local_eid                                       | definition changed
-lisp_add_del_map_resolver                                    | definition changed
-lisp_add_del_map_server                                      | definition changed
-lisp_add_del_remote_mapping                                  | definition changed
-lisp_adjacencies_get_reply                                   | definition changed
-lisp_eid_table_details                                       | definition changed
-lisp_eid_table_dump                                          | definition changed
-lisp_locator_details                                         | definition changed
-lisp_map_resolver_details                                    | definition changed
-lisp_map_server_details                                      | definition changed
-lisp_use_petr                                                | definition changed
-log_details                                                  | definition changed
-macip_acl_add                                                | definition changed
-macip_acl_add_replace                                        | definition changed
-macip_acl_details                                            | definition changed
-mactime_add_del_range                                        | definition changed
-mactime_details                                              | definition changed
-map_add_domain                                               | definition changed
-map_domain_details                                           | definition changed
-map_param_add_del_pre_resolve                                | definition changed
-map_param_get_reply                                          | definition changed
-memif_details                                                | definition changed
-mfib_signal_details                                          | definition changed
+l2tpv3_create_tunnel                                         | message CRC32 fix
+l3xc_details                                                 | message CRC32 fix
+l3xc_update                                                  | message CRC32 fix
+lb_add_del_as                                                | message CRC32 fix
+lb_add_del_vip                                               | message CRC32 fix
+lb_as_details                                                | message CRC32 fix
+lb_conf                                                      | message CRC32 fix
+lb_vip_details                                               | message CRC32 fix
+lb_vip_dump                                                  | message CRC32 fix
+lisp_add_del_adjacency                                       | message CRC32 fix
+lisp_add_del_local_eid                                       | message CRC32 fix
+lisp_add_del_map_resolver                                    | message CRC32 fix
+lisp_add_del_map_server                                      | message CRC32 fix
+lisp_add_del_remote_mapping                                  | message CRC32 fix
+lisp_adjacencies_get_reply                                   | message CRC32 fix
+lisp_eid_table_details                                       | message CRC32 fix
+lisp_eid_table_dump                                          | message CRC32 fix
+lisp_locator_details                                         | message CRC32 fix
+lisp_map_resolver_details                                    | message CRC32 fix
+lisp_map_server_details                                      | message CRC32 fix
+lisp_use_petr                                                | message CRC32 fix
+log_details                                                  | message CRC32 fix
+macip_acl_add                                                | message CRC32 fix
+macip_acl_add_replace                                        | message CRC32 fix
+macip_acl_details                                            | message CRC32 fix
+mactime_add_del_range                                        | message CRC32 fix
+mactime_details                                              | message CRC32 fix
+map_add_domain                                               | message CRC32 fix
+map_domain_details                                           | message CRC32 fix
+map_param_add_del_pre_resolve                                | message CRC32 fix
+map_param_get_reply                                          | message CRC32 fix
+memif_details                                                | message CRC32 fix
+mfib_signal_details                                          | message CRC32 fix
 modify_vhost_user_if_v2                                      | only in image
 modify_vhost_user_if_v2_reply                                | only in image
-mpls_ip_bind_unbind                                          | definition changed
-mpls_route_add_del                                           | definition changed
-mpls_route_details                                           | definition changed
-mpls_tunnel_add_del                                          | definition changed
-mpls_tunnel_details                                          | definition changed
+mpls_ip_bind_unbind                                          | message CRC32 fix
+mpls_route_add_del                                           | message CRC32 fix
+mpls_route_details                                           | message CRC32 fix
+mpls_tunnel_add_del                                          | message CRC32 fix
+mpls_tunnel_details                                          | message CRC32 fix
 mss_clamp_details                                            | only in image
 mss_clamp_enable_disable                                     | only in image
 mss_clamp_enable_disable_reply                               | only in image
 mss_clamp_get                                                | only in image
 mss_clamp_get_reply                                          | only in image
-nat44_add_del_address_range                                  | definition changed
-nat44_add_del_identity_mapping                               | definition changed
-nat44_add_del_interface_addr                                 | definition changed
-nat44_add_del_lb_static_mapping                              | definition changed
-nat44_add_del_static_mapping                                 | definition changed
-nat44_address_details                                        | definition changed
-nat44_del_session                                            | definition changed
+nat44_add_del_address_range                                  | message CRC32 fix
+nat44_add_del_identity_mapping                               | message CRC32 fix
+nat44_add_del_interface_addr                                 | message CRC32 fix
+nat44_add_del_lb_static_mapping                              | message CRC32 fix
+nat44_add_del_static_mapping                                 | message CRC32 fix
+nat44_address_details                                        | message CRC32 fix
+nat44_del_session                                            | message CRC32 fix
 nat44_ed_plugin_enable_disable                               | only in image
 nat44_ed_plugin_enable_disable_reply                         | only in image
 nat44_ed_set_fq_options                                      | only in image
@@ -463,48 +463,48 @@ nat44_ei_user_session_details                                | only in image
 nat44_ei_user_session_dump                                   | only in image
 nat44_ei_worker_details                                      | only in image
 nat44_ei_worker_dump                                         | only in image
-nat44_identity_mapping_details                               | definition changed
-nat44_interface_addr_details                                 | definition changed
-nat44_lb_static_mapping_add_del_local                        | definition changed
-nat44_lb_static_mapping_details                              | definition changed
-nat44_static_mapping_details                                 | definition changed
-nat44_user_session_details                                   | definition changed
-nat64_add_del_pool_addr_range                                | definition changed
-nat64_add_del_static_bib                                     | definition changed
-nat64_bib_details                                            | definition changed
-nat64_st_details                                             | definition changed
-nat66_add_del_static_mapping                                 | definition changed
+nat44_identity_mapping_details                               | message CRC32 fix
+nat44_interface_addr_details                                 | message CRC32 fix
+nat44_lb_static_mapping_add_del_local                        | message CRC32 fix
+nat44_lb_static_mapping_details                              | message CRC32 fix
+nat44_static_mapping_details                                 | message CRC32 fix
+nat44_user_session_details                                   | message CRC32 fix
+nat64_add_del_pool_addr_range                                | message CRC32 fix
+nat64_add_del_static_bib                                     | message CRC32 fix
+nat64_bib_details                                            | message CRC32 fix
+nat64_st_details                                             | message CRC32 fix
+nat66_add_del_static_mapping                                 | message CRC32 fix
 nat66_plugin_enable_disable                                  | only in image
 nat66_plugin_enable_disable_reply                            | only in image
-nat66_static_mapping_details                                 | definition changed
-nat_det_add_del_map                                          | definition changed
-nat_det_close_session_in                                     | definition changed
-nat_det_close_session_out                                    | definition changed
-nat_det_map_details                                          | definition changed
-nsh_add_del_map                                              | definition changed
-nsh_map_details                                              | definition changed
-nsim_cross_connect_enable_disable                            | definition changed
-one_add_del_adjacency                                        | definition changed
-one_add_del_l2_arp_entry                                     | definition changed
-one_add_del_local_eid                                        | definition changed
-one_add_del_map_resolver                                     | definition changed
-one_add_del_map_server                                       | definition changed
-one_add_del_ndp_entry                                        | definition changed
-one_add_del_remote_mapping                                   | definition changed
-one_adjacencies_get_reply                                    | definition changed
-one_eid_table_details                                        | definition changed
-one_eid_table_dump                                           | definition changed
-one_l2_arp_entries_get_reply                                 | definition changed
-one_locator_details                                          | definition changed
-one_map_resolver_details                                     | definition changed
-one_map_server_details                                       | definition changed
-one_ndp_entries_get_reply                                    | definition changed
-one_stats_details                                            | definition changed
-one_use_petr                                                 | definition changed
-p2p_ethernet_add                                             | definition changed
-p2p_ethernet_del                                             | definition changed
-pipe_create_reply                                            | definition changed
-pipe_details                                                 | definition changed
+nat66_static_mapping_details                                 | message CRC32 fix
+nat_det_add_del_map                                          | message CRC32 fix
+nat_det_close_session_in                                     | message CRC32 fix
+nat_det_close_session_out                                    | message CRC32 fix
+nat_det_map_details                                          | message CRC32 fix
+nsh_add_del_map                                              | message CRC32 fix
+nsh_map_details                                              | message CRC32 fix
+nsim_cross_connect_enable_disable                            | message CRC32 fix
+one_add_del_adjacency                                        | message CRC32 fix
+one_add_del_l2_arp_entry                                     | message CRC32 fix
+one_add_del_local_eid                                        | message CRC32 fix
+one_add_del_map_resolver                                     | message CRC32 fix
+one_add_del_map_server                                       | message CRC32 fix
+one_add_del_ndp_entry                                        | message CRC32 fix
+one_add_del_remote_mapping                                   | message CRC32 fix
+one_adjacencies_get_reply                                    | message CRC32 fix
+one_eid_table_details                                        | message CRC32 fix
+one_eid_table_dump                                           | message CRC32 fix
+one_l2_arp_entries_get_reply                                 | message CRC32 fix
+one_locator_details                                          | message CRC32 fix
+one_map_resolver_details                                     | message CRC32 fix
+one_map_server_details                                       | message CRC32 fix
+one_ndp_entries_get_reply                                    | message CRC32 fix
+one_stats_details                                            | message CRC32 fix
+one_use_petr                                                 | message CRC32 fix
+p2p_ethernet_add                                             | message CRC32 fix
+p2p_ethernet_del                                             | message CRC32 fix
+pipe_create_reply                                            | message CRC32 fix
+pipe_details                                                 | message CRC32 fix
 pnat_binding_add                                             | only in image
 pnat_binding_add_reply                                       | only in image
 pnat_binding_attach                                          | only in image
@@ -519,109 +519,109 @@ pnat_bindings_get_reply                                      | only in image
 pnat_interfaces_details                                      | only in image
 pnat_interfaces_get                                          | only in image
 pnat_interfaces_get_reply                                    | only in image
-policer_add_del                                              | definition changed
+policer_add_del                                              | message CRC32 fix
 policer_bind                                                 | only in image
 policer_bind_reply                                           | only in image
-policer_details                                              | definition changed
+policer_details                                              | message CRC32 fix
 policer_input                                                | only in image
 policer_input_reply                                          | only in image
-pppoe_add_del_session                                        | definition changed
-pppoe_session_details                                        | definition changed
-proxy_arp_add_del                                            | definition changed
-proxy_arp_details                                            | definition changed
-punt_socket_deregister                                       | definition changed
-punt_socket_details                                          | definition changed
-punt_socket_register                                         | definition changed
-qos_record_details                                           | definition changed
-qos_record_enable_disable                                    | definition changed
-qos_store_details                                            | definition changed
-qos_store_enable_disable                                     | definition changed
+pppoe_add_del_session                                        | message CRC32 fix
+pppoe_session_details                                        | message CRC32 fix
+proxy_arp_add_del                                            | message CRC32 fix
+proxy_arp_details                                            | message CRC32 fix
+punt_socket_deregister                                       | message CRC32 fix
+punt_socket_details                                          | message CRC32 fix
+punt_socket_register                                         | message CRC32 fix
+qos_record_details                                           | message CRC32 fix
+qos_record_enable_disable                                    | message CRC32 fix
+qos_store_details                                            | message CRC32 fix
+qos_store_enable_disable                                     | message CRC32 fix
 rdma_create_v3                                               | only in image
 rdma_create_v3_reply                                         | only in image
-session_rule_add_del                                         | definition changed
-session_rules_details                                        | definition changed
+session_rule_add_del                                         | message CRC32 fix
+session_rules_details                                        | message CRC32 fix
 set_ip_flow_hash_router_id                                   | only in image
 set_ip_flow_hash_router_id_reply                             | only in image
 set_ip_flow_hash_v2                                          | only in image
 set_ip_flow_hash_v2_reply                                    | only in image
-set_ipfix_exporter                                           | definition changed
-set_punt                                                     | definition changed
-show_lisp_use_petr_reply                                     | definition changed
-show_one_use_petr_reply                                      | definition changed
-sr_localsid_add_del                                          | definition changed
-sr_localsids_details                                         | definition changed
-sr_mpls_policy_assign_endpoint_color                         | definition changed
-sr_mpls_steering_add_del                                     | definition changed
-sr_policies_details                                          | definition changed
-sr_policy_add                                                | definition changed
-sr_policy_mod                                                | definition changed
-sr_steering_add_del                                          | definition changed
-sr_steering_pol_details                                      | definition changed
-stn_add_del_rule                                             | definition changed
-stn_rules_details                                            | definition changed
-svs_details                                                  | definition changed
-svs_route_add_del                                            | definition changed
-sw_if_l2tpv3_tunnel_details                                  | definition changed
-sw_interface_add_del_address                                 | definition changed
-sw_interface_bond_details                                    | definition changed
-sw_interface_details                                         | definition changed
-sw_interface_event                                           | definition changed
+set_ipfix_exporter                                           | message CRC32 fix
+set_punt                                                     | message CRC32 fix
+show_lisp_use_petr_reply                                     | message CRC32 fix
+show_one_use_petr_reply                                      | message CRC32 fix
+sr_localsid_add_del                                          | message CRC32 fix
+sr_localsids_details                                         | message CRC32 fix
+sr_mpls_policy_assign_endpoint_color                         | message CRC32 fix
+sr_mpls_steering_add_del                                     | message CRC32 fix
+sr_policies_details                                          | message CRC32 fix
+sr_policy_add                                                | message CRC32 fix
+sr_policy_mod                                                | message CRC32 fix
+sr_steering_add_del                                          | message CRC32 fix
+sr_steering_pol_details                                      | message CRC32 fix
+stn_add_del_rule                                             | message CRC32 fix
+stn_rules_details                                            | message CRC32 fix
+svs_details                                                  | message CRC32 fix
+svs_route_add_del                                            | message CRC32 fix
+sw_if_l2tpv3_tunnel_details                                  | message CRC32 fix
+sw_interface_add_del_address                                 | message CRC32 fix
+sw_interface_bond_details                                    | message CRC32 fix
+sw_interface_details                                         | message CRC32 fix
+sw_interface_event                                           | message CRC32 fix
 sw_interface_ip6_get_link_local_address                      | only in image
 sw_interface_ip6_get_link_local_address_reply                | only in image
-sw_interface_ip6_set_link_local_address                      | definition changed
-sw_interface_ip6nd_ra_prefix                                 | definition changed
-sw_interface_lacp_details                                    | definition changed
-sw_interface_rx_placement_details                            | definition changed
-sw_interface_set_flags                                       | definition changed
-sw_interface_set_l2_bridge                                   | definition changed
-sw_interface_set_l2_xconnect                                 | definition changed
-sw_interface_set_lldp                                        | definition changed
-sw_interface_set_mac_address                                 | definition changed
+sw_interface_ip6_set_link_local_address                      | message CRC32 fix
+sw_interface_ip6nd_ra_prefix                                 | message CRC32 fix
+sw_interface_lacp_details                                    | message CRC32 fix
+sw_interface_rx_placement_details                            | message CRC32 fix
+sw_interface_set_flags                                       | message CRC32 fix
+sw_interface_set_l2_bridge                                   | message CRC32 fix
+sw_interface_set_l2_xconnect                                 | message CRC32 fix
+sw_interface_set_lldp                                        | message CRC32 fix
+sw_interface_set_mac_address                                 | message CRC32 fix
 sw_interface_set_promisc                                     | only in image
 sw_interface_set_promisc_reply                               | only in image
-sw_interface_set_rx_mode                                     | definition changed
-sw_interface_set_unnumbered                                  | definition changed
-sw_interface_span_details                                    | definition changed
-sw_interface_span_enable_disable                             | definition changed
-sw_interface_tap_v2_details                                  | definition changed
-sw_interface_vhost_user_details                              | definition changed
-sw_interface_virtio_pci_details                              | definition changed
-syslog_get_sender_reply                                      | definition changed
-syslog_set_sender                                            | definition changed
-tap_create_v2                                                | definition changed
-tcp_configure_src_addresses                                  | definition changed
-teib_details                                                 | definition changed
-teib_entry_add_del                                           | definition changed
-udp_encap_add                                                | definition changed
-udp_encap_details                                            | definition changed
-udp_ping_add_del                                             | definition changed
-virtio_pci_create                                            | definition changed
-vmxnet3_details                                              | definition changed
-vrrp_vr_add_del                                              | definition changed
-vrrp_vr_details                                              | definition changed
-vrrp_vr_peer_details                                         | definition changed
-vrrp_vr_set_peers                                            | definition changed
-vrrp_vr_track_if_add_del                                     | definition changed
-vrrp_vr_track_if_details                                     | definition changed
-vxlan_add_del_tunnel                                         | definition changed
+sw_interface_set_rx_mode                                     | message CRC32 fix
+sw_interface_set_unnumbered                                  | message CRC32 fix
+sw_interface_span_details                                    | message CRC32 fix
+sw_interface_span_enable_disable                             | message CRC32 fix
+sw_interface_tap_v2_details                                  | message CRC32 fix
+sw_interface_vhost_user_details                              | message CRC32 fix
+sw_interface_virtio_pci_details                              | message CRC32 fix
+syslog_get_sender_reply                                      | message CRC32 fix
+syslog_set_sender                                            | message CRC32 fix
+tap_create_v2                                                | message CRC32 fix
+tcp_configure_src_addresses                                  | message CRC32 fix
+teib_details                                                 | message CRC32 fix
+teib_entry_add_del                                           | message CRC32 fix
+udp_encap_add                                                | message CRC32 fix
+udp_encap_details                                            | message CRC32 fix
+udp_ping_add_del                                             | message CRC32 fix
+virtio_pci_create                                            | message CRC32 fix
+vmxnet3_details                                              | message CRC32 fix
+vrrp_vr_add_del                                              | message CRC32 fix
+vrrp_vr_details                                              | message CRC32 fix
+vrrp_vr_peer_details                                         | message CRC32 fix
+vrrp_vr_set_peers                                            | message CRC32 fix
+vrrp_vr_track_if_add_del                                     | message CRC32 fix
+vrrp_vr_track_if_details                                     | message CRC32 fix
+vxlan_add_del_tunnel                                         | message CRC32 fix
 vxlan_add_del_tunnel_v2                                      | only in image
 vxlan_add_del_tunnel_v2_reply                                | only in image
 vxlan_add_del_tunnel_v3                                      | only in image
 vxlan_add_del_tunnel_v3_reply                                | only in image
-vxlan_gbp_tunnel_add_del                                     | definition changed
-vxlan_gbp_tunnel_details                                     | definition changed
-vxlan_gpe_add_del_tunnel                                     | definition changed
-vxlan_gpe_ioam_export_enable_disable                         | definition changed
-vxlan_gpe_ioam_transit_disable                               | definition changed
-vxlan_gpe_ioam_transit_enable                                | definition changed
-vxlan_gpe_ioam_vni_disable                                   | definition changed
-vxlan_gpe_ioam_vni_enable                                    | definition changed
-vxlan_gpe_tunnel_details                                     | definition changed
-vxlan_offload_rx                                             | definition changed
-vxlan_tunnel_details                                         | definition changed
+vxlan_gbp_tunnel_add_del                                     | message CRC32 fix
+vxlan_gbp_tunnel_details                                     | message CRC32 fix
+vxlan_gpe_add_del_tunnel                                     | message CRC32 fix
+vxlan_gpe_ioam_export_enable_disable                         | message CRC32 fix
+vxlan_gpe_ioam_transit_disable                               | message CRC32 fix
+vxlan_gpe_ioam_transit_enable                                | message CRC32 fix
+vxlan_gpe_ioam_vni_disable                                   | message CRC32 fix
+vxlan_gpe_ioam_vni_enable                                    | message CRC32 fix
+vxlan_gpe_tunnel_details                                     | message CRC32 fix
+vxlan_offload_rx                                             | message CRC32 fix
+vxlan_tunnel_details                                         | message CRC32 fix
 vxlan_tunnel_v2_details                                      | only in image
 vxlan_tunnel_v2_dump                                         | only in image
-want_ip_neighbor_events                                      | definition changed
+want_ip_neighbor_events                                      | message CRC32 fix
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
