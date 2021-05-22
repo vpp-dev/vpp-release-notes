@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 763 commits since the previous release, including 351 fixes.
+More than 779 commits since the previous release, including 361 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Fri May 21 02:31:40 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Sat May 22 02:31:10 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -173,6 +173,7 @@ abf_policy_add_del                                           | message CRC32 fix
 abf_policy_details                                           | message CRC32 fix
 acl_add_replace                                              | message CRC32 fix
 acl_details                                                  | message CRC32 fix
+af_xdp_create                                                | definition changed
 arping                                                       | only in image
 arping_reply                                                 | only in image
 bd_ip_mac_add_del                                            | message CRC32 fix
@@ -625,7 +626,7 @@ want_ip_neighbor_events                                      | message CRC32 fix
 want_l2_macs_events2                                         | only in image
 want_l2_macs_events2_reply                                   | only in image
 
-Found 455 api message signature differences
+Found 456 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -1011,34 +1012,130 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/arping/arping.api ||
+| @c src/vnet/policer/policer_types.api ||
 | ------- | ------- |
-| [a77ae4708](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a77ae4708) | arping: add arping command |
+| [c5299ff30](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c5299ff30) | policer: remove SSE2 prefix |
+
+| @c src/vnet/policer/policer.api ||
+| ------- | ------- |
+| [b04683017](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b04683017) | policer: add api to configure input policing |
+| [48e26367c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=48e26367c) | policer: add api to bind policer to worker |
+
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [a5a9efd4d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5a9efd4d) | vcl session: switch to generic cert key apis |
+
+| @c src/vnet/ipfix-export/ipfix_export.api ||
+| ------- | ------- |
+| [baa18701b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=baa18701b) | misc: ipfix process node wait time adjustment |
+
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [f16e9a550](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f16e9a550) | ipsec: Support async mode per-SA |
+| [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
+| [751bb131e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=751bb131e) | Revert "ipsec: Use the new tunnel API types to add flow label and TTL copy" |
+| [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
+| [751bb131e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=751bb131e) | Revert "ipsec: Use the new tunnel API types to add flow label and TTL copy" |
+| [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
+| [a9e2774f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a9e2774f5) | ipsec: Deprecated the old IPsec Tunnel interface |
+| [95f59f380](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95f59f380) | ipsec: Mark the interface create reply deprecated |
+
+| @c src/vnet/devices/virtio/vhost_user.api ||
+| ------- | ------- |
+| [27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a) | vhost: Add event index for interrupt notification to driver |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be) | fib: Allow the creation of new source on the API |
+| [8f5fef2c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8f5fef2c7) | ip: Path MTU |
+| [3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82) | ip: Router ID included in flow hash |
+| [f2984bbb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2984bbb0) | ip: use IPv6 flowlabel in flow hash computation |
+| [58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5) | ip: add API to retrieve IPv6 link-layer address |
+
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035) | l2: Separating scan-delay and learn-limit into a separate API from want_l2_macs_events |
+| [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
+
+| @c src/vnet/flow/flow_types.api ||
+| ------- | ------- |
+| [91f102ed8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91f102ed8) | flow: The type of vni in VxLAN flow should be u32 |
+
+| @c src/vnet/flow/flow.api ||
+| ------- | ------- |
+| [c7e7819ad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7e7819ad) | flow: Add API implementation of IP4/IP6, IP4_VXLAN/IP6_VXLAN |
+
+| @c src/vnet/fib/fib_types.api ||
+| ------- | ------- |
+| [976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be) | fib: Allow the creation of new source on the API |
+
+| @c src/vnet/fib/fib.api ||
+| ------- | ------- |
+| [976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be) | fib: Allow the creation of new source on the API |
+
+| @c src/vnet/vxlan/vxlan.api ||
+| ------- | ------- |
+| [3e38422ab](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3e38422ab) | vxlan: Fix L3 mode |
+| [839dcc0fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839dcc0fb) | vxlan: add udp-port configuration support |
+
+| @c src/vnet/bfd/bfd.api ||
+| ------- | ------- |
+| [4376ab2a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4376ab2a9) | tests: use socket transport instead of shared memory |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [fd0b399ff](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd0b399ff) | interface: Add promisc on/off in api |
+
+| @c src/vnet/tunnel/tunnel_types.api ||
+| ------- | ------- |
+| [a91cb4590](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a91cb4590) | tunnel: support copying TTL and flow label from inner to outer |
+
+| @c src/vnet/interface_types.api ||
+| ------- | ------- |
+| [6a999d67d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a999d67d) | interface: RX/TX direction type in API |
+
+| @c src/vat2/test/vat2_test.api ||
+| ------- | ------- |
+| [ab9f57355](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab9f57355) | api: crchcecker ignore version < 1.0.0 and outside of src directory |
+| [71134f26a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=71134f26a) | vat2: jsonconvert return checking - coverity |
+| [93c4b1bb3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=93c4b1bb3) | vppapigen: more _fromjson autogeneration coverity fixes |
+| [316967cfa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=316967cfa) | vppapigen: fix coverity issues in jsonconvert |
+| [cf0102b3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cf0102b3b) | vppapigen: coverity issues in autogenerated code pass 3. |
+| [fb0afab7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fb0afab7f) | vppapigen: fix fromjson coverity errors in generation |
 
 | @c src/plugins/gbp/gbp.api ||
 | ------- | ------- |
 | [dc22c839f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dc22c839f) | tests: clean up gbp calls from vpp_papi_provider |
+
+| @c src/plugins/map/map.api ||
+| ------- | ------- |
+| [9302cfea9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9302cfea9) | vppapigen: Support an 'autoendian' keyword for message definitions in .api files |
+
+| @c src/plugins/arping/arping.api ||
+| ------- | ------- |
+| [a77ae4708](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a77ae4708) | arping: add arping command |
 
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [4376ab2a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4376ab2a9) | tests: use socket transport instead of shared memory |
 | [44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef) | linux-cp: Linux Interface Mirroring for Control Plane Integration |
 
-| @c src/plugins/cnat/cnat.api ||
+| @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
-| [516b0adf6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=516b0adf6) | cnat: Add calico/k8s src policy |
-| [3fd77f7de](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3fd77f7de) | cnat: Prepare extended snat policies |
-| [cc9a1a0d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cc9a1a0d3) | cnat: add input feature node |
-| [4d237874e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4d237874e) | cnat: Add maglev support |
-| [27647a27c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27647a27c) | cnat: fixes & prepare maglev |
+| [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
 
-| @c src/plugins/map/map.api ||
+| @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
-| [9302cfea9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9302cfea9) | vppapigen: Support an 'autoendian' keyword for message definitions in .api files |
+| [af2cc6425](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af2cc6425) | ikev2: support responder hostname |
+| [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
+| [fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39) | ikev2: use new counters data model & add more counters |
 
-| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
+| @c src/plugins/nat/det44/det44.api ||
 | ------- | ------- |
-| [e3f078fcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3f078fcf) | nat: fix byte order on ipfix message fields |
 | [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
@@ -1046,20 +1143,6 @@ please collaborate with the feature maintainer on their productization.
 | [e3f078fcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3f078fcf) | nat: fix byte order on ipfix message fields |
 | [e7a80a98b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e7a80a98b) | nat: NAT44ED fail if using old plugin option |
 | [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
-
-| @c src/plugins/nat/lib/nat_types.api ||
-| ------- | ------- |
-| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
-
-| @c src/plugins/nat/det44/det44.api ||
-| ------- | ------- |
-| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
-
-| @c src/plugins/nat/pnat/pnat.api ||
-| ------- | ------- |
-| [ec34fb772](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ec34fb772) | pnat: coverity errors |
-| [ab3151c52](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab3151c52) | nat: pnat copy and clear byte instructions |
-| [18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d) | nat: 1:1 policy NAT |
 
 | @c src/plugins/nat/nat64/nat64.api ||
 | ------- | ------- |
@@ -1070,6 +1153,25 @@ please collaborate with the feature maintainer on their productization.
 | [ed2ee5e57](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ed2ee5e57) | nat: NAT66 plugin enable&disable calls update |
 | [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
 
+| @c src/plugins/nat/pnat/pnat.api ||
+| ------- | ------- |
+| [ec34fb772](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ec34fb772) | pnat: coverity errors |
+| [ab3151c52](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab3151c52) | nat: pnat copy and clear byte instructions |
+| [18327be5d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18327be5d) | nat: 1:1 policy NAT |
+
+| @c src/plugins/nat/lib/nat_types.api ||
+| ------- | ------- |
+| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
+
+| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
+| ------- | ------- |
+| [e3f078fcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3f078fcf) | nat: fix byte order on ipfix message fields |
+| [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [a42c41be4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a42c41be4) | af_xdp: workaround kernel race between poll() and sendmsg() |
+
 | @c src/plugins/mss_clamp/mss_clamp.api ||
 | ------- | ------- |
 | [bf55e9931](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bf55e9931) | mss_clamp: TCP MSS clamping plugin |
@@ -1078,109 +1180,12 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [f5a45680e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f5a45680e) | rdma: add support for RSS configuration |
 
-| @c src/plugins/ikev2/ikev2.api ||
+| @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
-| [af2cc6425](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af2cc6425) | ikev2: support responder hostname |
-| [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
-| [fab5e7f39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fab5e7f39) | ikev2: use new counters data model & add more counters |
-
-| @c src/plugins/ikev2/ikev2_types.api ||
-| ------- | ------- |
-| [68d275356](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68d275356) | ikev2: add per SA stats |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be) | fib: Allow the creation of new source on the API |
-| [8f5fef2c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8f5fef2c7) | ip: Path MTU |
-| [3d5f08a82](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d5f08a82) | ip: Router ID included in flow hash |
-| [f2984bbb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2984bbb0) | ip: use IPv6 flowlabel in flow hash computation |
-| [58a1915b5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58a1915b5) | ip: add API to retrieve IPv6 link-layer address |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
-| [751bb131e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=751bb131e) | Revert "ipsec: Use the new tunnel API types to add flow label and TTL copy" |
-| [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
-| [a9e2774f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a9e2774f5) | ipsec: Deprecated the old IPsec Tunnel interface |
-| [95f59f380](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95f59f380) | ipsec: Mark the interface create reply deprecated |
-
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [f16e9a550](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f16e9a550) | ipsec: Support async mode per-SA |
-| [9ec846c26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ec846c26) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
-| [751bb131e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=751bb131e) | Revert "ipsec: Use the new tunnel API types to add flow label and TTL copy" |
-| [c7eaa711f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7eaa711f) | ipsec: Use the new tunnel API types to add flow label and TTL copy support |
-
-| @c src/vnet/fib/fib_types.api ||
-| ------- | ------- |
-| [976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be) | fib: Allow the creation of new source on the API |
-
-| @c src/vnet/fib/fib.api ||
-| ------- | ------- |
-| [976b259be](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=976b259be) | fib: Allow the creation of new source on the API |
-
-| @c src/vnet/session/session.api ||
-| ------- | ------- |
-| [a5a9efd4d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5a9efd4d) | vcl session: switch to generic cert key apis |
-
-| @c src/vnet/vxlan/vxlan.api ||
-| ------- | ------- |
-| [3e38422ab](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3e38422ab) | vxlan: Fix L3 mode |
-| [839dcc0fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839dcc0fb) | vxlan: add udp-port configuration support |
-
-| @c src/vnet/ipfix-export/ipfix_export.api ||
-| ------- | ------- |
-| [baa18701b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=baa18701b) | misc: ipfix process node wait time adjustment |
-
-| @c src/vnet/flow/flow_types.api ||
-| ------- | ------- |
-| [91f102ed8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91f102ed8) | flow: The type of vni in VxLAN flow should be u32 |
-
-| @c src/vnet/flow/flow.api ||
-| ------- | ------- |
-| [c7e7819ad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7e7819ad) | flow: Add API implementation of IP4/IP6, IP4_VXLAN/IP6_VXLAN |
-
-| @c src/vnet/bfd/bfd.api ||
-| ------- | ------- |
-| [4376ab2a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4376ab2a9) | tests: use socket transport instead of shared memory |
-
-| @c src/vnet/policer/policer_types.api ||
-| ------- | ------- |
-| [c5299ff30](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c5299ff30) | policer: remove SSE2 prefix |
-
-| @c src/vnet/policer/policer.api ||
-| ------- | ------- |
-| [b04683017](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b04683017) | policer: add api to configure input policing |
-| [48e26367c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=48e26367c) | policer: add api to bind policer to worker |
-
-| @c src/vnet/l2/l2.api ||
-| ------- | ------- |
-| [0f8d10035](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8d10035) | l2: Separating scan-delay and learn-limit into a separate API from want_l2_macs_events |
-| [5f93e3b7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f93e3b7f) | l2: add per bridge domain learn limit |
-
-| @c src/vnet/interface_types.api ||
-| ------- | ------- |
-| [6a999d67d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a999d67d) | interface: RX/TX direction type in API |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [fd0b399ff](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd0b399ff) | interface: Add promisc on/off in api |
-
-| @c src/vnet/devices/virtio/vhost_user.api ||
-| ------- | ------- |
-| [27ba5008a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27ba5008a) | vhost: Add event index for interrupt notification to driver |
-
-| @c src/vnet/tunnel/tunnel_types.api ||
-| ------- | ------- |
-| [a91cb4590](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a91cb4590) | tunnel: support copying TTL and flow label from inner to outer |
-
-| @c src/vat2/test/vat2_test.api ||
-| ------- | ------- |
-| [ab9f57355](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab9f57355) | api: crchcecker ignore version < 1.0.0 and outside of src directory |
-| [71134f26a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=71134f26a) | vat2: jsonconvert return checking - coverity |
-| [93c4b1bb3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=93c4b1bb3) | vppapigen: more _fromjson autogeneration coverity fixes |
-| [316967cfa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=316967cfa) | vppapigen: fix coverity issues in jsonconvert |
-| [cf0102b3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cf0102b3b) | vppapigen: coverity issues in autogenerated code pass 3. |
-| [fb0afab7f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fb0afab7f) | vppapigen: fix fromjson coverity errors in generation |
+| [516b0adf6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=516b0adf6) | cnat: Add calico/k8s src policy |
+| [3fd77f7de](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3fd77f7de) | cnat: Prepare extended snat policies |
+| [cc9a1a0d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cc9a1a0d3) | cnat: add input feature node |
+| [4d237874e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4d237874e) | cnat: Add maglev support |
+| [27647a27c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27647a27c) | cnat: fixes & prepare maglev |
 
 
