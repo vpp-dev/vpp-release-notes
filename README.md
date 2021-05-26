@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2106 Release notes for VPP 21.06
 
-More than 782 commits since the previous release, including 362 fixes.
+More than 787 commits since the previous release, including 364 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Tue May 25 02:43:10 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.06 release, generated as on Wed May 26 03:05:31 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -87,6 +87,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Update quicly to v0.1.3 ([db36fda74](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db36fda74))
   - RDMA (ibverb) driver
     - Add support for RSS configuration ([f5a45680e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f5a45680e))
+  - SRTP
+    - Basic implementation based on libsrtp2 ([6621abf49](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6621abf49))
   - TCP MSS Clamping
     - TCP MSS clamping plugin ([bf55e9931](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bf55e9931))
   - Linux-cp
@@ -1121,6 +1123,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
+| [6bb77dec7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6bb77dec7) | linux-cp: A V2 variant of pair create API that returns the host interface created |
 | [4376ab2a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4376ab2a9) | tests: use socket transport instead of shared memory |
 | [44db1caef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44db1caef) | linux-cp: Linux Interface Mirroring for Control Plane Integration |
 
@@ -1165,6 +1168,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/nat44-ei/nat44_ei.api ||
 | ------- | ------- |
+| [01930f568](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01930f568) | nat: report correct EI per-user session limit |
 | [e3f078fcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3f078fcf) | nat: fix byte order on ipfix message fields |
 | [0eaf4e678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0eaf4e678) | nat: Final NAT44 EI/ED split patch |
 
