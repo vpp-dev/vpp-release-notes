@@ -40,16 +40,22 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 3 commits since the previous release, including 3 fixes.
+More than 8 commits since the previous release, including 3 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Thu May 27 03:23:44 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Fri May 28 03:48:08 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - DPDK
+    - Bump to 21.05 ([9303b1089](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9303b1089))
+- VNET
+  - IPv4 LPM
+    - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
 
 ## Known issues
 
@@ -70,9 +76,6 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
-Message Name                                                 | Result
--------------------------------------------------------------|------------------
-No api message signature differences found.
 
 
 ### Newly deprecated API messages
