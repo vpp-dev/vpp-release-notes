@@ -1,10 +1,10 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 53 commits since the previous release, including 41 fixes.
+More than 57 commits since the previous release, including 41 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Mon Jun 14 02:14:18 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Tue Jun 15 02:18:41 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -16,6 +16,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - IPv4 LPM
     - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
+  - Packet Generator
+    - A Tunnel mode variant of a pg interface ([6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730))
   - UDP
     - Add udp decapsulation ([8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394))
 
@@ -38,12 +40,6 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
-Message Name                                                 | Result
--------------------------------------------------------------|------------------
-udp_decap_add_del                                            | only in image
-udp_decap_add_del_reply                                      | only in image
-
-Found 2 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -367,6 +363,10 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/vnet/pg/pg.api ||
+| ------- | ------- |
+| [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
 
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
