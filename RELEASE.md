@@ -1,10 +1,10 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 59 commits since the previous release, including 43 fixes.
+More than 73 commits since the previous release, including 51 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Wed Jun 16 02:14:17 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Jun 19 02:16:22 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -18,8 +18,12 @@ HIGHLIGHTS-PLACEHOLDER
     - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
   - Packet Generator
     - A Tunnel mode variant of a pg interface ([6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730))
+  - Session Layer
+    - Optimize ct fifo segment allocations ([da78c5abc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da78c5abc))
   - UDP
     - Add udp decapsulation ([8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394))
+- VPP Comms Library
+  - Basic support for epoll level-triggered evts ([fe286f7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe286f7d1))
 
 ## Known issues
 
@@ -364,12 +368,12 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/pg/pg.api ||
-| ------- | ------- |
-| [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
-
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
 | [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
+
+| @c src/vnet/pg/pg.api ||
+| ------- | ------- |
+| [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
 
 
