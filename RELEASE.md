@@ -1,10 +1,10 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 123 commits since the previous release, including 70 fixes.
+More than 133 commits since the previous release, including 76 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Mon Jun 28 02:06:51 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Wed Jun 30 02:09:10 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -46,12 +46,16 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+ipsec_sad_entry_add                                          | only in image
+ipsec_sad_entry_add_reply                                    | only in image
+ipsec_sad_entry_del                                          | only in image
+ipsec_sad_entry_del_reply                                    | only in image
 pg_create_interface_v2                                       | only in image
 pg_create_interface_v2_reply                                 | only in image
 udp_decap_add_del                                            | only in image
 udp_decap_add_del_reply                                      | only in image
 
-Found 4 api message signature differences
+Found 8 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -379,6 +383,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
 | [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [ff2e4138c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff2e4138c) | ipsec: Split the SA add_del API into an separate add and del |
 
 | @c src/vnet/pg/pg.api ||
 | ------- | ------- |
