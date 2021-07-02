@@ -1,10 +1,10 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 133 commits since the previous release, including 76 fixes.
+More than 140 commits since the previous release, including 80 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Wed Jun 30 02:09:10 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Fri Jul  2 02:06:37 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - DPDK
     - Bump to 21.05 ([9303b1089](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9303b1089))
+  - Vmxnet3 device driver
+    - Support manual thread assignment to tx queue ([a57a7005d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a57a7005d))
 - VNET
   - IPv4 LPM
     - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
@@ -380,6 +382,10 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/pg/pg.api ||
+| ------- | ------- |
+| [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
+
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
 | [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
@@ -388,8 +394,8 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [ff2e4138c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff2e4138c) | ipsec: Split the SA add_del API into an separate add and del |
 
-| @c src/vnet/pg/pg.api ||
+| @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
-| [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
+| [53dd08c59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53dd08c59) | ipsec: Derive the TUNNEL_V6 flag from the configured address types |
 
 
