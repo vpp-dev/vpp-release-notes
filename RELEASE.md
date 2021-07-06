@@ -4,7 +4,7 @@ More than 147 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Mon Jul  5 02:04:05 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Tue Jul  6 02:06:11 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
