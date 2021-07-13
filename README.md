@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 158 commits since the previous release, including 90 fixes.
+More than 160 commits since the previous release, including 90 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Jul 10 02:02:10 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Tue Jul 13 02:06:54 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Bump to 21.05 ([9303b1089](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9303b1089))
   - Vmxnet3 device driver
     - Support manual thread assignment to tx queue ([a57a7005d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a57a7005d))
+- Python binding for the VPP API
+  - Remove shared memory transport ([041372b79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041372b79))
 - VNET
   - IPv4 LPM
     - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
