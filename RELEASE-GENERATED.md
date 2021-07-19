@@ -1,18 +1,22 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 177 commits since the previous release, including 97 fixes.
+More than 191 commits since the previous release, including 102 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Thu Jul 15 02:06:33 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Mon Jul 19 02:07:40 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Infrastructure Library
+  - Add array mask func ([0ec7dad7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0ec7dad7a))
 - Plugins
   - DPDK
     - Bump to 21.05 ([9303b1089](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9303b1089))
+  - Snort plugin
+    - Snort3 plugin and DAQ ([839b1473e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839b1473e))
   - Vmxnet3 device driver
     - Support manual thread assignment to tx queue ([a57a7005d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a57a7005d))
 - Python binding for the VPP API
