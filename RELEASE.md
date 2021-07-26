@@ -1,10 +1,10 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 192 commits since the previous release, including 103 fixes.
+More than 203 commits since the previous release, including 108 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Wed Jul 21 10:28:59 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Mon Jul 26 02:08:36 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -12,6 +12,7 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Infrastructure Library
   - Add array mask func ([0ec7dad7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0ec7dad7a))
+  - Add abstract socket & netns fns ([4cef6de59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4cef6de59))
 - Plugins
   - DPDK
     - Bump to 21.05 ([9303b1089](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9303b1089))
@@ -28,6 +29,7 @@ HIGHLIGHTS-PLACEHOLDER
     - A Tunnel mode variant of a pg interface ([6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730))
   - Session Layer
     - Optimize ct fifo segment allocations ([da78c5abc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da78c5abc))
+    - Support abstract sockets for app ns ([7cb471a02](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cb471a02))
   - UDP
     - Add udp decapsulation ([8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394))
 - VPP Comms Library
@@ -52,18 +54,6 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
-Message Name                                                 | Result
--------------------------------------------------------------|------------------
-ipsec_sad_entry_add                                          | only in image
-ipsec_sad_entry_add_reply                                    | only in image
-ipsec_sad_entry_del                                          | only in image
-ipsec_sad_entry_del_reply                                    | only in image
-pg_create_interface_v2                                       | only in image
-pg_create_interface_v2_reply                                 | only in image
-udp_decap_add_del                                            | only in image
-udp_decap_add_del_reply                                      | only in image
-
-Found 8 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -71,6 +61,8 @@ Found 8 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- app_namespace_add_del
+- app_namespace_add_del_reply
 
 ### In-progress API messages
 
@@ -391,6 +383,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/pg/pg.api ||
 | ------- | ------- |
 | [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
+
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [7cb471a02](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cb471a02) | session vcl: support abstract sockets for app ns |
 
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
