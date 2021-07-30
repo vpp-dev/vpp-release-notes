@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 211 commits since the previous release, including 114 fixes.
+More than 216 commits since the previous release, including 115 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Thu Jul 29 02:08:21 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Fri Jul 30 02:12:31 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -94,6 +94,20 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+app_namespace_add_del_v2                                     | only in image
+app_namespace_add_del_v2_reply                               | only in image
+ipsec_sad_entry_add                                          | only in image
+ipsec_sad_entry_add_reply                                    | only in image
+ipsec_sad_entry_del                                          | only in image
+ipsec_sad_entry_del_reply                                    | only in image
+pg_create_interface_v2                                       | only in image
+pg_create_interface_v2_reply                                 | only in image
+udp_decap_add_del                                            | only in image
+udp_decap_add_del_reply                                      | only in image
+
+Found 10 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -420,6 +434,14 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [53dd08c59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53dd08c59) | ipsec: Derive the TUNNEL_V6 flag from the configured address types |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [ff2e4138c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff2e4138c) | ipsec: Split the SA add_del API into an separate add and del |
+
 | @c src/vnet/pg/pg.api ||
 | ------- | ------- |
 | [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
@@ -431,13 +453,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
 | [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [ff2e4138c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff2e4138c) | ipsec: Split the SA add_del API into an separate add and del |
-
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [53dd08c59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53dd08c59) | ipsec: Derive the TUNNEL_V6 flag from the configured address types |
 
 
