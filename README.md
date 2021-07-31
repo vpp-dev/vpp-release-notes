@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 216 commits since the previous release, including 115 fixes.
+More than 217 commits since the previous release, including 116 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Fri Jul 30 02:12:31 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Jul 31 02:05:06 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
