@@ -1,10 +1,10 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 236 commits since the previous release, including 131 fixes.
+More than 241 commits since the previous release, including 131 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Wed Aug 11 02:02:39 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Thu Aug 12 02:03:49 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -23,6 +23,9 @@ HIGHLIGHTS-PLACEHOLDER
 - Python binding for the VPP API
   - Remove shared memory transport ([041372b79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041372b79))
 - VNET
+  - FIB
+    - A 16-8-8 and a 8-8-8-8 versions of an ip4\_fib\_t ([d6953332d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d6953332d))
+    - Compiile time option to use 8-8-8-8 stride tries for FIB rather than 16-8-8-8 ([a70b015ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a70b015ce))
   - IPv4 LPM
     - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
   - Packet Generator
@@ -54,6 +57,20 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+app_namespace_add_del_v2                                     | only in image
+app_namespace_add_del_v2_reply                               | only in image
+ipsec_sad_entry_add                                          | only in image
+ipsec_sad_entry_add_reply                                    | only in image
+ipsec_sad_entry_del                                          | only in image
+ipsec_sad_entry_del_reply                                    | only in image
+pg_create_interface_v2                                       | only in image
+pg_create_interface_v2_reply                                 | only in image
+udp_decap_add_del                                            | only in image
+udp_decap_add_del_reply                                      | only in image
+
+Found 10 api message signature differences
 
 
 ### Newly deprecated API messages
