@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 241 commits since the previous release, including 131 fixes.
+More than 251 commits since the previous release, including 134 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Thu Aug 12 02:03:49 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Aug 14 02:01:03 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -68,6 +68,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Compiile time option to use 8-8-8-8 stride tries for FIB rather than 16-8-8-8 ([a70b015ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a70b015ce))
   - IPv4 LPM
     - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
+    - Source address selection ([8034a36a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8034a36a9))
+    - Punt redirect add nh in api ([2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6))
   - Packet Generator
     - A Tunnel mode variant of a pg interface ([6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730))
   - Session Layer
@@ -99,8 +101,12 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+add_del_ip_punt_redirect_v2                                  | only in image
+add_del_ip_punt_redirect_v2_reply                            | only in image
 app_namespace_add_del_v2                                     | only in image
 app_namespace_add_del_v2_reply                               | only in image
+ip_punt_redirect_v2_details                                  | only in image
+ip_punt_redirect_v2_dump                                     | only in image
 ipsec_sad_entry_add                                          | only in image
 ipsec_sad_entry_add_reply                                    | only in image
 ipsec_sad_entry_del                                          | only in image
@@ -110,7 +116,7 @@ pg_create_interface_v2_reply                                 | only in image
 udp_decap_add_del                                            | only in image
 udp_decap_add_del_reply                                      | only in image
 
-Found 10 api message signature differences
+Found 14 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -120,6 +126,8 @@ will disappear in the next release.
 
 - app_namespace_add_del
 - app_namespace_add_del_reply
+- ip_punt_redirect
+- ip_punt_redirect_reply
 
 ### In-progress API messages
 
@@ -444,6 +452,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [ff2e4138c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff2e4138c) | ipsec: Split the SA add_del API into an separate add and del |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6) | ip: punt redirect add nh in api |
 
 | @c src/vnet/pg/pg.api ||
 | ------- | ------- |
