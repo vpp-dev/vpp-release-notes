@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 252 commits since the previous release, including 135 fixes.
+More than 253 commits since the previous release, including 135 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sun Aug 15 02:02:27 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Tue Aug 17 02:02:43 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -99,6 +99,24 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+add_del_ip_punt_redirect_v2                                  | only in image
+add_del_ip_punt_redirect_v2_reply                            | only in image
+app_namespace_add_del_v2                                     | only in image
+app_namespace_add_del_v2_reply                               | only in image
+ip_punt_redirect_v2_details                                  | only in image
+ip_punt_redirect_v2_dump                                     | only in image
+ipsec_sad_entry_add                                          | only in image
+ipsec_sad_entry_add_reply                                    | only in image
+ipsec_sad_entry_del                                          | only in image
+ipsec_sad_entry_del_reply                                    | only in image
+pg_create_interface_v2                                       | only in image
+pg_create_interface_v2_reply                                 | only in image
+udp_decap_add_del                                            | only in image
+udp_decap_add_del_reply                                      | only in image
+
+Found 14 api message signature differences
 
 
 ### Newly deprecated API messages
