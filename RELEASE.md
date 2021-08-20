@@ -1,10 +1,10 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 260 commits since the previous release, including 140 fixes.
+More than 262 commits since the previous release, including 141 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Thu Aug 19 01:58:35 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Fri Aug 20 02:01:53 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -59,24 +59,6 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
-Message Name                                                 | Result
--------------------------------------------------------------|------------------
-add_del_ip_punt_redirect_v2                                  | only in image
-add_del_ip_punt_redirect_v2_reply                            | only in image
-app_namespace_add_del_v2                                     | only in image
-app_namespace_add_del_v2_reply                               | only in image
-ip_punt_redirect_v2_details                                  | only in image
-ip_punt_redirect_v2_dump                                     | only in image
-ipsec_sad_entry_add                                          | only in image
-ipsec_sad_entry_add_reply                                    | only in image
-ipsec_sad_entry_del                                          | only in image
-ipsec_sad_entry_del_reply                                    | only in image
-pg_create_interface_v2                                       | only in image
-pg_create_interface_v2_reply                                 | only in image
-udp_decap_add_del                                            | only in image
-udp_decap_add_del_reply                                      | only in image
-
-Found 14 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -109,6 +91,10 @@ please collaborate with the feature maintainer on their productization.
 - abf_policy_add_del_reply
 - abf_policy_details
 - abf_policy_dump
+- acl_plugin_use_hash_lookup_get
+- acl_plugin_use_hash_lookup_get_reply
+- acl_plugin_use_hash_lookup_set
+- acl_plugin_use_hash_lookup_set_reply
 - adl_allowlist_enable_disable
 - adl_allowlist_enable_disable_reply
 - adl_interface_enable_disable
@@ -404,6 +390,10 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/plugins/acl/acl.api ||
+| ------- | ------- |
+| [1d342b9c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d342b9c8) | acl: add API call for setting the toggle to select between linear and bihash-based lookups |
 
 | @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
