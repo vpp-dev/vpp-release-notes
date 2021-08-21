@@ -1,10 +1,10 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 262 commits since the previous release, including 141 fixes.
+More than 272 commits since the previous release, including 148 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Fri Aug 20 02:01:53 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Aug 21 02:01:51 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -59,6 +59,28 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+acl_plugin_use_hash_lookup_get                               | only in image
+acl_plugin_use_hash_lookup_get_reply                         | only in image
+acl_plugin_use_hash_lookup_set                               | only in image
+acl_plugin_use_hash_lookup_set_reply                         | only in image
+add_del_ip_punt_redirect_v2                                  | only in image
+add_del_ip_punt_redirect_v2_reply                            | only in image
+app_namespace_add_del_v2                                     | only in image
+app_namespace_add_del_v2_reply                               | only in image
+ip_punt_redirect_v2_details                                  | only in image
+ip_punt_redirect_v2_dump                                     | only in image
+ipsec_sad_entry_add                                          | only in image
+ipsec_sad_entry_add_reply                                    | only in image
+ipsec_sad_entry_del                                          | only in image
+ipsec_sad_entry_del_reply                                    | only in image
+pg_create_interface_v2                                       | only in image
+pg_create_interface_v2_reply                                 | only in image
+udp_decap_add_del                                            | only in image
+udp_decap_add_del_reply                                      | only in image
+
+Found 18 api message signature differences
 
 
 ### Newly deprecated API messages
