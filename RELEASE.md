@@ -1,10 +1,10 @@
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 274 commits since the previous release, including 150 fixes.
+More than 280 commits since the previous release, including 153 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Thu Aug 26 02:00:36 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Fri Aug 27 02:06:04 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -32,6 +32,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Punt redirect add nh in api ([2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6))
   - Packet Generator
     - A Tunnel mode variant of a pg interface ([6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730))
+  - Segment Routing (IPv6 and MPLS)
+    - Extend the srv6 sid list structure ([ad8b82d83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ad8b82d83))
   - Session Layer
     - Optimize ct fifo segment allocations ([da78c5abc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da78c5abc))
     - Support abstract sockets for app ns ([7cb471a02](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cb471a02))
@@ -59,6 +61,28 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+acl_plugin_use_hash_lookup_get                               | only in image
+acl_plugin_use_hash_lookup_get_reply                         | only in image
+acl_plugin_use_hash_lookup_set                               | only in image
+acl_plugin_use_hash_lookup_set_reply                         | only in image
+add_del_ip_punt_redirect_v2                                  | only in image
+add_del_ip_punt_redirect_v2_reply                            | only in image
+app_namespace_add_del_v2                                     | only in image
+app_namespace_add_del_v2_reply                               | only in image
+ip_punt_redirect_v2_details                                  | only in image
+ip_punt_redirect_v2_dump                                     | only in image
+ipsec_sad_entry_add                                          | only in image
+ipsec_sad_entry_add_reply                                    | only in image
+ipsec_sad_entry_del                                          | only in image
+ipsec_sad_entry_del_reply                                    | only in image
+pg_create_interface_v2                                       | only in image
+pg_create_interface_v2_reply                                 | only in image
+udp_decap_add_del                                            | only in image
+udp_decap_add_del_reply                                      | only in image
+
+Found 18 api message signature differences
 
 
 ### Newly deprecated API messages
