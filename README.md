@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 280 commits since the previous release, including 153 fixes.
+More than 285 commits since the previous release, including 156 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Fri Aug 27 02:06:04 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Aug 28 01:59:23 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -56,6 +56,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - DPDK
     - Bump to 21.05 ([9303b1089](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9303b1089))
+  - Bufmon
+    - Add buffer monitoring plugin ([e09a2337b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e09a2337b))
   - Snort plugin
     - Snort3 plugin and DAQ ([839b1473e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839b1473e))
   - Vmxnet3 device driver
