@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 285 commits since the previous release, including 156 fixes.
+More than 300 commits since the previous release, including 162 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Aug 28 01:59:23 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Wed Sep  1 02:08:16 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -56,6 +56,7 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - DPDK
     - Bump to 21.05 ([9303b1089](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9303b1089))
+    - Bump to 21.08 ([8990f095a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8990f095a))
   - Bufmon
     - Add buffer monitoring plugin ([e09a2337b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e09a2337b))
   - Snort plugin
@@ -68,6 +69,8 @@ HIGHLIGHTS-PLACEHOLDER
   - FIB
     - A 16-8-8 and a 8-8-8-8 versions of an ip4\_fib\_t ([d6953332d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d6953332d))
     - Compiile time option to use 8-8-8-8 stride tries for FIB rather than 16-8-8-8 ([a70b015ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a70b015ce))
+  - FLOW
+    - Add esp spi rss type ([da6520b4e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da6520b4e))
   - IPv4 LPM
     - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
     - Source address selection ([8034a36a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8034a36a9))
