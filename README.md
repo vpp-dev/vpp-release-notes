@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 300 commits since the previous release, including 162 fixes.
+More than 304 commits since the previous release, including 164 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Wed Sep  1 02:08:16 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Sep  4 02:04:24 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -464,28 +464,28 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [1d342b9c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d342b9c8) | acl: add API call for setting the toggle to select between linear and bihash-based lookups |
 
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [53dd08c59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53dd08c59) | ipsec: Derive the TUNNEL_V6 flag from the configured address types |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [ff2e4138c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff2e4138c) | ipsec: Split the SA add_del API into an separate add and del |
-
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6) | ip: punt redirect add nh in api |
 
-| @c src/vnet/pg/pg.api ||
+| @c src/vnet/udp/udp.api ||
 | ------- | ------- |
-| [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
+| [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
 | [7cb471a02](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cb471a02) | session vcl: support abstract sockets for app ns |
 
-| @c src/vnet/udp/udp.api ||
+| @c src/vnet/pg/pg.api ||
 | ------- | ------- |
-| [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
+| [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [ff2e4138c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff2e4138c) | ipsec: Split the SA add_del API into an separate add and del |
+
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [53dd08c59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53dd08c59) | ipsec: Derive the TUNNEL_V6 flag from the configured address types |
 
 
