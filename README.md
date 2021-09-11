@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 304 commits since the previous release, including 164 fixes.
+More than 329 commits since the previous release, including 177 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Mon Sep  6 02:08:03 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Sep 11 02:02:17 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -59,6 +59,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Bump to 21.08 ([8990f095a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8990f095a))
   - Bufmon
     - Add buffer monitoring plugin ([e09a2337b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e09a2337b))
+  - Performance counter
+    - Adding support for papi TMAM ([c3cb2075d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c3cb2075d))
   - Snort plugin
     - Snort3 plugin and DAQ ([839b1473e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839b1473e))
   - Vmxnet3 device driver
@@ -75,6 +77,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
     - Source address selection ([8034a36a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8034a36a9))
     - Punt redirect add nh in api ([2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6))
+  - Interface Common
+    - Add custom interface name support ([f49734d3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f49734d3b))
   - Packet Generator
     - A Tunnel mode variant of a pg interface ([6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730))
   - Segment Routing (IPv6 and MPLS)
@@ -124,10 +128,12 @@ ipsec_sad_entry_del                                          | only in image
 ipsec_sad_entry_del_reply                                    | only in image
 pg_create_interface_v2                                       | only in image
 pg_create_interface_v2_reply                                 | only in image
+sw_interface_set_interface_name                              | only in image
+sw_interface_set_interface_name_reply                        | only in image
 udp_decap_add_del                                            | only in image
 udp_decap_add_del_reply                                      | only in image
 
-Found 18 api message signature differences
+Found 20 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -460,6 +466,11 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [2ac5c11cd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ac5c11cd) | nat: Revert "nat: nat44-ed add session timing out indicator in api" |
+| [f059a3452](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f059a3452) | nat: nat44-ed add session timing out indicator in api |
+
 | @c src/plugins/acl/acl.api ||
 | ------- | ------- |
 | [1d342b9c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d342b9c8) | acl: add API call for setting the toggle to select between linear and bihash-based lookups |
@@ -471,6 +482,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
 | [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [f49734d3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f49734d3b) | interface: add custom interface name support |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
