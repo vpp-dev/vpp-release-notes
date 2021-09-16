@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 329 commits since the previous release, including 177 fixes.
+More than 340 commits since the previous release, including 183 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Mon Sep 13 02:05:25 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Thu Sep 16 02:10:03 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -77,6 +77,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
     - Source address selection ([8034a36a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8034a36a9))
     - Punt redirect add nh in api ([2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6))
+    - Show ip table CLI ([14b472e37](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14b472e37))
   - Interface Common
     - Add custom interface name support ([f49734d3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f49734d3b))
   - Packet Generator
