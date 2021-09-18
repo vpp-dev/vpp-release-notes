@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2110 Release notes for VPP 21.10
 
-More than 340 commits since the previous release, including 183 fixes.
+More than 353 commits since the previous release, including 187 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Thu Sep 16 02:10:03 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Sep 18 02:07:37 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,7 @@ HIGHLIGHTS-PLACEHOLDER
 - Infrastructure Library
   - Add array mask func ([0ec7dad7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0ec7dad7a))
   - Add abstract socket & netns fns ([4cef6de59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4cef6de59))
+  - Move format\_table from perfmon ([0e6584014](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e6584014))
 - Plugins
   - DPDK
     - Bump to 21.05 ([9303b1089](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9303b1089))
@@ -68,6 +69,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Python binding for the VPP API
   - Remove shared memory transport ([041372b79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041372b79))
 - VNET
+  - - IP6 Neighbor Discovery
+    - Add ip6-nd proxy ([cebb47733](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cebb47733))
   - FIB
     - A 16-8-8 and a 8-8-8-8 versions of an ip4\_fib\_t ([d6953332d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d6953332d))
     - Compiile time option to use 8-8-8-8 stride tries for FIB rather than 16-8-8-8 ([a70b015ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a70b015ce))
@@ -87,6 +90,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Session Layer
     - Optimize ct fifo segment allocations ([da78c5abc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da78c5abc))
     - Support abstract sockets for app ns ([7cb471a02](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cb471a02))
+    - Add sock\_name option to add\_ns ([1a9e2f96d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1a9e2f96d))
   - UDP
     - Add udp decapsulation ([8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394))
 - VPP Comms Library
@@ -121,6 +125,10 @@ add_del_ip_punt_redirect_v2                                  | only in image
 add_del_ip_punt_redirect_v2_reply                            | only in image
 app_namespace_add_del_v2                                     | only in image
 app_namespace_add_del_v2_reply                               | only in image
+app_namespace_add_del_v3                                     | only in image
+app_namespace_add_del_v3_reply                               | only in image
+ip6nd_proxy_enable_disable                                   | only in image
+ip6nd_proxy_enable_disable_reply                             | only in image
 ip_punt_redirect_v2_details                                  | only in image
 ip_punt_redirect_v2_dump                                     | only in image
 ipsec_sad_entry_add                                          | only in image
@@ -134,7 +142,7 @@ sw_interface_set_interface_name_reply                        | only in image
 udp_decap_add_del                                            | only in image
 udp_decap_add_del_reply                                      | only in image
 
-Found 20 api message signature differences
+Found 24 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -467,29 +475,9 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
-| ------- | ------- |
-| [2ac5c11cd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ac5c11cd) | nat: Revert "nat: nat44-ed add session timing out indicator in api" |
-| [f059a3452](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f059a3452) | nat: nat44-ed add session timing out indicator in api |
-
-| @c src/plugins/acl/acl.api ||
-| ------- | ------- |
-| [1d342b9c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d342b9c8) | acl: add API call for setting the toggle to select between linear and bihash-based lookups |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6) | ip: punt redirect add nh in api |
-
-| @c src/vnet/udp/udp.api ||
-| ------- | ------- |
-| [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [f49734d3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f49734d3b) | interface: add custom interface name support |
-
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
+| [1a9e2f96d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1a9e2f96d) | session: Add sock_name option to add_ns |
 | [7cb471a02](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cb471a02) | session vcl: support abstract sockets for app ns |
 
 | @c src/vnet/pg/pg.api ||
@@ -503,5 +491,30 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
 | [53dd08c59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53dd08c59) | ipsec: Derive the TUNNEL_V6 flag from the configured address types |
+
+| @c src/vnet/ip6-nd/ip6_nd.api ||
+| ------- | ------- |
+| [cebb47733](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cebb47733) | ip6-nd: add ip6-nd proxy |
+
+| @c src/vnet/udp/udp.api ||
+| ------- | ------- |
+| [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [f49734d3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f49734d3b) | interface: add custom interface name support |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6) | ip: punt redirect add nh in api |
+
+| @c src/plugins/acl/acl.api ||
+| ------- | ------- |
+| [1d342b9c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d342b9c8) | acl: add API call for setting the toggle to select between linear and bihash-based lookups |
+
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [2ac5c11cd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ac5c11cd) | nat: Revert "nat: nat44-ed add session timing out indicator in api" |
+| [f059a3452](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f059a3452) | nat: nat44-ed add session timing out indicator in api |
 
 
