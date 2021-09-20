@@ -4,7 +4,7 @@ More than 353 commits since the previous release, including 187 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Sat Sep 18 02:07:37 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Mon Sep 20 02:07:27 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -75,34 +75,6 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
-Message Name                                                 | Result
--------------------------------------------------------------|------------------
-acl_plugin_use_hash_lookup_get                               | only in image
-acl_plugin_use_hash_lookup_get_reply                         | only in image
-acl_plugin_use_hash_lookup_set                               | only in image
-acl_plugin_use_hash_lookup_set_reply                         | only in image
-add_del_ip_punt_redirect_v2                                  | only in image
-add_del_ip_punt_redirect_v2_reply                            | only in image
-app_namespace_add_del_v2                                     | only in image
-app_namespace_add_del_v2_reply                               | only in image
-app_namespace_add_del_v3                                     | only in image
-app_namespace_add_del_v3_reply                               | only in image
-ip6nd_proxy_enable_disable                                   | only in image
-ip6nd_proxy_enable_disable_reply                             | only in image
-ip_punt_redirect_v2_details                                  | only in image
-ip_punt_redirect_v2_dump                                     | only in image
-ipsec_sad_entry_add                                          | only in image
-ipsec_sad_entry_add_reply                                    | only in image
-ipsec_sad_entry_del                                          | only in image
-ipsec_sad_entry_del_reply                                    | only in image
-pg_create_interface_v2                                       | only in image
-pg_create_interface_v2_reply                                 | only in image
-sw_interface_set_interface_name                              | only in image
-sw_interface_set_interface_name_reply                        | only in image
-udp_decap_add_del                                            | only in image
-udp_decap_add_del_reply                                      | only in image
-
-Found 24 api message signature differences
 
 
 ### Newly deprecated API messages
