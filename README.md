@@ -38,65 +38,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 # Draft Release Notes below
 
 
-@page release_notes_2110 Release notes for VPP 21.10
+@page release_notes_2202 Release notes for VPP 22.02
 
-More than 358 commits since the previous release, including 187 fixes.
+More than 2 commits since the previous release, including 0 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 21.10 release, generated as on Tue Sep 21 02:06:32 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Fri Sep 24 02:06:03 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Infrastructure Library
-  - Add array mask func ([0ec7dad7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0ec7dad7a))
-  - Add abstract socket & netns fns ([4cef6de59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4cef6de59))
-  - Move format\_table from perfmon ([0e6584014](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e6584014))
-- Plugins
-  - DPDK
-    - Bump to 21.05 ([9303b1089](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9303b1089))
-    - Bump to 21.08 ([8990f095a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8990f095a))
-  - Bufmon
-    - Add buffer monitoring plugin ([e09a2337b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e09a2337b))
-  - Performance counter
-    - Adding support for papi TMAM ([c3cb2075d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c3cb2075d))
-  - Snort plugin
-    - Snort3 plugin and DAQ ([839b1473e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=839b1473e))
-  - Vmxnet3 device driver
-    - Support manual thread assignment to tx queue ([a57a7005d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a57a7005d))
-- Python binding for the VPP API
-  - Remove shared memory transport ([041372b79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=041372b79))
-- VNET
-  - - IP6 Neighbor Discovery
-    - Add ip6-nd proxy ([cebb47733](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cebb47733))
-  - FIB
-    - A 16-8-8 and a 8-8-8-8 versions of an ip4\_fib\_t ([d6953332d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d6953332d))
-    - Compiile time option to use 8-8-8-8 stride tries for FIB rather than 16-8-8-8 ([a70b015ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a70b015ce))
-  - FLOW
-    - Add esp spi rss type ([da6520b4e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da6520b4e))
-  - Hash
-    - Add support for hashing infra ([41b23bc95](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=41b23bc95))
-  - IPv4 LPM
-    - Allow the 'ip6 enable' on tunnel interface types ([dfef64b4c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dfef64b4c))
-    - Source address selection ([8034a36a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8034a36a9))
-    - Punt redirect add nh in api ([2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6))
-    - Show ip table CLI ([14b472e37](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14b472e37))
-  - Interface Common
-    - Add custom interface name support ([f49734d3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f49734d3b))
-  - Packet Generator
-    - A Tunnel mode variant of a pg interface ([6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730))
-  - Segment Routing (IPv6 and MPLS)
-    - Extend the srv6 sid list structure ([ad8b82d83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ad8b82d83))
-  - Session Layer
-    - Optimize ct fifo segment allocations ([da78c5abc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da78c5abc))
-    - Support abstract sockets for app ns ([7cb471a02](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cb471a02))
-    - Add sock\_name option to add\_ns ([1a9e2f96d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1a9e2f96d))
-  - UDP
-    - Add udp decapsulation ([8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394))
-- VPP Comms Library
-  - Basic support for epoll level-triggered evts ([fe286f7d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe286f7d1))
 
 ## Known issues
 
@@ -119,32 +72,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-acl_plugin_use_hash_lookup_get                               | only in image
-acl_plugin_use_hash_lookup_get_reply                         | only in image
-acl_plugin_use_hash_lookup_set                               | only in image
-acl_plugin_use_hash_lookup_set_reply                         | only in image
-add_del_ip_punt_redirect_v2                                  | only in image
-add_del_ip_punt_redirect_v2_reply                            | only in image
-app_namespace_add_del_v2                                     | only in image
-app_namespace_add_del_v2_reply                               | only in image
-app_namespace_add_del_v3                                     | only in image
-app_namespace_add_del_v3_reply                               | only in image
-ip6nd_proxy_enable_disable                                   | only in image
-ip6nd_proxy_enable_disable_reply                             | only in image
-ip_punt_redirect_v2_details                                  | only in image
-ip_punt_redirect_v2_dump                                     | only in image
-ipsec_sad_entry_add                                          | only in image
-ipsec_sad_entry_add_reply                                    | only in image
-ipsec_sad_entry_del                                          | only in image
-ipsec_sad_entry_del_reply                                    | only in image
-pg_create_interface_v2                                       | only in image
-pg_create_interface_v2_reply                                 | only in image
-sw_interface_set_interface_name                              | only in image
-sw_interface_set_interface_name_reply                        | only in image
-udp_decap_add_del                                            | only in image
-udp_decap_add_del_reply                                      | only in image
-
-Found 24 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -152,10 +80,6 @@ Found 24 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- app_namespace_add_del
-- app_namespace_add_del_reply
-- ip_punt_redirect
-- ip_punt_redirect_reply
 
 ### In-progress API messages
 
@@ -476,47 +400,5 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
-
-| @c src/vnet/session/session.api ||
-| ------- | ------- |
-| [1a9e2f96d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1a9e2f96d) | session: Add sock_name option to add_ns |
-| [7cb471a02](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cb471a02) | session vcl: support abstract sockets for app ns |
-
-| @c src/vnet/pg/pg.api ||
-| ------- | ------- |
-| [6197cb730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6197cb730) | pg: A Tunnel mode variant of a pg interface |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [ff2e4138c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff2e4138c) | ipsec: Split the SA add_del API into an separate add and del |
-
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [53dd08c59](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53dd08c59) | ipsec: Derive the TUNNEL_V6 flag from the configured address types |
-
-| @c src/vnet/ip6-nd/ip6_nd.api ||
-| ------- | ------- |
-| [cebb47733](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cebb47733) | ip6-nd: add ip6-nd proxy |
-
-| @c src/vnet/udp/udp.api ||
-| ------- | ------- |
-| [8a6f5d394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a6f5d394) | udp: add udp decapsulation |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [f49734d3b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f49734d3b) | interface: add custom interface name support |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [2a1783fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a1783fd6) | ip: punt redirect add nh in api |
-
-| @c src/plugins/acl/acl.api ||
-| ------- | ------- |
-| [1d342b9c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d342b9c8) | acl: add API call for setting the toggle to select between linear and bihash-based lookups |
-
-| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
-| ------- | ------- |
-| [2ac5c11cd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ac5c11cd) | nat: Revert "nat: nat44-ed add session timing out indicator in api" |
-| [f059a3452](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f059a3452) | nat: nat44-ed add session timing out indicator in api |
 
 
