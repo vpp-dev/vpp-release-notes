@@ -1,15 +1,18 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 20 commits since the previous release, including 9 fixes.
+More than 29 commits since the previous release, including 11 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Sep 28 02:07:36 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Sep 29 02:01:16 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- VNET
+  - Device Drivers
+    - Add queues params in create\_if ([7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6))
 - Gomemif
   - Add mode support ([176373cae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=176373cae))
 
@@ -34,7 +37,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+af_packet_create_v2                                          | only in image
+af_packet_create_v2_reply                                    | only in image
+
+Found 2 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -363,10 +369,18 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/devices/af_packet/af_packet.api ||
+| ------- | ------- |
+| [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
+
 | @c src/vlibmemory/vlib.api ||
 | ------- | ------- |
 | [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
 | [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
+
+| @c src/vlibmemory/memclnt.api ||
+| ------- | ------- |
+| [36217e3ca](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=36217e3ca) | api: API trace improvements |
 
 | @c src/vpp/api/vpe.api ||
 | ------- | ------- |
