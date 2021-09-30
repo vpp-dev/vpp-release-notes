@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 29 commits since the previous release, including 11 fixes.
+More than 36 commits since the previous release, including 15 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Sep 29 02:01:16 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Sep 30 02:11:30 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Device Drivers
     - Add queues params in create\_if ([7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6))
+  - IPSec
+    - Record the number of packets lost from an SA ([e11203e5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e11203e5b))
 - Gomemif
   - Add mode support ([176373cae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=176373cae))
 
@@ -79,8 +81,10 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 af_packet_create_v2                                          | only in image
 af_packet_create_v2_reply                                    | only in image
+nat44_user_session_v2_details                                | only in image
+nat44_user_session_v2_dump                                   | only in image
 
-Found 2 api message signature differences
+Found 4 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -327,6 +331,8 @@ please collaborate with the feature maintainer on their productization.
 - nat44_ei_worker_dump
 - nat44_show_running_config
 - nat44_show_running_config_reply
+- nat44_user_session_v2_details
+- nat44_user_session_v2_dump
 - nat64_plugin_enable_disable
 - nat64_plugin_enable_disable_reply
 - oddbuf_enable_disable
@@ -412,6 +418,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/devices/af_packet/af_packet.api ||
 | ------- | ------- |
 | [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
+
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [c7164827a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7164827a) | nat: nat44-ed add session timing out indicator in api (2) |
 
 | @c src/vlibmemory/vlib.api ||
 | ------- | ------- |
