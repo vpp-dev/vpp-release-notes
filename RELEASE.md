@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 36 commits since the previous release, including 15 fixes.
+More than 42 commits since the previous release, including 16 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Sep 30 02:11:30 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Fri Oct  1 02:13:33 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -378,6 +378,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/devices/af_packet/af_packet.api ||
 | ------- | ------- |
 | [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
+
+| @c src/vnet/fib/fib_types.api ||
+| ------- | ------- |
+| [da3310597](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3310597) | fib: doc nitfixes |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
