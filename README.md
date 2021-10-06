@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 59 commits since the previous release, including 26 fixes.
+More than 64 commits since the previous release, including 28 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Oct  5 02:06:04 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Oct  6 02:06:58 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add queues params in create\_if ([7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6))
   - IPSec
     - Record the number of packets lost from an SA ([e11203e5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e11203e5b))
+  - Session Layer
+    - Add session\_sapi\_enable\_disable ([7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26))
 - Gomemif
   - Add mode support ([176373cae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=176373cae))
 
@@ -81,10 +83,17 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 af_packet_create_v2                                          | only in image
 af_packet_create_v2_reply                                    | only in image
+nat44_ed_add_del_output_interface                            | only in image
+nat44_ed_add_del_output_interface_reply                      | only in image
+nat44_ed_output_interface_details                            | only in image
+nat44_ed_output_interface_get                                | only in image
+nat44_ed_output_interface_get_reply                          | only in image
 nat44_user_session_v2_details                                | only in image
 nat44_user_session_v2_dump                                   | only in image
+session_sapi_enable_disable                                  | only in image
+session_sapi_enable_disable_reply                            | only in image
 
-Found 4 api message signature differences
+Found 11 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -92,6 +101,10 @@ Found 4 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- nat44_interface_add_del_output_feature
+- nat44_interface_add_del_output_feature_reply
+- nat44_interface_output_feature_details
+- nat44_interface_output_feature_dump
 
 ### In-progress API messages
 
@@ -415,6 +428,10 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26) | session: Add session_sapi_enable_disable |
+
 | @c src/vnet/devices/af_packet/af_packet.api ||
 | ------- | ------- |
 | [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
@@ -425,6 +442,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
+| [4189108e1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4189108e1) | nat: NAT44 ED api fix and improvement |
 | [c7164827a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7164827a) | nat: nat44-ed add session timing out indicator in api (2) |
 
 | @c src/vlibmemory/vlib.api ||
