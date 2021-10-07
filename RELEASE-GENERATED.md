@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 64 commits since the previous release, including 28 fixes.
+More than 75 commits since the previous release, including 33 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Oct  6 02:06:58 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Oct  7 02:10:41 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -15,6 +15,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add queues params in create\_if ([7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6))
   - IPSec
     - Record the number of packets lost from an SA ([e11203e5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e11203e5b))
+  - IPv4 LPM
+    - Add classifier-based ACLs support on ip punt ([abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223))
   - Session Layer
     - Add session\_sapi\_enable\_disable ([7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26))
 - Gomemif
@@ -50,10 +52,18 @@ nat44_ed_output_interface_get                                | only in image
 nat44_ed_output_interface_get_reply                          | only in image
 nat44_user_session_v2_details                                | only in image
 nat44_user_session_v2_dump                                   | only in image
+punt_acl_add_del                                             | only in image
+punt_acl_add_del_reply                                       | only in image
 session_sapi_enable_disable                                  | only in image
 session_sapi_enable_disable_reply                            | only in image
+want_wireguard_peer_events                                   | only in image
+want_wireguard_peer_events_reply                             | only in image
+wireguard_peer_add                                           | definition changed
+wireguard_peer_event                                         | only in image
+wireguard_peers_details                                      | definition changed
+wireguard_peers_dump                                         | definition changed
 
-Found 11 api message signature differences
+Found 19 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -373,6 +383,8 @@ please collaborate with the feature maintainer on their productization.
 - vxlan_gbp_tunnel_add_del_reply
 - vxlan_gbp_tunnel_details
 - vxlan_gbp_tunnel_dump
+- want_wireguard_peer_events
+- want_wireguard_peer_events_reply
 - wireguard_interface_create
 - wireguard_interface_create_reply
 - wireguard_interface_delete
@@ -381,6 +393,7 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_interface_dump
 - wireguard_peer_add
 - wireguard_peer_add_reply
+- wireguard_peer_event
 - wireguard_peer_remove
 - wireguard_peer_remove_reply
 - wireguard_peers_details
@@ -399,6 +412,18 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/fib/fib_types.api ||
 | ------- | ------- |
 | [da3310597](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3310597) | fib: doc nitfixes |
+
+| @c src/vnet/classify/classify.api ||
+| ------- | ------- |
+| [abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223) | ip: add classifier-based ACLs support on ip punt |
+
+| @c src/vnet/qos/qos.api ||
+| ------- | ------- |
+| [2c77ae484](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c77ae484) | docs: vnet comment nitfixes |
+
+| @c src/plugins/wireguard/wireguard.api ||
+| ------- | ------- |
+| [dd630d15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd630d15d) | wireguard: add events for peer |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
