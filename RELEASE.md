@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 75 commits since the previous release, including 33 fixes.
+More than 89 commits since the previous release, including 41 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Oct  7 02:10:41 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Fri Oct  8 02:10:36 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -401,25 +401,25 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/classify/classify.api ||
+| ------- | ------- |
+| [abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223) | ip: add classifier-based ACLs support on ip punt |
+
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
 | [7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26) | session: Add session_sapi_enable_disable |
 
-| @c src/vnet/devices/af_packet/af_packet.api ||
+| @c src/vnet/qos/qos.api ||
 | ------- | ------- |
-| [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
+| [2c77ae484](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c77ae484) | docs: vnet comment nitfixes |
 
 | @c src/vnet/fib/fib_types.api ||
 | ------- | ------- |
 | [da3310597](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3310597) | fib: doc nitfixes |
 
-| @c src/vnet/classify/classify.api ||
+| @c src/vnet/devices/af_packet/af_packet.api ||
 | ------- | ------- |
-| [abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223) | ip: add classifier-based ACLs support on ip punt |
-
-| @c src/vnet/qos/qos.api ||
-| ------- | ------- |
-| [2c77ae484](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c77ae484) | docs: vnet comment nitfixes |
+| [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
 
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
