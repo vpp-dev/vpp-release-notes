@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 89 commits since the previous release, including 41 fixes.
+More than 92 commits since the previous release, including 42 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Fri Oct  8 02:10:36 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Sat Oct  9 02:02:28 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -96,6 +96,10 @@ punt_acl_add_del                                             | only in image
 punt_acl_add_del_reply                                       | only in image
 session_sapi_enable_disable                                  | only in image
 session_sapi_enable_disable_reply                            | only in image
+vxlan_gpe_add_del_tunnel_v2                                  | only in image
+vxlan_gpe_add_del_tunnel_v2_reply                            | only in image
+vxlan_gpe_tunnel_v2_details                                  | only in image
+vxlan_gpe_tunnel_v2_dump                                     | only in image
 want_wireguard_peer_events                                   | only in image
 want_wireguard_peer_events_reply                             | only in image
 wireguard_peer_add                                           | definition changed
@@ -103,7 +107,7 @@ wireguard_peer_event                                         | only in image
 wireguard_peers_details                                      | definition changed
 wireguard_peers_dump                                         | definition changed
 
-Found 19 api message signature differences
+Found 23 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -452,6 +456,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/qos/qos.api ||
 | ------- | ------- |
 | [2c77ae484](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c77ae484) | docs: vnet comment nitfixes |
+
+| @c src/vnet/vxlan-gpe/vxlan_gpe.api ||
+| ------- | ------- |
+| [ea9629298](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ea9629298) | vxlan-gpe: add udp-port configuration support |
 
 | @c src/vnet/fib/fib_types.api ||
 | ------- | ------- |
