@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 135 commits since the previous release, including 70 fixes.
+More than 137 commits since the previous release, including 71 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Mon Oct 18 02:14:02 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Oct 19 02:08:48 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -440,11 +440,13 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vlibmemory/vlib.api ||
 | ------- | ------- |
+| [f0e67d78a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0e67d78a) | interface: add api test file |
 | [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
 | [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
 
 | @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
+| [f0e67d78a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0e67d78a) | interface: add api test file |
 | [36217e3ca](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=36217e3ca) | api: API trace improvements |
 
 | @c src/vpp/api/vpe.api ||
