@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 139 commits since the previous release, including 73 fixes.
+More than 144 commits since the previous release, including 75 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Oct 20 02:09:59 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Oct 21 02:14:50 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -50,6 +50,11 @@ nat44_ed_add_del_output_interface_reply                      | only in image
 nat44_ed_output_interface_details                            | only in image
 nat44_ed_output_interface_get                                | only in image
 nat44_ed_output_interface_get_reply                          | only in image
+nat44_ei_add_del_output_interface                            | only in image
+nat44_ei_add_del_output_interface_reply                      | only in image
+nat44_ei_output_interface_details                            | only in image
+nat44_ei_output_interface_get                                | only in image
+nat44_ei_output_interface_get_reply                          | only in image
 nat44_user_session_v2_details                                | only in image
 nat44_user_session_v2_dump                                   | only in image
 punt_acl_add_del                                             | only in image
@@ -67,7 +72,7 @@ wireguard_peer_event                                         | only in image
 wireguard_peers_details                                      | definition changed
 wireguard_peers_dump                                         | definition changed
 
-Found 23 api message signature differences
+Found 28 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -437,6 +442,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [4189108e1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4189108e1) | nat: NAT44 ED api fix and improvement |
 | [c7164827a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7164827a) | nat: nat44-ed add session timing out indicator in api (2) |
+
+| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
+| ------- | ------- |
+| [1953da661](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1953da661) | nat: nat44-ei configuration improvements |
 
 | @c src/vlibmemory/vlib.api ||
 | ------- | ------- |
