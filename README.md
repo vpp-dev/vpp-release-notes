@@ -40,16 +40,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 179 commits since the previous release, including 98 fixes.
+More than 202 commits since the previous release, including 111 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Nov  2 02:08:22 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Nov  3 02:04:21 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Infrastructure Library
+  - Initial RISC-V support ([6eb0f84e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6eb0f84e3))
 - VNET
   - Device Drivers
     - Add queues params in create\_if ([7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6))
@@ -476,6 +478,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
+| [064b77c74](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=064b77c74) | build: remove unnecessary executable bits |
 | [dd630d15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd630d15d) | wireguard: add events for peer |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
