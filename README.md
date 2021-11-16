@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 263 commits since the previous release, including 136 fixes.
+More than 271 commits since the previous release, including 139 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Mon Nov 15 02:06:26 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Nov 16 02:05:13 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -62,6 +62,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Session Layer
     - Add session\_sapi\_enable\_disable ([7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26))
     - Add support for DSCP ([3ef8bf366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ef8bf366))
+- VPP Comms Library
+  - Add DSCP support in VCL ([2f09bfc8b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2f09bfc8b))
 - Gomemif
   - Add mode support ([176373cae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=176373cae))
 
