@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 271 commits since the previous release, including 139 fixes.
+More than 278 commits since the previous release, including 141 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Nov 16 02:05:13 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Nov 17 02:05:03 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -12,6 +12,8 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Infrastructure Library
   - Initial RISC-V support ([6eb0f84e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6eb0f84e3))
+- Sphinx Documents
+  - Consume fd.io version list ([ae5609721](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ae5609721))
 - VNET
   - Device Drivers
     - Add queues params in create\_if ([7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6))
