@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 289 commits since the previous release, including 146 fixes.
+More than 293 commits since the previous release, including 146 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Nov 18 02:04:39 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Fri Nov 19 02:05:39 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -92,6 +92,8 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 af_packet_create_v2                                          | only in image
 af_packet_create_v2_reply                                    | only in image
+af_xdp_create_v2                                             | only in image
+af_xdp_create_v2_reply                                       | only in image
 nat44_ed_add_del_output_interface                            | only in image
 nat44_ed_add_del_output_interface_reply                      | only in image
 nat44_ed_output_interface_details                            | only in image
@@ -119,7 +121,7 @@ wireguard_peer_event                                         | only in image
 wireguard_peers_details                                      | definition changed
 wireguard_peers_dump                                         | definition changed
 
-Found 28 api message signature differences
+Found 30 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -162,6 +164,8 @@ please collaborate with the feature maintainer on their productization.
 - adl_interface_enable_disable_reply
 - af_xdp_create
 - af_xdp_create_reply
+- af_xdp_create_v2
+- af_xdp_create_v2_reply
 - af_xdp_delete
 - af_xdp_delete_reply
 - cnat_get_snat_addresses
@@ -457,6 +461,15 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/wireguard/wireguard.api ||
+| ------- | ------- |
+| [064b77c74](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=064b77c74) | build: remove unnecessary executable bits |
+| [dd630d15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd630d15d) | wireguard: add events for peer |
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [57bdb26ba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=57bdb26ba) | af_xdp: introduce to netns api |
+
 | @c src/plugins/nat/nat44-ei/nat44_ei.api ||
 | ------- | ------- |
 | [1953da661](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1953da661) | nat: nat44-ei configuration improvements |
@@ -466,33 +479,17 @@ please collaborate with the feature maintainer on their productization.
 | [4189108e1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4189108e1) | nat: NAT44 ED api fix and improvement |
 | [c7164827a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7164827a) | nat: nat44-ed add session timing out indicator in api (2) |
 
-| @c src/plugins/wireguard/wireguard.api ||
-| ------- | ------- |
-| [064b77c74](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=064b77c74) | build: remove unnecessary executable bits |
-| [dd630d15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd630d15d) | wireguard: add events for peer |
-
-| @c src/vlibmemory/vlib.api ||
-| ------- | ------- |
-| [f0e67d78a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0e67d78a) | interface: add api test file |
-| [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
-| [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
-
-| @c src/vlibmemory/memclnt.api ||
-| ------- | ------- |
-| [f0e67d78a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0e67d78a) | interface: add api test file |
-| [36217e3ca](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=36217e3ca) | api: API trace improvements |
-
 | @c src/vnet/devices/af_packet/af_packet.api ||
 | ------- | ------- |
 | [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
 
-| @c src/vnet/fib/fib_types.api ||
-| ------- | ------- |
-| [da3310597](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3310597) | fib: doc nitfixes |
-
 | @c src/vnet/classify/classify.api ||
 | ------- | ------- |
 | [abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223) | ip: add classifier-based ACLs support on ip punt |
+
+| @c src/vnet/fib/fib_types.api ||
+| ------- | ------- |
+| [da3310597](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3310597) | fib: doc nitfixes |
 
 | @c src/vnet/qos/qos.api ||
 | ------- | ------- |
@@ -508,6 +505,17 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vpp/api/vpe.api ||
 | ------- | ------- |
+| [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
+| [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
+
+| @c src/vlibmemory/memclnt.api ||
+| ------- | ------- |
+| [f0e67d78a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0e67d78a) | interface: add api test file |
+| [36217e3ca](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=36217e3ca) | api: API trace improvements |
+
+| @c src/vlibmemory/vlib.api ||
+| ------- | ------- |
+| [f0e67d78a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0e67d78a) | interface: add api test file |
 | [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
 | [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
 
