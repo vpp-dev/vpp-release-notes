@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 297 commits since the previous release, including 147 fixes.
+More than 319 commits since the previous release, including 154 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Mon Nov 22 02:05:48 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Nov 23 02:04:36 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -66,6 +66,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for DSCP ([3ef8bf366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ef8bf366))
 - VPP Comms Library
   - Add DSCP support in VCL ([2f09bfc8b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2f09bfc8b))
+- Vector Library
+  - Add virtual time support ([56eccdbaa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=56eccdbaa))
 - Gomemif
   - Add mode support ([176373cae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=176373cae))
 
@@ -94,6 +96,11 @@ af_packet_create_v2                                          | only in image
 af_packet_create_v2_reply                                    | only in image
 af_xdp_create_v2                                             | only in image
 af_xdp_create_v2_reply                                       | only in image
+ipfix_all_exporter_details                                   | only in image
+ipfix_all_exporter_get                                       | only in image
+ipfix_all_exporter_get_reply                                 | only in image
+ipfix_exporter_create_delete                                 | only in image
+ipfix_exporter_create_delete_reply                           | only in image
 nat44_ed_add_del_output_interface                            | only in image
 nat44_ed_add_del_output_interface_reply                      | only in image
 nat44_ed_output_interface_details                            | only in image
@@ -121,7 +128,7 @@ wireguard_peer_event                                         | only in image
 wireguard_peers_details                                      | definition changed
 wireguard_peers_dump                                         | definition changed
 
-Found 30 api message signature differences
+Found 35 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -498,6 +505,11 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/vxlan-gpe/vxlan_gpe.api ||
 | ------- | ------- |
 | [ea9629298](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ea9629298) | vxlan-gpe: add udp-port configuration support |
+
+| @c src/vnet/ipfix-export/ipfix_export.api ||
+| ------- | ------- |
+| [acb0d2d13](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=acb0d2d13) | ipfix-export: add a new API to dump all exporters |
+| [d747dd950](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d747dd950) | ipfix-export: support creating multiple exporters |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
