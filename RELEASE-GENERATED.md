@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 319 commits since the previous release, including 154 fixes.
+More than 327 commits since the previous release, including 157 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Nov 23 02:04:36 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Nov 24 02:05:17 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -56,11 +56,61 @@ af_packet_create_v2                                          | only in image
 af_packet_create_v2_reply                                    | only in image
 af_xdp_create_v2                                             | only in image
 af_xdp_create_v2_reply                                       | only in image
+gbp_bridge_domain_add                                        | only in file
+gbp_bridge_domain_add_reply                                  | only in file
+gbp_bridge_domain_del                                        | only in file
+gbp_bridge_domain_del_reply                                  | only in file
+gbp_bridge_domain_details                                    | only in file
+gbp_bridge_domain_dump                                       | only in file
+gbp_bridge_domain_dump_reply                                 | only in file
+gbp_contract_add_del                                         | only in file
+gbp_contract_add_del_reply                                   | only in file
+gbp_contract_details                                         | only in file
+gbp_contract_dump                                            | only in file
+gbp_endpoint_add                                             | only in file
+gbp_endpoint_add_reply                                       | only in file
+gbp_endpoint_del                                             | only in file
+gbp_endpoint_del_reply                                       | only in file
+gbp_endpoint_details                                         | only in file
+gbp_endpoint_dump                                            | only in file
+gbp_endpoint_group_add                                       | only in file
+gbp_endpoint_group_add_reply                                 | only in file
+gbp_endpoint_group_del                                       | only in file
+gbp_endpoint_group_del_reply                                 | only in file
+gbp_endpoint_group_details                                   | only in file
+gbp_endpoint_group_dump                                      | only in file
+gbp_ext_itf_add_del                                          | only in file
+gbp_ext_itf_add_del_reply                                    | only in file
+gbp_ext_itf_details                                          | only in file
+gbp_ext_itf_dump                                             | only in file
+gbp_recirc_add_del                                           | only in file
+gbp_recirc_add_del_reply                                     | only in file
+gbp_recirc_details                                           | only in file
+gbp_recirc_dump                                              | only in file
+gbp_route_domain_add                                         | only in file
+gbp_route_domain_add_reply                                   | only in file
+gbp_route_domain_del                                         | only in file
+gbp_route_domain_del_reply                                   | only in file
+gbp_route_domain_details                                     | only in file
+gbp_route_domain_dump                                        | only in file
+gbp_route_domain_dump_reply                                  | only in file
+gbp_subnet_add_del                                           | only in file
+gbp_subnet_add_del_reply                                     | only in file
+gbp_subnet_details                                           | only in file
+gbp_subnet_dump                                              | only in file
+gbp_vxlan_tunnel_add                                         | only in file
+gbp_vxlan_tunnel_add_reply                                   | only in file
+gbp_vxlan_tunnel_del                                         | only in file
+gbp_vxlan_tunnel_del_reply                                   | only in file
+gbp_vxlan_tunnel_details                                     | only in file
+gbp_vxlan_tunnel_dump                                        | only in file
 ipfix_all_exporter_details                                   | only in image
 ipfix_all_exporter_get                                       | only in image
 ipfix_all_exporter_get_reply                                 | only in image
 ipfix_exporter_create_delete                                 | only in image
 ipfix_exporter_create_delete_reply                           | only in image
+l2_emulation                                                 | only in file
+l2_emulation_reply                                           | only in file
 nat44_ed_add_del_output_interface                            | only in image
 nat44_ed_add_del_output_interface_reply                      | only in image
 nat44_ed_output_interface_details                            | only in image
@@ -77,6 +127,12 @@ punt_acl_add_del                                             | only in image
 punt_acl_add_del_reply                                       | only in image
 session_sapi_enable_disable                                  | only in image
 session_sapi_enable_disable_reply                            | only in image
+sw_interface_set_vxlan_gbp_bypass                            | only in file
+sw_interface_set_vxlan_gbp_bypass_reply                      | only in file
+vxlan_gbp_tunnel_add_del                                     | only in file
+vxlan_gbp_tunnel_add_del_reply                               | only in file
+vxlan_gbp_tunnel_details                                     | only in file
+vxlan_gbp_tunnel_dump                                        | only in file
 vxlan_gpe_add_del_tunnel_v2                                  | only in image
 vxlan_gpe_add_del_tunnel_v2_reply                            | only in image
 vxlan_gpe_tunnel_v2_details                                  | only in image
@@ -88,7 +144,7 @@ wireguard_peer_event                                         | only in image
 wireguard_peers_details                                      | definition changed
 wireguard_peers_dump                                         | definition changed
 
-Found 35 api message signature differences
+Found 91 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -427,6 +483,18 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c extras/deprecated/plugins/gbp/gbp.api ||
+| ------- | ------- |
+| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
+
+| @c extras/deprecated/plugins/l2e/l2e.api ||
+| ------- | ------- |
+| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
+
+| @c extras/deprecated/vnet/vxlan-gbp/vxlan_gbp.api ||
+| ------- | ------- |
+| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
 
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
