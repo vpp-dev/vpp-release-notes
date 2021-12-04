@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 364 commits since the previous release, including 167 fixes.
+More than 368 commits since the previous release, including 169 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Fri Dec  3 02:06:08 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Sat Dec  4 02:05:27 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -21,6 +21,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Record the number of packets lost from an SA ([e11203e5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e11203e5b))
   - IPv4 LPM
     - Add classifier-based ACLs support on ip punt ([abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223))
+  - Interface Common
+    - Add multi tx-queues support for new tx infra ([0d05c0d21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0d05c0d21))
   - Session Layer
     - Add session\_sapi\_enable\_disable ([7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26))
     - Add support for DSCP ([3ef8bf366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ef8bf366))
@@ -127,8 +129,13 @@ punt_acl_add_del                                             | only in image
 punt_acl_add_del_reply                                       | only in image
 session_sapi_enable_disable                                  | only in image
 session_sapi_enable_disable_reply                            | only in image
+sw_interface_set_tx_placement                                | only in image
+sw_interface_set_tx_placement_reply                          | only in image
 sw_interface_set_vxlan_gbp_bypass                            | only in file
 sw_interface_set_vxlan_gbp_bypass_reply                      | only in file
+sw_interface_tx_placement_details                            | only in image
+sw_interface_tx_placement_get                                | only in image
+sw_interface_tx_placement_get_reply                          | only in image
 vxlan_gbp_tunnel_add_del                                     | only in file
 vxlan_gbp_tunnel_add_del_reply                               | only in file
 vxlan_gbp_tunnel_details                                     | only in file
@@ -144,7 +151,7 @@ wireguard_peer_event                                         | only in image
 wireguard_peers_details                                      | definition changed
 wireguard_peers_dump                                         | definition changed
 
-Found 91 api message signature differences
+Found 96 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -503,6 +510,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/qos/qos.api ||
 | ------- | ------- |
 | [2c77ae484](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c77ae484) | docs: vnet comment nitfixes |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [0d05c0d21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0d05c0d21) | interface: add multi tx-queues support for new tx infra |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
