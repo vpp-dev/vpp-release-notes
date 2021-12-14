@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 385 commits since the previous release, including 178 fixes.
+More than 387 commits since the previous release, including 180 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Mon Dec 13 02:08:28 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Dec 14 02:10:30 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -491,50 +491,10 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c extras/deprecated/vnet/vxlan-gbp/vxlan_gbp.api ||
+| @c src/vpp/api/vpe.api ||
 | ------- | ------- |
-| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
-
-| @c extras/deprecated/plugins/l2e/l2e.api ||
-| ------- | ------- |
-| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
-
-| @c extras/deprecated/plugins/gbp/gbp.api ||
-| ------- | ------- |
-| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
-
-| @c src/vnet/fib/fib_types.api ||
-| ------- | ------- |
-| [da3310597](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3310597) | fib: doc nitfixes |
-
-| @c src/vnet/qos/qos.api ||
-| ------- | ------- |
-| [2c77ae484](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c77ae484) | docs: vnet comment nitfixes |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [0d05c0d21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0d05c0d21) | interface: add multi tx-queues support for new tx infra |
-
-| @c src/vnet/session/session.api ||
-| ------- | ------- |
-| [7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26) | session: Add session_sapi_enable_disable |
-
-| @c src/vnet/ipfix-export/ipfix_export.api ||
-| ------- | ------- |
-| [acb0d2d13](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=acb0d2d13) | ipfix-export: add a new API to dump all exporters |
-| [d747dd950](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d747dd950) | ipfix-export: support creating multiple exporters |
-
-| @c src/vnet/devices/af_packet/af_packet.api ||
-| ------- | ------- |
-| [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
-
-| @c src/vnet/classify/classify.api ||
-| ------- | ------- |
-| [abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223) | ip: add classifier-based ACLs support on ip punt |
-
-| @c src/vnet/vxlan-gpe/vxlan_gpe.api ||
-| ------- | ------- |
-| [ea9629298](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ea9629298) | vxlan-gpe: add udp-port configuration support |
+| [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
+| [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
 
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
@@ -554,6 +514,39 @@ please collaborate with the feature maintainer on their productization.
 | [4189108e1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4189108e1) | nat: NAT44 ED api fix and improvement |
 | [c7164827a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7164827a) | nat: nat44-ed add session timing out indicator in api (2) |
 
+| @c src/vnet/qos/qos.api ||
+| ------- | ------- |
+| [2c77ae484](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c77ae484) | docs: vnet comment nitfixes |
+
+| @c src/vnet/vxlan-gpe/vxlan_gpe.api ||
+| ------- | ------- |
+| [ea9629298](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ea9629298) | vxlan-gpe: add udp-port configuration support |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [0d05c0d21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0d05c0d21) | interface: add multi tx-queues support for new tx infra |
+
+| @c src/vnet/classify/classify.api ||
+| ------- | ------- |
+| [abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223) | ip: add classifier-based ACLs support on ip punt |
+
+| @c src/vnet/fib/fib_types.api ||
+| ------- | ------- |
+| [da3310597](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3310597) | fib: doc nitfixes |
+
+| @c src/vnet/devices/af_packet/af_packet.api ||
+| ------- | ------- |
+| [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
+
+| @c src/vnet/ipfix-export/ipfix_export.api ||
+| ------- | ------- |
+| [acb0d2d13](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=acb0d2d13) | ipfix-export: add a new API to dump all exporters |
+| [d747dd950](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d747dd950) | ipfix-export: support creating multiple exporters |
+
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26) | session: Add session_sapi_enable_disable |
+
 | @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
 | [f0e67d78a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0e67d78a) | interface: add api test file |
@@ -565,9 +558,16 @@ please collaborate with the feature maintainer on their productization.
 | [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
 | [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
 
-| @c src/vpp/api/vpe.api ||
+| @c extras/deprecated/plugins/gbp/gbp.api ||
 | ------- | ------- |
-| [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
-| [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
+| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
+
+| @c extras/deprecated/plugins/l2e/l2e.api ||
+| ------- | ------- |
+| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
+
+| @c extras/deprecated/vnet/vxlan-gbp/vxlan_gbp.api ||
+| ------- | ------- |
+| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
 
 
