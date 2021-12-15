@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 387 commits since the previous release, including 180 fixes.
+More than 397 commits since the previous release, including 183 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Dec 14 02:10:30 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Dec 15 02:08:10 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -12,6 +12,7 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Infrastructure Library
   - Initial RISC-V support ([6eb0f84e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6eb0f84e3))
+  - Toeplitz hash ([2e5921b08](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e5921b08))
 - Sphinx Documents
   - Consume fd.io version list ([ae5609721](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ae5609721))
 - VNET
@@ -23,6 +24,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add classifier-based ACLs support on ip punt ([abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223))
   - Interface Common
     - Add multi tx-queues support for new tx infra ([0d05c0d21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0d05c0d21))
+    - Add interface monitor cli ([162ff5e41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=162ff5e41))
   - Session Layer
     - Add session\_sapi\_enable\_disable ([7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26))
     - Add support for DSCP ([3ef8bf366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ef8bf366))
