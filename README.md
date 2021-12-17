@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 398 commits since the previous release, including 183 fixes.
+More than 405 commits since the previous release, including 186 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Dec 16 02:07:29 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Fri Dec 17 02:11:45 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -68,6 +68,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Session Layer
     - Add session\_sapi\_enable\_disable ([7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26))
     - Add support for DSCP ([3ef8bf366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ef8bf366))
+    - App mq congestion detection ([20c242316](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=20c242316))
 - VPP Comms Library
   - Add DSCP support in VCL ([2f09bfc8b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2f09bfc8b))
 - Vector Library
@@ -234,12 +235,6 @@ please collaborate with the feature maintainer on their productization.
 - adl_allowlist_enable_disable_reply
 - adl_interface_enable_disable
 - adl_interface_enable_disable_reply
-- af_xdp_create
-- af_xdp_create_reply
-- af_xdp_create_v2
-- af_xdp_create_v2_reply
-- af_xdp_delete
-- af_xdp_delete_reply
 - cnat_get_snat_addresses
 - cnat_get_snat_addresses_reply
 - cnat_session_details
@@ -545,6 +540,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
+| [31ed835b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=31ed835b3) | af_xdp: mark API as stable |
 | [57bdb26ba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=57bdb26ba) | af_xdp: introduce to netns api |
 
 | @c src/plugins/nat/nat44-ei/nat44_ei.api ||
