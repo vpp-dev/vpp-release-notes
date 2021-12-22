@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 412 commits since the previous release, including 192 fixes.
+More than 415 commits since the previous release, including 194 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Dec 21 02:12:58 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Dec 22 02:12:22 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,9 @@ HIGHLIGHTS-PLACEHOLDER
 - Infrastructure Library
   - Initial RISC-V support ([6eb0f84e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6eb0f84e3))
   - Toeplitz hash ([2e5921b08](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e5921b08))
+- Plugins
+  - HSI
+    - Host stack intercept plugin ([68501d369](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68501d369))
 - Sphinx Documents
   - Consume fd.io version list ([ae5609721](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ae5609721))
 - VNET
