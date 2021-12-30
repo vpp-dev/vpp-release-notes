@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 426 commits since the previous release, including 199 fixes.
+More than 428 commits since the previous release, including 200 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Dec 29 02:10:02 UTC 2021.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Dec 30 02:10:04 UTC 2021.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -57,6 +57,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - HSI
     - Host stack intercept plugin ([68501d369](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68501d369))
+- SVM Library
+  - Add support for thresh dequeue notification ([fb079585c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fb079585c))
 - Sphinx Documents
   - Consume fd.io version list ([ae5609721](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ae5609721))
 - VNET
