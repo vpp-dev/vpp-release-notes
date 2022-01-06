@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 437 commits since the previous release, including 203 fixes.
+More than 452 commits since the previous release, including 204 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Jan  5 02:14:22 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Jan  6 02:19:03 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -17,6 +17,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - HSI
     - Host stack intercept plugin ([68501d369](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68501d369))
+  - IPv6 Segment Routing Mobile
+    - Update GTP4/6.D function ([be872a8dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be872a8dd))
 - SVM Library
   - Add support for thresh dequeue notification ([fb079585c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fb079585c))
 - Sphinx Documents
