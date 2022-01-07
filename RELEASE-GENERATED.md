@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 452 commits since the previous release, including 204 fixes.
+More than 462 commits since the previous release, including 206 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Jan  6 02:19:03 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Fri Jan  7 02:18:08 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -37,6 +37,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add session\_sapi\_enable\_disable ([7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26))
     - Add support for DSCP ([3ef8bf366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ef8bf366))
     - App mq congestion detection ([20c242316](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=20c242316))
+  - TAP Drivers
+    - Add num\_tx\_queues API ([40edaf601](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40edaf601))
 - VPP Comms Library
   - Add DSCP support in VCL ([2f09bfc8b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2f09bfc8b))
 - Vector Library
@@ -147,6 +149,8 @@ sw_interface_set_vxlan_gbp_bypass_reply                      | only in file
 sw_interface_tx_placement_details                            | only in image
 sw_interface_tx_placement_get                                | only in image
 sw_interface_tx_placement_get_reply                          | only in image
+tap_create_v3                                                | only in image
+tap_create_v3_reply                                          | only in image
 vxlan_gbp_tunnel_add_del                                     | only in file
 vxlan_gbp_tunnel_add_del_reply                               | only in file
 vxlan_gbp_tunnel_details                                     | only in file
@@ -162,7 +166,7 @@ wireguard_peer_event                                         | only in image
 wireguard_peers_details                                      | definition changed
 wireguard_peers_dump                                         | definition changed
 
-Found 96 api message signature differences
+Found 98 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -543,6 +547,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/devices/af_packet/af_packet.api ||
 | ------- | ------- |
 | [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
+
+| @c src/vnet/devices/tap/tapv2.api ||
+| ------- | ------- |
+| [40edaf601](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40edaf601) | tap: add num_tx_queues API |
 
 | @c src/vnet/ipfix-export/ipfix_export.api ||
 | ------- | ------- |
