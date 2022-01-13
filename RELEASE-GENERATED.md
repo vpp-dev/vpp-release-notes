@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 481 commits since the previous release, including 215 fixes.
+More than 499 commits since the previous release, including 222 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Jan 11 02:14:02 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Thu Jan 13 02:16:08 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -15,6 +15,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Toeplitz hash ([2e5921b08](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e5921b08))
   - Add bihash 12\_4 template ([d51250f5e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d51250f5e))
 - Plugins
+  - DPDK
+    - Bump to DPDK v21.11 ([6c75cd224](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6c75cd224))
   - HSI
     - Host stack intercept plugin ([68501d369](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68501d369))
   - IPv6 Segment Routing Mobile
