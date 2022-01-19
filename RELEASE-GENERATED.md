@@ -1,10 +1,10 @@
 @page release_notes_2202 Release notes for VPP 22.02
 
-More than 509 commits since the previous release, including 224 fixes.
+More than 517 commits since the previous release, including 229 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Tue Jan 18 02:15:23 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Jan 19 02:02:32 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -19,6 +19,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Bump to ipsecmb v1.1 ([e15245d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e15245d79))
   - DPDK
     - Bump to DPDK v21.11 ([6c75cd224](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6c75cd224))
+    - Add qat gen4-b device support ([1c4415bfa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1c4415bfa))
   - HSI
     - Host stack intercept plugin ([68501d369](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68501d369))
   - IPv6 Segment Routing Mobile
