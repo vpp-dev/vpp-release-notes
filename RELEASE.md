@@ -1,55 +1,15 @@
-@page release_notes_2202 Release notes for VPP 22.02
+@page release_notes_2206 Release notes for VPP 22.06
 
-More than 517 commits since the previous release, including 229 fixes.
+More than 2 commits since the previous release, including 1 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.02 release, generated as on Wed Jan 19 02:02:32 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Thu Jan 20 02:17:27 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Infrastructure Library
-  - Initial RISC-V support ([6eb0f84e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6eb0f84e3))
-  - Toeplitz hash ([2e5921b08](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e5921b08))
-  - Add bihash 12\_4 template ([d51250f5e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d51250f5e))
-- Plugins
-  - Crypto - ipsecmb
-    - Bump to ipsecmb v1.1 ([e15245d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e15245d79))
-  - DPDK
-    - Bump to DPDK v21.11 ([6c75cd224](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6c75cd224))
-    - Add qat gen4-b device support ([1c4415bfa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1c4415bfa))
-  - HSI
-    - Host stack intercept plugin ([68501d369](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68501d369))
-  - IPv6 Segment Routing Mobile
-    - Update GTP4/6.D function ([be872a8dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be872a8dd))
-- SVM Library
-  - Add support for thresh dequeue notification ([fb079585c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fb079585c))
-- Sphinx Documents
-  - Consume fd.io version list ([ae5609721](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ae5609721))
-- VNET
-  - Device Drivers
-    - Add queues params in create\_if ([7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6))
-  - IPSec
-    - Record the number of packets lost from an SA ([e11203e5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e11203e5b))
-  - IPv4 LPM
-    - Add classifier-based ACLs support on ip punt ([abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223))
-  - Interface Common
-    - Add multi tx-queues support for new tx infra ([0d05c0d21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0d05c0d21))
-    - Add interface monitor cli ([162ff5e41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=162ff5e41))
-  - Session Layer
-    - Add session\_sapi\_enable\_disable ([7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26))
-    - Add support for DSCP ([3ef8bf366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ef8bf366))
-    - App mq congestion detection ([20c242316](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=20c242316))
-  - TAP Drivers
-    - Add num\_tx\_queues API ([40edaf601](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40edaf601))
-- VPP Comms Library
-  - Add DSCP support in VCL ([2f09bfc8b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2f09bfc8b))
-- Vector Library
-  - Add virtual time support ([56eccdbaa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=56eccdbaa))
-- Gomemif
-  - Add mode support ([176373cae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=176373cae))
 
 ## Known issues
 
@@ -72,106 +32,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-af_packet_create_v2                                          | only in image
-af_packet_create_v2_reply                                    | only in image
-af_xdp_create_v2                                             | only in image
-af_xdp_create_v2_reply                                       | only in image
-gbp_bridge_domain_add                                        | only in file
-gbp_bridge_domain_add_reply                                  | only in file
-gbp_bridge_domain_del                                        | only in file
-gbp_bridge_domain_del_reply                                  | only in file
-gbp_bridge_domain_details                                    | only in file
-gbp_bridge_domain_dump                                       | only in file
-gbp_bridge_domain_dump_reply                                 | only in file
-gbp_contract_add_del                                         | only in file
-gbp_contract_add_del_reply                                   | only in file
-gbp_contract_details                                         | only in file
-gbp_contract_dump                                            | only in file
-gbp_endpoint_add                                             | only in file
-gbp_endpoint_add_reply                                       | only in file
-gbp_endpoint_del                                             | only in file
-gbp_endpoint_del_reply                                       | only in file
-gbp_endpoint_details                                         | only in file
-gbp_endpoint_dump                                            | only in file
-gbp_endpoint_group_add                                       | only in file
-gbp_endpoint_group_add_reply                                 | only in file
-gbp_endpoint_group_del                                       | only in file
-gbp_endpoint_group_del_reply                                 | only in file
-gbp_endpoint_group_details                                   | only in file
-gbp_endpoint_group_dump                                      | only in file
-gbp_ext_itf_add_del                                          | only in file
-gbp_ext_itf_add_del_reply                                    | only in file
-gbp_ext_itf_details                                          | only in file
-gbp_ext_itf_dump                                             | only in file
-gbp_recirc_add_del                                           | only in file
-gbp_recirc_add_del_reply                                     | only in file
-gbp_recirc_details                                           | only in file
-gbp_recirc_dump                                              | only in file
-gbp_route_domain_add                                         | only in file
-gbp_route_domain_add_reply                                   | only in file
-gbp_route_domain_del                                         | only in file
-gbp_route_domain_del_reply                                   | only in file
-gbp_route_domain_details                                     | only in file
-gbp_route_domain_dump                                        | only in file
-gbp_route_domain_dump_reply                                  | only in file
-gbp_subnet_add_del                                           | only in file
-gbp_subnet_add_del_reply                                     | only in file
-gbp_subnet_details                                           | only in file
-gbp_subnet_dump                                              | only in file
-gbp_vxlan_tunnel_add                                         | only in file
-gbp_vxlan_tunnel_add_reply                                   | only in file
-gbp_vxlan_tunnel_del                                         | only in file
-gbp_vxlan_tunnel_del_reply                                   | only in file
-gbp_vxlan_tunnel_details                                     | only in file
-gbp_vxlan_tunnel_dump                                        | only in file
-ipfix_all_exporter_details                                   | only in image
-ipfix_all_exporter_get                                       | only in image
-ipfix_all_exporter_get_reply                                 | only in image
-ipfix_exporter_create_delete                                 | only in image
-ipfix_exporter_create_delete_reply                           | only in image
-l2_emulation                                                 | only in file
-l2_emulation_reply                                           | only in file
-nat44_ed_add_del_output_interface                            | only in image
-nat44_ed_add_del_output_interface_reply                      | only in image
-nat44_ed_output_interface_details                            | only in image
-nat44_ed_output_interface_get                                | only in image
-nat44_ed_output_interface_get_reply                          | only in image
-nat44_ei_add_del_output_interface                            | only in image
-nat44_ei_add_del_output_interface_reply                      | only in image
-nat44_ei_output_interface_details                            | only in image
-nat44_ei_output_interface_get                                | only in image
-nat44_ei_output_interface_get_reply                          | only in image
-nat44_user_session_v2_details                                | only in image
-nat44_user_session_v2_dump                                   | only in image
-punt_acl_add_del                                             | only in image
-punt_acl_add_del_reply                                       | only in image
-session_sapi_enable_disable                                  | only in image
-session_sapi_enable_disable_reply                            | only in image
-sw_interface_set_tx_placement                                | only in image
-sw_interface_set_tx_placement_reply                          | only in image
-sw_interface_set_vxlan_gbp_bypass                            | only in file
-sw_interface_set_vxlan_gbp_bypass_reply                      | only in file
-sw_interface_tx_placement_details                            | only in image
-sw_interface_tx_placement_get                                | only in image
-sw_interface_tx_placement_get_reply                          | only in image
-tap_create_v3                                                | only in image
-tap_create_v3_reply                                          | only in image
-vxlan_gbp_tunnel_add_del                                     | only in file
-vxlan_gbp_tunnel_add_del_reply                               | only in file
-vxlan_gbp_tunnel_details                                     | only in file
-vxlan_gbp_tunnel_dump                                        | only in file
-vxlan_gpe_add_del_tunnel_v2                                  | only in image
-vxlan_gpe_add_del_tunnel_v2_reply                            | only in image
-vxlan_gpe_tunnel_v2_details                                  | only in image
-vxlan_gpe_tunnel_v2_dump                                     | only in image
-want_wireguard_peer_events                                   | only in image
-want_wireguard_peer_events_reply                             | only in image
-wireguard_peer_add                                           | definition changed
-wireguard_peer_event                                         | only in image
-wireguard_peers_details                                      | definition changed
-wireguard_peers_dump                                         | definition changed
-
-Found 98 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -179,10 +40,6 @@ Found 98 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- nat44_interface_add_del_output_feature
-- nat44_interface_add_del_output_feature_reply
-- nat44_interface_output_feature_details
-- nat44_interface_output_feature_dump
 
 ### In-progress API messages
 
@@ -504,89 +361,5 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
-
-| @c src/vlibmemory/memclnt.api ||
-| ------- | ------- |
-| [f0e67d78a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0e67d78a) | interface: add api test file |
-| [36217e3ca](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=36217e3ca) | api: API trace improvements |
-
-| @c src/vlibmemory/vlib.api ||
-| ------- | ------- |
-| [f0e67d78a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f0e67d78a) | interface: add api test file |
-| [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
-| [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
-
-| @c src/vnet/ipfix-export/ipfix_export.api ||
-| ------- | ------- |
-| [acb0d2d13](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=acb0d2d13) | ipfix-export: add a new API to dump all exporters |
-| [d747dd950](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d747dd950) | ipfix-export: support creating multiple exporters |
-
-| @c src/vnet/session/session.api ||
-| ------- | ------- |
-| [7b3a3df26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7b3a3df26) | session: Add session_sapi_enable_disable |
-
-| @c src/vnet/fib/fib_types.api ||
-| ------- | ------- |
-| [da3310597](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3310597) | fib: doc nitfixes |
-
-| @c src/vnet/qos/qos.api ||
-| ------- | ------- |
-| [2c77ae484](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c77ae484) | docs: vnet comment nitfixes |
-
-| @c src/vnet/devices/af_packet/af_packet.api ||
-| ------- | ------- |
-| [7d0e30bc6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7d0e30bc6) | devices: Add queues params in create_if |
-
-| @c src/vnet/devices/tap/tapv2.api ||
-| ------- | ------- |
-| [40edaf601](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40edaf601) | tap: add num_tx_queues API |
-
-| @c src/vnet/vxlan-gpe/vxlan_gpe.api ||
-| ------- | ------- |
-| [ea9629298](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ea9629298) | vxlan-gpe: add udp-port configuration support |
-
-| @c src/vnet/classify/classify.api ||
-| ------- | ------- |
-| [abb2a4223](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abb2a4223) | ip: add classifier-based ACLs support on ip punt |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [0d05c0d21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0d05c0d21) | interface: add multi tx-queues support for new tx infra |
-
-| @c src/plugins/wireguard/wireguard.api ||
-| ------- | ------- |
-| [064b77c74](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=064b77c74) | build: remove unnecessary executable bits |
-| [dd630d15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd630d15d) | wireguard: add events for peer |
-
-| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
-| ------- | ------- |
-| [4189108e1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4189108e1) | nat: NAT44 ED api fix and improvement |
-| [c7164827a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c7164827a) | nat: nat44-ed add session timing out indicator in api (2) |
-
-| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
-| ------- | ------- |
-| [1953da661](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1953da661) | nat: nat44-ei configuration improvements |
-
-| @c src/plugins/af_xdp/af_xdp.api ||
-| ------- | ------- |
-| [31ed835b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=31ed835b3) | af_xdp: mark API as stable |
-| [57bdb26ba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=57bdb26ba) | af_xdp: introduce to netns api |
-
-| @c src/vpp/api/vpe.api ||
-| ------- | ------- |
-| [a1400cecb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a1400cecb) | misc: api move continued |
-| [248210c6c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=248210c6c) | misc: move part of vpe apis to vlibmemory |
-
-| @c extras/deprecated/vnet/vxlan-gbp/vxlan_gbp.api ||
-| ------- | ------- |
-| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
-
-| @c extras/deprecated/plugins/l2e/l2e.api ||
-| ------- | ------- |
-| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
-
-| @c extras/deprecated/plugins/gbp/gbp.api ||
-| ------- | ------- |
-| [3be9164f8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3be9164f8) | misc: deprecate gbp and its dependents |
 
 
