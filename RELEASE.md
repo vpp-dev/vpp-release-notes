@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 7 commits since the previous release, including 3 fixes.
+More than 10 commits since the previous release, including 3 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri Jan 21 02:05:23 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Sat Jan 22 02:00:59 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -35,7 +35,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+wg_set_async_mode                                            | only in image
+wg_set_async_mode_reply                                      | only in image
+
+Found 2 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -349,6 +352,8 @@ please collaborate with the feature maintainer on their productization.
 - vxlan_gbp_tunnel_dump
 - want_wireguard_peer_events
 - want_wireguard_peer_events_reply
+- wg_set_async_mode
+- wg_set_async_mode_reply
 - wireguard_interface_create
 - wireguard_interface_create_reply
 - wireguard_interface_delete
@@ -364,5 +369,9 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/plugins/wireguard/wireguard.api ||
+| ------- | ------- |
+| [492d7790f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d7790f) | wireguard: add async mode for encryption packets |
 
 
