@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 34 commits since the previous release, including 13 fixes.
+More than 38 commits since the previous release, including 16 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri Jan 28 02:04:24 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Sat Jan 29 01:59:01 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - HTTP
     - Add http protocol plugin ([0b65621d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b65621d4))
+  - Linux-cp
+    - Linux Control Plane Netlink Listener ([616447c39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=616447c39))
 
 ## Known issues
 
