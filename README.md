@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 47 commits since the previous release, including 18 fixes.
+More than 58 commits since the previous release, including 24 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Mon Jan 31 02:02:12 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Wed Feb  2 02:04:49 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -79,10 +79,14 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+ip_local_reass_enable_disable                                | only in image
+ip_local_reass_enable_disable_reply                          | only in image
+ip_local_reass_get                                           | only in image
+ip_local_reass_get_reply                                     | only in image
 wg_set_async_mode                                            | only in image
 wg_set_async_mode_reply                                      | only in image
 
-Found 2 api message signature differences
+Found 6 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -417,5 +421,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
 | [492d7790f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d7790f) | wireguard: add async mode for encryption packets |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [01c1fa41f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01c1fa41f) | ip: reassembly - add a way to disable for forus |
 
 
