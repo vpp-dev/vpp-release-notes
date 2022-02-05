@@ -44,7 +44,7 @@ More than 64 commits since the previous release, including 26 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri Feb  4 01:53:55 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Sat Feb  5 01:46:43 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
