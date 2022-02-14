@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 93 commits since the previous release, including 36 fixes.
+More than 95 commits since the previous release, including 37 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Sun Feb 13 02:07:33 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Mon Feb 14 02:01:49 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - HTTP
     - Add http protocol plugin ([0b65621d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b65621d4))
+  - Host Stack Applications
+    - Add http throughput test server app ([cfcc42e29](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cfcc42e29))
   - Prom
     - Basic builtin prometheus stats exporter ([7285be2aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7285be2aa))
   - Linux-cp
