@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 106 commits since the previous release, including 42 fixes.
+More than 114 commits since the previous release, including 46 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Thu Feb 17 02:00:01 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri Feb 18 02:09:35 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -25,6 +25,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Feature support on interface output ([c454e8993](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c454e8993))
 - VPP Comms Library
   - Make eventfd flag configurable from env ([794599bcc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=794599bcc))
+  - Add support for reconnect ([8ccc6b350](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8ccc6b350))
 
 ## Known issues
 
