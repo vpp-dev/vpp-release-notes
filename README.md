@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 114 commits since the previous release, including 46 fixes.
+More than 122 commits since the previous release, including 50 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri Feb 18 02:09:35 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Sat Feb 19 02:05:53 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Build System
   - Make the build work on Debian 11 ([a47203128](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a47203128))
 - Plugins
+  - DPDK
+    - Support devargs for vmbus ([502714fc4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=502714fc4))
   - HTTP
     - Add http protocol plugin ([0b65621d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b65621d4))
   - Host Stack Applications
