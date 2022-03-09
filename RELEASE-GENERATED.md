@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 180 commits since the previous release, including 79 fixes.
+More than 184 commits since the previous release, including 81 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Tue Mar  8 02:15:15 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Wed Mar  9 02:25:32 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Build System
   - Make the build work on Debian 11 ([a47203128](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a47203128))
 - Plugins
+  - Crypto - ipsecmb
+    - Bump to ipsecmb v1.2 ([c711bd08c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c711bd08c))
   - DPDK
     - Support devargs for vmbus ([502714fc4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=502714fc4))
   - HTTP
@@ -25,6 +27,9 @@ HIGHLIGHTS-PLACEHOLDER
     - Linux Control Plane Netlink Listener ([616447c39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=616447c39))
   - Snort plugin
     - Feature support on interface output ([c454e8993](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c454e8993))
+- VNET
+  - Classifier
+    - Add API to retrieve punt ACL tables ([7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6))
 - VPP Comms Library
   - Make eventfd flag configurable from env ([794599bcc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=794599bcc))
   - Add support for reconnect ([8ccc6b350](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8ccc6b350))
@@ -56,10 +61,12 @@ ip_local_reass_enable_disable                                | only in image
 ip_local_reass_enable_disable_reply                          | only in image
 ip_local_reass_get                                           | only in image
 ip_local_reass_get_reply                                     | only in image
+punt_acl_get                                                 | only in image
+punt_acl_get_reply                                           | only in image
 wg_set_async_mode                                            | only in image
 wg_set_async_mode_reply                                      | only in image
 
-Found 8 api message signature differences
+Found 10 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -395,6 +402,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [6a2c6a044](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a2c6a044) | wireguard: improve sending WG interface dump details |
 | [492d7790f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d7790f) | wireguard: add async mode for encryption packets |
+
+| @c src/vnet/classify/classify.api ||
+| ------- | ------- |
+| [7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6) | classify: add API to retrieve punt ACL tables |
 
 | @c src/vnet/bfd/bfd.api ||
 | ------- | ------- |
