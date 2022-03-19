@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 221 commits since the previous release, including 101 fixes.
+More than 234 commits since the previous release, including 105 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri Mar 18 02:29:22 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Sat Mar 19 02:16:03 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -32,6 +32,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add API to retrieve punt ACL tables ([7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6))
   - FLOW
     - Add generic flow pattern for 5G flow enhancement ([3a3668201](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a3668201))
+  - Session Layer
+    - Add infra for safe pool reallocs ([53d8d4fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53d8d4fd6))
 - VPP Comms Library
   - Make eventfd flag configurable from env ([794599bcc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=794599bcc))
   - Add support for reconnect ([8ccc6b350](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8ccc6b350))
