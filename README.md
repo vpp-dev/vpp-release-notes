@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 234 commits since the previous release, including 105 fixes.
+More than 244 commits since the previous release, including 109 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Mon Mar 21 02:36:39 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Tue Mar 22 02:37:26 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -52,6 +52,8 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Build System
   - Make the build work on Debian 11 ([a47203128](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a47203128))
+- Infrastructure Library
+  - Add new bihash exports ([17ecd853e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=17ecd853e))
 - Plugins
   - Crypto - ipsecmb
     - Bump to ipsecmb v1.2 ([c711bd08c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c711bd08c))
@@ -61,6 +63,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add http protocol plugin ([0b65621d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b65621d4))
   - Host Stack Applications
     - Add http throughput test server app ([cfcc42e29](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cfcc42e29))
+    - Add support for SAPI in vpp\_echo ([d0d4b4337](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d0d4b4337))
   - Prom
     - Basic builtin prometheus stats exporter ([7285be2aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7285be2aa))
   - Linux-cp
@@ -109,8 +112,10 @@ punt_acl_get                                                 | only in image
 punt_acl_get_reply                                           | only in image
 wg_set_async_mode                                            | only in image
 wg_set_async_mode_reply                                      | only in image
+wireguard_peer_add                                           | definition changed
+wireguard_peers_details                                      | definition changed
 
-Found 10 api message signature differences
+Found 12 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -444,6 +449,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
+| [f47917959](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f47917959) | wireguard: improve peer dump details |
 | [6a2c6a044](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a2c6a044) | wireguard: improve sending WG interface dump details |
 | [492d7790f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d7790f) | wireguard: add async mode for encryption packets |
 
