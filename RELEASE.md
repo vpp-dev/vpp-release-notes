@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 249 commits since the previous release, including 111 fixes.
+More than 270 commits since the previous release, including 121 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Wed Mar 23 02:44:43 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Thu Mar 24 02:34:07 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -33,6 +33,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Classifier
     - Add API to retrieve punt ACL tables ([7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6))
+  - Device Drivers
+    - Af-packet v3 support ([219cbcb29](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=219cbcb29))
   - FLOW
     - Add generic flow pattern for 5G flow enhancement ([3a3668201](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a3668201))
   - Session Layer
@@ -40,6 +42,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VPP Comms Library
   - Make eventfd flag configurable from env ([794599bcc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=794599bcc))
   - Add support for reconnect ([8ccc6b350](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8ccc6b350))
+- Vector Library
+  - Leave SIGCONT signal with its default handler ([8486283cd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8486283cd))
 
 ## Known issues
 
