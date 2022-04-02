@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 324 commits since the previous release, including 146 fixes.
+More than 331 commits since the previous release, including 148 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri Apr  1 03:00:22 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Sat Apr  2 02:37:48 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -112,14 +112,44 @@ ip_local_reass_enable_disable                                | only in image
 ip_local_reass_enable_disable_reply                          | only in image
 ip_local_reass_get                                           | only in image
 ip_local_reass_get_reply                                     | only in image
+nat44_ed_add_del_vrf_route                                   | only in image
+nat44_ed_add_del_vrf_route_reply                             | only in image
+nat44_ed_add_del_vrf_table                                   | only in image
+nat44_ed_add_del_vrf_table_reply                             | only in image
+nat44_ed_vrf_tables_details                                  | only in image
+nat44_ed_vrf_tables_dump                                     | only in image
+nat44_forwarding_is_enabled                                  | only in file
+nat44_forwarding_is_enabled_reply                            | only in file
+nat44_interface_add_del_output_feature                       | only in file
+nat44_interface_add_del_output_feature_reply                 | only in file
+nat44_interface_output_feature_details                       | only in file
+nat44_interface_output_feature_dump                          | only in file
+nat44_plugin_enable_disable                                  | only in file
+nat44_plugin_enable_disable_reply                            | only in file
+nat44_session_cleanup                                        | only in file
+nat44_session_cleanup_reply                                  | only in file
+nat_control_ping                                             | only in file
+nat_control_ping_reply                                       | only in file
+nat_get_timeouts                                             | only in file
+nat_get_timeouts_reply                                       | only in file
+nat_set_log_level                                            | only in file
+nat_set_log_level_reply                                      | only in file
+nat_show_config_2                                            | only in file
+nat_show_config_2_reply                                      | only in file
+nat_show_config                                              | only in file
+nat_show_config_reply                                        | only in file
 punt_acl_get                                                 | only in image
 punt_acl_get_reply                                           | only in image
+vrrp_vr_del                                                  | only in image
+vrrp_vr_del_reply                                            | only in image
+vrrp_vr_update                                               | only in image
+vrrp_vr_update_reply                                         | only in image
 wg_set_async_mode                                            | only in image
 wg_set_async_mode_reply                                      | only in image
 wireguard_peer_add                                           | definition changed
 wireguard_peers_details                                      | definition changed
 
-Found 12 api message signature differences
+Found 42 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -127,6 +157,25 @@ Found 12 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- nat44_del_user
+- nat44_del_user_reply
+- nat_get_addr_and_port_alloc_alg
+- nat_get_addr_and_port_alloc_alg_reply
+- nat_ha_flush
+- nat_ha_flush_reply
+- nat_ha_get_failover
+- nat_ha_get_failover_reply
+- nat_ha_get_listener
+- nat_ha_get_listener_reply
+- nat_ha_resync
+- nat_ha_resync_completed_event
+- nat_ha_resync_reply
+- nat_ha_set_failover
+- nat_ha_set_failover_reply
+- nat_ha_set_listener
+- nat_ha_set_listener_reply
+- nat_set_addr_and_port_alloc_alg
+- nat_set_addr_and_port_alloc_alg_reply
 
 ### In-progress API messages
 
@@ -301,14 +350,6 @@ please collaborate with the feature maintainer on their productization.
 - l2_emulation_reply
 - mdata_enable_disable
 - mdata_enable_disable_reply
-- nat44_add_del_static_mapping_v2
-- nat44_add_del_static_mapping_v2_reply
-- nat44_ed_plugin_enable_disable
-- nat44_ed_plugin_enable_disable_reply
-- nat44_ed_set_fq_options
-- nat44_ed_set_fq_options_reply
-- nat44_ed_show_fq_options
-- nat44_ed_show_fq_options_reply
 - nat44_ei_add_del_address_range
 - nat44_ei_add_del_address_range_reply
 - nat44_ei_add_del_static_mapping
@@ -360,10 +401,6 @@ please collaborate with the feature maintainer on their productization.
 - nat44_ei_user_session_dump
 - nat44_ei_worker_details
 - nat44_ei_worker_dump
-- nat44_show_running_config
-- nat44_show_running_config_reply
-- nat44_user_session_v2_details
-- nat44_user_session_v2_dump
 - nat64_plugin_enable_disable
 - nat64_plugin_enable_disable_reply
 - oddbuf_enable_disable
@@ -450,6 +487,15 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [691c630b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=691c630b7) | nat: VRF routing & FIB improvements |
+| [b68108203](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b68108203) | nat: nat44-ed cleanup & fixes |
+
+| @c src/plugins/vrrp/vrrp.api ||
+| ------- | ------- |
+| [7539e4b55](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7539e4b55) | vrrp: add stats support and update API |
 
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
