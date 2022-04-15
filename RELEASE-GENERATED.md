@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 332 commits since the previous release, including 149 fixes.
+More than 400 commits since the previous release, including 180 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Mon Apr  4 02:48:59 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri Apr 15 15:47:48 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -19,6 +19,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Bump to ipsecmb v1.2 ([c711bd08c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c711bd08c))
   - DPDK
     - Support devargs for vmbus ([502714fc4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=502714fc4))
+    - Bump to DPDK v22.03 ([2f132efc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2f132efc3))
   - HTTP
     - Add http protocol plugin ([0b65621d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b65621d4))
   - Host Stack Applications
@@ -35,6 +36,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add API to retrieve punt ACL tables ([7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6))
   - Device Drivers
     - Af-packet v3 support ([219cbcb29](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=219cbcb29))
+    - Add multi-queue support for af-packet ([5a7aa51f0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5a7aa51f0))
   - FLOW
     - Add generic flow pattern for 5G flow enhancement ([3a3668201](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a3668201))
   - Session Layer
@@ -448,6 +450,18 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/bfd/bfd.api ||
+| ------- | ------- |
+| [63f2c7d70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63f2c7d70) | bfd: Add an update API that has create new or modify existing semantics |
+
+| @c src/vnet/classify/classify.api ||
+| ------- | ------- |
+| [7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6) | classify: add API to retrieve punt ACL tables |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [01c1fa41f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01c1fa41f) | ip: reassembly - add a way to disable for forus |
+
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
 | [691c630b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=691c630b7) | nat: VRF routing & FIB improvements |
@@ -462,17 +476,5 @@ please collaborate with the feature maintainer on their productization.
 | [f47917959](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f47917959) | wireguard: improve peer dump details |
 | [6a2c6a044](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a2c6a044) | wireguard: improve sending WG interface dump details |
 | [492d7790f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d7790f) | wireguard: add async mode for encryption packets |
-
-| @c src/vnet/classify/classify.api ||
-| ------- | ------- |
-| [7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6) | classify: add API to retrieve punt ACL tables |
-
-| @c src/vnet/bfd/bfd.api ||
-| ------- | ------- |
-| [63f2c7d70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63f2c7d70) | bfd: Add an update API that has create new or modify existing semantics |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [01c1fa41f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01c1fa41f) | ip: reassembly - add a way to disable for forus |
 
 
