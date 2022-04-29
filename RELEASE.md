@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 419 commits since the previous release, including 188 fixes.
+More than 424 commits since the previous release, including 190 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Thu Apr 28 03:45:50 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri Apr 29 03:09:43 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -451,13 +451,13 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/bfd/bfd.api ||
-| ------- | ------- |
-| [63f2c7d70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63f2c7d70) | bfd: Add an update API that has create new or modify existing semantics |
-
 | @c src/vnet/classify/classify.api ||
 | ------- | ------- |
 | [7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6) | classify: add API to retrieve punt ACL tables |
+
+| @c src/vnet/bfd/bfd.api ||
+| ------- | ------- |
+| [63f2c7d70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63f2c7d70) | bfd: Add an update API that has create new or modify existing semantics |
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
@@ -474,6 +474,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
+| [39fdefdc9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39fdefdc9) | wireguard: Document wireguard async mode default |
 | [f47917959](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f47917959) | wireguard: improve peer dump details |
 | [6a2c6a044](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a2c6a044) | wireguard: improve sending WG interface dump details |
 | [492d7790f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d7790f) | wireguard: add async mode for encryption packets |
