@@ -40,16 +40,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 428 commits since the previous release, including 193 fixes.
+More than 430 commits since the previous release, including 194 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Mon May  2 03:30:52 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Tue May  3 03:06:20 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Binary API Compiler for C and C++
+  - Support api clients within VPP process ([2ca88ff97](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ca88ff97))
 - Build System
   - Make the build work on Debian 11 ([a47203128](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a47203128))
 - Infrastructure Library
@@ -115,6 +117,8 @@ ip_local_reass_enable_disable                                | only in image
 ip_local_reass_enable_disable_reply                          | only in image
 ip_local_reass_get                                           | only in image
 ip_local_reass_get_reply                                     | only in image
+memclnt_create_v2                                            | only in image
+memclnt_create_v2_reply                                      | only in image
 nat44_ed_add_del_vrf_route                                   | only in image
 nat44_ed_add_del_vrf_route_reply                             | only in image
 nat44_ed_add_del_vrf_table                                   | only in image
@@ -152,7 +156,7 @@ wg_set_async_mode_reply                                      | only in image
 wireguard_peer_add                                           | definition changed
 wireguard_peers_details                                      | definition changed
 
-Found 42 api message signature differences
+Found 44 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -518,5 +522,9 @@ please collaborate with the feature maintainer on their productization.
 | [f47917959](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f47917959) | wireguard: improve peer dump details |
 | [6a2c6a044](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a2c6a044) | wireguard: improve sending WG interface dump details |
 | [492d7790f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d7790f) | wireguard: add async mode for encryption packets |
+
+| @c src/vlibmemory/memclnt.api ||
+| ------- | ------- |
+| [2ca88ff97](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ca88ff97) | vapi: support api clients within vpp process |
 
 
