@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 430 commits since the previous release, including 194 fixes.
+More than 432 commits since the previous release, including 194 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Tue May  3 03:06:20 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Wed May  4 03:06:31 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -82,6 +82,8 @@ HIGHLIGHTS-PLACEHOLDER
   - FLOW
     - Add generic flow pattern for 5G flow enhancement ([3a3668201](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a3668201))
     - Enable RSS queue group action for 5G enhancement ([b95e6d4e7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b95e6d4e7))
+  - IPSec
+    - Support per next-header next-nodes ([98ca76ab8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=98ca76ab8))
   - Session Layer
     - Add infra for safe pool reallocs ([53d8d4fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53d8d4fd6))
 - VPP Comms Library
