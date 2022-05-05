@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 432 commits since the previous release, including 194 fixes.
+More than 436 commits since the previous release, including 197 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Wed May  4 03:06:31 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Thu May  5 03:00:59 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -147,6 +147,8 @@ nat_show_config_2                                            | only in file
 nat_show_config_2_reply                                      | only in file
 nat_show_config                                              | only in file
 nat_show_config_reply                                        | only in file
+policer_output                                               | only in image
+policer_output_reply                                         | only in image
 punt_acl_get                                                 | only in image
 punt_acl_get_reply                                           | only in image
 vrrp_vr_del                                                  | only in image
@@ -158,7 +160,7 @@ wg_set_async_mode_reply                                      | only in image
 wireguard_peer_add                                           | definition changed
 wireguard_peers_details                                      | definition changed
 
-Found 44 api message signature differences
+Found 46 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -504,6 +506,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/bfd/bfd.api ||
 | ------- | ------- |
 | [63f2c7d70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63f2c7d70) | bfd: Add an update API that has create new or modify existing semantics |
+
+| @c src/vnet/policer/policer.api ||
+| ------- | ------- |
+| [e5a3ae017](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e5a3ae017) | policer: output interface policer |
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
