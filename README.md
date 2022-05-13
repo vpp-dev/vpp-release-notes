@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 452 commits since the previous release, including 208 fixes.
+More than 453 commits since the previous release, including 208 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Thu May 12 02:57:18 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri May 13 03:22:02 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -147,6 +147,11 @@ nat_show_config_2                                            | only in file
 nat_show_config_2_reply                                      | only in file
 nat_show_config                                              | only in file
 nat_show_config_reply                                        | only in file
+pnat_binding_add                                             | definition changed
+pnat_binding_add_v2                                          | only in image
+pnat_binding_add_v2_reply                                    | only in image
+pnat_bindings_details                                        | definition changed
+pnat_interfaces_details                                      | definition changed
 policer_output                                               | only in image
 policer_output_reply                                         | only in image
 punt_acl_get                                                 | only in image
@@ -160,7 +165,7 @@ wg_set_async_mode_reply                                      | only in image
 wireguard_peer_add                                           | definition changed
 wireguard_peers_details                                      | definition changed
 
-Found 46 api message signature differences
+Found 51 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -420,6 +425,8 @@ please collaborate with the feature maintainer on their productization.
 - pg_interface_enable_disable_coalesce_reply
 - pnat_binding_add
 - pnat_binding_add_reply
+- pnat_binding_add_v2
+- pnat_binding_add_v2_reply
 - pnat_binding_attach
 - pnat_binding_attach_reply
 - pnat_binding_del
@@ -503,22 +510,30 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6) | classify: add API to retrieve punt ACL tables |
 
-| @c src/vnet/bfd/bfd.api ||
+| @c src/vnet/ip/ip.api ||
 | ------- | ------- |
-| [63f2c7d70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63f2c7d70) | bfd: Add an update API that has create new or modify existing semantics |
+| [01c1fa41f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01c1fa41f) | ip: reassembly - add a way to disable for forus |
 
 | @c src/vnet/policer/policer.api ||
 | ------- | ------- |
 | [e5a3ae017](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e5a3ae017) | policer: output interface policer |
 
-| @c src/vnet/ip/ip.api ||
+| @c src/vnet/bfd/bfd.api ||
 | ------- | ------- |
-| [01c1fa41f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01c1fa41f) | ip: reassembly - add a way to disable for forus |
+| [63f2c7d70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63f2c7d70) | bfd: Add an update API that has create new or modify existing semantics |
+
+| @c src/vlibmemory/memclnt.api ||
+| ------- | ------- |
+| [2ca88ff97](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ca88ff97) | vapi: support api clients within vpp process |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
 | [691c630b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=691c630b7) | nat: VRF routing & FIB improvements |
 | [b68108203](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b68108203) | nat: nat44-ed cleanup & fixes |
+
+| @c src/plugins/nat/pnat/pnat.api ||
+| ------- | ------- |
+| [0891b6aa4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0891b6aa4) | pnat: add support to wildcard IP Protocol field if not specified |
 
 | @c src/plugins/vrrp/vrrp.api ||
 | ------- | ------- |
@@ -530,9 +545,5 @@ please collaborate with the feature maintainer on their productization.
 | [f47917959](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f47917959) | wireguard: improve peer dump details |
 | [6a2c6a044](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a2c6a044) | wireguard: improve sending WG interface dump details |
 | [492d7790f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d7790f) | wireguard: add async mode for encryption packets |
-
-| @c src/vlibmemory/memclnt.api ||
-| ------- | ------- |
-| [2ca88ff97](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ca88ff97) | vapi: support api clients within vpp process |
 
 
