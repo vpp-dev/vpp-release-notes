@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 453 commits since the previous release, including 208 fixes.
+More than 458 commits since the previous release, including 212 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri May 13 03:22:02 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Sat May 14 03:30:01 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -29,6 +29,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for SAPI in vpp\_echo ([d0d4b4337](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d0d4b4337))
   - Prom
     - Basic builtin prometheus stats exporter ([7285be2aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7285be2aa))
+  - Flowprobe
+    - Add support for reporting on inbound packets ([6f5ddf346](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f5ddf346))
   - Linux-cp
     - Linux Control Plane Netlink Listener ([616447c39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=616447c39))
   - Snort plugin
@@ -75,6 +77,8 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 bfd_udp_upd                                                  | only in image
 bfd_udp_upd_reply                                            | only in image
+flowprobe_interface_add_del                                  | only in image
+flowprobe_interface_add_del_reply                            | only in image
 ip_local_reass_enable_disable                                | only in image
 ip_local_reass_enable_disable_reply                          | only in image
 ip_local_reass_get                                           | only in image
@@ -125,7 +129,7 @@ wg_set_async_mode_reply                                      | only in image
 wireguard_peer_add                                           | definition changed
 wireguard_peers_details                                      | definition changed
 
-Found 51 api message signature differences
+Found 53 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -220,6 +224,8 @@ please collaborate with the feature maintainer on their productization.
 - flow_disable_reply
 - flow_enable
 - flow_enable_reply
+- flowprobe_interface_add_del
+- flowprobe_interface_add_del_reply
 - gbp_bridge_domain_add
 - gbp_bridge_domain_add_reply
 - gbp_bridge_domain_del
@@ -494,6 +500,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/nat/pnat/pnat.api ||
 | ------- | ------- |
 | [0891b6aa4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0891b6aa4) | pnat: add support to wildcard IP Protocol field if not specified |
+
+| @c src/plugins/flowprobe/flowprobe.api ||
+| ------- | ------- |
+| [6f5ddf346](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f5ddf346) | flowprobe: add support for reporting on inbound packets |
 
 | @c src/plugins/vrrp/vrrp.api ||
 | ------- | ------- |
