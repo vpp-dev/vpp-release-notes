@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 460 commits since the previous release, including 212 fixes.
+More than 462 commits since the previous release, including 213 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Mon May 16 02:43:38 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Tue May 17 03:05:14 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -77,8 +77,14 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 bfd_udp_upd                                                  | only in image
 bfd_udp_upd_reply                                            | only in image
+flowprobe_get_params                                         | only in image
+flowprobe_get_params_reply                                   | only in image
 flowprobe_interface_add_del                                  | only in image
 flowprobe_interface_add_del_reply                            | only in image
+flowprobe_interface_details                                  | only in image
+flowprobe_interface_dump                                     | only in image
+flowprobe_set_params                                         | only in image
+flowprobe_set_params_reply                                   | only in image
 ip_local_reass_enable_disable                                | only in image
 ip_local_reass_enable_disable_reply                          | only in image
 ip_local_reass_get                                           | only in image
@@ -129,7 +135,7 @@ wg_set_async_mode_reply                                      | only in image
 wireguard_peer_add                                           | definition changed
 wireguard_peers_details                                      | definition changed
 
-Found 53 api message signature differences
+Found 59 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -224,8 +230,14 @@ please collaborate with the feature maintainer on their productization.
 - flow_disable_reply
 - flow_enable
 - flow_enable_reply
+- flowprobe_get_params
+- flowprobe_get_params_reply
 - flowprobe_interface_add_del
 - flowprobe_interface_add_del_reply
+- flowprobe_interface_details
+- flowprobe_interface_dump
+- flowprobe_set_params
+- flowprobe_set_params_reply
 - gbp_bridge_domain_add
 - gbp_bridge_domain_add_reply
 - gbp_bridge_domain_del
@@ -503,6 +515,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/flowprobe/flowprobe.api ||
 | ------- | ------- |
+| [86c7856ed](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86c7856ed) | flowprobe: add api messages to obtain current state |
 | [6f5ddf346](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f5ddf346) | flowprobe: add support for reporting on inbound packets |
 
 | @c src/plugins/vrrp/vrrp.api ||
