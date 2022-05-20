@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 467 commits since the previous release, including 218 fixes.
+More than 472 commits since the previous release, including 222 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Thu May 19 03:07:30 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Fri May 20 02:57:01 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -484,13 +484,13 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/classify/classify.api ||
-| ------- | ------- |
-| [7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6) | classify: add API to retrieve punt ACL tables |
-
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [01c1fa41f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01c1fa41f) | ip: reassembly - add a way to disable for forus |
+
+| @c src/vnet/classify/classify.api ||
+| ------- | ------- |
+| [7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6) | classify: add API to retrieve punt ACL tables |
 
 | @c src/vnet/policer/policer.api ||
 | ------- | ------- |
