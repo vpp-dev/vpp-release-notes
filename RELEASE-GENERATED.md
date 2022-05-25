@@ -1,10 +1,10 @@
 @page release_notes_2206 Release notes for VPP 22.06
 
-More than 477 commits since the previous release, including 226 fixes.
+More than 485 commits since the previous release, including 230 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Tue May 24 03:05:26 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Wed May 25 03:02:48 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -44,6 +44,7 @@ HIGHLIGHTS-PLACEHOLDER
   - FLOW
     - Add generic flow pattern for 5G flow enhancement ([3a3668201](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a3668201))
     - Enable RSS queue group action for 5G enhancement ([b95e6d4e7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b95e6d4e7))
+    - Support generic flow and RSS action in vapi ([337960b8a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=337960b8a))
   - IPSec
     - Support per next-header next-nodes ([98ca76ab8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=98ca76ab8))
   - Session Layer
@@ -75,8 +76,15 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+af_packet_create_v3                                          | only in image
+af_packet_create_v3_reply                                    | only in image
 bfd_udp_upd                                                  | only in image
 bfd_udp_upd_reply                                            | only in image
+dhcp_client_details                                          | message CRC32 fix
+dhcp_compl_event                                             | message CRC32 fix
+flow_add_v2                                                  | only in image
+flow_add_v2_reply                                            | only in image
+flow_classify_dump                                           | definition changed
 flowprobe_get_params                                         | only in image
 flowprobe_get_params_reply                                   | only in image
 flowprobe_interface_add_del                                  | only in image
@@ -122,10 +130,20 @@ pnat_binding_add_v2                                          | only in image
 pnat_binding_add_v2_reply                                    | only in image
 pnat_bindings_details                                        | definition changed
 pnat_interfaces_details                                      | definition changed
+policer_classify_dump                                        | definition changed
 policer_output                                               | only in image
 policer_output_reply                                         | only in image
 punt_acl_get                                                 | only in image
 punt_acl_get_reply                                           | only in image
+punt_socket_deregister                                       | definition changed
+punt_socket_details                                          | definition changed
+punt_socket_dump                                             | definition changed
+punt_socket_register                                         | definition changed
+session_rule_add_del                                         | definition changed
+session_rules_details                                        | message CRC32 fix
+set_punt                                                     | definition changed
+udp_decap_add_del                                            | definition changed
+urpf_update                                                  | definition changed
 vrrp_vr_del                                                  | only in image
 vrrp_vr_del_reply                                            | only in image
 vrrp_vr_update                                               | only in image
@@ -135,7 +153,7 @@ wg_set_async_mode_reply                                      | only in image
 wireguard_peer_add                                           | definition changed
 wireguard_peers_details                                      | definition changed
 
-Found 59 api message signature differences
+Found 76 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -224,6 +242,8 @@ please collaborate with the feature maintainer on their productization.
 - det44_set_timeouts_reply
 - flow_add
 - flow_add_reply
+- flow_add_v2
+- flow_add_v2_reply
 - flow_del
 - flow_del_reply
 - flow_disable
@@ -492,6 +512,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6) | classify: add API to retrieve punt ACL tables |
 
+| @c src/vnet/devices/af_packet/af_packet.api ||
+| ------- | ------- |
+| [0bfc222e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0bfc222e3) | devices: add af-packet v3 api |
+
 | @c src/vnet/policer/policer.api ||
 | ------- | ------- |
 | [e5a3ae017](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e5a3ae017) | policer: output interface policer |
@@ -499,6 +523,14 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/bfd/bfd.api ||
 | ------- | ------- |
 | [63f2c7d70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63f2c7d70) | bfd: Add an update API that has create new or modify existing semantics |
+
+| @c src/vnet/flow/flow.api ||
+| ------- | ------- |
+| [337960b8a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=337960b8a) | flow: support generic flow and RSS action in vapi |
+
+| @c src/vnet/flow/flow_types.api ||
+| ------- | ------- |
+| [337960b8a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=337960b8a) | flow: support generic flow and RSS action in vapi |
 
 | @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
