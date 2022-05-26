@@ -1,59 +1,15 @@
-@page release_notes_2206 Release notes for VPP 22.06
+@page release_notes_2210 Release notes for VPP 22.10
 
-More than 485 commits since the previous release, including 230 fixes.
+More than 1 commits since the previous release, including 0 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.06 release, generated as on Wed May 25 03:02:48 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Thu May 26 03:06:59 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Binary API Compiler for C and C++
-  - Support api clients within VPP process ([2ca88ff97](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ca88ff97))
-- Build System
-  - Make the build work on Debian 11 ([a47203128](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a47203128))
-- Infrastructure Library
-  - Add new bihash exports ([17ecd853e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=17ecd853e))
-- Plugins
-  - Crypto - ipsecmb
-    - Bump to ipsecmb v1.2 ([c711bd08c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c711bd08c))
-  - DPDK
-    - Support devargs for vmbus ([502714fc4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=502714fc4))
-    - Bump to DPDK v22.03 ([2f132efc3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2f132efc3))
-  - HTTP
-    - Add http protocol plugin ([0b65621d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b65621d4))
-  - Host Stack Applications
-    - Add http throughput test server app ([cfcc42e29](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cfcc42e29))
-    - Add support for SAPI in vpp\_echo ([d0d4b4337](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d0d4b4337))
-  - Prom
-    - Basic builtin prometheus stats exporter ([7285be2aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7285be2aa))
-  - Flowprobe
-    - Add support for reporting on inbound packets ([6f5ddf346](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f5ddf346))
-  - Linux-cp
-    - Linux Control Plane Netlink Listener ([616447c39](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=616447c39))
-  - Snort plugin
-    - Feature support on interface output ([c454e8993](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c454e8993))
-- VNET
-  - Classifier
-    - Add API to retrieve punt ACL tables ([7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6))
-  - Device Drivers
-    - Af-packet v3 support ([219cbcb29](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=219cbcb29))
-    - Add multi-queue support for af-packet ([5a7aa51f0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5a7aa51f0))
-  - FLOW
-    - Add generic flow pattern for 5G flow enhancement ([3a3668201](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3a3668201))
-    - Enable RSS queue group action for 5G enhancement ([b95e6d4e7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b95e6d4e7))
-    - Support generic flow and RSS action in vapi ([337960b8a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=337960b8a))
-  - IPSec
-    - Support per next-header next-nodes ([98ca76ab8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=98ca76ab8))
-  - Session Layer
-    - Add infra for safe pool reallocs ([53d8d4fd6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53d8d4fd6))
-- VPP Comms Library
-  - Make eventfd flag configurable from env ([794599bcc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=794599bcc))
-  - Add support for reconnect ([8ccc6b350](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8ccc6b350))
-- Vector Library
-  - Leave SIGCONT signal with its default handler ([8486283cd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8486283cd))
 
 ## Known issues
 
@@ -76,84 +32,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-af_packet_create_v3                                          | only in image
-af_packet_create_v3_reply                                    | only in image
-bfd_udp_upd                                                  | only in image
-bfd_udp_upd_reply                                            | only in image
-dhcp_client_details                                          | message CRC32 fix
-dhcp_compl_event                                             | message CRC32 fix
-flow_add_v2                                                  | only in image
-flow_add_v2_reply                                            | only in image
-flow_classify_dump                                           | definition changed
-flowprobe_get_params                                         | only in image
-flowprobe_get_params_reply                                   | only in image
-flowprobe_interface_add_del                                  | only in image
-flowprobe_interface_add_del_reply                            | only in image
-flowprobe_interface_details                                  | only in image
-flowprobe_interface_dump                                     | only in image
-flowprobe_set_params                                         | only in image
-flowprobe_set_params_reply                                   | only in image
-ip_local_reass_enable_disable                                | only in image
-ip_local_reass_enable_disable_reply                          | only in image
-ip_local_reass_get                                           | only in image
-ip_local_reass_get_reply                                     | only in image
-memclnt_create_v2                                            | only in image
-memclnt_create_v2_reply                                      | only in image
-nat44_ed_add_del_vrf_route                                   | only in image
-nat44_ed_add_del_vrf_route_reply                             | only in image
-nat44_ed_add_del_vrf_table                                   | only in image
-nat44_ed_add_del_vrf_table_reply                             | only in image
-nat44_ed_vrf_tables_details                                  | only in image
-nat44_ed_vrf_tables_dump                                     | only in image
-nat44_forwarding_is_enabled                                  | only in file
-nat44_forwarding_is_enabled_reply                            | only in file
-nat44_interface_add_del_output_feature                       | only in file
-nat44_interface_add_del_output_feature_reply                 | only in file
-nat44_interface_output_feature_details                       | only in file
-nat44_interface_output_feature_dump                          | only in file
-nat44_plugin_enable_disable                                  | only in file
-nat44_plugin_enable_disable_reply                            | only in file
-nat44_session_cleanup                                        | only in file
-nat44_session_cleanup_reply                                  | only in file
-nat_control_ping                                             | only in file
-nat_control_ping_reply                                       | only in file
-nat_get_timeouts                                             | only in file
-nat_get_timeouts_reply                                       | only in file
-nat_set_log_level                                            | only in file
-nat_set_log_level_reply                                      | only in file
-nat_show_config_2                                            | only in file
-nat_show_config_2_reply                                      | only in file
-nat_show_config                                              | only in file
-nat_show_config_reply                                        | only in file
-pnat_binding_add                                             | definition changed
-pnat_binding_add_v2                                          | only in image
-pnat_binding_add_v2_reply                                    | only in image
-pnat_bindings_details                                        | definition changed
-pnat_interfaces_details                                      | definition changed
-policer_classify_dump                                        | definition changed
-policer_output                                               | only in image
-policer_output_reply                                         | only in image
-punt_acl_get                                                 | only in image
-punt_acl_get_reply                                           | only in image
-punt_socket_deregister                                       | definition changed
-punt_socket_details                                          | definition changed
-punt_socket_dump                                             | definition changed
-punt_socket_register                                         | definition changed
-session_rule_add_del                                         | definition changed
-session_rules_details                                        | message CRC32 fix
-set_punt                                                     | definition changed
-udp_decap_add_del                                            | definition changed
-urpf_update                                                  | definition changed
-vrrp_vr_del                                                  | only in image
-vrrp_vr_del_reply                                            | only in image
-vrrp_vr_update                                               | only in image
-vrrp_vr_update_reply                                         | only in image
-wg_set_async_mode                                            | only in image
-wg_set_async_mode_reply                                      | only in image
-wireguard_peer_add                                           | definition changed
-wireguard_peers_details                                      | definition changed
-
-Found 76 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -161,25 +40,6 @@ Found 76 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- nat44_del_user
-- nat44_del_user_reply
-- nat_get_addr_and_port_alloc_alg
-- nat_get_addr_and_port_alloc_alg_reply
-- nat_ha_flush
-- nat_ha_flush_reply
-- nat_ha_get_failover
-- nat_ha_get_failover_reply
-- nat_ha_get_listener
-- nat_ha_get_listener_reply
-- nat_ha_resync
-- nat_ha_resync_completed_event
-- nat_ha_resync_reply
-- nat_ha_set_failover
-- nat_ha_set_failover_reply
-- nat_ha_set_listener
-- nat_ha_set_listener_reply
-- nat_set_addr_and_port_alloc_alg
-- nat_set_addr_and_port_alloc_alg_reply
 
 ### In-progress API messages
 
@@ -503,62 +363,5 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [01c1fa41f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01c1fa41f) | ip: reassembly - add a way to disable for forus |
-
-| @c src/vnet/classify/classify.api ||
-| ------- | ------- |
-| [7fc0ee7f6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7fc0ee7f6) | classify: add API to retrieve punt ACL tables |
-
-| @c src/vnet/devices/af_packet/af_packet.api ||
-| ------- | ------- |
-| [0bfc222e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0bfc222e3) | devices: add af-packet v3 api |
-
-| @c src/vnet/policer/policer.api ||
-| ------- | ------- |
-| [e5a3ae017](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e5a3ae017) | policer: output interface policer |
-
-| @c src/vnet/bfd/bfd.api ||
-| ------- | ------- |
-| [63f2c7d70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63f2c7d70) | bfd: Add an update API that has create new or modify existing semantics |
-
-| @c src/vnet/flow/flow.api ||
-| ------- | ------- |
-| [337960b8a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=337960b8a) | flow: support generic flow and RSS action in vapi |
-
-| @c src/vnet/flow/flow_types.api ||
-| ------- | ------- |
-| [337960b8a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=337960b8a) | flow: support generic flow and RSS action in vapi |
-
-| @c src/vlibmemory/memclnt.api ||
-| ------- | ------- |
-| [2ca88ff97](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ca88ff97) | vapi: support api clients within vpp process |
-
-| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
-| ------- | ------- |
-| [691c630b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=691c630b7) | nat: VRF routing & FIB improvements |
-| [b68108203](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b68108203) | nat: nat44-ed cleanup & fixes |
-
-| @c src/plugins/nat/pnat/pnat.api ||
-| ------- | ------- |
-| [0891b6aa4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0891b6aa4) | pnat: add support to wildcard IP Protocol field if not specified |
-
-| @c src/plugins/flowprobe/flowprobe.api ||
-| ------- | ------- |
-| [86c7856ed](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86c7856ed) | flowprobe: add api messages to obtain current state |
-| [6f5ddf346](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f5ddf346) | flowprobe: add support for reporting on inbound packets |
-
-| @c src/plugins/vrrp/vrrp.api ||
-| ------- | ------- |
-| [7539e4b55](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7539e4b55) | vrrp: add stats support and update API |
-
-| @c src/plugins/wireguard/wireguard.api ||
-| ------- | ------- |
-| [39fdefdc9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39fdefdc9) | wireguard: Document wireguard async mode default |
-| [f47917959](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f47917959) | wireguard: improve peer dump details |
-| [6a2c6a044](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a2c6a044) | wireguard: improve sending WG interface dump details |
-| [492d7790f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d7790f) | wireguard: add async mode for encryption packets |
 
 
