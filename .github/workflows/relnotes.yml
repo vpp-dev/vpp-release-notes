@@ -30,7 +30,7 @@ jobs:
       env:
          SECRET_SSH_KEY: ${{ secrets.VPP_RELNOTES_PRIVATE_SSH_KEY }}
       run: |
-        sudo mkdir /run/user/$(id -u)
+        sudo mkdir /run/user/$(id -u) || true
         sudo chown $(whoami) /run/user/$(id -u)
         # sudo apt-get install -y --allow-downgrades libllvm6.0=1:6.0-1ubuntu2
         sudo apt-get install clang-format-6.0
