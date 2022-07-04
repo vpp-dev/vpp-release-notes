@@ -40,21 +40,30 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 39 commits since the previous release, including 21 fixes.
+More than 57 commits since the previous release, including 26 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Wed Jun 29 03:23:25 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Mon Jul  4 03:23:31 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Test Infrastructure
+  - Add ipsec flow performance unit test ([422544363](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=422544363))
 - VNET
   - IPSec
     - Introduce spd fast path types ([d699a347c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d699a347c))
+    - Add/delete ipsec fast path policy ([0464310fd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0464310fd))
+    - Add spd fast path matching ([e1dce3758](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1dce3758))
+    - Add fast path configuration parser ([4da8a63a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4da8a63a9))
+    - Show fast path flag in cli ([93bc431df](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=93bc431df))
+    - Add fast path python tests ([ab0bf0c0c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab0bf0c0c))
   - Segment Routing (IPv6 and MPLS)
     - SRv6 TEF behavior support ([9cca694c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9cca694c8))
+    - Add support for SRv6 Path Tracing Infrastructure ([c933bb7e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c933bb7e3))
+    - SRv6 Path Tracing Sink node behavior ([d50e661d6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d50e661d6))
 
 ## Known issues
 
