@@ -40,16 +40,20 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 62 commits since the previous release, including 30 fixes.
+More than 66 commits since the previous release, including 31 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Tue Jul 12 03:32:08 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Wed Jul 13 03:18:56 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - Performance counter
+    - Enable perfmon plugin for Arm ([268d7be66](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=268d7be66))
+    - Add Arm event bundles ([af82211d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af82211d3))
 - Test Infrastructure
   - Add ipsec flow performance unit test ([422544363](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=422544363))
 - VNET
@@ -422,11 +426,11 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/ipsec/ipsec_types.api ||
+| @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [815c6a4fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=815c6a4fb) | ipsec: change wildcard value for any protocol of spd policy |
 
-| @c src/vnet/ipsec/ipsec.api ||
+| @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
 | [815c6a4fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=815c6a4fb) | ipsec: change wildcard value for any protocol of spd policy |
 
