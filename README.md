@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 66 commits since the previous release, including 31 fixes.
+More than 68 commits since the previous release, including 31 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Fri Jul 15 03:35:30 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Sat Jul 16 03:08:32 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -56,6 +56,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add Arm event bundles ([af82211d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af82211d3))
 - Test Infrastructure
   - Add ipsec flow performance unit test ([422544363](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=422544363))
+  - Add fast path ipv6 python tests for outbound policy matching ([651cc01b6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=651cc01b6))
 - VNET
   - IPSec
     - Introduce spd fast path types ([d699a347c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d699a347c))
@@ -64,6 +65,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add fast path configuration parser ([4da8a63a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4da8a63a9))
     - Show fast path flag in cli ([93bc431df](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=93bc431df))
     - Add fast path python tests ([ab0bf0c0c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab0bf0c0c))
+    - Fast path outbound policy matching implementation for ipv6 ([86f8208af](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86f8208af))
   - Segment Routing (IPv6 and MPLS)
     - SRv6 TEF behavior support ([9cca694c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9cca694c8))
     - Add support for SRv6 Path Tracing Infrastructure ([c933bb7e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c933bb7e3))
