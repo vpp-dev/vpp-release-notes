@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 68 commits since the previous release, including 31 fixes.
+More than 73 commits since the previous release, including 36 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Tue Jul 19 03:33:29 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Wed Jul 20 03:20:26 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -286,6 +286,13 @@ please collaborate with the feature maintainer on their productization.
 - ip_route_v2_dump
 - l2_emulation
 - l2_emulation_reply
+- lcp_default_ns_get_reply
+- lcp_default_ns_set
+- lcp_default_ns_set_reply
+- lcp_itf_pair_add_del
+- lcp_itf_pair_add_del_reply
+- lcp_itf_pair_add_del_v2
+- lcp_itf_pair_details
 - mdata_enable_disable
 - mdata_enable_disable_reply
 - nat44_ei_add_del_address_range
@@ -428,11 +435,16 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/ipsec/ipsec.api ||
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [3f245e687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f245e687) | linux-cp: change namespace to netns |
+| [99e3b8b84](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99e3b8b84) | linux-cp: API downgrade due to namespace keyword |
+
+| @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
 | [815c6a4fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=815c6a4fb) | ipsec: change wildcard value for any protocol of spd policy |
 
-| @c src/vnet/ipsec/ipsec_types.api ||
+| @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [815c6a4fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=815c6a4fb) | ipsec: change wildcard value for any protocol of spd policy |
 
