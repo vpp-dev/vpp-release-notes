@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 88 commits since the previous release, including 45 fixes.
+More than 91 commits since the previous release, including 47 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Mon Aug  8 03:15:24 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Tue Aug  9 03:20:02 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Enable interrupt support for vmxnet3 ([157e4f5d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=157e4f5d2))
   - Wireguard
     - Add processing of received cookie messages ([44ec846f4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44ec846f4))
+    - Add dos mitigation support ([ce91af8ad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ce91af8ad))
   - Performance counter
     - Enable perfmon plugin for Arm ([268d7be66](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=268d7be66))
     - Add Arm event bundles ([af82211d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af82211d3))
