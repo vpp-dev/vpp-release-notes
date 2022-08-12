@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 102 commits since the previous release, including 50 fixes.
+More than 108 commits since the previous release, including 52 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Thu Aug 11 03:03:11 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Fri Aug 12 03:10:49 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -449,6 +449,14 @@ please collaborate with the feature maintainer on their productization.
 | [3f245e687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f245e687) | linux-cp: change namespace to netns |
 | [99e3b8b84](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99e3b8b84) | linux-cp: API downgrade due to namespace keyword |
 
+| @c src/vnet/mpls/mpls.api ||
+| ------- | ------- |
+| [41a85c0a2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=41a85c0a2) | mpls: Use the .api for the definition of error/info counters |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [e22a70416](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e22a70416) | ip: Use .api declared error counters |
+
 | @c src/vnet/bfd/bfd.api ||
 | ------- | ------- |
 | [5c7e579f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c7e579f7) | bfd: Express node stats using the .api file |
@@ -459,6 +467,11 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
+| [93688d734](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=93688d734) | ipsec: Use .api declared error counters |
 | [815c6a4fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=815c6a4fb) | ipsec: change wildcard value for any protocol of spd policy |
+
+| @c src/vnet/arp/arp.api ||
+| ------- | ------- |
+| [13a74ae25](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=13a74ae25) | arp: Use the new style error count declaration |
 
 
