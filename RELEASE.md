@@ -1,10 +1,10 @@
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 119 commits since the previous release, including 61 fixes.
+More than 130 commits since the previous release, including 68 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Thu Aug 18 03:34:07 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Fri Aug 19 03:25:23 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -423,7 +423,12 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
+| [b29c60660](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b29c60660) | ip: Use .api declarative counters for ICMP. |
 | [e22a70416](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e22a70416) | ip: Use .api declared error counters |
+
+| @c src/vnet/ip-neighbor/ip_neighbor.api ||
+| ------- | ------- |
+| [6e4a56e65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6e4a56e65) | ip-neighbor: Declarative .api counters. |
 
 | @c src/vnet/bfd/bfd.api ||
 | ------- | ------- |
