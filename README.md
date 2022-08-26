@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 140 commits since the previous release, including 74 fixes.
+More than 142 commits since the previous release, including 75 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Thu Aug 25 03:43:26 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Fri Aug 26 03:49:38 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -79,6 +79,8 @@ HIGHLIGHTS-PLACEHOLDER
     - SRv6 TEF behavior support ([9cca694c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9cca694c8))
     - Add support for SRv6 Path Tracing Infrastructure ([c933bb7e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c933bb7e3))
     - SRv6 Path Tracing Sink node behavior ([d50e661d6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d50e661d6))
+- Vector Library
+  - Introduce DMA infrastructure ([abd566942](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abd566942))
 
 ## Known issues
 
