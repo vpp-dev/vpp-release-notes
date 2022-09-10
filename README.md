@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 179 commits since the previous release, including 104 fixes.
+More than 184 commits since the previous release, including 107 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Fri Sep  9 03:38:43 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Sat Sep 10 03:44:58 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
