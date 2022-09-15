@@ -1,10 +1,10 @@
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 186 commits since the previous release, including 107 fixes.
+More than 188 commits since the previous release, including 107 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Wed Sep 14 03:46:52 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Thu Sep 15 03:53:51 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -37,6 +37,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add fast path python tests ([ab0bf0c0c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab0bf0c0c))
     - Fast path outbound policy matching implementation for ipv6 ([86f8208af](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86f8208af))
     - Introduce fast path ipv4 inbound matching ([993b6bee6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=993b6bee6))
+    - Make chacha20-poly1305 available via API ([d7c030d60](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7c030d60))
   - Segment Routing (IPv6 and MPLS)
     - SRv6 TEF behavior support ([9cca694c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9cca694c8))
     - Add support for SRv6 Path Tracing Infrastructure ([c933bb7e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c933bb7e3))
@@ -415,6 +416,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
+| [d7c030d60](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7c030d60) | ipsec: make chacha20-poly1305 available via API |
 | [815c6a4fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=815c6a4fb) | ipsec: change wildcard value for any protocol of spd policy |
 
 | @c src/vnet/mpls/mpls.api ||
