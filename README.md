@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 194 commits since the previous release, including 110 fixes.
+More than 201 commits since the previous release, including 116 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Sun Sep 18 03:52:45 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Mon Sep 19 04:03:27 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -483,6 +483,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/bfd/bfd.api ||
 | ------- | ------- |
 | [5c7e579f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c7e579f7) | bfd: Express node stats using the .api file |
+
+| @c src/plugins/abf/abf.api ||
+| ------- | ------- |
+| [755b529c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755b529c1) | abf: add API parameter n_paths range checks |
 
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
