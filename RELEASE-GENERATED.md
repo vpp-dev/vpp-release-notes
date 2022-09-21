@@ -1,15 +1,17 @@
 @page release_notes_2210 Release notes for VPP 22.10
 
-More than 204 commits since the previous release, including 117 fixes.
+More than 212 commits since the previous release, including 118 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Tue Sep 20 03:46:13 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Wed Sep 21 04:00:53 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Packetforge
+  - Add packetforge for generic flow to extras ([ce4b64517](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ce4b64517))
 - Plugins
   - DPDK
     - Enable interrupt support for vmxnet3 ([157e4f5d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=157e4f5d2))
