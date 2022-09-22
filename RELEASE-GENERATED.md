@@ -1,55 +1,18 @@
-@page release_notes_2210 Release notes for VPP 22.10
+@page release_notes_2302 Release notes for VPP 23.02
 
-More than 212 commits since the previous release, including 118 fixes.
+More than 1 commits since the previous release, including 0 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 22.10 release, generated as on Wed Sep 21 04:00:53 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Sep 22 03:45:38 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Packetforge
-  - Add packetforge for generic flow to extras ([ce4b64517](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ce4b64517))
-- Plugins
-  - DPDK
-    - Enable interrupt support for vmxnet3 ([157e4f5d2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=157e4f5d2))
-    - Bump to 22.07 ([3c285b54a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3c285b54a))
-  - Wireguard
-    - Add processing of received cookie messages ([44ec846f4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44ec846f4))
-    - Add dos mitigation support ([ce91af8ad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ce91af8ad))
-    - Add handshake rate limiting support ([a6328e51e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a6328e51e))
-    - Add peers roaming support ([fee9853a4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fee9853a4))
-  - Performance counter
-    - Enable perfmon plugin for Arm ([268d7be66](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=268d7be66))
-    - Add Arm event bundles ([af82211d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af82211d3))
-- Test Infrastructure
-  - Add ipsec flow performance unit test ([422544363](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=422544363))
-  - Add fast path ipv6 python tests for outbound policy matching ([651cc01b6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=651cc01b6))
 - VNET
-  - IP Neighbors
-    - ARP and ND stats per-interface. ([fd2417b2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd2417b2a))
   - IPSec
-    - Introduce spd fast path types ([d699a347c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d699a347c))
-    - Add/delete ipsec fast path policy ([0464310fd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0464310fd))
-    - Add spd fast path matching ([e1dce3758](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1dce3758))
-    - Add fast path configuration parser ([4da8a63a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4da8a63a9))
-    - Show fast path flag in cli ([93bc431df](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=93bc431df))
-    - Add fast path python tests ([ab0bf0c0c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ab0bf0c0c))
-    - Fast path outbound policy matching implementation for ipv6 ([86f8208af](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86f8208af))
-    - Introduce fast path ipv4 inbound matching ([993b6bee6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=993b6bee6))
-    - Make chacha20-poly1305 available via API ([d7c030d60](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7c030d60))
-  - Segment Routing (IPv6 and MPLS)
-    - SRv6 TEF behavior support ([9cca694c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9cca694c8))
-    - Add support for SRv6 Path Tracing Infrastructure ([c933bb7e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c933bb7e3))
-    - SRv6 Path Tracing Sink node behavior ([d50e661d6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d50e661d6))
-  - Session Layer
-    - Support dma option ([0654242d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0654242d1))
-- VPP Comms Library
-  - Add hugepage for vcl configure and svm ([c795b8836](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c795b8836))
-- Vector Library
-  - Introduce DMA infrastructure ([abd566942](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abd566942))
+    - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
 
 ## Known issues
 
@@ -72,10 +35,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-ipsec_spd_entry_add_del_v2                                   | only in image
-ipsec_spd_entry_add_del_v2_reply                             | only in image
-
-Found 2 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -83,7 +43,6 @@ Found 2 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- ipsec_spd_entry_add_del
 
 ### In-progress API messages
 
@@ -414,45 +373,5 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [93688d734](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=93688d734) | ipsec: Use .api declared error counters |
-| [815c6a4fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=815c6a4fb) | ipsec: change wildcard value for any protocol of spd policy |
-
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [d7c030d60](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d7c030d60) | ipsec: make chacha20-poly1305 available via API |
-| [815c6a4fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=815c6a4fb) | ipsec: change wildcard value for any protocol of spd policy |
-
-| @c src/vnet/mpls/mpls.api ||
-| ------- | ------- |
-| [41a85c0a2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=41a85c0a2) | mpls: Use the .api for the definition of error/info counters |
-
-| @c src/vnet/arp/arp.api ||
-| ------- | ------- |
-| [13a74ae25](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=13a74ae25) | arp: Use the new style error count declaration |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [b29c60660](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b29c60660) | ip: Use .api declarative counters for ICMP. |
-| [e22a70416](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e22a70416) | ip: Use .api declared error counters |
-
-| @c src/vnet/ip-neighbor/ip_neighbor.api ||
-| ------- | ------- |
-| [6e4a56e65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6e4a56e65) | ip-neighbor: Declarative .api counters. |
-
-| @c src/vnet/bfd/bfd.api ||
-| ------- | ------- |
-| [5c7e579f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c7e579f7) | bfd: Express node stats using the .api file |
-
-| @c src/plugins/abf/abf.api ||
-| ------- | ------- |
-| [755b529c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755b529c1) | abf: add API parameter n_paths range checks |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [3f245e687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f245e687) | linux-cp: change namespace to netns |
-| [99e3b8b84](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99e3b8b84) | linux-cp: API downgrade due to namespace keyword |
 
 
