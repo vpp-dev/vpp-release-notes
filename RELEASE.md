@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 5 commits since the previous release, including 0 fixes.
+More than 12 commits since the previous release, including 6 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Tue Sep 27 03:40:14 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Sep 28 03:46:49 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -373,5 +373,9 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [d92524687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d92524687) | vnet: fix ip4 version and IHL check |
 
 
