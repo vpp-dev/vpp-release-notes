@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 12 commits since the previous release, including 6 fixes.
+More than 16 commits since the previous release, including 7 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Sep 28 03:46:49 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Sep 29 03:49:27 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,9 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - IPSec
     - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
+- VPP StrongSwan Daemon
+  - Add plugin for VPP-swan ([4e88e041a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4e88e041a))
+  - Add scripts for testing ([95875774b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95875774b))
 
 ## Known issues
 
