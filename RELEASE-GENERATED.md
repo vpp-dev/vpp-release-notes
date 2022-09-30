@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 16 commits since the previous release, including 7 fixes.
+More than 20 commits since the previous release, including 9 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Sep 29 03:49:27 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Sep 30 04:07:14 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - IPSec
     - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
+  - UDP
+    - Add udp encap source port entropy support ([5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362))
 - VPP StrongSwan Daemon
   - Add plugin for VPP-swan ([4e88e041a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4e88e041a))
   - Add scripts for testing ([95875774b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95875774b))
@@ -380,5 +382,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [d92524687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d92524687) | vnet: fix ip4 version and IHL check |
+
+| @c src/vnet/udp/udp.api ||
+| ------- | ------- |
+| [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
 
 
