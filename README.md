@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 20 commits since the previous release, including 9 fixes.
+More than 22 commits since the previous release, including 10 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Mon Oct  3 03:07:23 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Tue Oct  4 03:15:42 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -80,7 +80,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+sr_localsids_with_packet_stats_details                       | only in image
+sr_localsids_with_packet_stats_dump                          | only in image
+
+Found 2 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -354,6 +357,8 @@ please collaborate with the feature maintainer on their productization.
 - pnat_interfaces_get_reply
 - sample_macswap_enable_disable
 - sample_macswap_enable_disable_reply
+- sr_localsids_with_packet_stats_details
+- sr_localsids_with_packet_stats_dump
 - sr_policies_with_sl_index_details
 - sr_policies_with_sl_index_dump
 - sw_interface_set_vxlan_gbp_bypass
@@ -426,5 +431,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
 | [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
 
 
