@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 28 commits since the previous release, including 11 fixes.
+More than 32 commits since the previous release, including 13 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Oct  6 03:13:06 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Oct  7 03:23:02 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -15,6 +15,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
   - UDP
     - Add udp encap source port entropy support ([5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362))
+- VPP Comms Library
+  - Add api to check if vcl disconnected from VPP ([6ff8e90ed](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ff8e90ed))
 - VPP StrongSwan Daemon
   - Add plugin for VPP-swan ([4e88e041a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4e88e041a))
   - Add scripts for testing ([95875774b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95875774b))
