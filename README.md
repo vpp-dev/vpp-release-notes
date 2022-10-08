@@ -40,16 +40,19 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 32 commits since the previous release, including 13 fixes.
+More than 38 commits since the previous release, including 14 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Oct  7 03:23:02 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Sat Oct  8 03:08:12 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - Unicast Reverse Path forwarding
+    - Add mode for specific fib index lookup ([b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5))
 - VNET
   - IPSec
     - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
@@ -84,8 +87,10 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 sr_localsids_with_packet_stats_details                       | only in image
 sr_localsids_with_packet_stats_dump                          | only in image
+urpf_update_v2                                               | only in image
+urpf_update_v2_reply                                         | only in image
 
-Found 2 api message signature differences
+Found 4 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -437,5 +442,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
 | [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
+
+| @c src/plugins/urpf/urpf.api ||
+| ------- | ------- |
+| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
 
 
