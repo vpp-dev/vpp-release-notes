@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 40 commits since the previous release, including 16 fixes.
+More than 44 commits since the previous release, including 18 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Tue Oct 11 03:41:53 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Oct 12 03:40:32 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -85,12 +85,18 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+bridge_domain_add_del_v2                                     | only in image
+bridge_domain_add_del_v2_reply                               | only in image
+nat44_ei_user_session_v2_details                             | only in image
+nat44_ei_user_session_v2_dump                                | only in image
+nat44_user_session_v3_details                                | only in image
+nat44_user_session_v3_dump                                   | only in image
 sr_localsids_with_packet_stats_details                       | only in image
 sr_localsids_with_packet_stats_dump                          | only in image
 urpf_update_v2                                               | only in image
 urpf_update_v2_reply                                         | only in image
 
-Found 4 api message signature differences
+Found 10 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -98,6 +104,8 @@ Found 4 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- bridge_domain_add_del
+- bridge_domain_add_del_reply
 
 ### In-progress API messages
 
@@ -338,6 +346,8 @@ please collaborate with the feature maintainer on their productization.
 - nat44_ei_user_dump
 - nat44_ei_user_session_details
 - nat44_ei_user_session_dump
+- nat44_ei_user_session_v2_details
+- nat44_ei_user_session_v2_dump
 - nat44_ei_worker_details
 - nat44_ei_worker_dump
 - nat64_plugin_enable_disable
@@ -431,6 +441,10 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
+
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [d92524687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d92524687) | vnet: fix ip4 version and IHL check |
@@ -442,6 +456,14 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
 | [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
+
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
+
+| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
+| ------- | ------- |
+| [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
 
 | @c src/plugins/urpf/urpf.api ||
 | ------- | ------- |
