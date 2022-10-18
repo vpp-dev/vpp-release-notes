@@ -40,17 +40,21 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 55 commits since the previous release, including 25 fixes.
+More than 58 commits since the previous release, including 26 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Mon Oct 17 04:06:38 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Tue Oct 18 03:49:20 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
 - Plugins
+  - CNat
+    - Add sctp support ([f284c14c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f284c14c7))
+  - Crypto - ipsecmb
+    - Bump ipsecmb library to v1.3 ([2a6f35f24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a6f35f24))
   - Unicast Reverse Path forwarding
     - Add mode for specific fib index lookup ([b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5))
 - VNET
