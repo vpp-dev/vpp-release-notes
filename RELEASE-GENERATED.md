@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 65 commits since the previous release, including 31 fixes.
+More than 66 commits since the previous release, including 31 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Oct 19 03:48:34 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Oct 20 03:40:43 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -406,6 +406,10 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/urpf/urpf.api ||
+| ------- | ------- |
+| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
+
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
 | [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
@@ -414,9 +418,9 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
 
-| @c src/plugins/urpf/urpf.api ||
+| @c src/vnet/l2/l2.api ||
 | ------- | ------- |
-| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
+| [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
 
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
@@ -429,9 +433,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
 | [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
-
-| @c src/vnet/l2/l2.api ||
-| ------- | ------- |
-| [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
 
 
