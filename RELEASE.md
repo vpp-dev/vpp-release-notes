@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 66 commits since the previous release, including 31 fixes.
+More than 71 commits since the previous release, including 33 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Oct 20 03:40:43 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Oct 21 03:14:04 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -23,6 +23,7 @@ HIGHLIGHTS-PLACEHOLDER
   - UDP
     - Add udp encap source port entropy support ([5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362))
     - Explicit udp output node ([8c1be054b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8c1be054b))
+    - Support for disabling tx csum ([f8ee39ff7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f8ee39ff7))
 - VPP Comms Library
   - Add api to check if vcl disconnected from VPP ([6ff8e90ed](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ff8e90ed))
 - VPP StrongSwan Daemon
