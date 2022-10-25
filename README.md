@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 71 commits since the previous release, including 33 fixes.
+More than 78 commits since the previous release, including 37 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Mon Oct 24 04:04:40 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Tue Oct 25 03:59:26 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,9 +55,13 @@ HIGHLIGHTS-PLACEHOLDER
     - Add sctp support ([f284c14c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f284c14c7))
   - Crypto - ipsecmb
     - Bump ipsecmb library to v1.3 ([2a6f35f24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a6f35f24))
+  - DPDK
+    - Add Intel QAT 200xx series support ([a57549ad2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a57549ad2))
   - Unicast Reverse Path forwarding
     - Add mode for specific fib index lookup ([b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5))
 - VNET
+  - Device Drivers
+    - Add support for af-packet v2 ([8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0))
   - IPSec
     - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
   - UDP
@@ -462,6 +466,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
 | [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
+
+| @c src/vnet/devices/af_packet/af_packet.api ||
+| ------- | ------- |
+| [8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0) | devices: add support for af-packet v2 |
 
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
