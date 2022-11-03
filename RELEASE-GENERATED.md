@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 93 commits since the previous release, including 45 fixes.
+More than 94 commits since the previous release, including 45 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Nov  2 03:29:17 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Nov  3 03:09:55 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -24,6 +24,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for af-packet v2 ([8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0))
   - IPSec
     - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
+  - Segment Routing (IPv6 and MPLS)
+    - SRv6 Path Tracing Midpoint behaviour ([39d6deca5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39d6deca5))
   - UDP
     - Add udp encap source port entropy support ([5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362))
     - Explicit udp output node ([8c1be054b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8c1be054b))
