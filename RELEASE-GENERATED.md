@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 96 commits since the previous release, including 47 fixes.
+More than 100 commits since the previous release, including 50 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Nov  4 03:16:30 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Sat Nov  5 03:03:53 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -59,16 +59,35 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 bridge_domain_add_del_v2                                     | only in image
 bridge_domain_add_del_v2_reply                               | only in image
+nat44_del_user                                               | only in file
+nat44_del_user_reply                                         | only in file
 nat44_ei_user_session_v2_details                             | only in image
 nat44_ei_user_session_v2_dump                                | only in image
 nat44_user_session_v3_details                                | only in image
 nat44_user_session_v3_dump                                   | only in image
+nat_get_addr_and_port_alloc_alg                              | only in file
+nat_get_addr_and_port_alloc_alg_reply                        | only in file
+nat_ha_flush                                                 | only in file
+nat_ha_flush_reply                                           | only in file
+nat_ha_get_failover                                          | only in file
+nat_ha_get_failover_reply                                    | only in file
+nat_ha_get_listener                                          | only in file
+nat_ha_get_listener_reply                                    | only in file
+nat_ha_resync                                                | only in file
+nat_ha_resync_completed_event                                | only in file
+nat_ha_resync_reply                                          | only in file
+nat_ha_set_failover                                          | only in file
+nat_ha_set_failover_reply                                    | only in file
+nat_ha_set_listener                                          | only in file
+nat_ha_set_listener_reply                                    | only in file
+nat_set_addr_and_port_alloc_alg                              | only in file
+nat_set_addr_and_port_alloc_alg_reply                        | only in file
 sr_localsids_with_packet_stats_details                       | only in image
 sr_localsids_with_packet_stats_dump                          | only in image
 urpf_update_v2                                               | only in image
 urpf_update_v2_reply                                         | only in image
 
-Found 10 api message signature differences
+Found 29 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -419,6 +438,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
+| [a923ce591](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a923ce591) | nat: cleanup of deprecated features |
 | [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
 
 | @c src/plugins/nat/nat44-ei/nat44_ei.api ||
