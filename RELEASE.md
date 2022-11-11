@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 109 commits since the previous release, including 57 fixes.
+More than 116 commits since the previous release, including 59 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Nov 10 03:07:59 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Nov 11 03:07:59 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -17,6 +17,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Bump ipsecmb library to v1.3 ([2a6f35f24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a6f35f24))
   - DPDK
     - Add Intel QAT 200xx series support ([a57549ad2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a57549ad2))
+  - HTTP
+    - Support client connect ([ee4172ef0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ee4172ef0))
   - Unicast Reverse Path forwarding
     - Add mode for specific fib index lookup ([b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5))
 - VNET
