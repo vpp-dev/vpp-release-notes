@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 123 commits since the previous release, including 61 fixes.
+More than 125 commits since the previous release, including 63 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Nov 17 02:53:21 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Sun Nov 20 03:00:33 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -434,9 +434,25 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/urpf/urpf.api ||
+| @c src/vnet/udp/udp.api ||
 | ------- | ------- |
-| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
+| [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
+
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [d92524687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d92524687) | vnet: fix ip4 version and IHL check |
+
+| @c src/vnet/devices/af_packet/af_packet.api ||
+| ------- | ------- |
+| [8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0) | devices: add support for af-packet v2 |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
@@ -447,24 +463,8 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
 
-| @c src/vnet/l2/l2.api ||
+| @c src/plugins/urpf/urpf.api ||
 | ------- | ------- |
-| [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
-
-| @c src/vnet/devices/af_packet/af_packet.api ||
-| ------- | ------- |
-| [8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0) | devices: add support for af-packet v2 |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [d92524687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d92524687) | vnet: fix ip4 version and IHL check |
-
-| @c src/vnet/udp/udp.api ||
-| ------- | ------- |
-| [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
+| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
 
 
