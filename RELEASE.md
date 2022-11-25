@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 132 commits since the previous release, including 66 fixes.
+More than 134 commits since the previous release, including 66 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Nov 24 02:37:04 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Nov 25 02:44:20 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -28,6 +28,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
   - Segment Routing (IPv6 and MPLS)
     - SRv6 Path Tracing Midpoint behaviour ([39d6deca5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39d6deca5))
+    - Srv6 path tracing api ([b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf))
   - UDP
     - Add udp encap source port entropy support ([5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362))
     - Explicit udp output node ([8c1be054b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8c1be054b))
@@ -86,10 +87,16 @@ nat_set_addr_and_port_alloc_alg                              | only in file
 nat_set_addr_and_port_alloc_alg_reply                        | only in file
 sr_localsids_with_packet_stats_details                       | only in image
 sr_localsids_with_packet_stats_dump                          | only in image
+sr_pt_iface_add                                              | only in image
+sr_pt_iface_add_reply                                        | only in image
+sr_pt_iface_del                                              | only in image
+sr_pt_iface_del_reply                                        | only in image
+sr_pt_iface_details                                          | only in image
+sr_pt_iface_dump                                             | only in image
 urpf_update_v2                                               | only in image
 urpf_update_v2_reply                                         | only in image
 
-Found 29 api message signature differences
+Found 35 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -434,37 +441,41 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/udp/udp.api ||
+| @c src/plugins/urpf/urpf.api ||
 | ------- | ------- |
-| [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
+| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
 
-| @c src/vnet/srv6/sr.api ||
+| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
 | ------- | ------- |
-| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
-
-| @c src/vnet/l2/l2.api ||
-| ------- | ------- |
-| [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [d92524687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d92524687) | vnet: fix ip4 version and IHL check |
-
-| @c src/vnet/devices/af_packet/af_packet.api ||
-| ------- | ------- |
-| [8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0) | devices: add support for af-packet v2 |
+| [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
 | [a923ce591](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a923ce591) | nat: cleanup of deprecated features |
 | [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
 
-| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
+| @c src/vnet/ip/ip.api ||
 | ------- | ------- |
-| [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
+| [d92524687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d92524687) | vnet: fix ip4 version and IHL check |
 
-| @c src/plugins/urpf/urpf.api ||
+| @c src/vnet/udp/udp.api ||
 | ------- | ------- |
-| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
+| [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
+
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
+
+| @c src/vnet/devices/af_packet/af_packet.api ||
+| ------- | ------- |
+| [8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0) | devices: add support for af-packet v2 |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
+
+| @c src/vnet/srv6/sr_pt.api ||
+| ------- | ------- |
+| [b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf) | sr: srv6 path tracing api |
 
 
