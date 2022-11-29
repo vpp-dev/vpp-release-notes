@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 136 commits since the previous release, including 67 fixes.
+More than 138 commits since the previous release, including 67 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Mon Nov 28 02:40:50 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Tue Nov 29 02:36:40 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -66,6 +66,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for af-packet v2 ([8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0))
   - IPSec
     - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
+    - Remove redundant policy array in fast path spd ([14bf6a8fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14bf6a8fb))
   - Segment Routing (IPv6 and MPLS)
     - SRv6 Path Tracing Midpoint behaviour ([39d6deca5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39d6deca5))
     - Srv6 path tracing api ([b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf))
