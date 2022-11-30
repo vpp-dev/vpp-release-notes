@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 138 commits since the previous release, including 67 fixes.
+More than 145 commits since the previous release, including 72 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Tue Nov 29 02:36:40 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Nov 30 02:34:03 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -107,6 +107,7 @@ will disappear in the next release.
 
 - bridge_domain_add_del
 - bridge_domain_add_del_reply
+- ipsec_spd_entry_add_del_reply
 
 ### In-progress API messages
 
@@ -458,6 +459,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [d92524687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d92524687) | vnet: fix ip4 version and IHL check |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [520cde406](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=520cde406) | ipsec: use correct reply message |
 
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
