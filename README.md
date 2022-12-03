@@ -40,17 +40,19 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 148 commits since the previous release, including 73 fixes.
+More than 156 commits since the previous release, including 76 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Dec  2 02:30:11 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Sat Dec  3 02:16:35 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
 - Plugins
+  - AVF Device driver
+    - Support generic flow ([a6d16b713](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a6d16b713))
   - CNat
     - Add sctp support ([f284c14c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f284c14c7))
   - Crypto - ipsecmb
@@ -147,7 +149,11 @@ will disappear in the next release.
 
 - bridge_domain_add_del
 - bridge_domain_add_del_reply
+- create_vhost_user_if
+- create_vhost_user_if_reply
 - ipsec_spd_entry_add_del_reply
+- modify_vhost_user_if
+- modify_vhost_user_if_reply
 
 ### In-progress API messages
 
@@ -486,6 +492,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/urpf/urpf.api ||
 | ------- | ------- |
 | [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
+
+| @c src/plugins/vhost/vhost_user.api ||
+| ------- | ------- |
+| [7eba44d1e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7eba44d1e) | vhost: convert vhost device driver to a plugin |
 
 | @c src/plugins/nat/nat44-ei/nat44_ei.api ||
 | ------- | ------- |
