@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 177 commits since the previous release, including 85 fixes.
+More than 179 commits since the previous release, including 85 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Dec 14 02:32:12 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Dec 15 02:31:31 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -489,22 +489,34 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/urpf/urpf.api ||
-| ------- | ------- |
-| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
-
 | @c src/plugins/vhost/vhost_user.api ||
 | ------- | ------- |
 | [7eba44d1e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7eba44d1e) | vhost: convert vhost device driver to a plugin |
 
-| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
+| @c src/plugins/urpf/urpf.api ||
 | ------- | ------- |
-| [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
+| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
 | [a923ce591](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a923ce591) | nat: cleanup of deprecated features |
 | [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
+
+| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
+| ------- | ------- |
+| [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
+
+| @c src/vnet/srv6/sr_pt.api ||
+| ------- | ------- |
+| [b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf) | sr: srv6 path tracing api |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
+
+| @c src/vnet/udp/udp.api ||
+| ------- | ------- |
+| [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
@@ -514,10 +526,6 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [520cde406](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=520cde406) | ipsec: use correct reply message |
 
-| @c src/vnet/udp/udp.api ||
-| ------- | ------- |
-| [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
-
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
 | [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
@@ -525,13 +533,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/devices/af_packet/af_packet.api ||
 | ------- | ------- |
 | [8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0) | devices: add support for af-packet v2 |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
-
-| @c src/vnet/srv6/sr_pt.api ||
-| ------- | ------- |
-| [b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf) | sr: srv6 path tracing api |
 
 
