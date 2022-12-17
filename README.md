@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 181 commits since the previous release, including 87 fixes.
+More than 183 commits since the previous release, including 88 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Dec 16 02:13:52 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Sat Dec 17 02:13:05 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -69,6 +69,7 @@ HIGHLIGHTS-PLACEHOLDER
   - IPSec
     - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
     - Remove redundant policy array in fast path spd ([14bf6a8fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14bf6a8fb))
+    - New api for sa ips and ports updates ([4117b24ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4117b24ac))
   - Segment Routing (IPv6 and MPLS)
     - SRv6 Path Tracing Midpoint behaviour ([39d6deca5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39d6deca5))
     - Srv6 path tracing api ([b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf))
@@ -105,6 +106,8 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 bridge_domain_add_del_v2                                     | only in image
 bridge_domain_add_del_v2_reply                               | only in image
+ipsec_sad_entry_update                                       | only in image
+ipsec_sad_entry_update_reply                                 | only in image
 nat44_del_user                                               | only in file
 nat44_del_user_reply                                         | only in file
 nat44_ei_user_session_v2_details                             | only in image
@@ -139,7 +142,7 @@ sr_pt_iface_dump                                             | only in image
 urpf_update_v2                                               | only in image
 urpf_update_v2_reply                                         | only in image
 
-Found 35 api message signature differences
+Found 37 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -524,7 +527,12 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
+| [4117b24ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4117b24ac) | ipsec: new api for sa ips and ports updates |
 | [520cde406](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=520cde406) | ipsec: use correct reply message |
+
+| @c src/vnet/bfd/bfd.api ||
+| ------- | ------- |
+| [415b6a7c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=415b6a7c7) | bfd: fix bfd udp error enum incompatibility |
 
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
