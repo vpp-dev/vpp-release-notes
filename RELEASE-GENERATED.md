@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 189 commits since the previous release, including 92 fixes.
+More than 193 commits since the previous release, including 94 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Dec 21 02:15:28 UTC 2022.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Dec 22 02:17:04 UTC 2022.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -456,6 +456,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [7eba44d1e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7eba44d1e) | vhost: convert vhost device driver to a plugin |
 
+| @c src/plugins/af_packet/af_packet.api ||
+| ------- | ------- |
+| [bca76580b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bca76580b) | af_packet: move to plugin |
+
 | @c src/plugins/urpf/urpf.api ||
 | ------- | ------- |
 | [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
@@ -497,9 +501,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
 | [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
-
-| @c src/vnet/devices/af_packet/af_packet.api ||
-| ------- | ------- |
-| [8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0) | devices: add support for af-packet v2 |
 
 
