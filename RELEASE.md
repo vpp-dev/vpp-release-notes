@@ -1,10 +1,10 @@
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 219 commits since the previous release, including 109 fixes.
+More than 222 commits since the previous release, including 111 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Thu Jan 12 02:21:43 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Fri Jan 13 02:30:59 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -452,17 +452,13 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/vhost/vhost_user.api ||
-| ------- | ------- |
-| [7eba44d1e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7eba44d1e) | vhost: convert vhost device driver to a plugin |
-
 | @c src/plugins/af_packet/af_packet.api ||
 | ------- | ------- |
 | [bca76580b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bca76580b) | af_packet: move to plugin |
 
-| @c src/plugins/urpf/urpf.api ||
+| @c src/plugins/vhost/vhost_user.api ||
 | ------- | ------- |
-| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
+| [7eba44d1e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7eba44d1e) | vhost: convert vhost device driver to a plugin |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
@@ -473,13 +469,9 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
 
-| @c src/vnet/srv6/sr_pt.api ||
+| @c src/plugins/urpf/urpf.api ||
 | ------- | ------- |
-| [b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf) | sr: srv6 path tracing api |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
+| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
 
 | @c src/vnet/udp/udp.api ||
 | ------- | ------- |
@@ -494,12 +486,20 @@ please collaborate with the feature maintainer on their productization.
 | [4117b24ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4117b24ac) | ipsec: new api for sa ips and ports updates |
 | [520cde406](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=520cde406) | ipsec: use correct reply message |
 
-| @c src/vnet/bfd/bfd.api ||
+| @c src/vnet/srv6/sr_pt.api ||
 | ------- | ------- |
-| [415b6a7c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=415b6a7c7) | bfd: fix bfd udp error enum incompatibility |
+| [b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf) | sr: srv6 path tracing api |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
 
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
 | [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
+
+| @c src/vnet/bfd/bfd.api ||
+| ------- | ------- |
+| [415b6a7c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=415b6a7c7) | bfd: fix bfd udp error enum incompatibility |
 
 
