@@ -40,16 +40,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2302 Release notes for VPP 23.02
 
-More than 233 commits since the previous release, including 115 fixes.
+More than 243 commits since the previous release, including 118 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Tue Jan 17 02:21:04 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Jan 18 02:28:17 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Binary API Compiler for Python
+  - Include comments in json ([5d2346801](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5d2346801))
 - Plugins
   - AVF Device driver
     - Support generic flow ([a6d16b713](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a6d16b713))
