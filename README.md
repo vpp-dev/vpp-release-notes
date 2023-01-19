@@ -38,52 +38,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 # Draft Release Notes below
 
 
-@page release_notes_2302 Release notes for VPP 23.02
+@page release_notes_2306 Release notes for VPP 23.06
 
-More than 243 commits since the previous release, including 118 fixes.
+More than 0 commits since the previous release, including 0 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.02 release, generated as on Wed Jan 18 02:28:17 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Thu Jan 19 02:31:02 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Binary API Compiler for Python
-  - Include comments in json ([5d2346801](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5d2346801))
-- Plugins
-  - AVF Device driver
-    - Support generic flow ([a6d16b713](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a6d16b713))
-  - CNat
-    - Add sctp support ([f284c14c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f284c14c7))
-  - Crypto - ipsecmb
-    - Bump ipsecmb library to v1.3 ([2a6f35f24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a6f35f24))
-  - DPDK
-    - Add Intel QAT 200xx series support ([a57549ad2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a57549ad2))
-  - HTTP
-    - Support client connect ([ee4172ef0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ee4172ef0))
-  - Unicast Reverse Path forwarding
-    - Add mode for specific fib index lookup ([b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5))
-- VNET
-  - Device Drivers
-    - Add support for af-packet v2 ([8b90d89b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b90d89b0))
-  - IPSec
-    - Introduce fast path ipv6 inbound matching ([06abf2352](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06abf2352))
-    - Remove redundant policy array in fast path spd ([14bf6a8fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14bf6a8fb))
-    - New api for sa ips and ports updates ([4117b24ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4117b24ac))
-  - Segment Routing (IPv6 and MPLS)
-    - SRv6 Path Tracing Midpoint behaviour ([39d6deca5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39d6deca5))
-    - Srv6 path tracing api ([b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf))
-  - UDP
-    - Add udp encap source port entropy support ([5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362))
-    - Explicit udp output node ([8c1be054b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8c1be054b))
-    - Support for disabling tx csum ([f8ee39ff7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f8ee39ff7))
-- VPP Comms Library
-  - Add api to check if vcl disconnected from VPP ([6ff8e90ed](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ff8e90ed))
-- VPP StrongSwan Daemon
-  - Add plugin for VPP-swan ([4e88e041a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4e88e041a))
-  - Add scripts for testing ([95875774b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=95875774b))
 
 ## Known issues
 
@@ -106,45 +72,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-bridge_domain_add_del_v2                                     | only in image
-bridge_domain_add_del_v2_reply                               | only in image
-ipsec_sad_entry_update                                       | only in image
-ipsec_sad_entry_update_reply                                 | only in image
-nat44_del_user                                               | only in file
-nat44_del_user_reply                                         | only in file
-nat44_ei_user_session_v2_details                             | only in image
-nat44_ei_user_session_v2_dump                                | only in image
-nat44_user_session_v3_details                                | only in image
-nat44_user_session_v3_dump                                   | only in image
-nat_get_addr_and_port_alloc_alg                              | only in file
-nat_get_addr_and_port_alloc_alg_reply                        | only in file
-nat_ha_flush                                                 | only in file
-nat_ha_flush_reply                                           | only in file
-nat_ha_get_failover                                          | only in file
-nat_ha_get_failover_reply                                    | only in file
-nat_ha_get_listener                                          | only in file
-nat_ha_get_listener_reply                                    | only in file
-nat_ha_resync                                                | only in file
-nat_ha_resync_completed_event                                | only in file
-nat_ha_resync_reply                                          | only in file
-nat_ha_set_failover                                          | only in file
-nat_ha_set_failover_reply                                    | only in file
-nat_ha_set_listener                                          | only in file
-nat_ha_set_listener_reply                                    | only in file
-nat_set_addr_and_port_alloc_alg                              | only in file
-nat_set_addr_and_port_alloc_alg_reply                        | only in file
-sr_localsids_with_packet_stats_details                       | only in image
-sr_localsids_with_packet_stats_dump                          | only in image
-sr_pt_iface_add                                              | only in image
-sr_pt_iface_add_reply                                        | only in image
-sr_pt_iface_del                                              | only in image
-sr_pt_iface_del_reply                                        | only in image
-sr_pt_iface_details                                          | only in image
-sr_pt_iface_dump                                             | only in image
-urpf_update_v2                                               | only in image
-urpf_update_v2_reply                                         | only in image
-
-Found 37 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -152,13 +80,6 @@ Found 37 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- bridge_domain_add_del
-- bridge_domain_add_del_reply
-- create_vhost_user_if
-- create_vhost_user_if_reply
-- ipsec_spd_entry_add_del_reply
-- modify_vhost_user_if
-- modify_vhost_user_if_reply
 
 ### In-progress API messages
 
@@ -493,55 +414,5 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
-
-| @c src/plugins/af_packet/af_packet.api ||
-| ------- | ------- |
-| [bca76580b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bca76580b) | af_packet: move to plugin |
-
-| @c src/plugins/vhost/vhost_user.api ||
-| ------- | ------- |
-| [7eba44d1e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7eba44d1e) | vhost: convert vhost device driver to a plugin |
-
-| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
-| ------- | ------- |
-| [a923ce591](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a923ce591) | nat: cleanup of deprecated features |
-| [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
-
-| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
-| ------- | ------- |
-| [91246bc6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91246bc6a) | nat: report time between current vpp time and last_heard |
-
-| @c src/plugins/urpf/urpf.api ||
-| ------- | ------- |
-| [b3605eab5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b3605eab5) | urpf: add mode for specific fib index lookup |
-
-| @c src/vnet/udp/udp.api ||
-| ------- | ------- |
-| [5c801b362](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c801b362) | udp: add udp encap source port entropy support |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [d92524687](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d92524687) | vnet: fix ip4 version and IHL check |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [4117b24ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4117b24ac) | ipsec: new api for sa ips and ports updates |
-| [520cde406](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=520cde406) | ipsec: use correct reply message |
-
-| @c src/vnet/srv6/sr_pt.api ||
-| ------- | ------- |
-| [b79d09bbf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b79d09bbf) | sr: srv6 path tracing api |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [9503eb59c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9503eb59c) | sr: new messages created to return packet statistics in sr localsid details |
-
-| @c src/vnet/l2/l2.api ||
-| ------- | ------- |
-| [0f8f4351b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f8f4351b) | l2: Add bridge_domain_add_del_v2 to l2 api |
-
-| @c src/vnet/bfd/bfd.api ||
-| ------- | ------- |
-| [415b6a7c7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=415b6a7c7) | bfd: fix bfd udp error enum incompatibility |
 
 
