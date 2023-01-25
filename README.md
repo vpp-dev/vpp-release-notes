@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 6 commits since the previous release, including 5 fixes.
+More than 8 commits since the previous release, including 6 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Tue Jan 24 02:19:28 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed Jan 25 02:20:41 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -414,6 +414,10 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
 
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
