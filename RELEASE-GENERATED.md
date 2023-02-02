@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 19 commits since the previous release, including 12 fixes.
+More than 23 commits since the previous release, including 14 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed Feb  1 02:40:09 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Thu Feb  2 02:29:53 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -39,8 +39,23 @@ pcap_trace_off                                               | only in image
 pcap_trace_off_reply                                         | only in image
 pcap_trace_on                                                | only in image
 pcap_trace_on_reply                                          | only in image
+policer_add                                                  | only in image
+policer_add_reply                                            | only in image
+policer_bind_v2                                              | only in image
+policer_bind_v2_reply                                        | only in image
+policer_del                                                  | only in image
+policer_del_reply                                            | only in image
+policer_dump_v2                                              | only in image
+policer_input_v2                                             | only in image
+policer_input_v2_reply                                       | only in image
+policer_output_v2                                            | only in image
+policer_output_v2_reply                                      | only in image
+policer_reset                                                | only in image
+policer_reset_reply                                          | only in image
+policer_update                                               | only in image
+policer_update_reply                                         | only in image
 
-Found 4 api message signature differences
+Found 19 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -394,5 +409,13 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/interface.api ||
 | ------- | ------- |
 | [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
+
+| @c src/vnet/policer/policer.api ||
+| ------- | ------- |
+| [2d1a62bfd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d1a62bfd) | policer: API policer selection by index |
+
+| @c src/vnet/policer/policer_types.api ||
+| ------- | ------- |
+| [2d1a62bfd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d1a62bfd) | policer: API policer selection by index |
 
 
