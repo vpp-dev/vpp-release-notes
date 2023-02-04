@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 29 commits since the previous release, including 20 fixes.
+More than 33 commits since the previous release, including 23 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Feb  3 02:32:32 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sat Feb  4 02:18:08 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - DPDK
     - Add intf tag to dev{} subinput ([4fe09e9f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4fe09e9f2))
+- VPP StrongSwan Daemon
+  - Allow SAs to be used to the route-based IPsec ([fc2d95d11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fc2d95d11))
 
 ## Known issues
 
