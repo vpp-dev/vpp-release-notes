@@ -1,15 +1,17 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 42 commits since the previous release, including 28 fixes.
+More than 48 commits since the previous release, including 32 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed Feb  8 02:31:38 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Thu Feb  9 02:31:29 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Build System
+  - Allow skipping external-deps ([9db6db065](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9db6db065))
 - Plugins
   - DPDK
     - Add intf tag to dev{} subinput ([4fe09e9f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4fe09e9f2))
@@ -56,8 +58,10 @@ policer_reset                                                | only in image
 policer_reset_reply                                          | only in image
 policer_update                                               | only in image
 policer_update_reply                                         | only in image
+sw_interface_ip6nd_ra_details                                | only in image
+sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 19 api message signature differences
+Found 21 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -337,6 +341,8 @@ please collaborate with the feature maintainer on their productization.
 - sr_localsids_with_packet_stats_dump
 - sr_policies_with_sl_index_details
 - sr_policies_with_sl_index_dump
+- sw_interface_ip6nd_ra_details
+- sw_interface_ip6nd_ra_dump
 - sw_interface_set_vxlan_gbp_bypass
 - sw_interface_set_vxlan_gbp_bypass_reply
 - test_addresses
@@ -411,6 +417,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/interface.api ||
 | ------- | ------- |
 | [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
+
+| @c src/vnet/ip6-nd/ip6_nd.api ||
+| ------- | ------- |
+| [3b28fd730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3b28fd730) | ip6-nd: support dump/details for IPv6 RA |
 
 | @c src/vnet/policer/policer.api ||
 | ------- | ------- |
