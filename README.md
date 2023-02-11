@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 52 commits since the previous release, including 32 fixes.
+More than 57 commits since the previous release, including 32 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Feb 10 02:36:17 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sat Feb 11 02:21:20 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,9 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - DPDK
     - Add intf tag to dev{} subinput ([4fe09e9f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4fe09e9f2))
+- VNET
+  - Segment Routing (IPv6 and MPLS)
+    - Support define src ipv6 per encap policy ([c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09))
 - VPP StrongSwan Daemon
   - Allow SAs to be used to the route-based IPsec ([fc2d95d11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fc2d95d11))
 
@@ -98,10 +101,16 @@ policer_reset                                                | only in image
 policer_reset_reply                                          | only in image
 policer_update                                               | only in image
 policer_update_reply                                         | only in image
+sr_policies_v2_details                                       | only in image
+sr_policies_v2_dump                                          | only in image
+sr_policy_add_v2                                             | only in image
+sr_policy_add_v2_reply                                       | only in image
+sr_policy_mod_v2                                             | only in image
+sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 21 api message signature differences
+Found 27 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -379,8 +388,13 @@ please collaborate with the feature maintainer on their productization.
 - sample_macswap_enable_disable_reply
 - sr_localsids_with_packet_stats_details
 - sr_localsids_with_packet_stats_dump
+- sr_policies_v2_details
 - sr_policies_with_sl_index_details
 - sr_policies_with_sl_index_dump
+- sr_policy_add_v2
+- sr_policy_add_v2_reply
+- sr_policy_mod_v2
+- sr_policy_mod_v2_reply
 - sw_interface_ip6nd_ra_details
 - sw_interface_ip6nd_ra_dump
 - sw_interface_set_vxlan_gbp_bypass
@@ -453,6 +467,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
 | [8bd4db599](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8bd4db599) | vxlan: convert vxlan to a plugin |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09) | sr: support define src ipv6 per encap policy |
 
 | @c src/vnet/interface.api ||
 | ------- | ------- |
