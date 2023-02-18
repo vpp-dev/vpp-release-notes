@@ -4,7 +4,7 @@ More than 65 commits since the previous release, including 36 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Feb 17 02:35:09 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sat Feb 18 02:24:22 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -420,13 +420,13 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
-
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
 | [8bd4db599](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8bd4db599) | vxlan: convert vxlan to a plugin |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
 
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
