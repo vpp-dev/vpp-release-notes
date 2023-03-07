@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 102 commits since the previous release, including 48 fixes.
+More than 135 commits since the previous release, including 65 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Mon Mar  6 02:35:47 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Tue Mar  7 02:42:25 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -12,10 +12,15 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Build System
   - Allow skipping external-deps ([9db6db065](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9db6db065))
+  - Add Rocky Linux 9 support ([184a70a58](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=184a70a58))
 - Plugins
   - DPDK
     - Add intf tag to dev{} subinput ([4fe09e9f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4fe09e9f2))
+  - Memif device driver
+    - Autogenerate socket\_ids ([8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65))
 - VNET
+  - FLOW
+    - Introduce IP in IP support for flow ([99d3a4054](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99d3a4054))
   - Segment Routing (IPv6 and MPLS)
     - Support define src ipv6 per encap policy ([c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09))
 - VPP StrongSwan Daemon
@@ -42,6 +47,8 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+memif_socket_filename_add_del_v2                             | only in image
+memif_socket_filename_add_del_v2_reply                       | only in image
 pcap_trace_off                                               | only in image
 pcap_trace_off_reply                                         | only in image
 pcap_trace_on                                                | only in image
@@ -70,7 +77,7 @@ sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 27 api message signature differences
+Found 29 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -419,6 +426,10 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/plugins/memif/memif.api ||
+| ------- | ------- |
+| [8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65) | memif: autogenerate socket_ids |
 
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
