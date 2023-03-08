@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 135 commits since the previous release, including 65 fixes.
+More than 140 commits since the previous release, including 67 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Tue Mar  7 02:42:25 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed Mar  8 02:36:55 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -54,6 +54,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Allow skipping external-deps ([9db6db065](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9db6db065))
   - Add Rocky Linux 9 support ([184a70a58](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=184a70a58))
 - Plugins
+  - AVF Device driver
+    - Enable rss action of flow ([21121f60d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=21121f60d))
   - DPDK
     - Add intf tag to dev{} subinput ([4fe09e9f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4fe09e9f2))
   - Memif device driver
@@ -65,6 +67,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Support define src ipv6 per encap policy ([c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09))
 - VPP StrongSwan Daemon
   - Allow SAs to be used to the route-based IPsec ([fc2d95d11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fc2d95d11))
+- Vector Library
+  - Stop worker threads on main loop exit ([d1dc1060d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1dc1060d))
 
 ## Known issues
 
