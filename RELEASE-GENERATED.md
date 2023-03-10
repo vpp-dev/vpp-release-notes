@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 145 commits since the previous release, including 70 fixes.
+More than 147 commits since the previous release, including 72 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Thu Mar  9 02:36:51 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Mar 10 02:39:44 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -431,26 +431,6 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/memif/memif.api ||
-| ------- | ------- |
-| [8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65) | memif: autogenerate socket_ids |
-
-| @c src/plugins/vxlan/vxlan.api ||
-| ------- | ------- |
-| [8bd4db599](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8bd4db599) | vxlan: convert vxlan to a plugin |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09) | sr: support define src ipv6 per encap policy |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
-
 | @c src/vnet/ip6-nd/ip6_nd.api ||
 | ------- | ------- |
 | [3b28fd730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3b28fd730) | ip6-nd: support dump/details for IPv6 RA |
@@ -462,5 +442,25 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/policer/policer_types.api ||
 | ------- | ------- |
 | [2d1a62bfd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d1a62bfd) | policer: API policer selection by index |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09) | sr: support define src ipv6 per encap policy |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
+
+| @c src/plugins/vxlan/vxlan.api ||
+| ------- | ------- |
+| [8bd4db599](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8bd4db599) | vxlan: convert vxlan to a plugin |
+
+| @c src/plugins/memif/memif.api ||
+| ------- | ------- |
+| [8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65) | memif: autogenerate socket_ids |
 
 
