@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 152 commits since the previous release, including 75 fixes.
+More than 162 commits since the previous release, including 80 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Tue Mar 14 02:09:23 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed Mar 15 02:17:56 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -18,6 +18,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Enable rss action of flow ([21121f60d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=21121f60d))
   - DPDK
     - Add intf tag to dev{} subinput ([4fe09e9f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4fe09e9f2))
+    - Enable Google Virtual Ethernet ([e10ace267](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e10ace267))
   - Memif device driver
     - Autogenerate socket\_ids ([8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65))
 - VNET
