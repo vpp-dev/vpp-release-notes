@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 182 commits since the previous release, including 89 fixes.
+More than 187 commits since the previous release, including 90 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Thu Mar 23 02:11:30 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Mar 24 02:13:50 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -24,6 +24,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - FLOW
     - Introduce IP in IP support for flow ([99d3a4054](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99d3a4054))
+  - IPSec
+    - Add per-SA error counters ([ad95b0618](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ad95b0618))
   - Segment Routing (IPv6 and MPLS)
     - Support define src ipv6 per encap policy ([c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09))
   - Session Layer
