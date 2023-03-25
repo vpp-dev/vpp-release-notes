@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 187 commits since the previous release, including 90 fixes.
+More than 192 commits since the previous release, including 93 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Mar 24 02:13:50 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sat Mar 25 02:10:56 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -56,6 +56,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+application_tls_cert_add                                     | only in file
+application_tls_cert_add_reply                               | only in file
+application_tls_key_add                                      | only in file
+application_tls_key_add_reply                                | only in file
 memif_socket_filename_add_del_v2                             | only in image
 memif_socket_filename_add_del_v2_reply                       | only in image
 pcap_trace_off                                               | only in image
@@ -86,7 +90,7 @@ sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 29 api message signature differences
+Found 33 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -463,6 +467,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
 | [c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09) | sr: support define src ipv6 per encap policy |
+
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [c9fac2111](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9fac2111) | api: Remove deprecated message from API |
 
 | @c src/vnet/interface.api ||
 | ------- | ------- |
