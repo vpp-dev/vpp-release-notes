@@ -4,7 +4,7 @@ More than 192 commits since the previous release, including 93 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sun Mar 26 02:18:06 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Mon Mar 27 02:11:58 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
