@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 198 commits since the previous release, including 96 fixes.
+More than 200 commits since the previous release, including 97 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Mar 31 02:15:24 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sat Apr  1 02:10:09 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -66,6 +66,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Introduce IP in IP support for flow ([99d3a4054](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99d3a4054))
   - IPSec
     - Add per-SA error counters ([ad95b0618](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ad95b0618))
+  - IPv4 LPM
+    - Support flow-hash gtpv1teid ([b23c6f4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b23c6f4f2))
   - Segment Routing (IPv6 and MPLS)
     - Support define src ipv6 per encap policy ([c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09))
   - Session Layer
@@ -121,6 +123,8 @@ policer_reset                                                | only in image
 policer_reset_reply                                          | only in image
 policer_update                                               | only in image
 policer_update_reply                                         | only in image
+set_ip_flow_hash_v3                                          | only in image
+set_ip_flow_hash_v3_reply                                    | only in image
 sr_policies_v2_details                                       | only in image
 sr_policies_v2_dump                                          | only in image
 sr_policy_add_v2                                             | only in image
@@ -130,7 +134,7 @@ sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 33 api message signature differences
+Found 35 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -406,6 +410,8 @@ please collaborate with the feature maintainer on their productization.
 - pnat_interfaces_get_reply
 - sample_macswap_enable_disable
 - sample_macswap_enable_disable_reply
+- set_ip_flow_hash_v3
+- set_ip_flow_hash_v3_reply
 - sr_localsids_with_packet_stats_details
 - sr_localsids_with_packet_stats_dump
 - sr_policies_v2_details
@@ -515,5 +521,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/interface.api ||
 | ------- | ------- |
 | [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [b23c6f4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b23c6f4f2) | ip: support flow-hash gtpv1teid |
 
 
