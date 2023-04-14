@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 210 commits since the previous release, including 103 fixes.
+More than 213 commits since the previous release, including 104 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Thu Apr 13 02:08:39 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Apr 14 02:07:39 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -104,6 +104,8 @@ application_tls_key_add                                      | only in file
 application_tls_key_add_reply                                | only in file
 memif_socket_filename_add_del_v2                             | only in image
 memif_socket_filename_add_del_v2_reply                       | only in image
+nat44_ed_vrf_tables_v2_details                               | only in image
+nat44_ed_vrf_tables_v2_dump                                  | only in image
 pcap_trace_off                                               | only in image
 pcap_trace_off_reply                                         | only in image
 pcap_trace_on                                                | only in image
@@ -134,7 +136,7 @@ sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 35 api message signature differences
+Found 37 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -142,6 +144,8 @@ Found 35 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- nat44_ed_vrf_tables_details
+- nat44_ed_vrf_tables_dump
 
 ### In-progress API messages
 
@@ -333,6 +337,8 @@ please collaborate with the feature maintainer on their productization.
 - lcp_itf_pair_details
 - mdata_enable_disable
 - mdata_enable_disable_reply
+- nat44_ed_vrf_tables_v2_details
+- nat44_ed_vrf_tables_v2_dump
 - nat44_ei_add_del_address_range
 - nat44_ei_add_del_address_range_reply
 - nat44_ei_add_del_static_mapping
@@ -525,5 +531,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
 | [8bd4db599](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8bd4db599) | vxlan: convert vxlan to a plugin |
+
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [d9df16503](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d9df16503) | nat: adding a new api nat44_ed_vrf_tables_v2_dump |
 
 
