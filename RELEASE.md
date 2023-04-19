@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 222 commits since the previous release, including 107 fixes.
+More than 226 commits since the previous release, including 109 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Tue Apr 18 02:08:30 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed Apr 19 02:12:30 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -16,6 +16,7 @@ HIGHLIGHTS-PLACEHOLDER
 - Infrastructure Library
   - Native poly1305 implementation ([003330c55](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=003330c55))
   - Add AMD EPYC cpu family details ([6a1a83234](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a1a83234))
+  - Multiarch support for AMD EPYC processors ([206592bb7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=206592bb7))
 - Plugins
   - AVF Device driver
     - Enable rss action of flow ([21121f60d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=21121f60d))
