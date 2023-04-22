@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 231 commits since the previous release, including 114 fixes.
+More than 234 commits since the previous release, including 115 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Apr 21 02:10:17 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sat Apr 22 02:11:26 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -495,6 +495,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
 | [8bd4db599](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8bd4db599) | vxlan: convert vxlan to a plugin |
+
+| @c src/plugins/lb/lb_types.api ||
+| ------- | ------- |
+| [2cebd4270](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2cebd4270) | lb: improve formatting in lb_types.api |
 
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
