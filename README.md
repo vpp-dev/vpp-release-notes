@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 235 commits since the previous release, including 115 fixes.
+More than 246 commits since the previous release, including 121 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Tue Apr 25 02:11:34 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed Apr 26 02:11:32 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -63,8 +63,10 @@ HIGHLIGHTS-PLACEHOLDER
   - DPDK
     - Add intf tag to dev{} subinput ([4fe09e9f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4fe09e9f2))
     - Enable Google Virtual Ethernet ([e10ace267](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e10ace267))
+    - Code preparation for bumping to DPDK 22.11 ([efad24a84](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=efad24a84))
   - Memif device driver
     - Autogenerate socket\_ids ([8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65))
+    - Support dma option ([cada0c507](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cada0c507))
 - VNET
   - FLOW
     - Introduce IP in IP support for flow ([99d3a4054](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99d3a4054))
@@ -106,6 +108,8 @@ application_tls_cert_add                                     | only in file
 application_tls_cert_add_reply                               | only in file
 application_tls_key_add                                      | only in file
 application_tls_key_add_reply                                | only in file
+memif_create_v2                                              | only in image
+memif_create_v2_reply                                        | only in image
 memif_socket_filename_add_del_v2                             | only in image
 memif_socket_filename_add_del_v2_reply                       | only in image
 nat44_ed_vrf_tables_v2_details                               | only in image
@@ -140,7 +144,7 @@ sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 37 api message signature differences
+Found 39 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -504,6 +508,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
 
+| @c src/vnet/flow/flow.api ||
+| ------- | ------- |
+| [39d7699c2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39d7699c2) | api: Mark old message versions as deprecated |
+
 | @c src/vnet/policer/policer.api ||
 | ------- | ------- |
 | [2d1a62bfd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d1a62bfd) | policer: API policer selection by index |
@@ -526,6 +534,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/memif/memif.api ||
 | ------- | ------- |
+| [cada0c507](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cada0c507) | memif: support dma option |
 | [8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65) | memif: autogenerate socket_ids |
 
 | @c src/plugins/linux-cp/lcp.api ||
