@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 246 commits since the previous release, including 121 fixes.
+More than 248 commits since the previous release, including 121 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed Apr 26 02:11:32 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Thu Apr 27 02:10:57 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -464,13 +464,13 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [c9fac2111](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9fac2111) | api: Remove deprecated message from API |
 
-| @c src/vnet/interface.api ||
+| @c src/vnet/ip/ip.api ||
 | ------- | ------- |
-| [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
+| [b23c6f4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b23c6f4f2) | ip: support flow-hash gtpv1teid |
 
-| @c src/vnet/flow/flow.api ||
+| @c src/vnet/ip6-nd/ip6_nd.api ||
 | ------- | ------- |
-| [39d7699c2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39d7699c2) | api: Mark old message versions as deprecated |
+| [3b28fd730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3b28fd730) | ip6-nd: support dump/details for IPv6 RA |
 
 | @c src/vnet/policer/policer.api ||
 | ------- | ------- |
@@ -480,26 +480,17 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [2d1a62bfd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d1a62bfd) | policer: API policer selection by index |
 
-| @c src/vnet/ip6-nd/ip6_nd.api ||
+| @c src/vnet/flow/flow.api ||
 | ------- | ------- |
-| [3b28fd730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3b28fd730) | ip6-nd: support dump/details for IPv6 RA |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [b23c6f4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b23c6f4f2) | ip: support flow-hash gtpv1teid |
+| [39d7699c2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39d7699c2) | api: Mark old message versions as deprecated |
 
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
 | [c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09) | sr: support define src ipv6 per encap policy |
 
-| @c src/plugins/memif/memif.api ||
+| @c src/vnet/interface.api ||
 | ------- | ------- |
-| [cada0c507](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cada0c507) | memif: support dma option |
-| [8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65) | memif: autogenerate socket_ids |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
+| [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
 
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
@@ -512,5 +503,14 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
 | [d9df16503](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d9df16503) | nat: adding a new api nat44_ed_vrf_tables_v2_dump |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
+
+| @c src/plugins/memif/memif.api ||
+| ------- | ------- |
+| [cada0c507](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cada0c507) | memif: support dma option |
+| [8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65) | memif: autogenerate socket_ids |
 
 
