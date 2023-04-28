@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 248 commits since the previous release, including 121 fixes.
+More than 251 commits since the previous release, including 121 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Thu Apr 27 02:10:57 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Apr 28 02:12:07 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -64,6 +64,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add intf tag to dev{} subinput ([4fe09e9f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4fe09e9f2))
     - Enable Google Virtual Ethernet ([e10ace267](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e10ace267))
     - Code preparation for bumping to DPDK 22.11 ([efad24a84](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=efad24a84))
+    - Bump to DPDK 22.11 ([efcf1befc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=efcf1befc))
   - Memif device driver
     - Autogenerate socket\_ids ([8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65))
     - Support dma option ([cada0c507](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cada0c507))
@@ -154,6 +155,8 @@ will disappear in the next release.
 
 - nat44_ed_vrf_tables_details
 - nat44_ed_vrf_tables_dump
+- rdma_create_reply
+- rdma_create_v2_reply
 
 ### In-progress API messages
 
@@ -547,6 +550,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
+
+| @c src/plugins/rdma/rdma.api ||
+| ------- | ------- |
+| [9db32048d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9db32048d) | api: Mark old message versions as deprecated |
 
 | @c src/plugins/memif/memif.api ||
 | ------- | ------- |
