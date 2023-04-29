@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 251 commits since the previous release, including 121 fixes.
+More than 253 commits since the previous release, including 122 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri Apr 28 02:12:07 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sat Apr 29 02:10:20 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -65,6 +65,8 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+app_namespace_add_del_v4                                     | only in image
+app_namespace_add_del_v4_reply                               | only in image
 application_tls_cert_add                                     | only in file
 application_tls_cert_add_reply                               | only in file
 application_tls_key_add                                      | only in file
@@ -105,7 +107,7 @@ sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 39 api message signature differences
+Found 41 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -113,6 +115,11 @@ Found 39 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- app_namespace_add_del_v2
+- app_namespace_add_del_v2_reply
+- app_namespace_add_del_v3
+- app_namespace_add_del_v3_reply
+- app_namespace_add_del_v4
 - nat44_ed_vrf_tables_details
 - nat44_ed_vrf_tables_dump
 - rdma_create_reply
@@ -465,6 +472,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
+| [51f1b26e8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=51f1b26e8) | session: update due to clib_socket refactoring |
 | [c9fac2111](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9fac2111) | api: Remove deprecated message from API |
 
 | @c src/vnet/ip/ip.api ||
