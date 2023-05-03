@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 253 commits since the previous release, including 122 fixes.
+More than 254 commits since the previous release, including 122 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Tue May  2 02:09:17 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed May  3 02:08:47 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -25,6 +25,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Enable Google Virtual Ethernet ([e10ace267](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e10ace267))
     - Code preparation for bumping to DPDK 22.11 ([efad24a84](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=efad24a84))
     - Bump to DPDK 22.11 ([efcf1befc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=efcf1befc))
+  - RDMA (ibverb) driver
+    - Bump to 43.0 ([6f8335282](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8335282))
   - Memif device driver
     - Autogenerate socket\_ids ([8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65))
     - Support dma option ([cada0c507](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cada0c507))
