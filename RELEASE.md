@@ -4,7 +4,7 @@ More than 260 commits since the previous release, including 124 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Thu May 11 02:09:14 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri May 12 02:07:25 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -475,19 +475,6 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/session/session.api ||
-| ------- | ------- |
-| [51f1b26e8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=51f1b26e8) | session: update due to clib_socket refactoring |
-| [c9fac2111](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9fac2111) | api: Remove deprecated message from API |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [b23c6f4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b23c6f4f2) | ip: support flow-hash gtpv1teid |
-
-| @c src/vnet/ip6-nd/ip6_nd.api ||
-| ------- | ------- |
-| [3b28fd730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3b28fd730) | ip6-nd: support dump/details for IPv6 RA |
-
 | @c src/vnet/policer/policer.api ||
 | ------- | ------- |
 | [2d1a62bfd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d1a62bfd) | policer: API policer selection by index |
@@ -495,6 +482,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/policer/policer_types.api ||
 | ------- | ------- |
 | [2d1a62bfd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d1a62bfd) | policer: API policer selection by index |
+
+| @c src/vnet/ip6-nd/ip6_nd.api ||
+| ------- | ------- |
+| [3b28fd730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3b28fd730) | ip6-nd: support dump/details for IPv6 RA |
 
 | @c src/vnet/flow/flow.api ||
 | ------- | ------- |
@@ -508,9 +499,18 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
 
-| @c src/plugins/vxlan/vxlan.api ||
+| @c src/vnet/session/session.api ||
 | ------- | ------- |
-| [8bd4db599](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8bd4db599) | vxlan: convert vxlan to a plugin |
+| [51f1b26e8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=51f1b26e8) | session: update due to clib_socket refactoring |
+| [c9fac2111](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9fac2111) | api: Remove deprecated message from API |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [b23c6f4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b23c6f4f2) | ip: support flow-hash gtpv1teid |
+
+| @c src/plugins/rdma/rdma.api ||
+| ------- | ------- |
+| [9db32048d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9db32048d) | api: Mark old message versions as deprecated |
 
 | @c src/plugins/lb/lb_types.api ||
 | ------- | ------- |
@@ -520,17 +520,17 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [d9df16503](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d9df16503) | nat: adding a new api nat44_ed_vrf_tables_v2_dump |
 
-| @c src/plugins/linux-cp/lcp.api ||
+| @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
-| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
-
-| @c src/plugins/rdma/rdma.api ||
-| ------- | ------- |
-| [9db32048d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9db32048d) | api: Mark old message versions as deprecated |
+| [8bd4db599](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8bd4db599) | vxlan: convert vxlan to a plugin |
 
 | @c src/plugins/memif/memif.api ||
 | ------- | ------- |
 | [cada0c507](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cada0c507) | memif: support dma option |
 | [8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65) | memif: autogenerate socket_ids |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
 
 
