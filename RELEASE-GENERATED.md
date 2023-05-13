@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 260 commits since the previous release, including 124 fixes.
+More than 263 commits since the previous release, including 125 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Fri May 12 02:07:25 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sat May 13 02:07:48 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -82,6 +82,14 @@ memif_socket_filename_add_del_v2                             | only in image
 memif_socket_filename_add_del_v2_reply                       | only in image
 nat44_ed_vrf_tables_v2_details                               | only in image
 nat44_ed_vrf_tables_v2_dump                                  | only in image
+nsh_add_del_entry                                            | only in file
+nsh_add_del_entry_reply                                      | only in file
+nsh_add_del_map                                              | only in file
+nsh_add_del_map_reply                                        | only in file
+nsh_entry_details                                            | only in file
+nsh_entry_dump                                               | only in file
+nsh_map_details                                              | only in file
+nsh_map_dump                                                 | only in file
 pcap_trace_off                                               | only in image
 pcap_trace_off_reply                                         | only in image
 pcap_trace_on                                                | only in image
@@ -112,7 +120,7 @@ sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 41 api message signature differences
+Found 49 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -511,6 +519,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/rdma/rdma.api ||
 | ------- | ------- |
 | [9db32048d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9db32048d) | api: Mark old message versions as deprecated |
+
+| @c src/plugins/gre/gre.api ||
+| ------- | ------- |
+| [cefb178aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cefb178aa) | gre: move to a plugin |
 
 | @c src/plugins/lb/lb_types.api ||
 | ------- | ------- |
