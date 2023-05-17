@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 268 commits since the previous release, including 126 fixes.
+More than 277 commits since the previous release, including 133 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Tue May 16 02:12:48 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed May 17 02:12:47 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -27,6 +27,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Bump to DPDK 22.11 ([efcf1befc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=efcf1befc))
     - Code preparation for bumping to DPDK 23.03 ([648006b3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=648006b3c))
     - Bump to DPDK 23.03 ([df6a00f58](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df6a00f58))
+  - IP session redirect
+    - Add session redirect plugin ([83e73709c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83e73709c))
   - RDMA (ibverb) driver
     - Bump to 43.0 ([6f8335282](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8335282))
     - Bump version to 45.0 ([0e8ec6468](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e8ec6468))
@@ -76,6 +78,12 @@ application_tls_cert_add                                     | only in file
 application_tls_cert_add_reply                               | only in file
 application_tls_key_add                                      | only in file
 application_tls_key_add_reply                                | only in file
+ip_session_redirect_add                                      | only in image
+ip_session_redirect_add_reply                                | only in image
+ip_session_redirect_add_v2                                   | only in image
+ip_session_redirect_add_v2_reply                             | only in image
+ip_session_redirect_del                                      | only in image
+ip_session_redirect_del_reply                                | only in image
 memif_create_v2                                              | only in image
 memif_create_v2_reply                                        | only in image
 memif_socket_filename_add_del_v2                             | only in image
@@ -120,7 +128,7 @@ sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
 
-Found 49 api message signature differences
+Found 55 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -317,6 +325,12 @@ please collaborate with the feature maintainer on their productization.
 - ip_route_lookup_v2_reply
 - ip_route_v2_details
 - ip_route_v2_dump
+- ip_session_redirect_add
+- ip_session_redirect_add_reply
+- ip_session_redirect_add_v2
+- ip_session_redirect_add_v2_reply
+- ip_session_redirect_del
+- ip_session_redirect_del_reply
 - l2_emulation
 - l2_emulation_reply
 - lcp_default_ns_get_reply
@@ -523,6 +537,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/gre/gre.api ||
 | ------- | ------- |
 | [cefb178aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cefb178aa) | gre: move to a plugin |
+
+| @c src/plugins/ip_session_redirect/ip_session_redirect.api ||
+| ------- | ------- |
+| [83e73709c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83e73709c) | ip_session_redirect: add session redirect plugin |
 
 | @c src/plugins/lb/lb_types.api ||
 | ------- | ------- |
