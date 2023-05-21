@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 288 commits since the previous release, including 141 fixes.
+More than 292 commits since the previous release, including 141 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sat May 20 02:08:31 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sun May 21 02:17:22 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -27,6 +27,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Bump to DPDK 22.11 ([efcf1befc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=efcf1befc))
     - Code preparation for bumping to DPDK 23.03 ([648006b3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=648006b3c))
     - Bump to DPDK 23.03 ([df6a00f58](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df6a00f58))
+  - Host Stack Applications
+    - Add an option to configure ns in http cli ([f96b6c65f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f96b6c65f))
   - IP session redirect
     - Add session redirect plugin ([83e73709c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83e73709c))
   - RDMA (ibverb) driver
