@@ -1,10 +1,10 @@
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 292 commits since the previous release, including 141 fixes.
+More than 294 commits since the previous release, including 142 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Sun May 21 02:17:22 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Mon May 22 02:17:18 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -44,6 +44,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add per-SA error counters ([ad95b0618](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ad95b0618))
   - IPv4 LPM
     - Support flow-hash gtpv1teid ([b23c6f4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b23c6f4f2))
+  - MPLS
+    - Implement state change callbacks ([ae48ffb50](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ae48ffb50))
   - Segment Routing (IPv6 and MPLS)
     - Support define src ipv6 per encap policy ([c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09))
   - Session Layer
