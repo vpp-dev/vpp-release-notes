@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2306 Release notes for VPP 23.06
 
-More than 295 commits since the previous release, including 143 fixes.
+More than 298 commits since the previous release, including 145 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Tue May 23 02:12:56 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed May 24 02:15:51 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -171,8 +171,12 @@ sr_policy_mod_v2                                             | only in image
 sr_policy_mod_v2_reply                                       | only in image
 sw_interface_ip6nd_ra_details                                | only in image
 sw_interface_ip6nd_ra_dump                                   | only in image
+trace_clear_cache                                            | only in image
+trace_clear_cache_reply                                      | only in image
+trace_v2_details                                             | only in image
+trace_v2_dump                                                | only in image
 
-Found 55 api message signature differences
+Found 59 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -510,6 +514,8 @@ please collaborate with the feature maintainer on their productization.
 - test_vla_reply
 - trace_capture_packets
 - trace_capture_packets_reply
+- trace_clear_cache
+- trace_clear_cache_reply
 - trace_clear_capture
 - trace_clear_capture_reply
 - trace_details
@@ -517,6 +523,8 @@ please collaborate with the feature maintainer on their productization.
 - trace_dump_reply
 - trace_set_filters
 - trace_set_filters_reply
+- trace_v2_details
+- trace_v2_dump
 - vxlan_gbp_tunnel_add_del
 - vxlan_gbp_tunnel_add_del_reply
 - vxlan_gbp_tunnel_details
@@ -585,6 +593,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/ip_session_redirect/ip_session_redirect.api ||
 | ------- | ------- |
 | [83e73709c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83e73709c) | ip_session_redirect: add session redirect plugin |
+
+| @c src/plugins/tracedump/tracedump.api ||
+| ------- | ------- |
+| [02063b985](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=02063b985) | misc: fix tracedump API to match CLI behavior |
 
 | @c src/plugins/lb/lb_types.api ||
 | ------- | ------- |
