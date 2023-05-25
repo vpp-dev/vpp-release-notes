@@ -1,59 +1,15 @@
-@page release_notes_2306 Release notes for VPP 23.06
+@page release_notes_2310 Release notes for VPP 23.10
 
-More than 298 commits since the previous release, including 145 fixes.
+More than 2 commits since the previous release, including 0 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.06 release, generated as on Wed May 24 02:15:51 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu May 25 02:11:50 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Build System
-  - Allow skipping external-deps ([9db6db065](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9db6db065))
-  - Add Rocky Linux 9 support ([184a70a58](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=184a70a58))
-- Infrastructure Library
-  - Native poly1305 implementation ([003330c55](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=003330c55))
-  - Add AMD EPYC cpu family details ([6a1a83234](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a1a83234))
-  - Multiarch support for AMD EPYC processors ([206592bb7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=206592bb7))
-- Plugins
-  - AVF Device driver
-    - Enable rss action of flow ([21121f60d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=21121f60d))
-  - DPDK
-    - Add intf tag to dev{} subinput ([4fe09e9f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4fe09e9f2))
-    - Enable Google Virtual Ethernet ([e10ace267](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e10ace267))
-    - Code preparation for bumping to DPDK 22.11 ([efad24a84](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=efad24a84))
-    - Bump to DPDK 22.11 ([efcf1befc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=efcf1befc))
-    - Code preparation for bumping to DPDK 23.03 ([648006b3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=648006b3c))
-    - Bump to DPDK 23.03 ([df6a00f58](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df6a00f58))
-  - Host Stack Applications
-    - Add an option to configure ns in http cli ([f96b6c65f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f96b6c65f))
-  - IP session redirect
-    - Add session redirect plugin ([83e73709c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83e73709c))
-  - RDMA (ibverb) driver
-    - Bump to 43.0 ([6f8335282](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8335282))
-    - Bump version to 45.0 ([0e8ec6468](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e8ec6468))
-  - Memif device driver
-    - Autogenerate socket\_ids ([8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65))
-    - Support dma option ([cada0c507](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cada0c507))
-- VNET
-  - FLOW
-    - Introduce IP in IP support for flow ([99d3a4054](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99d3a4054))
-  - IPSec
-    - Add per-SA error counters ([ad95b0618](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ad95b0618))
-  - IPv4 LPM
-    - Support flow-hash gtpv1teid ([b23c6f4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b23c6f4f2))
-  - MPLS
-    - Implement state change callbacks ([ae48ffb50](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ae48ffb50))
-  - Segment Routing (IPv6 and MPLS)
-    - Support define src ipv6 per encap policy ([c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09))
-  - Session Layer
-    - Add session stats ([ac3c8dcb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac3c8dcb0))
-- VPP StrongSwan Daemon
-  - Allow SAs to be used to the route-based IPsec ([fc2d95d11](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fc2d95d11))
-- Vector Library
-  - Stop worker threads on main loop exit ([d1dc1060d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1dc1060d))
 
 ## Known issues
 
@@ -76,67 +32,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-app_namespace_add_del_v4                                     | only in image
-app_namespace_add_del_v4_reply                               | only in image
-application_tls_cert_add                                     | only in file
-application_tls_cert_add_reply                               | only in file
-application_tls_key_add                                      | only in file
-application_tls_key_add_reply                                | only in file
-ip_session_redirect_add                                      | only in image
-ip_session_redirect_add_reply                                | only in image
-ip_session_redirect_add_v2                                   | only in image
-ip_session_redirect_add_v2_reply                             | only in image
-ip_session_redirect_del                                      | only in image
-ip_session_redirect_del_reply                                | only in image
-memif_create_v2                                              | only in image
-memif_create_v2_reply                                        | only in image
-memif_socket_filename_add_del_v2                             | only in image
-memif_socket_filename_add_del_v2_reply                       | only in image
-nat44_ed_vrf_tables_v2_details                               | only in image
-nat44_ed_vrf_tables_v2_dump                                  | only in image
-nsh_add_del_entry                                            | only in file
-nsh_add_del_entry_reply                                      | only in file
-nsh_add_del_map                                              | only in file
-nsh_add_del_map_reply                                        | only in file
-nsh_entry_details                                            | only in file
-nsh_entry_dump                                               | only in file
-nsh_map_details                                              | only in file
-nsh_map_dump                                                 | only in file
-pcap_trace_off                                               | only in image
-pcap_trace_off_reply                                         | only in image
-pcap_trace_on                                                | only in image
-pcap_trace_on_reply                                          | only in image
-policer_add                                                  | only in image
-policer_add_reply                                            | only in image
-policer_bind_v2                                              | only in image
-policer_bind_v2_reply                                        | only in image
-policer_del                                                  | only in image
-policer_del_reply                                            | only in image
-policer_dump_v2                                              | only in image
-policer_input_v2                                             | only in image
-policer_input_v2_reply                                       | only in image
-policer_output_v2                                            | only in image
-policer_output_v2_reply                                      | only in image
-policer_reset                                                | only in image
-policer_reset_reply                                          | only in image
-policer_update                                               | only in image
-policer_update_reply                                         | only in image
-set_ip_flow_hash_v3                                          | only in image
-set_ip_flow_hash_v3_reply                                    | only in image
-sr_policies_v2_details                                       | only in image
-sr_policies_v2_dump                                          | only in image
-sr_policy_add_v2                                             | only in image
-sr_policy_add_v2_reply                                       | only in image
-sr_policy_mod_v2                                             | only in image
-sr_policy_mod_v2_reply                                       | only in image
-sw_interface_ip6nd_ra_details                                | only in image
-sw_interface_ip6nd_ra_dump                                   | only in image
-trace_clear_cache                                            | only in image
-trace_clear_cache_reply                                      | only in image
-trace_v2_details                                             | only in image
-trace_v2_dump                                                | only in image
-
-Found 59 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -144,15 +40,6 @@ Found 59 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- app_namespace_add_del_v2
-- app_namespace_add_del_v2_reply
-- app_namespace_add_del_v3
-- app_namespace_add_del_v3_reply
-- app_namespace_add_del_v4
-- nat44_ed_vrf_tables_details
-- nat44_ed_vrf_tables_dump
-- rdma_create_reply
-- rdma_create_v2_reply
 
 ### In-progress API messages
 
@@ -508,75 +395,5 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
-
-| @c src/vnet/policer/policer.api ||
-| ------- | ------- |
-| [2d1a62bfd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d1a62bfd) | policer: API policer selection by index |
-
-| @c src/vnet/policer/policer_types.api ||
-| ------- | ------- |
-| [2d1a62bfd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d1a62bfd) | policer: API policer selection by index |
-
-| @c src/vnet/ip6-nd/ip6_nd.api ||
-| ------- | ------- |
-| [3b28fd730](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3b28fd730) | ip6-nd: support dump/details for IPv6 RA |
-
-| @c src/vnet/flow/flow.api ||
-| ------- | ------- |
-| [39d7699c2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=39d7699c2) | api: Mark old message versions as deprecated |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [c4c205b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4c205b09) | sr: support define src ipv6 per encap policy |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [ddc16cfcf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddc16cfcf) | api: pcap capture api update |
-
-| @c src/vnet/session/session.api ||
-| ------- | ------- |
-| [51f1b26e8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=51f1b26e8) | session: update due to clib_socket refactoring |
-| [c9fac2111](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9fac2111) | api: Remove deprecated message from API |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [b23c6f4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b23c6f4f2) | ip: support flow-hash gtpv1teid |
-
-| @c src/plugins/rdma/rdma.api ||
-| ------- | ------- |
-| [9db32048d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9db32048d) | api: Mark old message versions as deprecated |
-
-| @c src/plugins/gre/gre.api ||
-| ------- | ------- |
-| [cefb178aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cefb178aa) | gre: move to a plugin |
-
-| @c src/plugins/ip_session_redirect/ip_session_redirect.api ||
-| ------- | ------- |
-| [83e73709c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83e73709c) | ip_session_redirect: add session redirect plugin |
-
-| @c src/plugins/tracedump/tracedump.api ||
-| ------- | ------- |
-| [02063b985](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=02063b985) | misc: fix tracedump API to match CLI behavior |
-
-| @c src/plugins/lb/lb_types.api ||
-| ------- | ------- |
-| [2cebd4270](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2cebd4270) | lb: improve formatting in lb_types.api |
-
-| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
-| ------- | ------- |
-| [d9df16503](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d9df16503) | nat: adding a new api nat44_ed_vrf_tables_v2_dump |
-
-| @c src/plugins/vxlan/vxlan.api ||
-| ------- | ------- |
-| [8bd4db599](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8bd4db599) | vxlan: convert vxlan to a plugin |
-
-| @c src/plugins/memif/memif.api ||
-| ------- | ------- |
-| [cada0c507](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cada0c507) | memif: support dma option |
-| [8b213ee65](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8b213ee65) | memif: autogenerate socket_ids |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [139b2da5c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139b2da5c) | vppapigen: enable codegen for stream message types |
 
 
