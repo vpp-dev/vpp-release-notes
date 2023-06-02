@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 13 commits since the previous release, including 7 fixes.
+More than 15 commits since the previous release, including 7 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Jun  1 02:55:34 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Jun  2 02:33:08 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -80,6 +80,8 @@ No api message signature differences found.
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- crypto_set_async_dispatch
+- crypto_set_async_dispatch_reply
 
 ### In-progress API messages
 
@@ -435,5 +437,9 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/vnet/crypto/crypto.api ||
+| ------- | ------- |
+| [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
 
 
