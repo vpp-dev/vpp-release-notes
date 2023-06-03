@@ -1,15 +1,18 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 15 commits since the previous release, including 7 fixes.
+More than 20 commits since the previous release, including 9 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Jun  2 02:33:08 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Sat Jun  3 02:26:25 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - Wireguard
+    - Add support for chained buffers ([f2b6edb14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2b6edb14))
 
 ## Known issues
 
@@ -42,6 +45,12 @@ will disappear in the next release.
 
 - crypto_set_async_dispatch
 - crypto_set_async_dispatch_reply
+- nat44_add_del_static_mapping
+- nat44_add_del_static_mapping_reply
+- nat44_user_session_details
+- nat44_user_session_dump
+- nat44_user_session_v2_details
+- nat44_user_session_v2_dump
 
 ### In-progress API messages
 
@@ -397,6 +406,10 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_dump
 
 ### Patches that changed API definitions
+
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [b1239c488](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1239c488) | api: nat44_ed - Mark old message versions as deprecated |
 
 | @c src/vnet/crypto/crypto.api ||
 | ------- | ------- |
