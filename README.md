@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 25 commits since the previous release, including 12 fixes.
+More than 32 commits since the previous release, including 15 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Jun  8 02:37:23 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Jun  9 02:39:46 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -454,5 +454,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/crypto/crypto.api ||
 | ------- | ------- |
 | [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
 
 
