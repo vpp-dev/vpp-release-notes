@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 45 commits since the previous release, including 22 fixes.
+More than 48 commits since the previous release, including 22 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Jun 22 02:21:54 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Jun 23 02:40:39 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,9 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - Wireguard
     - Add support for chained buffers ([f2b6edb14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2b6edb14))
+- VNET
+  - TCP
+    - Add simple stats collector ([6052f4b9d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6052f4b9d))
 
 ## Known issues
 
