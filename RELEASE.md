@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 48 commits since the previous release, including 22 fixes.
+More than 50 commits since the previous release, including 23 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Jun 23 02:40:39 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Sat Jun 24 02:40:27 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -38,7 +38,14 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+ipsec_sa_v4_details                                          | only in image
+ipsec_sa_v4_dump                                             | only in image
+ipsec_sad_bind                                               | only in image
+ipsec_sad_bind_reply                                         | only in image
+ipsec_sad_unbind                                             | only in image
+ipsec_sad_unbind_reply                                       | only in image
+
+Found 6 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -420,6 +427,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
+| [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
 | [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
 
 
