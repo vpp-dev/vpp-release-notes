@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 52 commits since the previous release, including 24 fixes.
+More than 58 commits since the previous release, including 28 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Tue Jun 27 02:42:49 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Jun 28 02:40:34 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -78,6 +78,8 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+af_xdp_create_v3                                             | only in image
+af_xdp_create_v3_reply                                       | only in image
 ipsec_sa_v4_details                                          | only in image
 ipsec_sa_v4_dump                                             | only in image
 ipsec_sad_bind                                               | only in image
@@ -85,7 +87,7 @@ ipsec_sad_bind_reply                                         | only in image
 ipsec_sad_unbind                                             | only in image
 ipsec_sad_unbind_reply                                       | only in image
 
-Found 6 api message signature differences
+Found 8 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -93,6 +95,14 @@ Found 6 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- af_packet_create
+- af_packet_create_reply
+- af_packet_create_v2
+- af_packet_create_v2_reply
+- af_xdp_create
+- af_xdp_create_reply
+- af_xdp_create_v2
+- af_xdp_create_v2_reply
 - crypto_set_async_dispatch
 - crypto_set_async_dispatch_reply
 - nat44_add_del_static_mapping
@@ -101,6 +111,14 @@ will disappear in the next release.
 - nat44_user_session_dump
 - nat44_user_session_v2_details
 - nat44_user_session_v2_dump
+- tap_create_v2
+- tap_create_v2_reply
+- vxlan_add_del_tunnel
+- vxlan_add_del_tunnel_reply
+- vxlan_add_del_tunnel_v2
+- vxlan_add_del_tunnel_v2_reply
+- vxlan_tunnel_details
+- vxlan_tunnel_dump
 
 ### In-progress API messages
 
@@ -457,6 +475,18 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+
+| @c src/plugins/af_packet/af_packet.api ||
+| ------- | ------- |
+| [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
+
+| @c src/plugins/vxlan/vxlan.api ||
+| ------- | ------- |
+| [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
+
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
 | [b1239c488](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1239c488) | api: nat44_ed - Mark old message versions as deprecated |
@@ -464,6 +494,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/crypto/crypto.api ||
 | ------- | ------- |
 | [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
+
+| @c src/vnet/devices/tap/tapv2.api ||
+| ------- | ------- |
+| [74d9f0ae3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74d9f0ae3) | api: tapv2 - Mark old message versions as deprecated |
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
