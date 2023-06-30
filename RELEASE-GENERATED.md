@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 59 commits since the previous release, including 29 fixes.
+More than 61 commits since the previous release, including 30 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Jun 29 02:37:25 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Jun 30 02:34:32 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -40,6 +40,8 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 af_xdp_create_v3                                             | only in image
 af_xdp_create_v3_reply                                       | only in image
+ip_neighbor_config_get                                       | only in image
+ip_neighbor_config_get_reply                                 | only in image
 ipsec_sa_v4_details                                          | only in image
 ipsec_sa_v4_dump                                             | only in image
 ipsec_sad_bind                                               | only in image
@@ -47,7 +49,7 @@ ipsec_sad_bind_reply                                         | only in image
 ipsec_sad_unbind                                             | only in image
 ipsec_sad_unbind_reply                                       | only in image
 
-Found 8 api message signature differences
+Found 10 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -253,6 +255,8 @@ please collaborate with the feature maintainer on their productization.
 - ikev2_set_tunnel_interface_reply
 - ikev2_traffic_selector_details
 - ikev2_traffic_selector_dump
+- ip_neighbor_config_get
+- ip_neighbor_config_get_reply
 - ip_route_add_del_v2
 - ip_route_add_del_v2_reply
 - ip_route_lookup_v2
@@ -435,33 +439,37 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/af_xdp/af_xdp.api ||
+| @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
-| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+| [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
+| [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
 
-| @c src/plugins/af_packet/af_packet.api ||
+| @c src/vnet/ip-neighbor/ip_neighbor.api ||
 | ------- | ------- |
-| [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
-
-| @c src/plugins/vxlan/vxlan.api ||
-| ------- | ------- |
-| [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
-
-| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
-| ------- | ------- |
-| [b1239c488](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1239c488) | api: nat44_ed - Mark old message versions as deprecated |
-
-| @c src/vnet/crypto/crypto.api ||
-| ------- | ------- |
-| [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
+| [e1cc87536](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1cc87536) | ip-neighbor: add api for getting neighbor db config |
 
 | @c src/vnet/devices/tap/tapv2.api ||
 | ------- | ------- |
 | [74d9f0ae3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74d9f0ae3) | api: tapv2 - Mark old message versions as deprecated |
 
-| @c src/vnet/ipsec/ipsec.api ||
+| @c src/vnet/crypto/crypto.api ||
 | ------- | ------- |
-| [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
-| [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
+| [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
+
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [b1239c488](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1239c488) | api: nat44_ed - Mark old message versions as deprecated |
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+
+| @c src/plugins/vxlan/vxlan.api ||
+| ------- | ------- |
+| [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
+
+| @c src/plugins/af_packet/af_packet.api ||
+| ------- | ------- |
+| [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
 
 
