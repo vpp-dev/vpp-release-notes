@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 61 commits since the previous release, including 30 fixes.
+More than 64 commits since the previous release, including 31 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Jun 30 02:34:32 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Sat Jul  1 02:48:59 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -80,6 +80,8 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 af_xdp_create_v3                                             | only in image
 af_xdp_create_v3_reply                                       | only in image
+bpf_trace_filter_set                                         | only in image
+bpf_trace_filter_set_reply                                   | only in image
 ip_neighbor_config_get                                       | only in image
 ip_neighbor_config_get_reply                                 | only in image
 ipsec_sa_v4_details                                          | only in image
@@ -88,8 +90,12 @@ ipsec_sad_bind                                               | only in image
 ipsec_sad_bind_reply                                         | only in image
 ipsec_sad_unbind                                             | only in image
 ipsec_sad_unbind_reply                                       | only in image
+trace_filter_function_details                                | only in image
+trace_filter_function_dump                                   | only in image
+trace_set_filter_function                                    | only in image
+trace_set_filter_function_reply                              | only in image
 
-Found 10 api message signature differences
+Found 16 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -150,6 +156,8 @@ please collaborate with the feature maintainer on their productization.
 - adl_allowlist_enable_disable_reply
 - adl_interface_enable_disable
 - adl_interface_enable_disable_reply
+- bpf_trace_filter_set
+- bpf_trace_filter_set_reply
 - cnat_get_snat_addresses
 - cnat_get_snat_addresses_reply
 - cnat_session_details
@@ -451,6 +459,10 @@ please collaborate with the feature maintainer on their productization.
 - trace_details
 - trace_dump
 - trace_dump_reply
+- trace_filter_function_details
+- trace_filter_function_dump
+- trace_set_filter_function
+- trace_set_filter_function_reply
 - trace_set_filters
 - trace_set_filters_reply
 - trace_v2_details
@@ -504,6 +516,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
 
+| @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
+| ------- | ------- |
+| [ccd307095](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ccd307095) | bpf_trace_filter: plugin for BPF Trace Filtering |
+
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
 | [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
@@ -511,5 +527,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/af_packet/af_packet.api ||
 | ------- | ------- |
 | [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
+
+| @c src/plugins/tracedump/tracedump.api ||
+| ------- | ------- |
+| [52fa5f21b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=52fa5f21b) | vlib: introduce trace filter functions |
 
 
