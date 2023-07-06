@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 64 commits since the previous release, including 31 fixes.
+More than 65 commits since the previous release, including 32 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Jul  5 02:41:24 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Jul  6 02:43:39 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -451,11 +451,6 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
-| [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
-
 | @c src/vnet/ip-neighbor/ip_neighbor.api ||
 | ------- | ------- |
 | [e1cc87536](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1cc87536) | ip-neighbor: add api for getting neighbor db config |
@@ -468,21 +463,26 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
 
-| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
-| [b1239c488](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1239c488) | api: nat44_ed - Mark old message versions as deprecated |
-
-| @c src/plugins/af_xdp/af_xdp.api ||
-| ------- | ------- |
-| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+| [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
+| [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
 
 | @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
 | ------- | ------- |
 | [ccd307095](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ccd307095) | bpf_trace_filter: plugin for BPF Trace Filtering |
 
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
 | [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
+
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [b1239c488](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1239c488) | api: nat44_ed - Mark old message versions as deprecated |
 
 | @c src/plugins/af_packet/af_packet.api ||
 | ------- | ------- |
