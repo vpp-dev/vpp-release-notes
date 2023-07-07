@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 65 commits since the previous release, including 32 fixes.
+More than 75 commits since the previous release, including 41 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Jul  6 02:43:39 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Jul  7 02:40:43 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -73,12 +73,29 @@ will disappear in the next release.
 - af_xdp_create_v2_reply
 - crypto_set_async_dispatch
 - crypto_set_async_dispatch_reply
+- ip_punt_redirect_details
+- ip_punt_redirect_dump
+- ipsec_sa_v2_details
+- ipsec_sa_v2_dump
+- ipsec_sad_entry_add_del_v2
+- ipsec_sad_entry_add_del_v2_reply
+- lcp_itf_pair_add_del
+- lcp_itf_pair_add_del_reply
+- memclnt_create
+- memclnt_create_reply
+- memif_create
+- memif_create_reply
+- memif_socket_filename_add_del
+- memif_socket_filename_add_del_reply
 - nat44_add_del_static_mapping
 - nat44_add_del_static_mapping_reply
 - nat44_user_session_details
 - nat44_user_session_dump
 - nat44_user_session_v2_details
 - nat44_user_session_v2_dump
+- pg_create_interface
+- pg_create_interface_reply
+- sr_policies_dump
 - tap_create_v2
 - tap_create_v2_reply
 - vxlan_add_del_tunnel
@@ -282,9 +299,8 @@ please collaborate with the feature maintainer on their productization.
 - lcp_default_ns_get_reply
 - lcp_default_ns_set
 - lcp_default_ns_set_reply
-- lcp_itf_pair_add_del
-- lcp_itf_pair_add_del_reply
 - lcp_itf_pair_add_del_v2
+- lcp_itf_pair_add_del_v2_reply
 - lcp_itf_pair_details
 - mdata_enable_disable
 - mdata_enable_disable_reply
@@ -451,9 +467,17 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [755e3aa54](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755e3aa54) | api: ip - Mark old message versions as deprecated |
+
 | @c src/vnet/ip-neighbor/ip_neighbor.api ||
 | ------- | ------- |
 | [e1cc87536](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1cc87536) | ip-neighbor: add api for getting neighbor db config |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [5c476e7ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c476e7ac) | api: sr - Mark old message versions as deprecated |
 
 | @c src/vnet/devices/tap/tapv2.api ||
 | ------- | ------- |
@@ -463,14 +487,31 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
 
+| @c src/vnet/pg/pg.api ||
+| ------- | ------- |
+| [be5676166](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be5676166) | api: pg - Mark old message versions as deprecated |
+
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
+| [63305843e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63305843e) | api: ipsec - Mark old message versions as deprecated |
 | [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
 | [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
+
+| @c src/vlibmemory/memclnt.api ||
+| ------- | ------- |
+| [7108cb15c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7108cb15c) | api: memclnt - Mark old message versions as deprecated |
 
 | @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
 | ------- | ------- |
 | [ccd307095](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ccd307095) | bpf_trace_filter: plugin for BPF Trace Filtering |
+
+| @c src/plugins/memif/memif.api ||
+| ------- | ------- |
+| [cfd8e4ec8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cfd8e4ec8) | api: memif - Mark old message versions as deprecated |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [fa6d21b4f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fa6d21b4f) | api: lcp - Mark old message versions as deprecated |
 
 | @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
