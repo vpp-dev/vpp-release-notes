@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 92 commits since the previous release, including 52 fixes.
+More than 97 commits since the previous release, including 54 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Tue Jul 25 02:30:43 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Jul 26 02:16:37 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -56,6 +56,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Linux-cp
     - Basic MPLS support. ([44b3abe86](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44b3abe86))
 - VNET
+  - Classifier
+    - Add bpf support to pcap classifier ([3f4075574](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f4075574))
   - TCP
     - Add simple stats collector ([6052f4b9d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6052f4b9d))
 
@@ -92,12 +94,14 @@ ipsec_sad_bind                                               | only in image
 ipsec_sad_bind_reply                                         | only in image
 ipsec_sad_unbind                                             | only in image
 ipsec_sad_unbind_reply                                       | only in image
+pcap_set_filter_function                                     | only in image
+pcap_set_filter_function_reply                               | only in image
 trace_filter_function_details                                | only in image
 trace_filter_function_dump                                   | only in image
 trace_set_filter_function                                    | only in image
 trace_set_filter_function_reply                              | only in image
 
-Found 16 api message signature differences
+Found 18 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -538,6 +542,10 @@ please collaborate with the feature maintainer on their productization.
 | [63305843e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63305843e) | api: ipsec - Mark old message versions as deprecated |
 | [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
 | [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [3f4075574](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f4075574) | classify: add bpf support to pcap classifier |
 
 | @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
