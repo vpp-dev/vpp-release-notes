@@ -4,7 +4,7 @@ More than 115 commits since the previous release, including 63 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Aug  3 02:06:27 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Aug  4 02:07:33 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -473,6 +473,20 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/crypto/crypto.api ||
+| ------- | ------- |
+| [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [63305843e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63305843e) | api: ipsec - Mark old message versions as deprecated |
+| [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
+| [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
+
+| @c src/vnet/pg/pg.api ||
+| ------- | ------- |
+| [be5676166](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be5676166) | api: pg - Mark old message versions as deprecated |
+
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [755e3aa54](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755e3aa54) | api: ip - Mark old message versions as deprecated |
@@ -481,27 +495,13 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [e1cc87536](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1cc87536) | ip-neighbor: add api for getting neighbor db config |
 
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [5c476e7ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c476e7ac) | api: sr - Mark old message versions as deprecated |
-
 | @c src/vnet/devices/tap/tapv2.api ||
 | ------- | ------- |
 | [74d9f0ae3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74d9f0ae3) | api: tapv2 - Mark old message versions as deprecated |
 
-| @c src/vnet/crypto/crypto.api ||
+| @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
-| [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
-
-| @c src/vnet/pg/pg.api ||
-| ------- | ------- |
-| [be5676166](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be5676166) | api: pg - Mark old message versions as deprecated |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [63305843e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=63305843e) | api: ipsec - Mark old message versions as deprecated |
-| [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
-| [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
+| [5c476e7ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c476e7ac) | api: sr - Mark old message versions as deprecated |
 
 | @c src/vnet/interface.api ||
 | ------- | ------- |
@@ -511,9 +511,29 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [7108cb15c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7108cb15c) | api: memclnt - Mark old message versions as deprecated |
 
+| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
+| ------- | ------- |
+| [b1239c488](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1239c488) | api: nat44_ed - Mark old message versions as deprecated |
+
+| @c src/plugins/vxlan/vxlan.api ||
+| ------- | ------- |
+| [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
+
+| @c src/plugins/tracedump/tracedump.api ||
+| ------- | ------- |
+| [52fa5f21b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=52fa5f21b) | vlib: introduce trace filter functions |
+
 | @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
 | ------- | ------- |
 | [ccd307095](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ccd307095) | bpf_trace_filter: plugin for BPF Trace Filtering |
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+
+| @c src/plugins/af_packet/af_packet.api ||
+| ------- | ------- |
+| [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
 
 | @c src/plugins/memif/memif.api ||
 | ------- | ------- |
@@ -522,25 +542,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [fa6d21b4f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fa6d21b4f) | api: lcp - Mark old message versions as deprecated |
-
-| @c src/plugins/af_xdp/af_xdp.api ||
-| ------- | ------- |
-| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
-
-| @c src/plugins/vxlan/vxlan.api ||
-| ------- | ------- |
-| [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
-
-| @c src/plugins/nat/nat44-ed/nat44_ed.api ||
-| ------- | ------- |
-| [b1239c488](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1239c488) | api: nat44_ed - Mark old message versions as deprecated |
-
-| @c src/plugins/af_packet/af_packet.api ||
-| ------- | ------- |
-| [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
-
-| @c src/plugins/tracedump/tracedump.api ||
-| ------- | ------- |
-| [52fa5f21b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=52fa5f21b) | vlib: introduce trace filter functions |
 
 
