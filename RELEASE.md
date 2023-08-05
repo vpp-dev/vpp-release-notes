@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 115 commits since the previous release, including 63 fixes.
+More than 117 commits since the previous release, including 64 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Aug  4 02:07:33 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Sat Aug  5 02:04:49 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -54,6 +54,14 @@ ipsec_sad_bind                                               | only in image
 ipsec_sad_bind_reply                                         | only in image
 ipsec_sad_unbind                                             | only in image
 ipsec_sad_unbind_reply                                       | only in image
+nsh_add_del_entry                                            | only in image
+nsh_add_del_entry_reply                                      | only in image
+nsh_add_del_map                                              | only in image
+nsh_add_del_map_reply                                        | only in image
+nsh_entry_details                                            | only in image
+nsh_entry_dump                                               | only in image
+nsh_map_details                                              | only in image
+nsh_map_dump                                                 | only in image
 pcap_set_filter_function                                     | only in image
 pcap_set_filter_function_reply                               | only in image
 trace_filter_function_details                                | only in image
@@ -61,7 +69,7 @@ trace_filter_function_dump                                   | only in image
 trace_set_filter_function                                    | only in image
 trace_set_filter_function_reply                              | only in image
 
-Found 18 api message signature differences
+Found 26 api message signature differences
 
 
 ### Newly deprecated API messages
