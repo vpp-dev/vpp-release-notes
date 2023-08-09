@@ -1,16 +1,18 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 123 commits since the previous release, including 65 fixes.
+More than 128 commits since the previous release, including 67 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Tue Aug  8 02:07:33 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Aug  9 02:08:13 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
 - Plugins
+  - CNat
+    - Flag to disable rsession ([663103279](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=663103279))
   - Wireguard
     - Add support for chained buffers ([f2b6edb14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2b6edb14))
   - Linux-cp
@@ -491,6 +493,10 @@ please collaborate with the feature maintainer on their productization.
 | [1271e3a2a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1271e3a2a) | ipsec: manually binding an SA to a worker |
 | [f441b5d0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f441b5d0e) | crypto: use fixed crypto frame pool |
 
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [84e665848](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84e665848) | ipsec: add support for RFC-4543 ENCR_NULL_AUTH_AES_GMAC |
+
 | @c src/vnet/pg/pg.api ||
 | ------- | ------- |
 | [be5676166](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be5676166) | api: pg - Mark old message versions as deprecated |
@@ -538,6 +544,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
 | [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+
+| @c src/plugins/cnat/cnat.api ||
+| ------- | ------- |
+| [663103279](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=663103279) | cnat: flag to disable rsession |
 
 | @c src/plugins/af_packet/af_packet.api ||
 | ------- | ------- |
