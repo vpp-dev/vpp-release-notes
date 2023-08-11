@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 132 commits since the previous release, including 68 fixes.
+More than 133 commits since the previous release, including 69 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Aug 10 02:12:48 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Aug 11 01:53:19 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
