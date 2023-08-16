@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 135 commits since the previous release, including 71 fixes.
+More than 140 commits since the previous release, including 74 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Tue Aug 15 01:54:19 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Aug 16 01:54:16 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,9 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - CNat
     - Flag to disable rsession ([663103279](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=663103279))
+  - DPDK
+    - Bump to DPDK 23.07 ([442189849](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=442189849))
+    - Bump rdma-core to 46.1 ([61ab09472](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61ab09472))
   - Wireguard
     - Add support for chained buffers ([f2b6edb14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2b6edb14))
   - Linux-cp
