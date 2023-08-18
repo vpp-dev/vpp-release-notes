@@ -44,7 +44,7 @@ More than 145 commits since the previous release, including 75 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Aug 17 01:52:47 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Aug 18 01:53:35 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -526,13 +526,9 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/ip-neighbor/ip_neighbor.api ||
+| @c src/vnet/crypto/crypto.api ||
 | ------- | ------- |
-| [e1cc87536](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1cc87536) | ip-neighbor: add api for getting neighbor db config |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [755e3aa54](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755e3aa54) | api: ip - Mark old message versions as deprecated |
+| [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
@@ -544,37 +540,33 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [84e665848](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84e665848) | ipsec: add support for RFC-4543 ENCR_NULL_AUTH_AES_GMAC |
 
-| @c src/vnet/interface.api ||
+| @c src/vnet/pg/pg.api ||
 | ------- | ------- |
-| [3f4075574](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f4075574) | classify: add bpf support to pcap classifier |
+| [be5676166](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be5676166) | api: pg - Mark old message versions as deprecated |
 
-| @c src/vnet/crypto/crypto.api ||
+| @c src/vnet/ip/ip.api ||
 | ------- | ------- |
-| [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
+| [755e3aa54](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755e3aa54) | api: ip - Mark old message versions as deprecated |
+
+| @c src/vnet/ip-neighbor/ip_neighbor.api ||
+| ------- | ------- |
+| [e1cc87536](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1cc87536) | ip-neighbor: add api for getting neighbor db config |
 
 | @c src/vnet/devices/tap/tapv2.api ||
 | ------- | ------- |
 | [74d9f0ae3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74d9f0ae3) | api: tapv2 - Mark old message versions as deprecated |
 
-| @c src/vnet/pg/pg.api ||
-| ------- | ------- |
-| [be5676166](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be5676166) | api: pg - Mark old message versions as deprecated |
-
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
 | [5c476e7ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c476e7ac) | api: sr - Mark old message versions as deprecated |
 
-| @c src/plugins/tracedump/tracedump.api ||
+| @c src/vnet/interface.api ||
 | ------- | ------- |
-| [52fa5f21b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=52fa5f21b) | vlib: introduce trace filter functions |
+| [3f4075574](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f4075574) | classify: add bpf support to pcap classifier |
 
-| @c src/plugins/linux-cp/lcp.api ||
+| @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
-| [fa6d21b4f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fa6d21b4f) | api: lcp - Mark old message versions as deprecated |
-
-| @c src/plugins/memif/memif.api ||
-| ------- | ------- |
-| [cfd8e4ec8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cfd8e4ec8) | api: memif - Mark old message versions as deprecated |
+| [7108cb15c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7108cb15c) | api: memclnt - Mark old message versions as deprecated |
 
 | @c src/plugins/nat/det44/det44.api ||
 | ------- | ------- |
@@ -588,28 +580,36 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [737edea32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=737edea32) | idpf: add native idpf driver plugin |
 
-| @c src/plugins/af_packet/af_packet.api ||
-| ------- | ------- |
-| [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
-
-| @c src/plugins/cnat/cnat.api ||
-| ------- | ------- |
-| [663103279](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=663103279) | cnat: flag to disable rsession |
-
 | @c src/plugins/vxlan/vxlan.api ||
 | ------- | ------- |
 | [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
 
-| @c src/plugins/af_xdp/af_xdp.api ||
+| @c src/plugins/tracedump/tracedump.api ||
 | ------- | ------- |
-| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+| [52fa5f21b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=52fa5f21b) | vlib: introduce trace filter functions |
 
 | @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
 | ------- | ------- |
 | [ccd307095](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ccd307095) | bpf_trace_filter: plugin for BPF Trace Filtering |
 
-| @c src/vlibmemory/memclnt.api ||
+| @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
-| [7108cb15c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7108cb15c) | api: memclnt - Mark old message versions as deprecated |
+| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+
+| @c src/plugins/cnat/cnat.api ||
+| ------- | ------- |
+| [663103279](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=663103279) | cnat: flag to disable rsession |
+
+| @c src/plugins/af_packet/af_packet.api ||
+| ------- | ------- |
+| [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
+
+| @c src/plugins/memif/memif.api ||
+| ------- | ------- |
+| [cfd8e4ec8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cfd8e4ec8) | api: memif - Mark old message versions as deprecated |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [fa6d21b4f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fa6d21b4f) | api: lcp - Mark old message versions as deprecated |
 
 
