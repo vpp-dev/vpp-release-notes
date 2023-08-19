@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 145 commits since the previous release, including 75 fixes.
+More than 150 commits since the previous release, including 75 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Aug 18 01:53:35 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Sat Aug 19 01:50:52 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,7 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - CNat
     - Flag to disable rsession ([663103279](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=663103279))
+    - Add host tag to bitmap in cnat snat ([f6beee077](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f6beee077))
   - DPDK
     - Bump to DPDK 23.07 ([442189849](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=442189849))
     - Bump rdma-core to 46.1 ([61ab09472](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61ab09472))
@@ -53,6 +54,7 @@ af_xdp_create_v3                                             | only in image
 af_xdp_create_v3_reply                                       | only in image
 bpf_trace_filter_set                                         | only in image
 bpf_trace_filter_set_reply                                   | only in image
+cnat_snat_policy_add_del_if                                  | definition changed
 idpf_create                                                  | only in image
 idpf_create_reply                                            | only in image
 idpf_delete                                                  | only in image
@@ -80,7 +82,7 @@ trace_filter_function_dump                                   | only in image
 trace_set_filter_function                                    | only in image
 trace_set_filter_function_reply                              | only in image
 
-Found 30 api message signature differences
+Found 31 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -558,6 +560,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
+| [f6beee077](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f6beee077) | cnat: add host tag to bitmap in cnat snat |
 | [663103279](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=663103279) | cnat: flag to disable rsession |
 
 | @c src/plugins/af_packet/af_packet.api ||
