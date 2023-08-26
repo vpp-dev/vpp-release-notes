@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 155 commits since the previous release, including 77 fixes.
+More than 157 commits since the previous release, including 78 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Aug 25 01:56:15 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Sat Aug 26 01:52:25 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -59,6 +59,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Bump rdma-core to 46.1 ([61ab09472](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61ab09472))
   - IDPF Device driver
     - Add native idpf driver plugin ([737edea32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=737edea32))
+  - NPTv6
+    - Network prefix translation for ipv6 ([6ee3aa41c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ee3aa41c))
   - Wireguard
     - Add support for chained buffers ([f2b6edb14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2b6edb14))
   - Linux-cp
@@ -107,6 +109,8 @@ ipsec_sad_bind                                               | only in image
 ipsec_sad_bind_reply                                         | only in image
 ipsec_sad_unbind                                             | only in image
 ipsec_sad_unbind_reply                                       | only in image
+npt66_binding_add_del                                        | only in image
+npt66_binding_add_del_reply                                  | only in image
 nsh_add_del_entry                                            | only in image
 nsh_add_del_entry_reply                                      | only in image
 nsh_add_del_map                                              | only in image
@@ -122,7 +126,7 @@ trace_filter_function_dump                                   | only in image
 trace_set_filter_function                                    | only in image
 trace_set_filter_function_reply                              | only in image
 
-Found 31 api message signature differences
+Found 33 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -422,6 +426,8 @@ please collaborate with the feature maintainer on their productization.
 - nat44_ei_worker_dump
 - nat64_plugin_enable_disable
 - nat64_plugin_enable_disable_reply
+- npt66_binding_add_del
+- npt66_binding_add_del_reply
 - oddbuf_enable_disable
 - oddbuf_enable_disable_reply
 - pg_interface_enable_disable_coalesce
@@ -593,6 +599,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/af_packet/af_packet.api ||
 | ------- | ------- |
 | [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
+
+| @c src/plugins/npt66/npt66.api ||
+| ------- | ------- |
+| [6ee3aa41c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ee3aa41c) | npt66: network prefix translation for ipv6 |
 
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
