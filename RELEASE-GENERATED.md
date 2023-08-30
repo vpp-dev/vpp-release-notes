@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 160 commits since the previous release, including 81 fixes.
+More than 161 commits since the previous release, including 81 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Tue Aug 29 02:29:11 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Aug 30 01:56:07 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -69,6 +69,8 @@ ipsec_sad_bind                                               | only in image
 ipsec_sad_bind_reply                                         | only in image
 ipsec_sad_unbind                                             | only in image
 ipsec_sad_unbind_reply                                       | only in image
+mpls_interface_details                                       | only in image
+mpls_interface_dump                                          | only in image
 npt66_binding_add_del                                        | only in image
 npt66_binding_add_del_reply                                  | only in image
 nsh_add_del_entry                                            | only in image
@@ -86,7 +88,7 @@ trace_filter_function_dump                                   | only in image
 trace_set_filter_function                                    | only in image
 trace_set_filter_function_reply                              | only in image
 
-Found 33 api message signature differences
+Found 35 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -531,6 +533,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
 | [5c476e7ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c476e7ac) | api: sr - Mark old message versions as deprecated |
+
+| @c src/vnet/mpls/mpls.api ||
+| ------- | ------- |
+| [8d61c59c3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8d61c59c3) | mpls: add mpls_interface_dump |
 
 | @c src/plugins/tracedump/tracedump.api ||
 | ------- | ------- |
