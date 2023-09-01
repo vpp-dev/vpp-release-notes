@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 162 commits since the previous release, including 82 fixes.
+More than 163 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Aug 31 01:56:46 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Fri Sep  1 02:01:21 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -23,6 +23,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Network prefix translation for ipv6 ([6ee3aa41c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ee3aa41c))
   - Wireguard
     - Add support for chained buffers ([f2b6edb14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2b6edb14))
+  - Fateshare
+    - A plugin for managing child processes ([f234b0d46](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f234b0d46))
   - Linux-cp
     - Basic MPLS support. ([44b3abe86](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=44b3abe86))
 - VNET
