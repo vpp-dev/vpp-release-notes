@@ -40,17 +40,19 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 166 commits since the previous release, including 83 fixes.
+More than 172 commits since the previous release, including 85 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Mon Sep  4 01:57:13 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Tue Sep  5 01:54:57 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
 - Plugins
+  - ARPing CLI
+    - Api to return responder mac address ([8af78b8e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8af78b8e3))
   - CNat
     - Flag to disable rsession ([663103279](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=663103279))
     - Add host tag to bitmap in cnat snat ([f6beee077](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f6beee077))
@@ -61,6 +63,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add native idpf driver plugin ([737edea32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=737edea32))
   - NPTv6
     - Network prefix translation for ipv6 ([6ee3aa41c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ee3aa41c))
+  - Trace node
+    - Filtering feature ([77812045e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=77812045e))
   - Wireguard
     - Add support for chained buffers ([f2b6edb14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2b6edb14))
   - Fateshare
@@ -96,6 +100,8 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 af_xdp_create_v3                                             | only in image
 af_xdp_create_v3_reply                                       | only in image
+arping_acd                                                   | only in image
+arping_acd_reply                                             | only in image
 bpf_trace_filter_set                                         | only in image
 bpf_trace_filter_set_reply                                   | only in image
 cnat_snat_policy_add_del_if                                  | definition changed
@@ -129,8 +135,10 @@ trace_filter_function_details                                | only in image
 trace_filter_function_dump                                   | only in image
 trace_set_filter_function                                    | only in image
 trace_set_filter_function_reply                              | only in image
+tracenode_enable_disable                                     | only in image
+tracenode_enable_disable_reply                               | only in image
 
-Found 35 api message signature differences
+Found 39 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -514,6 +522,8 @@ please collaborate with the feature maintainer on their productization.
 - trace_set_filters_reply
 - trace_v2_details
 - trace_v2_dump
+- tracenode_enable_disable
+- tracenode_enable_disable_reply
 - vxlan_gbp_tunnel_add_del
 - vxlan_gbp_tunnel_add_del_reply
 - vxlan_gbp_tunnel_details
@@ -603,6 +613,14 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/idpf/idpf.api ||
 | ------- | ------- |
 | [737edea32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=737edea32) | idpf: add native idpf driver plugin |
+
+| @c src/plugins/arping/arping.api ||
+| ------- | ------- |
+| [8af78b8e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8af78b8e3) | arping: api to return responder mac address |
+
+| @c src/plugins/tracenode/tracenode.api ||
+| ------- | ------- |
+| [77812045e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=77812045e) | tracenode: filtering feature |
 
 | @c src/plugins/af_packet/af_packet.api ||
 | ------- | ------- |
