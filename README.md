@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 172 commits since the previous release, including 85 fixes.
+More than 175 commits since the previous release, including 86 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Tue Sep  5 01:54:57 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Sep  6 01:56:22 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -119,8 +119,6 @@ ipsec_sad_unbind                                             | only in image
 ipsec_sad_unbind_reply                                       | only in image
 mpls_interface_details                                       | only in image
 mpls_interface_dump                                          | only in image
-npt66_binding_add_del                                        | only in image
-npt66_binding_add_del_reply                                  | only in image
 nsh_add_del_entry                                            | only in image
 nsh_add_del_entry_reply                                      | only in image
 nsh_add_del_map                                              | only in image
@@ -138,7 +136,7 @@ trace_set_filter_function_reply                              | only in image
 tracenode_enable_disable                                     | only in image
 tracenode_enable_disable_reply                               | only in image
 
-Found 39 api message signature differences
+Found 37 api message signature differences
 
 
 ### Newly deprecated API messages
