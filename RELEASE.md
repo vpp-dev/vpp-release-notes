@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 175 commits since the previous release, including 86 fixes.
+More than 181 commits since the previous release, including 88 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Sep  6 01:56:22 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Sep  7 01:56:18 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -34,6 +34,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Classifier
     - Add bpf support to pcap classifier ([3f4075574](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f4075574))
+  - IPv4 LPM
+    - Punt add punt socket support for icmp6 ([56b8abc07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=56b8abc07))
   - TCP
     - Add simple stats collector ([6052f4b9d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6052f4b9d))
 
