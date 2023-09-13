@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 184 commits since the previous release, including 91 fixes.
+More than 187 commits since the previous release, including 91 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Tue Sep 12 01:55:10 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Sep 13 01:57:33 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -74,6 +74,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Classifier
     - Add bpf support to pcap classifier ([3f4075574](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f4075574))
+  - Crypto Infra
+    - Allow changing dispatch mode ([139aba204](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139aba204))
   - IPv4 LPM
     - Punt add punt socket support for icmp6 ([56b8abc07](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=56b8abc07))
   - TCP
@@ -107,6 +109,8 @@ arping_acd_reply                                             | only in image
 bpf_trace_filter_set                                         | only in image
 bpf_trace_filter_set_reply                                   | only in image
 cnat_snat_policy_add_del_if                                  | definition changed
+crypto_set_async_dispatch_v2                                 | only in image
+crypto_set_async_dispatch_v2_reply                           | only in image
 idpf_create                                                  | only in image
 idpf_create_reply                                            | only in image
 idpf_delete                                                  | only in image
@@ -138,7 +142,7 @@ trace_set_filter_function_reply                              | only in image
 tracenode_enable_disable                                     | only in image
 tracenode_enable_disable_reply                               | only in image
 
-Found 37 api message signature differences
+Found 39 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -572,6 +576,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/crypto/crypto.api ||
 | ------- | ------- |
+| [139aba204](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139aba204) | crypto: allow changing dispatch mode |
 | [9a9604b09](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9a9604b09) | crypto: make crypto-dispatch node working in adaptive mode |
 
 | @c src/vnet/devices/tap/tapv2.api ||
