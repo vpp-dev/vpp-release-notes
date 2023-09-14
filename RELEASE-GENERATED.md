@@ -1,10 +1,10 @@
 @page release_notes_2310 Release notes for VPP 23.10
 
-More than 187 commits since the previous release, including 91 fixes.
+More than 206 commits since the previous release, including 101 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Wed Sep 13 01:57:33 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 23.10 release, generated as on Thu Sep 14 01:56:23 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -71,10 +71,6 @@ bpf_trace_filter_set_reply                                   | only in image
 cnat_snat_policy_add_del_if                                  | definition changed
 crypto_set_async_dispatch_v2                                 | only in image
 crypto_set_async_dispatch_v2_reply                           | only in image
-idpf_create                                                  | only in image
-idpf_create_reply                                            | only in image
-idpf_delete                                                  | only in image
-idpf_delete_reply                                            | only in image
 ip_neighbor_config_get                                       | only in image
 ip_neighbor_config_get_reply                                 | only in image
 ipsec_sa_v4_details                                          | only in image
@@ -102,7 +98,7 @@ trace_set_filter_function_reply                              | only in image
 tracenode_enable_disable                                     | only in image
 tracenode_enable_disable_reply                               | only in image
 
-Found 39 api message signature differences
+Found 35 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -176,10 +172,6 @@ please collaborate with the feature maintainer on their productization.
 - acl_plugin_use_hash_lookup_get_reply
 - acl_plugin_use_hash_lookup_set
 - acl_plugin_use_hash_lookup_set_reply
-- adl_allowlist_enable_disable
-- adl_allowlist_enable_disable_reply
-- adl_interface_enable_disable
-- adl_interface_enable_disable_reply
 - bpf_trace_filter_set
 - bpf_trace_filter_set_reply
 - cnat_get_snat_addresses
@@ -202,21 +194,9 @@ please collaborate with the feature maintainer on their productization.
 - cnat_translation_dump
 - cnat_translation_update
 - cnat_translation_update_reply
-- crypto_sw_scheduler_set_worker
-- crypto_sw_scheduler_set_worker_reply
 - det44_get_timeouts_reply
 - det44_set_timeouts
 - det44_set_timeouts_reply
-- flow_add
-- flow_add_reply
-- flow_add_v2
-- flow_add_v2_reply
-- flow_del
-- flow_del_reply
-- flow_disable
-- flow_disable_reply
-- flow_enable
-- flow_enable_reply
 - flowprobe_get_params
 - flowprobe_get_params_reply
 - flowprobe_interface_add_del
@@ -430,7 +410,6 @@ please collaborate with the feature maintainer on their productization.
 - set_ip_flow_hash_v3_reply
 - sr_localsids_with_packet_stats_details
 - sr_localsids_with_packet_stats_dump
-- sr_policies_v2_details
 - sr_policies_with_sl_index_details
 - sr_policies_with_sl_index_dump
 - sr_policy_add_v2
@@ -492,33 +471,16 @@ please collaborate with the feature maintainer on their productization.
 - vxlan_gbp_tunnel_add_del_reply
 - vxlan_gbp_tunnel_details
 - vxlan_gbp_tunnel_dump
-- want_wireguard_peer_events
-- want_wireguard_peer_events_reply
-- wg_set_async_mode
-- wg_set_async_mode_reply
-- wireguard_interface_create
-- wireguard_interface_create_reply
-- wireguard_interface_delete
-- wireguard_interface_delete_reply
-- wireguard_interface_details
-- wireguard_interface_dump
-- wireguard_peer_add
-- wireguard_peer_add_reply
-- wireguard_peer_event
-- wireguard_peer_remove
-- wireguard_peer_remove_reply
-- wireguard_peers_details
-- wireguard_peers_dump
 
 ### Patches that changed API definitions
 
-| @c src/vnet/ip-neighbor/ip_neighbor.api ||
+| @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
-| [e1cc87536](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1cc87536) | ip-neighbor: add api for getting neighbor db config |
+| [7108cb15c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7108cb15c) | api: memclnt - Mark old message versions as deprecated |
 
-| @c src/vnet/ip/ip.api ||
+| @c src/vnet/flow/flow.api ||
 | ------- | ------- |
-| [755e3aa54](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755e3aa54) | api: ip - Mark old message versions as deprecated |
+| [9c7e03348](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9c7e03348) | flow: mark API as production |
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
@@ -530,10 +492,6 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [84e665848](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84e665848) | ipsec: add support for RFC-4543 ENCR_NULL_AUTH_AES_GMAC |
 
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [3f4075574](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f4075574) | classify: add bpf support to pcap classifier |
-
 | @c src/vnet/crypto/crypto.api ||
 | ------- | ------- |
 | [139aba204](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=139aba204) | crypto: allow changing dispatch mode |
@@ -543,17 +501,30 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [74d9f0ae3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74d9f0ae3) | api: tapv2 - Mark old message versions as deprecated |
 
-| @c src/vnet/pg/pg.api ||
+| @c src/vnet/ip/ip.api ||
 | ------- | ------- |
-| [be5676166](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be5676166) | api: pg - Mark old message versions as deprecated |
+| [755e3aa54](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=755e3aa54) | api: ip - Mark old message versions as deprecated |
 
-| @c src/vnet/srv6/sr.api ||
+| @c src/vnet/interface.api ||
 | ------- | ------- |
-| [5c476e7ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c476e7ac) | api: sr - Mark old message versions as deprecated |
+| [3f4075574](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f4075574) | classify: add bpf support to pcap classifier |
 
 | @c src/vnet/mpls/mpls.api ||
 | ------- | ------- |
 | [8d61c59c3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8d61c59c3) | mpls: add mpls_interface_dump |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [238cf3bd4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=238cf3bd4) | sr: mark sr_policies_v2_details message as production |
+| [5c476e7ac](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5c476e7ac) | api: sr - Mark old message versions as deprecated |
+
+| @c src/vnet/pg/pg.api ||
+| ------- | ------- |
+| [be5676166](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be5676166) | api: pg - Mark old message versions as deprecated |
+
+| @c src/vnet/ip-neighbor/ip_neighbor.api ||
+| ------- | ------- |
+| [e1cc87536](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1cc87536) | ip-neighbor: add api for getting neighbor db config |
 
 | @c src/plugins/tracedump/tracedump.api ||
 | ------- | ------- |
@@ -563,9 +534,13 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [fa6d21b4f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fa6d21b4f) | api: lcp - Mark old message versions as deprecated |
 
-| @c src/plugins/memif/memif.api ||
+| @c src/plugins/crypto_sw_scheduler/crypto_sw_scheduler.api ||
 | ------- | ------- |
-| [cfd8e4ec8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cfd8e4ec8) | api: memif - Mark old message versions as deprecated |
+| [a998f80cd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a998f80cd) | crypto-sw-scheduler: stabilize the API |
+
+| @c src/plugins/adl/adl.api ||
+| ------- | ------- |
+| [b116bf8f3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b116bf8f3) | adl: stabilize the API |
 
 | @c src/plugins/nat/det44/det44.api ||
 | ------- | ------- |
@@ -575,45 +550,49 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b1239c488](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1239c488) | api: nat44_ed - Mark old message versions as deprecated |
 
-| @c src/plugins/idpf/idpf.api ||
+| @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
-| [737edea32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=737edea32) | idpf: add native idpf driver plugin |
-
-| @c src/plugins/arping/arping.api ||
-| ------- | ------- |
-| [8af78b8e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8af78b8e3) | arping: api to return responder mac address |
-
-| @c src/plugins/tracenode/tracenode.api ||
-| ------- | ------- |
-| [77812045e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=77812045e) | tracenode: filtering feature |
-
-| @c src/plugins/af_packet/af_packet.api ||
-| ------- | ------- |
-| [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
-
-| @c src/plugins/npt66/npt66.api ||
-| ------- | ------- |
-| [6ee3aa41c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ee3aa41c) | npt66: network prefix translation for ipv6 |
+| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
 
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
 | [f6beee077](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f6beee077) | cnat: add host tag to bitmap in cnat snat |
 | [663103279](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=663103279) | cnat: flag to disable rsession |
 
-| @c src/plugins/vxlan/vxlan.api ||
+| @c src/plugins/tracenode/tracenode.api ||
 | ------- | ------- |
-| [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
-
-| @c src/plugins/af_xdp/af_xdp.api ||
-| ------- | ------- |
-| [7f27ed666](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7f27ed666) | af_xdp: create_api_v3 without namespace keyword |
+| [77812045e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=77812045e) | tracenode: filtering feature |
 
 | @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
 | ------- | ------- |
 | [ccd307095](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ccd307095) | bpf_trace_filter: plugin for BPF Trace Filtering |
 
-| @c src/vlibmemory/memclnt.api ||
+| @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
-| [7108cb15c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7108cb15c) | api: memclnt - Mark old message versions as deprecated |
+| [f29d9f060](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f29d9f060) | wireguard: stabilize the API |
+
+| @c src/plugins/memif/memif.api ||
+| ------- | ------- |
+| [cfd8e4ec8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cfd8e4ec8) | api: memif - Mark old message versions as deprecated |
+
+| @c src/plugins/vxlan/vxlan.api ||
+| ------- | ------- |
+| [9ebd2b92e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ebd2b92e) | api: vxlan - Mark old message versions as deprecated |
+
+| @c src/plugins/af_packet/af_packet.api ||
+| ------- | ------- |
+| [fe965a3a1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe965a3a1) | api: af_packet - Mark old message versions as deprecated |
+
+| @c src/plugins/arping/arping.api ||
+| ------- | ------- |
+| [8af78b8e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8af78b8e3) | arping: api to return responder mac address |
+
+| @c src/plugins/npt66/npt66.api ||
+| ------- | ------- |
+| [6ee3aa41c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ee3aa41c) | npt66: network prefix translation for ipv6 |
+
+| @c src/plugins/idpf/idpf.api ||
+| ------- | ------- |
+| [737edea32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=737edea32) | idpf: add native idpf driver plugin |
 
 
