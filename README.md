@@ -40,16 +40,19 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 3 commits since the previous release, including 3 fixes.
+More than 8 commits since the previous release, including 6 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Tue Sep 26 01:58:05 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Wed Sep 27 01:57:49 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - Crypto - ipsecmb
+    - Bump intel-ipsec-mb version to 1.4 ([40242b88e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40242b88e))
 
 ## Known issues
 
@@ -72,7 +75,11 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+ping_finished_event                                          | only in image
+want_ping_finished_events                                    | only in image
+want_ping_finished_events_reply                              | only in image
+
+Found 3 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -321,6 +328,7 @@ please collaborate with the feature maintainer on their productization.
 - oddbuf_enable_disable_reply
 - pg_interface_enable_disable_coalesce
 - pg_interface_enable_disable_coalesce_reply
+- ping_finished_event
 - pnat_binding_add
 - pnat_binding_add_reply
 - pnat_binding_add_v2
@@ -404,7 +412,13 @@ please collaborate with the feature maintainer on their productization.
 - vxlan_gbp_tunnel_add_del_reply
 - vxlan_gbp_tunnel_details
 - vxlan_gbp_tunnel_dump
+- want_ping_finished_events
+- want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/ping/ping.api ||
+| ------- | ------- |
+| [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
 
 
