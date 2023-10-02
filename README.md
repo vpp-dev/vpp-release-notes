@@ -40,21 +40,26 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 11 commits since the previous release, including 6 fixes.
+More than 14 commits since the previous release, including 7 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Sun Oct  1 02:04:46 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Mon Oct  2 01:58:38 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Build System
+  - Modify N\_PREFETCH on Arm N2 to achieve best perf ([bef2d6da4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bef2d6da4))
 - Plugins
   - Crypto - ipsecmb
     - Bump intel-ipsec-mb version to 1.4 ([40242b88e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40242b88e))
   - DPDK
     - Add ConnectX-6LX and ConnectX-7 support ([029f039d5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=029f039d5))
+- VNET
+  - FLOW
+    - Add support for using l2tpv3 as RSS type ([6cb727394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6cb727394))
 
 ## Known issues
 
