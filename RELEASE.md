@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 24 commits since the previous release, including 11 fixes.
+More than 25 commits since the previous release, including 11 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Oct  6 01:57:55 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Sat Oct  7 01:56:24 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -14,6 +14,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Modify N\_PREFETCH on Arm N2 to achieve best perf ([bef2d6da4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bef2d6da4))
   - Add ability to disable some plugins from packaging and tests ([bc37878ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bc37878ec))
 - Plugins
+  - CNat
+    - Add flow hash config to cnat translation ([589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6))
   - Crypto - ipsecmb
     - Bump intel-ipsec-mb version to 1.4 ([40242b88e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40242b88e))
   - DPDK
@@ -45,11 +47,13 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+cnat_translation_details                                     | definition changed
+cnat_translation_update                                      | definition changed
 ping_finished_event                                          | only in image
 want_ping_finished_events                                    | only in image
 want_ping_finished_events_reply                              | only in image
 
-Found 3 api message signature differences
+Found 5 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -390,5 +394,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/ping/ping.api ||
 | ------- | ------- |
 | [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
+
+| @c src/plugins/cnat/cnat.api ||
+| ------- | ------- |
+| [589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6) | cnat: add flow hash config to cnat translation |
 
 
