@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 41 commits since the previous release, including 25 fixes.
+More than 46 commits since the previous release, including 27 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Oct 13 02:01:25 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Sat Oct 14 01:55:22 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -399,5 +399,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
 | [589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6) | cnat: add flow hash config to cnat translation |
+
+| @c src/plugins/npt66/npt66.api ||
+| ------- | ------- |
+| [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
 
 
