@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 46 commits since the previous release, including 27 fixes.
+More than 55 commits since the previous release, including 32 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Mon Oct 16 02:00:16 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Tue Oct 17 01:58:59 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -21,6 +21,8 @@ HIGHLIGHTS-PLACEHOLDER
   - DPDK
     - Add ConnectX-6LX and ConnectX-7 support ([029f039d5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=029f039d5))
     - Add Mellanox BlueField NICs ([006c071b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=006c071b0))
+  - NPTv6
+    - Icmp6 alg to handle icmp6 error messages ([ff344a98a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff344a98a))
 - VNET
   - FLOW
     - Add support for using l2tpv3 as RSS type ([6cb727394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6cb727394))
