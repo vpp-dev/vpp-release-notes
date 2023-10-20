@@ -1,0 +1,40 @@
+#!/bin/sh
+set -eux
+#
+# A script to prepare the VPP release notes commit
+#
+# Usage: ~/vpp-release-notes/scripts/prepare-relnote-commit v23.10
+#
+# Needs to be run from the root of VPP git tree on the stable branch
+# where the commit is being made
+
+export REALPATH=$(which realpath)
+
+if [ "$REALPATH" = "" ]; then
+	echo "Missing realpath. Please install it." 
+	exit 1
+fi
+
+if [ ! -f MAINTAINERS ]; then
+	echo "Could not find maintainers file. Outside of VPP git repo root ?"
+	exit 1
+fi
+
+export VPPVER=$1
+export VPP_BARE_VER=$(echo $VPPVER | sed -e 's/^v//')
+export OUTRN="docs/aboutvpp/releasenotes/${VPPVER}.rst"
+export TMP_LIST="/tmp/vpp-rnlist.rst"
+export RN_LIST="docs/aboutvpp/releasenotes/index.rst"
+
+
+
+perl ~/vpp-release-notes/scripts/vpp-relnote-md2rst.pl <~/vpp-release-notes/RELEASE.md | tee ${OUTRN}
+perl ~/vpp-release-notes/scripts/vpp-relnote-list-add-version.pl ${VPPVER} <${RN_LIST} >${TMP_LIST}
+mv ${TMP_LIST} ${RN_LIST}
+
+git add ${RN_LIST}
+git add ${OUTRN}
+
+git commit -m "misc: VPP $VPP_BARE_VER Release Notes" -m "Type: docs" -s
+
+
