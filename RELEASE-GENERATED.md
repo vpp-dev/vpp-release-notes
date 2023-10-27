@@ -4,7 +4,7 @@ More than 58 commits since the previous release, including 34 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Thu Oct 26 01:56:38 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Oct 27 01:56:57 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -394,6 +394,10 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/ping/ping.api ||
+| ------- | ------- |
+| [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
+
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
 | [589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6) | cnat: add flow hash config to cnat translation |
@@ -401,9 +405,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
 | [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
-
-| @c src/plugins/ping/ping.api ||
-| ------- | ------- |
-| [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
 
 
