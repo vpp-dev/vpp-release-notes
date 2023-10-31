@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 72 commits since the previous release, including 39 fixes.
+More than 79 commits since the previous release, including 42 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Mon Oct 30 01:59:32 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Tue Oct 31 01:59:13 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -52,11 +52,15 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 cnat_translation_details                                     | definition changed
 cnat_translation_update                                      | definition changed
+ipsec_sa_v5_details                                          | only in image
+ipsec_sa_v5_dump                                             | only in image
+ipsec_sad_entry_add_v2                                       | only in image
+ipsec_sad_entry_add_v2_reply                                 | only in image
 ping_finished_event                                          | only in image
 want_ping_finished_events                                    | only in image
 want_ping_finished_events_reply                              | only in image
 
-Found 5 api message signature differences
+Found 9 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -405,5 +409,13 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
 | [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
+
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
 
 
