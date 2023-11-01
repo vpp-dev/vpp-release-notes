@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 79 commits since the previous release, including 42 fixes.
+More than 85 commits since the previous release, including 42 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Tue Oct 31 01:59:13 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Wed Nov  1 02:02:33 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -398,6 +398,14 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
+
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
+
 | @c src/plugins/ping/ping.api ||
 | ------- | ------- |
 | [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
@@ -409,13 +417,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
 | [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
-
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
 
 
