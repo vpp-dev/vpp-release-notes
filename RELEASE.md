@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 89 commits since the previous release, including 43 fixes.
+More than 93 commits since the previous release, including 44 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Thu Nov  2 01:58:24 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Nov  3 01:59:09 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -21,11 +21,15 @@ HIGHLIGHTS-PLACEHOLDER
   - DPDK
     - Add ConnectX-6LX and ConnectX-7 support ([029f039d5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=029f039d5))
     - Add Mellanox BlueField NICs ([006c071b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=006c071b0))
+  - IAVF Device driver
+    - New driver using new dev infra ([47447f1f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47447f1f5))
   - NPTv6
     - Icmp6 alg to handle icmp6 error messages ([ff344a98a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff344a98a))
 - VNET
   - FLOW
     - Add support for using l2tpv3 as RSS type ([6cb727394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6cb727394))
+  - New Device Drivers Infra
+    - New device driver infra ([38c619115](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=38c619115))
   - Session Layer
     - Make port range configurable ([e111bbd12](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e111bbd12))
 
@@ -398,6 +402,14 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
+
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
+
 | @c src/plugins/ping/ping.api ||
 | ------- | ------- |
 | [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
@@ -409,13 +421,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
 | [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
-
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
 
 
