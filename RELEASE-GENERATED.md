@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 117 commits since the previous release, including 56 fixes.
+More than 120 commits since the previous release, including 57 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Nov 10 01:59:48 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Sat Nov 11 02:33:25 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -21,6 +21,8 @@ HIGHLIGHTS-PLACEHOLDER
   - DPDK
     - Add ConnectX-6LX and ConnectX-7 support ([029f039d5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=029f039d5))
     - Add Mellanox BlueField NICs ([006c071b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=006c071b0))
+  - GTPU
+    - Support non-G-PDU packets and PDU Session ([f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d))
   - IAVF Device driver
     - New driver using new dev infra ([47447f1f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47447f1f5))
   - NPTv6
@@ -56,6 +58,14 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 cnat_translation_details                                     | definition changed
 cnat_translation_update                                      | definition changed
+gtpu_add_del_forward                                         | only in image
+gtpu_add_del_forward_reply                                   | only in image
+gtpu_add_del_tunnel_v2                                       | only in image
+gtpu_add_del_tunnel_v2_reply                                 | only in image
+gtpu_get_transfer_counts                                     | only in image
+gtpu_get_transfer_counts_reply                               | only in image
+gtpu_tunnel_v2_details                                       | only in image
+gtpu_tunnel_v2_dump                                          | only in image
 ipsec_sa_v5_details                                          | only in image
 ipsec_sa_v5_dump                                             | only in image
 ipsec_sad_entry_add_v2                                       | only in image
@@ -64,7 +74,7 @@ ping_finished_event                                          | only in image
 want_ping_finished_events                                    | only in image
 want_ping_finished_events_reply                              | only in image
 
-Found 9 api message signature differences
+Found 17 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -178,6 +188,14 @@ please collaborate with the feature maintainer on their productization.
 - gbp_vxlan_tunnel_del_reply
 - gbp_vxlan_tunnel_details
 - gbp_vxlan_tunnel_dump
+- gtpu_add_del_forward
+- gtpu_add_del_forward_reply
+- gtpu_add_del_tunnel_v2
+- gtpu_add_del_tunnel_v2_reply
+- gtpu_get_transfer_counts
+- gtpu_get_transfer_counts_reply
+- gtpu_tunnel_v2_details
+- gtpu_tunnel_v2_dump
 - ikev2_child_sa_details
 - ikev2_child_sa_dump
 - ikev2_initiate_del_child_sa
@@ -421,5 +439,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
 | [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
+
+| @c src/plugins/gtpu/gtpu.api ||
+| ------- | ------- |
+| [f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d) | gtpu: support non-G-PDU packets and PDU Session |
 
 
