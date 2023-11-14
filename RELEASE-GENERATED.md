@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 121 commits since the previous release, including 58 fixes.
+More than 123 commits since the previous release, including 58 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Mon Nov 13 02:02:34 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Tue Nov 14 02:00:40 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -14,6 +14,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Modify N\_PREFETCH on Arm N2 to achieve best perf ([bef2d6da4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bef2d6da4))
   - Add ability to disable some plugins from packaging and tests ([bc37878ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bc37878ec))
 - Plugins
+  - Amazon Elastic Network Adapter (ENA) device driver
+    - Amazon Elastic Network Adapter (ENA) native driver ([2d725c612](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d725c612))
   - CNat
     - Add flow hash config to cnat translation ([589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6))
   - Crypto - ipsecmb
