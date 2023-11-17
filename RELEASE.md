@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 129 commits since the previous release, including 60 fixes.
+More than 132 commits since the previous release, including 60 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Thu Nov 16 02:03:48 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Nov 17 02:03:21 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -60,6 +60,8 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 cnat_translation_details                                     | definition changed
 cnat_translation_update                                      | definition changed
+dhcp_client_detect_enable_disable                            | only in image
+dhcp_client_detect_enable_disable_reply                      | only in image
 gtpu_add_del_forward                                         | only in image
 gtpu_add_del_forward_reply                                   | only in image
 gtpu_add_del_tunnel_v2                                       | only in image
@@ -76,7 +78,7 @@ ping_finished_event                                          | only in image
 want_ping_finished_events                                    | only in image
 want_ping_finished_events_reply                              | only in image
 
-Found 17 api message signature differences
+Found 19 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -437,6 +439,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
 | [589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6) | cnat: add flow hash config to cnat translation |
+
+| @c src/plugins/dhcp/dhcp.api ||
+| ------- | ------- |
+| [f3be34e44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f3be34e44) | dhcp: api to enable client detect on interface |
 
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
