@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 134 commits since the previous release, including 62 fixes.
+More than 136 commits since the previous release, including 63 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Mon Nov 20 02:04:17 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Tue Nov 21 02:07:04 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -424,17 +424,9 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/ipsec/ipsec.api ||
+| @c src/plugins/gtpu/gtpu.api ||
 | ------- | ------- |
-| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
-
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
-
-| @c src/plugins/ping/ping.api ||
-| ------- | ------- |
-| [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
+| [f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d) | gtpu: support non-G-PDU packets and PDU Session |
 
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
@@ -448,8 +440,16 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
 
-| @c src/plugins/gtpu/gtpu.api ||
+| @c src/plugins/ping/ping.api ||
 | ------- | ------- |
-| [f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d) | gtpu: support non-G-PDU packets and PDU Session |
+| [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
+
+| @c src/vnet/ipsec/ipsec_types.api ||
+| ------- | ------- |
+| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
 
 
