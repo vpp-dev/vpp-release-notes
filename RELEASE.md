@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 140 commits since the previous release, including 67 fixes.
+More than 145 commits since the previous release, including 69 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Mon Nov 27 02:03:22 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Tue Nov 28 02:04:11 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -60,6 +60,14 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 cnat_translation_details                                     | definition changed
 cnat_translation_update                                      | definition changed
+dev_attach                                                   | only in image
+dev_attach_reply                                             | only in image
+dev_create_port_if                                           | only in image
+dev_create_port_if_reply                                     | only in image
+dev_detach                                                   | only in image
+dev_detach_reply                                             | only in image
+dev_remove_port_if                                           | only in image
+dev_remove_port_if_reply                                     | only in image
 dhcp_client_detect_enable_disable                            | only in image
 dhcp_client_detect_enable_disable_reply                      | only in image
 gtpu_add_del_forward                                         | only in image
@@ -78,7 +86,7 @@ ping_finished_event                                          | only in image
 want_ping_finished_events                                    | only in image
 want_ping_finished_events_reply                              | only in image
 
-Found 19 api message signature differences
+Found 27 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -136,6 +144,14 @@ please collaborate with the feature maintainer on their productization.
 - det44_get_timeouts_reply
 - det44_set_timeouts
 - det44_set_timeouts_reply
+- dev_attach
+- dev_attach_reply
+- dev_create_port_if
+- dev_create_port_if_reply
+- dev_detach
+- dev_detach_reply
+- dev_remove_port_if
+- dev_remove_port_if_reply
 - flowprobe_get_params
 - flowprobe_get_params_reply
 - flowprobe_interface_add_del
@@ -443,6 +459,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/ping/ping.api ||
 | ------- | ------- |
 | [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
+
+| @c src/vnet/dev/dev.api ||
+| ------- | ------- |
+| [ddf6cec37](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddf6cec37) | dev: initial set of APIs |
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
