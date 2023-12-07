@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 167 commits since the previous release, including 82 fixes.
+More than 168 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Wed Dec  6 02:04:08 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Thu Dec  7 02:04:09 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -480,17 +480,13 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/gtpu/gtpu.api ||
-| ------- | ------- |
-| [f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d) | gtpu: support non-G-PDU packets and PDU Session |
-
-| @c src/plugins/cnat/cnat.api ||
-| ------- | ------- |
-| [589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6) | cnat: add flow hash config to cnat translation |
-
 | @c src/plugins/dhcp/dhcp.api ||
 | ------- | ------- |
 | [f3be34e44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f3be34e44) | dhcp: api to enable client detect on interface |
+
+| @c src/plugins/gtpu/gtpu.api ||
+| ------- | ------- |
+| [f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d) | gtpu: support non-G-PDU packets and PDU Session |
 
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
@@ -500,15 +496,19 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
 
+| @c src/plugins/cnat/cnat.api ||
+| ------- | ------- |
+| [589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6) | cnat: add flow hash config to cnat translation |
+
 | @c src/vnet/dev/dev.api ||
 | ------- | ------- |
 | [ddf6cec37](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddf6cec37) | dev: initial set of APIs |
 
-| @c src/vnet/ipsec/ipsec.api ||
+| @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
 | [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
 
-| @c src/vnet/ipsec/ipsec_types.api ||
+| @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
 
