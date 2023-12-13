@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 176 commits since the previous release, including 86 fixes.
+More than 180 commits since the previous release, including 88 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Tue Dec 12 02:04:41 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Wed Dec 13 02:04:26 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -25,6 +25,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add ConnectX-6LX and ConnectX-7 support ([029f039d5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=029f039d5))
     - Add Mellanox BlueField NICs ([006c071b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=006c071b0))
     - Bump to DPDK 23.11 ([327c32306](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=327c32306))
+    - Bump rdma-core to 49.0 ([b1a1209ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1a1209ce))
   - GTPU
     - Support non-G-PDU packets and PDU Session ([f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d))
   - IAVF Device driver
@@ -34,6 +35,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - FLOW
     - Add support for using l2tpv3 as RSS type ([6cb727394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6cb727394))
+  - IPSec
+    - Allow receiving encrypted IP packets with TFC padding ([8fce54637](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8fce54637))
   - New Device Drivers Infra
     - New device driver infra ([38c619115](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=38c619115))
   - Session Layer
