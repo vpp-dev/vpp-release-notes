@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 181 commits since the previous release, including 89 fixes.
+More than 184 commits since the previous release, including 90 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Thu Dec 14 02:02:44 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Dec 15 02:04:20 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -445,17 +445,17 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/dhcp/dhcp.api ||
+| @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
-| [f3be34e44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f3be34e44) | dhcp: api to enable client detect on interface |
+| [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
 
 | @c src/plugins/gtpu/gtpu.api ||
 | ------- | ------- |
 | [f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d) | gtpu: support non-G-PDU packets and PDU Session |
 
-| @c src/plugins/npt66/npt66.api ||
+| @c src/plugins/dhcp/dhcp.api ||
 | ------- | ------- |
-| [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
+| [f3be34e44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f3be34e44) | dhcp: api to enable client detect on interface |
 
 | @c src/plugins/ping/ping.api ||
 | ------- | ------- |
@@ -469,11 +469,11 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [ddf6cec37](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddf6cec37) | dev: initial set of APIs |
 
-| @c src/vnet/ipsec/ipsec_types.api ||
+| @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
 
-| @c src/vnet/ipsec/ipsec.api ||
+| @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
 | [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
 
