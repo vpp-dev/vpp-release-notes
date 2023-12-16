@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 184 commits since the previous release, including 90 fixes.
+More than 188 commits since the previous release, including 91 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Dec 15 02:04:20 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Sat Dec 16 02:01:45 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -128,10 +128,12 @@ ipsec_sa_v5_dump                                             | only in image
 ipsec_sad_entry_add_v2                                       | only in image
 ipsec_sad_entry_add_v2_reply                                 | only in image
 ping_finished_event                                          | only in image
+rdma_create_v4                                               | only in image
+rdma_create_v4_reply                                         | only in image
 want_ping_finished_events                                    | only in image
 want_ping_finished_events_reply                              | only in image
 
-Found 27 api message signature differences
+Found 29 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -139,6 +141,7 @@ Found 27 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- rdma_create_v3
 
 ### In-progress API messages
 
@@ -500,6 +503,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/ping/ping.api ||
 | ------- | ------- |
 | [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
+
+| @c src/plugins/rdma/rdma.api ||
+| ------- | ------- |
+| [04d262d1e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=04d262d1e) | rdma: add rdma_create_v4 that handles flags properly |
 
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
