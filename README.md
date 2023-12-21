@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 188 commits since the previous release, including 91 fixes.
+More than 192 commits since the previous release, including 92 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Wed Dec 20 01:45:17 UTC 2023.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Thu Dec 21 02:02:06 UTC 2023.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -70,6 +70,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Support non-G-PDU packets and PDU Session ([f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d))
   - IAVF Device driver
     - New driver using new dev infra ([47447f1f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47447f1f5))
+  - IPv6 Segment Routing Mobile
+    - Implement SRv6 mobile API funcs ([68ac24428](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68ac24428))
   - NPTv6
     - Icmp6 alg to handle icmp6 error messages ([ff344a98a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff344a98a))
 - VNET
@@ -130,10 +132,14 @@ ipsec_sad_entry_add_v2_reply                                 | only in image
 ping_finished_event                                          | only in image
 rdma_create_v4                                               | only in image
 rdma_create_v4_reply                                         | only in image
+sr_mobile_localsid_add_del                                   | only in image
+sr_mobile_localsid_add_del_reply                             | only in image
+sr_mobile_policy_add                                         | only in image
+sr_mobile_policy_add_reply                                   | only in image
 want_ping_finished_events                                    | only in image
 want_ping_finished_events_reply                              | only in image
 
-Found 29 api message signature differences
+Found 33 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -422,6 +428,10 @@ please collaborate with the feature maintainer on their productization.
 - set_ip_flow_hash_v3_reply
 - sr_localsids_with_packet_stats_details
 - sr_localsids_with_packet_stats_dump
+- sr_mobile_localsid_add_del
+- sr_mobile_localsid_add_del_reply
+- sr_mobile_policy_add
+- sr_mobile_policy_add_reply
 - sr_policies_with_sl_index_details
 - sr_policies_with_sl_index_dump
 - sr_policy_add_v2
@@ -488,6 +498,14 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/srv6-mobile/sr_mobile_types.api ||
+| ------- | ------- |
+| [68ac24428](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68ac24428) | srv6-mobile: Implement SRv6 mobile API funcs |
+
+| @c src/plugins/srv6-mobile/sr_mobile.api ||
+| ------- | ------- |
+| [68ac24428](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68ac24428) | srv6-mobile: Implement SRv6 mobile API funcs |
+
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
 | [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
@@ -523,5 +541,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/ipsec/ipsec_types.api ||
 | ------- | ------- |
 | [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
+
+| @c src/vnet/devices/virtio/virtio.api ||
+| ------- | ------- |
+| [00c59e496](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=00c59e496) | virtio: virtio_flags api use enumflag instead of enum |
 
 
