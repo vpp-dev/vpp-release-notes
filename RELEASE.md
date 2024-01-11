@@ -1,10 +1,10 @@
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 212 commits since the previous release, including 98 fixes.
+More than 215 commits since the previous release, including 100 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Wed Jan 10 02:05:24 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Thu Jan 11 02:05:13 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -96,10 +96,12 @@ sr_mobile_localsid_add_del                                   | only in image
 sr_mobile_localsid_add_del_reply                             | only in image
 sr_mobile_policy_add                                         | only in image
 sr_mobile_policy_add_reply                                   | only in image
+urpf_interface_details                                       | only in image
+urpf_interface_dump                                          | only in image
 want_ping_finished_events                                    | only in image
 want_ping_finished_events_reply                              | only in image
 
-Found 33 api message signature differences
+Found 35 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -457,6 +459,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/urpf/urpf.api ||
+| ------- | ------- |
+| [2fa69effc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2fa69effc) | urpf: add interface dump to API |
 
 | @c src/plugins/srv6-mobile/sr_mobile_types.api ||
 | ------- | ------- |
