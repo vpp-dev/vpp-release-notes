@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 219 commits since the previous release, including 101 fixes.
+More than 227 commits since the previous release, including 106 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Jan 12 02:05:23 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Sat Jan 13 02:03:23 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Build System
   - Modify N\_PREFETCH on Arm N2 to achieve best perf ([bef2d6da4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bef2d6da4))
   - Add ability to disable some plugins from packaging and tests ([bc37878ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bc37878ec))
+- Infrastructure Library
+  - Native AES-CTR implementation ([9caef2a35](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9caef2a35))
 - Plugins
   - Amazon Elastic Network Adapter (ENA) device driver
     - Amazon Elastic Network Adapter (ENA) native driver ([2d725c612](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d725c612))
@@ -61,6 +63,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Crypto - ipsecmb
     - Bump intel-ipsec-mb version to 1.4 ([40242b88e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40242b88e))
     - Bump intel-ipsec-mb version to 1.5 ([adb2c6799](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=adb2c6799))
+  - Crypto - native
+    - Add AES-CTR ([da3771c25](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3771c25))
   - DPDK
     - Add ConnectX-6LX and ConnectX-7 support ([029f039d5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=029f039d5))
     - Add Mellanox BlueField NICs ([006c071b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=006c071b0))
