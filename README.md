@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 230 commits since the previous release, including 107 fixes.
+More than 239 commits since the previous release, including 110 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Tue Jan 16 02:04:54 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Wed Jan 17 02:04:54 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -70,6 +70,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add Mellanox BlueField NICs ([006c071b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=006c071b0))
     - Bump to DPDK 23.11 ([327c32306](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=327c32306))
     - Bump rdma-core to 49.0 ([b1a1209ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1a1209ce))
+    - Add ID for QAT 4xxx series VF support ([ebe2371e6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ebe2371e6))
   - GTPU
     - Support non-G-PDU packets and PDU Session ([f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d))
   - IAVF Device driver
