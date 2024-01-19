@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 241 commits since the previous release, including 112 fixes.
+More than 244 commits since the previous release, including 113 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Thu Jan 18 02:04:35 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Jan 19 02:05:28 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -77,6 +77,8 @@ HIGHLIGHTS-PLACEHOLDER
     - New driver using new dev infra ([47447f1f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47447f1f5))
   - IPv6 Segment Routing Mobile
     - Implement SRv6 mobile API funcs ([68ac24428](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68ac24428))
+  - Marvell Octeon device driver
+    - Native driver for Marvell Octeon SoC ([01fe7ab88](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01fe7ab88))
   - NPTv6
     - Icmp6 alg to handle icmp6 error messages ([ff344a98a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff344a98a))
 - VNET
