@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2402 Release notes for VPP 24.02
 
-More than 244 commits since the previous release, including 113 fixes.
+More than 253 commits since the previous release, including 118 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Fri Jan 19 02:05:28 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Sat Jan 20 02:03:05 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -136,6 +136,9 @@ ipsec_sa_v5_details                                          | only in image
 ipsec_sa_v5_dump                                             | only in image
 ipsec_sad_entry_add_v2                                       | only in image
 ipsec_sad_entry_add_v2_reply                                 | only in image
+lldp_details                                                 | only in image
+lldp_dump                                                    | only in image
+lldp_dump_reply                                              | only in image
 ping_finished_event                                          | only in image
 rdma_create_v4                                               | only in image
 rdma_create_v4_reply                                         | only in image
@@ -148,7 +151,7 @@ urpf_interface_dump                                          | only in image
 want_ping_finished_events                                    | only in image
 want_ping_finished_events_reply                              | only in image
 
-Found 35 api message signature differences
+Found 38 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -349,6 +352,7 @@ please collaborate with the feature maintainer on their productization.
 - lcp_itf_pair_add_del_v2
 - lcp_itf_pair_add_del_v2_reply
 - lcp_itf_pair_details
+- lldp_details
 - mdata_enable_disable
 - mdata_enable_disable_reply
 - nat44_ed_vrf_tables_v2_details
@@ -534,6 +538,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/ping/ping.api ||
 | ------- | ------- |
 | [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
+
+| @c src/plugins/lldp/lldp.api ||
+| ------- | ------- |
+| [9f8d3b9b2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9f8d3b9b2) | lldp: dump api |
 
 | @c src/plugins/rdma/rdma.api ||
 | ------- | ------- |
