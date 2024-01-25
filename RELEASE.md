@@ -1,55 +1,15 @@
-@page release_notes_2402 Release notes for VPP 24.02
+@page release_notes_2406 Release notes for VPP 24.06
 
-More than 262 commits since the previous release, including 123 fixes.
+More than 0 commits since the previous release, including 0 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.02 release, generated as on Wed Jan 24 02:06:16 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu Jan 25 02:06:58 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Build System
-  - Modify N\_PREFETCH on Arm N2 to achieve best perf ([bef2d6da4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bef2d6da4))
-  - Add ability to disable some plugins from packaging and tests ([bc37878ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bc37878ec))
-- Infrastructure Library
-  - Native AES-CTR implementation ([9caef2a35](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9caef2a35))
-- Plugins
-  - Amazon Elastic Network Adapter (ENA) device driver
-    - Amazon Elastic Network Adapter (ENA) native driver ([2d725c612](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d725c612))
-  - CNat
-    - Add flow hash config to cnat translation ([589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6))
-  - Crypto - ipsecmb
-    - Bump intel-ipsec-mb version to 1.4 ([40242b88e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40242b88e))
-    - Bump intel-ipsec-mb version to 1.5 ([adb2c6799](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=adb2c6799))
-  - Crypto - native
-    - Add AES-CTR ([da3771c25](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=da3771c25))
-  - DPDK
-    - Add ConnectX-6LX and ConnectX-7 support ([029f039d5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=029f039d5))
-    - Add Mellanox BlueField NICs ([006c071b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=006c071b0))
-    - Bump to DPDK 23.11 ([327c32306](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=327c32306))
-    - Bump rdma-core to 49.0 ([b1a1209ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b1a1209ce))
-    - Add ID for QAT 4xxx series VF support ([ebe2371e6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ebe2371e6))
-  - GTPU
-    - Support non-G-PDU packets and PDU Session ([f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d))
-  - IAVF Device driver
-    - New driver using new dev infra ([47447f1f5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47447f1f5))
-  - IPv6 Segment Routing Mobile
-    - Implement SRv6 mobile API funcs ([68ac24428](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68ac24428))
-  - Marvell Octeon device driver
-    - Native driver for Marvell Octeon SoC ([01fe7ab88](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=01fe7ab88))
-  - NPTv6
-    - Icmp6 alg to handle icmp6 error messages ([ff344a98a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff344a98a))
-- VNET
-  - FLOW
-    - Add support for using l2tpv3 as RSS type ([6cb727394](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6cb727394))
-  - IPSec
-    - Allow receiving encrypted IP packets with TFC padding ([8fce54637](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8fce54637))
-  - New Device Drivers Infra
-    - New device driver infra ([38c619115](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=38c619115))
-  - Session Layer
-    - Make port range configurable ([e111bbd12](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e111bbd12))
 
 ## Known issues
 
@@ -72,46 +32,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-cnat_translation_details                                     | definition changed
-cnat_translation_update                                      | definition changed
-dev_attach                                                   | only in image
-dev_attach_reply                                             | only in image
-dev_create_port_if                                           | only in image
-dev_create_port_if_reply                                     | only in image
-dev_detach                                                   | only in image
-dev_detach_reply                                             | only in image
-dev_remove_port_if                                           | only in image
-dev_remove_port_if_reply                                     | only in image
-dhcp_client_detect_enable_disable                            | only in image
-dhcp_client_detect_enable_disable_reply                      | only in image
-gtpu_add_del_forward                                         | only in image
-gtpu_add_del_forward_reply                                   | only in image
-gtpu_add_del_tunnel_v2                                       | only in image
-gtpu_add_del_tunnel_v2_reply                                 | only in image
-gtpu_get_transfer_counts                                     | only in image
-gtpu_get_transfer_counts_reply                               | only in image
-gtpu_tunnel_v2_details                                       | only in image
-gtpu_tunnel_v2_dump                                          | only in image
-ipsec_sa_v5_details                                          | only in image
-ipsec_sa_v5_dump                                             | only in image
-ipsec_sad_entry_add_v2                                       | only in image
-ipsec_sad_entry_add_v2_reply                                 | only in image
-lldp_details                                                 | only in image
-lldp_dump                                                    | only in image
-lldp_dump_reply                                              | only in image
-ping_finished_event                                          | only in image
-rdma_create_v4                                               | only in image
-rdma_create_v4_reply                                         | only in image
-sr_mobile_localsid_add_del                                   | only in image
-sr_mobile_localsid_add_del_reply                             | only in image
-sr_mobile_policy_add                                         | only in image
-sr_mobile_policy_add_reply                                   | only in image
-urpf_interface_details                                       | only in image
-urpf_interface_dump                                          | only in image
-want_ping_finished_events                                    | only in image
-want_ping_finished_events_reply                              | only in image
-
-Found 38 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -119,7 +40,6 @@ Found 38 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- rdma_create_v3
 
 ### In-progress API messages
 
@@ -470,61 +390,5 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
-
-| @c src/plugins/urpf/urpf.api ||
-| ------- | ------- |
-| [2fa69effc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2fa69effc) | urpf: add interface dump to API |
-
-| @c src/plugins/srv6-mobile/sr_mobile_types.api ||
-| ------- | ------- |
-| [68ac24428](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68ac24428) | srv6-mobile: Implement SRv6 mobile API funcs |
-
-| @c src/plugins/srv6-mobile/sr_mobile.api ||
-| ------- | ------- |
-| [68ac24428](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68ac24428) | srv6-mobile: Implement SRv6 mobile API funcs |
-
-| @c src/plugins/npt66/npt66.api ||
-| ------- | ------- |
-| [bdeee2194](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bdeee2194) | npt66: add show command and rx/tx counters |
-
-| @c src/plugins/gtpu/gtpu.api ||
-| ------- | ------- |
-| [f9ab6985d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f9ab6985d) | gtpu: support non-G-PDU packets and PDU Session |
-
-| @c src/plugins/dhcp/dhcp.api ||
-| ------- | ------- |
-| [f3be34e44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f3be34e44) | dhcp: api to enable client detect on interface |
-
-| @c src/plugins/ping/ping.api ||
-| ------- | ------- |
-| [bb1cde678](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb1cde678) | ping: Simple binary API for running ping based on events |
-
-| @c src/plugins/lldp/lldp.api ||
-| ------- | ------- |
-| [9f8d3b9b2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9f8d3b9b2) | lldp: dump api |
-
-| @c src/plugins/rdma/rdma.api ||
-| ------- | ------- |
-| [04d262d1e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=04d262d1e) | rdma: add rdma_create_v4 that handles flags properly |
-
-| @c src/plugins/cnat/cnat.api ||
-| ------- | ------- |
-| [589fe7ca6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=589fe7ca6) | cnat: add flow hash config to cnat translation |
-
-| @c src/vnet/dev/dev.api ||
-| ------- | ------- |
-| [ddf6cec37](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddf6cec37) | dev: initial set of APIs |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
-
-| @c src/vnet/ipsec/ipsec_types.api ||
-| ------- | ------- |
-| [0e2f188f7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e2f188f7) | ipsec: huge anti-replay window support |
-
-| @c src/vnet/devices/virtio/virtio.api ||
-| ------- | ------- |
-| [00c59e496](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=00c59e496) | virtio: virtio_flags api use enumflag instead of enum |
 
 
