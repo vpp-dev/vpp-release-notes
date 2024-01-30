@@ -1,15 +1,17 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 2 commits since the previous release, including 1 fixes.
+More than 6 commits since the previous release, including 2 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Mon Jan 29 01:56:25 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue Jan 30 01:55:53 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Binary API Libraries
+  - Provide api definition over api ([ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41))
 
 ## Known issues
 
@@ -32,7 +34,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+get_api_json                                                 | only in image
+get_api_json_reply                                           | only in image
+
+Found 2 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -390,5 +395,9 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/vlibmemory/memclnt.api ||
+| ------- | ------- |
+| [ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41) | api: provide api definition over api |
 
 
