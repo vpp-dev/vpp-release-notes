@@ -1,10 +1,10 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 6 commits since the previous release, including 2 fixes.
+More than 7 commits since the previous release, including 2 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue Jan 30 01:55:53 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed Jan 31 01:56:29 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -236,6 +236,8 @@ please collaborate with the feature maintainer on their productization.
 - lcp_default_ns_set_reply
 - lcp_itf_pair_add_del_v2
 - lcp_itf_pair_add_del_v2_reply
+- lcp_itf_pair_add_del_v3
+- lcp_itf_pair_add_del_v3_reply
 - lcp_itf_pair_details
 - lldp_details
 - mdata_enable_disable
@@ -395,6 +397,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
 
 | @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
