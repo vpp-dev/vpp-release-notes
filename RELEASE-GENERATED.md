@@ -4,7 +4,7 @@ More than 7 commits since the previous release, including 2 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed Jan 31 01:56:29 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu Feb  1 02:00:40 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -398,12 +398,12 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
-
 | @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
 | [ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41) | api: provide api definition over api |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
 
 
