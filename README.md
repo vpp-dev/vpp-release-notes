@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 32 commits since the previous release, including 8 fixes.
+More than 35 commits since the previous release, including 9 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed Feb 14 01:56:30 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu Feb 15 01:56:37 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -76,8 +76,10 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 get_api_json                                                 | only in image
 get_api_json_reply                                           | only in image
+ikev2_sa_v2_details                                          | only in image
+ikev2_sa_v2_dump                                             | only in image
 
-Found 2 api message signature differences
+Found 4 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -441,6 +443,14 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
+
+| @c src/plugins/ikev2/ikev2_types.api ||
+| ------- | ------- |
+| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
+
+| @c src/plugins/ikev2/ikev2.api ||
+| ------- | ------- |
+| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
 
 | @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
