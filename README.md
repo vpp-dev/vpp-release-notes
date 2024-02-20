@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 56 commits since the previous release, including 15 fixes.
+More than 64 commits since the previous release, including 18 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Mon Feb 19 01:57:19 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue Feb 20 01:54:38 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -52,6 +52,13 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Binary API Libraries
   - Provide api definition over api ([ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41))
+- Build System
+  - Enable building on AlmaLinux 9 ([088d1a016](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=088d1a016))
+- Plugins
+  - Crypto - OpenSSL
+    - Refactor openssl API usage ([97c9f5e7c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=97c9f5e7c))
+  - Wireguard
+    - Notify key changes to crypto engine ([6f8252e83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8252e83))
 
 ## Known issues
 
