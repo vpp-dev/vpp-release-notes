@@ -1,10 +1,10 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 77 commits since the previous release, including 23 fixes.
+More than 80 commits since the previous release, including 24 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue Feb 27 01:54:55 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed Feb 28 01:56:20 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -19,6 +19,9 @@ HIGHLIGHTS-PLACEHOLDER
     - Refactor openssl API usage ([97c9f5e7c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=97c9f5e7c))
   - Wireguard
     - Notify key changes to crypto engine ([6f8252e83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8252e83))
+- VNET
+  - New Device Drivers Infra
+    - Add per-port vnet flow ([4af3fdfdd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4af3fdfdd))
 
 ## Known issues
 
