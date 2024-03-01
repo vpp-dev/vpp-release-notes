@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 81 commits since the previous release, including 24 fixes.
+More than 83 commits since the previous release, including 25 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu Feb 29 01:54:09 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Fri Mar  1 02:01:06 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -57,6 +57,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - Crypto - OpenSSL
     - Refactor openssl API usage ([97c9f5e7c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=97c9f5e7c))
+  - Marvell Octeon device driver
+    - Add flow offload infra ([3d1459b14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d1459b14))
   - Wireguard
     - Notify key changes to crypto engine ([6f8252e83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8252e83))
 - VNET
