@@ -1,10 +1,10 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 87 commits since the previous release, including 28 fixes.
+More than 94 commits since the previous release, including 32 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Mon Mar  4 02:09:25 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue Mar  5 01:55:12 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -46,12 +46,14 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+bpf_trace_filter_set_v2                                      | only in image
+bpf_trace_filter_set_v2_reply                                | only in image
 get_api_json                                                 | only in image
 get_api_json_reply                                           | only in image
 ikev2_sa_v2_details                                          | only in image
 ikev2_sa_v2_dump                                             | only in image
 
-Found 4 api message signature differences
+Found 6 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -86,6 +88,8 @@ please collaborate with the feature maintainer on their productization.
 - acl_plugin_use_hash_lookup_set_reply
 - bpf_trace_filter_set
 - bpf_trace_filter_set_reply
+- bpf_trace_filter_set_v2
+- bpf_trace_filter_set_v2_reply
 - cnat_get_snat_addresses
 - cnat_get_snat_addresses_reply
 - cnat_session_details
@@ -415,6 +419,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
+
+| @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
+| ------- | ------- |
+| [5be4b869a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5be4b869a) | bpf_trace_filter: support bpf filter optimization and dump |
 
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
