@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 109 commits since the previous release, including 39 fixes.
+More than 112 commits since the previous release, including 42 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed Mar 13 01:58:33 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu Mar 14 01:55:33 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -465,16 +465,16 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [5be4b869a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5be4b869a) | bpf_trace_filter: support bpf filter optimization and dump |
 
-| @c src/plugins/ikev2/ikev2.api ||
+| @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
-| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
+| [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
 
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
 | [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
 
-| @c src/plugins/linux-cp/lcp.api ||
+| @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
-| [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
+| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
 
 
