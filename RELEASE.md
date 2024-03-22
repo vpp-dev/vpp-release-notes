@@ -1,10 +1,10 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 121 commits since the previous release, including 44 fixes.
+More than 124 commits since the previous release, including 45 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu Mar 21 01:58:14 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Fri Mar 22 01:55:15 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
