@@ -1,10 +1,10 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 142 commits since the previous release, including 51 fixes.
+More than 147 commits since the previous release, including 51 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Fri Mar 29 01:55:45 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Sat Mar 30 01:53:06 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -25,6 +25,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - New Device Drivers Infra
     - Add per-port vnet flow ([4af3fdfdd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4af3fdfdd))
+- Vector Library
+  - Improve automatic core pinning ([71c32a898](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=71c32a898))
 
 ## Known issues
 
