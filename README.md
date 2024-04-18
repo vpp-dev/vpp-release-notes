@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 193 commits since the previous release, including 84 fixes.
+More than 194 commits since the previous release, including 84 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed Apr 17 01:59:35 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu Apr 18 01:57:59 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -459,24 +459,24 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vlibmemory/memclnt.api ||
+| @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
 | ------- | ------- |
-| [ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41) | api: provide api definition over api |
-
-| @c src/plugins/ikev2/ikev2_types.api ||
-| ------- | ------- |
-| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
-
-| @c src/plugins/ikev2/ikev2.api ||
-| ------- | ------- |
-| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
+| [5be4b869a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5be4b869a) | bpf_trace_filter: support bpf filter optimization and dump |
 
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
 
-| @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
+| @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
-| [5be4b869a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5be4b869a) | bpf_trace_filter: support bpf filter optimization and dump |
+| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
+
+| @c src/plugins/ikev2/ikev2_types.api ||
+| ------- | ------- |
+| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
+
+| @c src/vlibmemory/memclnt.api ||
+| ------- | ------- |
+| [ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41) | api: provide api definition over api |
 
 
