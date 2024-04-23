@@ -1,10 +1,10 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 197 commits since the previous release, including 86 fixes.
+More than 202 commits since the previous release, including 87 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Mon Apr 22 02:01:27 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue Apr 23 02:00:51 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -20,6 +20,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Marvell Octeon device driver
     - Add flow offload infra ([3d1459b14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d1459b14))
     - Add support for VF device ([09c6cae8c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=09c6cae8c))
+    - Add support for SDP device ([043560ef2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=043560ef2))
   - Wireguard
     - Notify key changes to crypto engine ([6f8252e83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8252e83))
 - VNET
