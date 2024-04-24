@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 202 commits since the previous release, including 87 fixes.
+More than 207 commits since the previous release, including 89 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue Apr 23 02:00:51 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed Apr 24 02:00:44 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -61,6 +61,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add flow offload infra ([3d1459b14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d1459b14))
     - Add support for VF device ([09c6cae8c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=09c6cae8c))
     - Add support for SDP device ([043560ef2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=043560ef2))
+    - Add promisc support ([9abc01f25](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9abc01f25))
   - Wireguard
     - Notify key changes to crypto engine ([6f8252e83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8252e83))
 - VNET
@@ -94,10 +95,14 @@ bpf_trace_filter_set_v2                                      | only in image
 bpf_trace_filter_set_v2_reply                                | only in image
 get_api_json                                                 | only in image
 get_api_json_reply                                           | only in image
+ikev2_child_sa_v2_details                                    | only in image
+ikev2_child_sa_v2_dump                                       | only in image
 ikev2_sa_v2_details                                          | only in image
 ikev2_sa_v2_dump                                             | only in image
+ikev2_sa_v3_details                                          | only in image
+ikev2_sa_v3_dump                                             | only in image
 
-Found 6 api message signature differences
+Found 10 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -229,8 +234,8 @@ please collaborate with the feature maintainer on their productization.
 - gtpu_get_transfer_counts_reply
 - gtpu_tunnel_v2_details
 - gtpu_tunnel_v2_dump
-- ikev2_child_sa_details
-- ikev2_child_sa_dump
+- ikev2_child_sa_v2_details
+- ikev2_child_sa_v2_dump
 - ikev2_initiate_del_child_sa
 - ikev2_initiate_del_child_sa_reply
 - ikev2_initiate_del_ike_sa
@@ -259,8 +264,8 @@ please collaborate with the feature maintainer on their productization.
 - ikev2_profile_set_ts_reply
 - ikev2_profile_set_udp_encap
 - ikev2_profile_set_udp_encap_reply
-- ikev2_sa_details
-- ikev2_sa_dump
+- ikev2_sa_v3_details
+- ikev2_sa_v3_dump
 - ikev2_set_esp_transforms
 - ikev2_set_esp_transforms_reply
 - ikev2_set_ike_transforms
@@ -470,10 +475,12 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
+| [07b227407](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07b227407) | ikev2: uptime |
 | [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
 
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
+| [07b227407](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07b227407) | ikev2: uptime |
 | [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
 
 | @c src/vlibmemory/memclnt.api ||
