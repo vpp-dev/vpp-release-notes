@@ -1,10 +1,10 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 207 commits since the previous release, including 89 fixes.
+More than 225 commits since the previous release, including 91 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed Apr 24 02:00:44 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu Apr 25 02:00:45 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -17,6 +17,9 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - Crypto - OpenSSL
     - Refactor openssl API usage ([97c9f5e7c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=97c9f5e7c))
+  - DPDK
+    - Bump to DPDK 24.03 ([a0fd52301](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a0fd52301))
+    - Bump rdma-core to 51.0 ([62af9bb64](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=62af9bb64))
   - Marvell Octeon device driver
     - Add flow offload infra ([3d1459b14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d1459b14))
     - Add support for VF device ([09c6cae8c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=09c6cae8c))
