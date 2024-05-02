@@ -1,10 +1,10 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 230 commits since the previous release, including 92 fixes.
+More than 235 commits since the previous release, including 96 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue Apr 30 01:59:45 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu May  2 01:59:51 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -17,6 +17,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - Crypto - OpenSSL
     - Refactor openssl API usage ([97c9f5e7c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=97c9f5e7c))
+  - Crypto - native
+    - Add SHA2-HMAC ([9f2799fda](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9f2799fda))
   - DPDK
     - Bump to DPDK 24.03 ([a0fd52301](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a0fd52301))
     - Bump rdma-core to 51.0 ([62af9bb64](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=62af9bb64))
