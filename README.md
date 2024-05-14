@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 263 commits since the previous release, including 113 fixes.
+More than 269 commits since the previous release, including 117 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Mon May 13 02:05:07 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue May 14 02:01:38 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -67,6 +67,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for VF device ([09c6cae8c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=09c6cae8c))
     - Add support for SDP device ([043560ef2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=043560ef2))
     - Add promisc support ([9abc01f25](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9abc01f25))
+    - Add support for mac address update ([b448568fa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b448568fa))
   - Wireguard
     - Notify key changes to crypto engine ([6f8252e83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8252e83))
 - VNET
