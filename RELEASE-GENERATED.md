@@ -1,10 +1,10 @@
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 278 commits since the previous release, including 122 fixes.
+More than 279 commits since the previous release, including 123 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed May 15 02:05:31 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Thu May 16 02:02:55 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -431,21 +431,17 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
+| @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
-| [5be4b869a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5be4b869a) | bpf_trace_filter: support bpf filter optimization and dump |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
+| [ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41) | api: provide api definition over api |
 
 | @c src/plugins/netmap/netmap.api ||
 | ------- | ------- |
 | [16cc51b88](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=16cc51b88) | netmap: Reinstate and update netmap plugin |
 
-| @c src/plugins/srmpls/sr_mpls.api ||
+| @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
 | ------- | ------- |
-| [182d8b2dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=182d8b2dd) | sr: move srmpls to a plugin |
+| [5be4b869a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5be4b869a) | bpf_trace_filter: support bpf filter optimization and dump |
 
 | @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
@@ -457,8 +453,12 @@ please collaborate with the feature maintainer on their productization.
 | [07b227407](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07b227407) | ikev2: uptime |
 | [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
 
-| @c src/vlibmemory/memclnt.api ||
+| @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
-| [ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41) | api: provide api definition over api |
+| [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
+
+| @c src/plugins/srmpls/sr_mpls.api ||
+| ------- | ------- |
+| [182d8b2dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=182d8b2dd) | sr: move srmpls to a plugin |
 
 
