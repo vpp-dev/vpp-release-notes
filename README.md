@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2406 Release notes for VPP 24.06
 
-More than 282 commits since the previous release, including 123 fixes.
+More than 283 commits since the previous release, including 123 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Mon May 20 02:05:12 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Tue May 21 02:02:43 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -116,6 +116,8 @@ Found 10 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- builtinurl_enable
+- builtinurl_enable_reply
 
 ### In-progress API messages
 
@@ -474,6 +476,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vlibmemory/memclnt.api ||
 | ------- | ------- |
 | [ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41) | api: provide api definition over api |
+
+| @c src/plugins/builtinurl/builtinurl.api ||
+| ------- | ------- |
+| [a5668eb05](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5668eb05) | builtinurl: mark api as deprecated |
 
 | @c src/plugins/netmap/netmap.api ||
 | ------- | ------- |
