@@ -1,40 +1,15 @@
-@page release_notes_2406 Release notes for VPP 24.06
+@page release_notes_2410 Release notes for VPP 24.10
 
-More than 284 commits since the previous release, including 124 fixes.
+More than 4 commits since the previous release, including 1 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.06 release, generated as on Wed May 22 02:03:29 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Fri May 24 02:03:48 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Binary API Libraries
-  - Provide api definition over api ([ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41))
-- Build System
-  - Enable building on AlmaLinux 9 ([088d1a016](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=088d1a016))
-- Plugins
-  - Crypto - OpenSSL
-    - Refactor openssl API usage ([97c9f5e7c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=97c9f5e7c))
-  - Crypto - native
-    - Add SHA2-HMAC ([9f2799fda](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9f2799fda))
-  - DPDK
-    - Bump to DPDK 24.03 ([a0fd52301](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a0fd52301))
-    - Bump rdma-core to 51.0 ([62af9bb64](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=62af9bb64))
-  - Marvell Octeon device driver
-    - Add flow offload infra ([3d1459b14](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3d1459b14))
-    - Add support for VF device ([09c6cae8c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=09c6cae8c))
-    - Add support for SDP device ([043560ef2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=043560ef2))
-    - Add promisc support ([9abc01f25](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9abc01f25))
-    - Add support for mac address update ([b448568fa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b448568fa))
-  - Wireguard
-    - Notify key changes to crypto engine ([6f8252e83](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f8252e83))
-- VNET
-  - New Device Drivers Infra
-    - Add per-port vnet flow ([4af3fdfdd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4af3fdfdd))
-- Vector Library
-  - Improve automatic core pinning ([71c32a898](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=71c32a898))
 
 ## Known issues
 
@@ -57,18 +32,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-bpf_trace_filter_set_v2                                      | only in image
-bpf_trace_filter_set_v2_reply                                | only in image
-get_api_json                                                 | only in image
-get_api_json_reply                                           | only in image
-ikev2_child_sa_v2_details                                    | only in image
-ikev2_child_sa_v2_dump                                       | only in image
-ikev2_sa_v2_details                                          | only in image
-ikev2_sa_v2_dump                                             | only in image
-ikev2_sa_v3_details                                          | only in image
-ikev2_sa_v3_dump                                             | only in image
-
-Found 10 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -76,8 +40,6 @@ Found 10 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- builtinurl_enable
-- builtinurl_enable_reply
 
 ### In-progress API messages
 
@@ -432,39 +394,5 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
-
-| @c src/vlibmemory/memclnt.api ||
-| ------- | ------- |
-| [ac0babd41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ac0babd41) | api: provide api definition over api |
-
-| @c src/plugins/builtinurl/builtinurl.api ||
-| ------- | ------- |
-| [a5668eb05](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a5668eb05) | builtinurl: mark api as deprecated |
-
-| @c src/plugins/netmap/netmap.api ||
-| ------- | ------- |
-| [16cc51b88](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=16cc51b88) | netmap: Reinstate and update netmap plugin |
-
-| @c src/plugins/bpf_trace_filter/bpf_trace_filter.api ||
-| ------- | ------- |
-| [5be4b869a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5be4b869a) | bpf_trace_filter: support bpf filter optimization and dump |
-
-| @c src/plugins/ikev2/ikev2.api ||
-| ------- | ------- |
-| [07b227407](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07b227407) | ikev2: uptime |
-| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
-
-| @c src/plugins/ikev2/ikev2_types.api ||
-| ------- | ------- |
-| [07b227407](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07b227407) | ikev2: uptime |
-| [f40a354da](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40a354da) | ikev2: dump state and profile name in CLI and API |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [83ad79d69](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=83ad79d69) | linux-cp: add add_del_v3 and get_v2 methods |
-
-| @c src/plugins/srmpls/sr_mpls.api ||
-| ------- | ------- |
-| [182d8b2dd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=182d8b2dd) | sr: move srmpls to a plugin |
 
 
