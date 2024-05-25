@@ -1,15 +1,17 @@
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 4 commits since the previous release, including 1 fixes.
+More than 7 commits since the previous release, including 3 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Fri May 24 02:03:48 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Sat May 25 02:01:58 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Vector Library
+  - Improvement to automatic core pinning ([0b0468cb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b0468cb0))
 
 ## Known issues
 
