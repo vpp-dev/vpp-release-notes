@@ -1,15 +1,18 @@
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 7 commits since the previous release, including 3 fixes.
+More than 12 commits since the previous release, including 5 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Tue May 28 02:05:15 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed May 29 02:06:40 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - Marvell Octeon device driver
+    - Add support for Marvell Octeon9 SoC ([a93c85a57](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a93c85a57))
 - Vector Library
   - Improvement to automatic core pinning ([0b0468cb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b0468cb0))
 
