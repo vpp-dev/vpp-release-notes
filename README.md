@@ -40,19 +40,25 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 30 commits since the previous release, including 10 fixes.
+More than 42 commits since the previous release, including 14 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Mon Jun 10 02:09:18 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Tue Jun 11 02:07:28 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Build System
+  - Bump octeon-roc version to 0.5 ([81f0f16b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=81f0f16b0))
 - Plugins
   - Marvell Octeon device driver
     - Add support for Marvell Octeon9 SoC ([a93c85a57](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a93c85a57))
+    - Enable vf device promiscuous mode feature ([38f59c315](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=38f59c315))
+    - Update trace to use qid instead of q ([a391de68a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a391de68a))
+    - Add counters support for port and queue ([b26b2bcd4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b26b2bcd4))
+    - Add support for vnet generic flow type ([282f2ecd8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=282f2ecd8))
 - Vector Library
   - Improvement to automatic core pinning ([0b0468cb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b0468cb0))
 
