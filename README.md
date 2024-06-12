@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 42 commits since the previous release, including 14 fixes.
+More than 44 commits since the previous release, including 14 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Tue Jun 11 02:07:28 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed Jun 12 02:07:27 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -59,6 +59,10 @@ HIGHLIGHTS-PLACEHOLDER
     - Update trace to use qid instead of q ([a391de68a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a391de68a))
     - Add counters support for port and queue ([b26b2bcd4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b26b2bcd4))
     - Add support for vnet generic flow type ([282f2ecd8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=282f2ecd8))
+    - Add clear counters for port and queues ([68b8125db](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68b8125db))
+- VNET
+  - New Device Drivers Infra
+    - Add port and queue counter clear operation ([2ea1e2c36](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ea1e2c36))
 - Vector Library
   - Improvement to automatic core pinning ([0b0468cb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b0468cb0))
 
