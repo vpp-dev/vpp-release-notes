@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 98 commits since the previous release, including 35 fixes.
+More than 107 commits since the previous release, including 39 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Fri Jul 12 02:08:17 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Sun Jul 14 02:16:46 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -87,7 +87,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+ip_table_add_del_v2                                          | only in image
+ip_table_add_del_v2_reply                                    | only in image
+
+Found 2 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -449,5 +452,9 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [ff570d3d0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff570d3d0) | fib: make mfib optional |
 
 
