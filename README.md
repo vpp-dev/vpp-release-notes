@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 148 commits since the previous release, including 54 fixes.
+More than 150 commits since the previous release, including 56 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed Jul 31 01:51:20 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Thu Aug  1 02:16:50 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -452,6 +452,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/npt66/npt66.api ||
+| ------- | ------- |
+| [f726ebd17](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f726ebd17) | npt66: replace clib_warnings() with error counters |
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
