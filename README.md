@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 150 commits since the previous release, including 56 fixes.
+More than 154 commits since the previous release, including 56 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Thu Aug  1 02:16:50 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Fri Aug  2 02:10:43 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -87,10 +87,12 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+builtinurl_enable                                            | only in file
+builtinurl_enable_reply                                      | only in file
 ip_table_add_del_v2                                          | only in image
 ip_table_add_del_v2_reply                                    | only in image
 
-Found 2 api message signature differences
+Found 4 api message signature differences
 
 
 ### Newly deprecated API messages
