@@ -1,10 +1,10 @@
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 158 commits since the previous release, including 58 fixes.
+More than 163 commits since the previous release, including 61 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed Aug  7 02:13:20 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Thu Aug  8 02:12:01 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -415,12 +415,16 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/npt66/npt66.api ||
-| ------- | ------- |
-| [f726ebd17](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f726ebd17) | npt66: replace clib_warnings() with error counters |
-
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [ff570d3d0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff570d3d0) | fib: make mfib optional |
+
+| @c src/plugins/ikev2/ikev2.api ||
+| ------- | ------- |
+| [0f2c6cd1a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f2c6cd1a) | ikev2: handoff packets |
+
+| @c src/plugins/npt66/npt66.api ||
+| ------- | ------- |
+| [f726ebd17](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f726ebd17) | npt66: replace clib_warnings() with error counters |
 
 
