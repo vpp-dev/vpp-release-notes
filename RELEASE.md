@@ -1,10 +1,10 @@
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 169 commits since the previous release, including 63 fixes.
+More than 171 commits since the previous release, including 64 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Tue Aug 20 02:11:45 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed Aug 21 02:12:08 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -49,10 +49,12 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 builtinurl_enable                                            | only in file
 builtinurl_enable_reply                                      | only in file
+http_static_enable_v2                                        | only in image
+http_static_enable_v2_reply                                  | only in image
 ip_table_add_del_v2                                          | only in image
 ip_table_add_del_v2_reply                                    | only in image
 
-Found 4 api message signature differences
+Found 6 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -60,6 +62,8 @@ Found 4 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- http_static_enable
+- http_static_enable_reply
 
 ### In-progress API messages
 
@@ -422,6 +426,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
 | [0f2c6cd1a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f2c6cd1a) | ikev2: handoff packets |
+
+| @c src/plugins/http_static/http_static.api ||
+| ------- | ------- |
+| [86fa94372](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86fa94372) | http_static: make max-age configurable |
 
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
