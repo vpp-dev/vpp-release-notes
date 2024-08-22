@@ -1,10 +1,10 @@
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 171 commits since the previous release, including 64 fixes.
+More than 178 commits since the previous release, including 65 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed Aug 21 02:12:08 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Thu Aug 22 02:13:49 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -20,6 +20,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add counters support for port and queue ([b26b2bcd4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b26b2bcd4))
     - Add support for vnet generic flow type ([282f2ecd8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=282f2ecd8))
     - Add clear counters for port and queues ([68b8125db](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68b8125db))
+    - Enable tx checksum offload capability ([e00ce3971](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e00ce3971))
+    - Add support for max\_rx\_frame\_size update ([f7f26e5b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f7f26e5b3))
 - VNET
   - New Device Drivers Infra
     - Add port and queue counter clear operation ([2ea1e2c36](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ea1e2c36))
