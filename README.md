@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 197 commits since the previous release, including 69 fixes.
+More than 204 commits since the previous release, including 70 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Thu Aug 29 02:16:22 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Fri Aug 30 02:17:17 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -52,6 +52,7 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Build System
   - Bump octeon-roc version to 0.5 ([81f0f16b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=81f0f16b0))
+  - Add Marvell CN913x platform ([fc49c63e7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fc49c63e7))
 - Plugins
   - Marvell Octeon device driver
     - Add support for Marvell Octeon9 SoC ([a93c85a57](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a93c85a57))
@@ -460,6 +461,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/vnet/devices/virtio/virtio.api ||
+| ------- | ------- |
+| [e9bc33201](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e9bc33201) | virtio: RSS support |
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
