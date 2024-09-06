@@ -1,10 +1,10 @@
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 207 commits since the previous release, including 71 fixes.
+More than 210 commits since the previous release, including 73 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Thu Sep  5 02:17:42 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Fri Sep  6 02:17:47 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -26,6 +26,7 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - New Device Drivers Infra
     - Add port and queue counter clear operation ([2ea1e2c36](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ea1e2c36))
+    - Add platform bus and devicetree support ([f508e07c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f508e07c1))
 - Vector Library
   - Improvement to automatic core pinning ([0b0468cb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b0468cb0))
 
