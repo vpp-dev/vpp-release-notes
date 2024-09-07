@@ -1,10 +1,10 @@
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 210 commits since the previous release, including 73 fixes.
+More than 212 commits since the previous release, including 74 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Fri Sep  6 02:17:47 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Sat Sep  7 02:18:52 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -27,6 +27,8 @@ HIGHLIGHTS-PLACEHOLDER
   - New Device Drivers Infra
     - Add port and queue counter clear operation ([2ea1e2c36](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ea1e2c36))
     - Add platform bus and devicetree support ([f508e07c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f508e07c1))
+  - Session Layer
+    - Add Source Deny List ([c4b5d1011](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4b5d1011))
 - Vector Library
   - Improvement to automatic core pinning ([0b0468cb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b0468cb0))
 
@@ -57,8 +59,14 @@ http_static_enable_v2                                        | only in image
 http_static_enable_v2_reply                                  | only in image
 ip_table_add_del_v2                                          | only in image
 ip_table_add_del_v2_reply                                    | only in image
+session_enable_disable_v2                                    | only in image
+session_enable_disable_v2_reply                              | only in image
+session_sdl_add_del                                          | only in image
+session_sdl_add_del_reply                                    | only in image
+session_sdl_details                                          | only in image
+session_sdl_dump                                             | only in image
 
-Found 6 api message signature differences
+Found 12 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -68,6 +76,8 @@ will disappear in the next release.
 
 - http_static_enable
 - http_static_enable_reply
+- session_enable_disable
+- session_enable_disable_reply
 
 ### In-progress API messages
 
@@ -434,6 +444,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
 | [f726ebd17](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f726ebd17) | npt66: replace clib_warnings() with error counters |
+
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [c4b5d1011](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4b5d1011) | session: add Source Deny List |
 
 | @c src/vnet/devices/virtio/virtio.api ||
 | ------- | ------- |
