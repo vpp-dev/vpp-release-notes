@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 213 commits since the previous release, including 74 fixes.
+More than 217 commits since the previous release, including 75 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Mon Sep  9 02:20:55 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Tue Sep 10 02:19:03 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -54,6 +54,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Bump octeon-roc version to 0.5 ([81f0f16b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=81f0f16b0))
   - Add Marvell CN913x platform ([fc49c63e7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fc49c63e7))
 - Plugins
+  - Marvell Armada device driver
+    - Introduce dev\_armada plugin ([4e5184189](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4e5184189))
   - Marvell Octeon device driver
     - Add support for Marvell Octeon9 SoC ([a93c85a57](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a93c85a57))
     - Enable vf device promiscuous mode feature ([38f59c315](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=38f59c315))
