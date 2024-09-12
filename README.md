@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 219 commits since the previous release, including 76 fixes.
+More than 221 commits since the previous release, including 78 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed Sep 11 02:17:53 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Thu Sep 12 02:18:25 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
