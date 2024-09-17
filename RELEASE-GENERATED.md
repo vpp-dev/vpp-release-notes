@@ -1,10 +1,10 @@
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 226 commits since the previous release, including 80 fixes.
+More than 227 commits since the previous release, including 80 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Mon Sep 16 02:33:16 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Tue Sep 17 01:59:17 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -14,6 +14,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Bump octeon-roc version to 0.5 ([81f0f16b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=81f0f16b0))
   - Add Marvell CN913x platform ([fc49c63e7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fc49c63e7))
 - Plugins
+  - DPDK
+    - Bump to DPDK 24.07 and RDMA 52.0 ([6ccfc3991](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ccfc3991))
   - Marvell Armada device driver
     - Introduce dev\_armada plugin ([4e5184189](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4e5184189))
   - Marvell Octeon device driver
