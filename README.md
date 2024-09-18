@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 227 commits since the previous release, including 80 fixes.
+More than 229 commits since the previous release, including 80 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Tue Sep 17 01:59:17 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed Sep 18 02:19:05 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -67,6 +67,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add clear counters for port and queues ([68b8125db](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68b8125db))
     - Enable tx checksum offload capability ([e00ce3971](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e00ce3971))
     - Add support for max\_rx\_frame\_size update ([f7f26e5b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f7f26e5b3))
+  - Packet Vector Tunnel Interface
+    - Packet Vector Tunnel Interface ([0acb398d6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0acb398d6))
 - VNET
   - New Device Drivers Infra
     - Add port and queue counter clear operation ([2ea1e2c36](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ea1e2c36))
@@ -103,6 +105,12 @@ http_static_enable_v2                                        | only in image
 http_static_enable_v2_reply                                  | only in image
 ip_table_add_del_v2                                          | only in image
 ip_table_add_del_v2_reply                                    | only in image
+pvti_interface_create                                        | only in image
+pvti_interface_create_reply                                  | only in image
+pvti_interface_delete                                        | only in image
+pvti_interface_delete_reply                                  | only in image
+pvti_interface_details                                       | only in image
+pvti_interface_dump                                          | only in image
 session_enable_disable_v2                                    | only in image
 session_enable_disable_v2_reply                              | only in image
 session_sdl_add_del                                          | only in image
@@ -110,7 +118,7 @@ session_sdl_add_del_reply                                    | only in image
 session_sdl_details                                          | only in image
 session_sdl_dump                                             | only in image
 
-Found 12 api message signature differences
+Found 18 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -401,6 +409,12 @@ please collaborate with the feature maintainer on their productization.
 - pnat_interfaces_details
 - pnat_interfaces_get
 - pnat_interfaces_get_reply
+- pvti_interface_create
+- pvti_interface_create_reply
+- pvti_interface_delete
+- pvti_interface_delete_reply
+- pvti_interface_details
+- pvti_interface_dump
 - sample_macswap_enable_disable
 - sample_macswap_enable_disable_reply
 - set_ip_flow_hash_v3
@@ -484,6 +498,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/http_static/http_static.api ||
 | ------- | ------- |
 | [86fa94372](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86fa94372) | http_static: make max-age configurable |
+
+| @c src/plugins/pvti/pvti.api ||
+| ------- | ------- |
+| [0acb398d6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0acb398d6) | pvti: Packet Vector Tunnel Interface |
 
 | @c src/plugins/npt66/npt66.api ||
 | ------- | ------- |
