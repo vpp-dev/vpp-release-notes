@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2410 Release notes for VPP 24.10
 
-More than 238 commits since the previous release, including 84 fixes.
+More than 241 commits since the previous release, including 86 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Tue Sep 24 02:29:51 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed Sep 25 02:31:12 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -67,6 +67,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add clear counters for port and queues ([68b8125db](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68b8125db))
     - Enable tx checksum offload capability ([e00ce3971](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e00ce3971))
     - Add support for max\_rx\_frame\_size update ([f7f26e5b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f7f26e5b3))
+    - Enable ethernet pause frame support ([53239b45c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53239b45c))
   - Packet Vector Tunnel Interface
     - Packet Vector Tunnel Interface ([0acb398d6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0acb398d6))
 - VNET
