@@ -38,46 +38,21 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 # Draft Release Notes below
 
 
-@page release_notes_2410 Release notes for VPP 24.10
+@page release_notes_2502 Release notes for VPP 25.02
 
-More than 241 commits since the previous release, including 86 fixes.
+More than 7 commits since the previous release, including 3 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 24.10 release, generated as on Wed Sep 25 02:31:12 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Sep 26 02:29:04 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Build System
-  - Bump octeon-roc version to 0.5 ([81f0f16b0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=81f0f16b0))
-  - Add Marvell CN913x platform ([fc49c63e7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fc49c63e7))
 - Plugins
-  - DPDK
-    - Bump to DPDK 24.07 and RDMA 52.0 ([6ccfc3991](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6ccfc3991))
-  - Marvell Armada device driver
-    - Introduce dev\_armada plugin ([4e5184189](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4e5184189))
   - Marvell Octeon device driver
-    - Add support for Marvell Octeon9 SoC ([a93c85a57](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a93c85a57))
-    - Enable vf device promiscuous mode feature ([38f59c315](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=38f59c315))
-    - Update trace to use qid instead of q ([a391de68a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a391de68a))
-    - Add counters support for port and queue ([b26b2bcd4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b26b2bcd4))
-    - Add support for vnet generic flow type ([282f2ecd8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=282f2ecd8))
-    - Add clear counters for port and queues ([68b8125db](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68b8125db))
-    - Enable tx checksum offload capability ([e00ce3971](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e00ce3971))
-    - Add support for max\_rx\_frame\_size update ([f7f26e5b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f7f26e5b3))
-    - Enable ethernet pause frame support ([53239b45c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53239b45c))
-  - Packet Vector Tunnel Interface
-    - Packet Vector Tunnel Interface ([0acb398d6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0acb398d6))
-- VNET
-  - New Device Drivers Infra
-    - Add port and queue counter clear operation ([2ea1e2c36](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2ea1e2c36))
-    - Add platform bus and devicetree support ([f508e07c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f508e07c1))
-  - Session Layer
-    - Add Source Deny List ([c4b5d1011](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4b5d1011))
-- Vector Library
-  - Improvement to automatic core pinning ([0b0468cb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b0468cb0))
+    - Enable h/w vlan tagging support ([e07c5fe46](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e07c5fe46))
 
 ## Known issues
 
@@ -100,26 +75,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-builtinurl_enable                                            | only in file
-builtinurl_enable_reply                                      | only in file
-http_static_enable_v2                                        | only in image
-http_static_enable_v2_reply                                  | only in image
-ip_table_add_del_v2                                          | only in image
-ip_table_add_del_v2_reply                                    | only in image
-pvti_interface_create                                        | only in image
-pvti_interface_create_reply                                  | only in image
-pvti_interface_delete                                        | only in image
-pvti_interface_delete_reply                                  | only in image
-pvti_interface_details                                       | only in image
-pvti_interface_dump                                          | only in image
-session_enable_disable_v2                                    | only in image
-session_enable_disable_v2_reply                              | only in image
-session_sdl_add_del                                          | only in image
-session_sdl_add_del_reply                                    | only in image
-session_sdl_details                                          | only in image
-session_sdl_dump                                             | only in image
-
-Found 18 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -127,10 +83,6 @@ Found 18 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- http_static_enable
-- http_static_enable_reply
-- session_enable_disable
-- session_enable_disable_reply
 
 ### In-progress API messages
 
@@ -491,33 +443,5 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
-
-| @c src/plugins/npt66/npt66.api ||
-| ------- | ------- |
-| [f726ebd17](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f726ebd17) | npt66: replace clib_warnings() with error counters |
-
-| @c src/plugins/ikev2/ikev2.api ||
-| ------- | ------- |
-| [0f2c6cd1a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0f2c6cd1a) | ikev2: handoff packets |
-
-| @c src/plugins/pvti/pvti.api ||
-| ------- | ------- |
-| [0acb398d6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0acb398d6) | pvti: Packet Vector Tunnel Interface |
-
-| @c src/plugins/http_static/http_static.api ||
-| ------- | ------- |
-| [86fa94372](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86fa94372) | http_static: make max-age configurable |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [ff570d3d0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff570d3d0) | fib: make mfib optional |
-
-| @c src/vnet/session/session.api ||
-| ------- | ------- |
-| [c4b5d1011](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c4b5d1011) | session: add Source Deny List |
-
-| @c src/vnet/devices/virtio/virtio.api ||
-| ------- | ------- |
-| [e9bc33201](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e9bc33201) | virtio: RSS support |
 
 
