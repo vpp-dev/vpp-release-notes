@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 11 commits since the previous release, including 4 fixes.
+More than 15 commits since the previous release, including 5 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Fri Sep 27 02:29:55 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Sat Sep 28 02:22:04 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - Marvell Octeon device driver
     - Enable h/w vlan tagging support ([e07c5fe46](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e07c5fe46))
+  - Snort plugin
+    - API functions for plugin ([e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68))
 
 ## Known issues
 
@@ -75,7 +77,37 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+session_sdl_add_del_v2                                       | only in image
+session_sdl_add_del_v2_reply                                 | only in image
+session_sdl_v2_details                                       | only in image
+session_sdl_v2_dump                                          | only in image
+snort_client_details                                         | only in image
+snort_client_disconnect                                      | only in image
+snort_client_disconnect_reply                                | only in image
+snort_client_get                                             | only in image
+snort_client_get_reply                                       | only in image
+snort_input_mode_get                                         | only in image
+snort_input_mode_get_reply                                   | only in image
+snort_input_mode_set                                         | only in image
+snort_input_mode_set_reply                                   | only in image
+snort_instance_create                                        | only in image
+snort_instance_create_reply                                  | only in image
+snort_instance_delete                                        | only in image
+snort_instance_delete_reply                                  | only in image
+snort_instance_details                                       | only in image
+snort_instance_disconnect                                    | only in image
+snort_instance_disconnect_reply                              | only in image
+snort_instance_get                                           | only in image
+snort_instance_get_reply                                     | only in image
+snort_interface_attach                                       | only in image
+snort_interface_attach_reply                                 | only in image
+snort_interface_detach                                       | only in image
+snort_interface_detach_reply                                 | only in image
+snort_interface_details                                      | only in image
+snort_interface_get                                          | only in image
+snort_interface_get_reply                                    | only in image
+
+Found 29 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -83,6 +115,10 @@ No api message signature differences found.
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- session_sdl_add_del
+- session_sdl_add_del_reply
+- session_sdl_details
+- session_sdl_dump
 
 ### In-progress API messages
 
@@ -443,5 +479,13 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/snort/snort.api ||
+| ------- | ------- |
+| [e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68) | snort: API functions for plugin |
+
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [6f173171b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f173171b) | session: fix SDL to use remote instead local |
 
 
