@@ -44,7 +44,7 @@ More than 15 commits since the previous release, including 5 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Sat Sep 28 02:22:04 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Sun Sep 29 02:34:59 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
