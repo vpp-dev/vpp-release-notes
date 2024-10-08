@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 26 commits since the previous release, including 9 fixes.
+More than 35 commits since the previous release, including 15 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Mon Oct  7 02:33:10 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Tue Oct  8 02:33:01 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -80,6 +80,8 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+pg_delete_interface                                          | only in image
+pg_delete_interface_reply                                    | only in image
 session_sdl_add_del_v2                                       | only in image
 session_sdl_add_del_v2_reply                                 | only in image
 session_sdl_v2_details                                       | only in image
@@ -110,7 +112,7 @@ snort_interface_details                                      | only in image
 snort_interface_get                                          | only in image
 snort_interface_get_reply                                    | only in image
 
-Found 29 api message signature differences
+Found 31 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -490,5 +492,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
 | [6f173171b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f173171b) | session: fix SDL to use remote instead local |
+
+| @c src/vnet/pg/pg.api ||
+| ------- | ------- |
+| [0b1bd9df3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b1bd9df3) | pg: add support to delete pg interface |
 
 
