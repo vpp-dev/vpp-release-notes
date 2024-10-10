@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 38 commits since the previous release, including 17 fixes.
+More than 41 commits since the previous release, including 17 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Oct  9 02:29:27 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Oct 10 02:29:45 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -445,16 +445,16 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/snort/snort.api ||
+| @c src/vnet/pg/pg.api ||
 | ------- | ------- |
-| [e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68) | snort: API functions for plugin |
+| [0b1bd9df3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b1bd9df3) | pg: add support to delete pg interface |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
 | [6f173171b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f173171b) | session: fix SDL to use remote instead local |
 
-| @c src/vnet/pg/pg.api ||
+| @c src/plugins/snort/snort.api ||
 | ------- | ------- |
-| [0b1bd9df3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b1bd9df3) | pg: add support to delete pg interface |
+| [e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68) | snort: API functions for plugin |
 
 
