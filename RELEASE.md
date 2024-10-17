@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 51 commits since the previous release, including 20 fixes.
+More than 52 commits since the previous release, including 20 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Oct 16 02:32:18 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Oct 17 02:30:14 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -16,6 +16,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Snort plugin
     - API functions for plugin ([e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68))
 - VNET
+  - Bidirectional Forwarding Detection (BFD)
+    - Add support for multihop ([17a918133](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=17a918133))
   - Session Layer
     - Add support for vcl transport attributes ([28955ceb8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28955ceb8))
 
@@ -40,6 +42,8 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+bfd_udp_enable_multihop                                      | only in image
+bfd_udp_enable_multihop_reply                                | only in image
 pg_delete_interface                                          | only in image
 pg_delete_interface_reply                                    | only in image
 session_sdl_add_del_v2                                       | only in image
@@ -72,7 +76,7 @@ snort_interface_details                                      | only in image
 snort_interface_get                                          | only in image
 snort_interface_get_reply                                    | only in image
 
-Found 31 api message signature differences
+Found 33 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -444,6 +448,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/vnet/bfd/bfd.api ||
+| ------- | ------- |
+| [17a918133](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=17a918133) | bfd: add support for multihop |
 
 | @c src/vnet/pg/pg.api ||
 | ------- | ------- |
