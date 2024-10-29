@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 82 commits since the previous release, including 31 fixes.
+More than 85 commits since the previous release, including 32 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Mon Oct 28 02:35:11 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Tue Oct 29 02:32:11 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -43,6 +43,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+af_xdp_create                                                | only in file
+af_xdp_create_reply                                          | only in file
+af_xdp_create_v2                                             | only in file
+af_xdp_create_v2_reply                                       | only in file
 bfd_udp_enable_multihop                                      | only in image
 bfd_udp_enable_multihop_reply                                | only in image
 pg_delete_interface                                          | only in image
@@ -77,7 +81,7 @@ snort_interface_details                                      | only in image
 snort_interface_get                                          | only in image
 snort_interface_get_reply                                    | only in image
 
-Found 33 api message signature differences
+Found 37 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -465,5 +469,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/snort/snort.api ||
 | ------- | ------- |
 | [e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68) | snort: API functions for plugin |
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [0dd47bcf2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0dd47bcf2) | af_xdp: api cleanup |
 
 
