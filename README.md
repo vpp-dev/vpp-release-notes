@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 97 commits since the previous release, including 36 fixes.
+More than 99 commits since the previous release, including 38 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Nov  6 02:20:51 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Nov  7 02:21:57 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -91,10 +91,14 @@ bfd_udp_enable_multihop                                      | only in image
 bfd_udp_enable_multihop_reply                                | only in image
 pg_delete_interface                                          | only in image
 pg_delete_interface_reply                                    | only in image
+session_rules_v2_details                                     | only in image
+session_rules_v2_dump                                        | only in image
 session_sdl_add_del_v2                                       | only in image
 session_sdl_add_del_v2_reply                                 | only in image
 session_sdl_v2_details                                       | only in image
 session_sdl_v2_dump                                          | only in image
+session_sdl_v3_details                                       | only in image
+session_sdl_v3_dump                                          | only in image
 snort_client_details                                         | only in image
 snort_client_disconnect                                      | only in image
 snort_client_disconnect_reply                                | only in image
@@ -121,7 +125,7 @@ snort_interface_details                                      | only in image
 snort_interface_get                                          | only in image
 snort_interface_get_reply                                    | only in image
 
-Found 37 api message signature differences
+Found 41 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -129,10 +133,14 @@ Found 37 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- session_rules_details
+- session_rules_dump
 - session_sdl_add_del
 - session_sdl_add_del_reply
 - session_sdl_details
 - session_sdl_dump
+- session_sdl_v2_details
+- session_sdl_v2_dump
 
 ### In-progress API messages
 
@@ -504,6 +512,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
+| [e0c4e6e32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e0c4e6e32) | session: session table holding free appns index |
 | [6f173171b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f173171b) | session: fix SDL to use remote instead local |
 
 | @c src/plugins/snort/snort.api ||
