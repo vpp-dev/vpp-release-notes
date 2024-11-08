@@ -1,16 +1,20 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 99 commits since the previous release, including 38 fixes.
+More than 103 commits since the previous release, including 38 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Nov  7 02:21:57 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Fri Nov  8 02:21:52 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
 - Plugins
+  - Crypto - ipsecmb
+    - Bump to ipsecmb v2.0 ([de020ab47](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=de020ab47))
+  - Marvell Armada device driver
+    - Initial DSA support ([99eed5ec6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99eed5ec6))
   - Marvell Octeon device driver
     - Enable h/w vlan tagging support ([e07c5fe46](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e07c5fe46))
     - Add crypto framework ([6937c0b2d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6937c0b2d))
@@ -19,6 +23,9 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Bidirectional Forwarding Detection (BFD)
     - Add support for multihop ([17a918133](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=17a918133))
+  - New Device Drivers Infra
+    - Introduce consistent\_qp feature ([825691419](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=825691419))
+    - Secondary interfaces support ([61e287b9f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61e287b9f))
   - Session Layer
     - Add support for vcl transport attributes ([28955ceb8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28955ceb8))
 
@@ -49,6 +56,7 @@ af_xdp_create_v2                                             | only in file
 af_xdp_create_v2_reply                                       | only in file
 bfd_udp_enable_multihop                                      | only in image
 bfd_udp_enable_multihop_reply                                | only in image
+dev_create_port_if                                           | definition changed
 pg_delete_interface                                          | only in image
 pg_delete_interface_reply                                    | only in image
 session_rules_v2_details                                     | only in image
@@ -85,7 +93,7 @@ snort_interface_details                                      | only in image
 snort_interface_get                                          | only in image
 snort_interface_get_reply                                    | only in image
 
-Found 41 api message signature differences
+Found 42 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -461,6 +469,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/vnet/dev/dev.api ||
+| ------- | ------- |
+| [825691419](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=825691419) | dev: introduce consistent_qp feature |
 
 | @c src/vnet/bfd/bfd.api ||
 | ------- | ------- |
