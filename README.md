@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 105 commits since the previous release, including 40 fixes.
+More than 108 commits since the previous release, including 41 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Mon Nov 11 02:29:42 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Tue Nov 12 02:20:06 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -58,6 +58,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Marvell Octeon device driver
     - Enable h/w vlan tagging support ([e07c5fe46](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e07c5fe46))
     - Add crypto framework ([6937c0b2d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6937c0b2d))
+    - Add support for hmac\_md5 and chachapoly ([3ac40b94c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ac40b94c))
   - Snort plugin
     - API functions for plugin ([e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68))
 - VNET
@@ -66,6 +67,8 @@ HIGHLIGHTS-PLACEHOLDER
   - New Device Drivers Infra
     - Introduce consistent\_qp feature ([825691419](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=825691419))
     - Secondary interfaces support ([61e287b9f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61e287b9f))
+  - Segment Routing (IPv6 and MPLS)
+    - Adding support to SRv6 uA behavior ([3462950ae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3462950ae))
   - Session Layer
     - Add support for vcl transport attributes ([28955ceb8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28955ceb8))
 
