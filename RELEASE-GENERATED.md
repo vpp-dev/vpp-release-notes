@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 108 commits since the previous release, including 41 fixes.
+More than 109 commits since the previous release, including 41 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Tue Nov 12 02:20:06 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Nov 13 02:22:20 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -484,6 +484,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/pg/pg.api ||
 | ------- | ------- |
 | [0b1bd9df3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b1bd9df3) | pg: add support to delete pg interface |
+
+| @c src/vnet/srv6/sr_types.api ||
+| ------- | ------- |
+| [c68c97083](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c68c97083) | sr : enable SRv6 uSID in the SRv6 API |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
