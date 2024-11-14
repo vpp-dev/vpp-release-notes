@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 109 commits since the previous release, including 41 fixes.
+More than 114 commits since the previous release, including 44 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Nov 13 02:22:20 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Nov 14 02:29:29 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -60,6 +60,10 @@ af_xdp_create_v2_reply                                       | only in file
 bfd_udp_enable_multihop                                      | only in image
 bfd_udp_enable_multihop_reply                                | only in image
 dev_create_port_if                                           | definition changed
+http_static_enable                                           | only in file
+http_static_enable_reply                                     | only in file
+http_static_enable_v3                                        | only in image
+http_static_enable_v3_reply                                  | only in image
 pg_delete_interface                                          | only in image
 pg_delete_interface_reply                                    | only in image
 session_rules_v2_details                                     | only in image
@@ -96,7 +100,7 @@ snort_interface_details                                      | only in image
 snort_interface_get                                          | only in image
 snort_interface_get_reply                                    | only in image
 
-Found 42 api message signature differences
+Found 46 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -104,6 +108,10 @@ Found 42 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- http_static_enable_v2
+- http_static_enable_v2_reply
+- http_static_enable_v3
+- http_static_enable_v3_reply
 - session_rules_details
 - session_rules_dump
 - session_sdl_add_del
@@ -501,5 +509,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
 | [0dd47bcf2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0dd47bcf2) | af_xdp: api cleanup |
+
+| @c src/plugins/http_static/http_static.api ||
+| ------- | ------- |
+| [a4597a74a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a4597a74a) | http_static: api add keepalive-timeout |
 
 
