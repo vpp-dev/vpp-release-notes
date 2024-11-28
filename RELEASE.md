@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 137 commits since the previous release, including 51 fixes.
+More than 146 commits since the previous release, including 55 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Nov 27 02:39:22 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Nov 28 02:39:01 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
