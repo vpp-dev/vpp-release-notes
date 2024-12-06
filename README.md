@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 154 commits since the previous release, including 59 fixes.
+More than 157 commits since the previous release, including 60 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Dec  5 02:41:54 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Fri Dec  6 02:40:37 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -538,6 +538,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/srv6/sr_types.api ||
 | ------- | ------- |
 | [c68c97083](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c68c97083) | sr : enable SRv6 uSID in the SRv6 API |
+
+| @c src/vnet/devices/tap/tapv2.api ||
+| ------- | ------- |
+| [91e63915e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91e63915e) | tap: update tap_flags |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
