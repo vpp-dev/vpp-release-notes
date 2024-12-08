@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 161 commits since the previous release, including 61 fixes.
+More than 163 commits since the previous release, including 62 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Sat Dec  7 02:38:20 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Sun Dec  8 02:46:31 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -33,6 +33,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Adding support to SRv6 uA behavior ([3462950ae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3462950ae))
   - Session Layer
     - Add support for vcl transport attributes ([28955ceb8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28955ceb8))
+  - TLS and TLS engine plugins
+    - Add async processing support ([b8af24b26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b8af24b26))
 
 ## Known issues
 
