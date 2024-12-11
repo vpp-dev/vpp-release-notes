@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 169 commits since the previous release, including 63 fixes.
+More than 177 commits since the previous release, including 64 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Tue Dec 10 02:43:27 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Dec 11 02:41:05 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -143,8 +143,10 @@ snort_interface_detach_reply                                 | only in image
 snort_interface_details                                      | only in image
 snort_interface_get                                          | only in image
 snort_interface_get_reply                                    | only in image
+sw_interface_ip4_enable_disable                              | only in image
+sw_interface_ip4_enable_disable_reply                        | only in image
 
-Found 46 api message signature differences
+Found 48 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -544,6 +546,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/devices/tap/tapv2.api ||
 | ------- | ------- |
 | [91e63915e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91e63915e) | tap: update tap_flags |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [18eedde9f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18eedde9f) | ip: add enable ip4 api |
 
 | @c src/vnet/session/session.api ||
 | ------- | ------- |
