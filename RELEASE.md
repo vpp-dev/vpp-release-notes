@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 190 commits since the previous release, including 67 fixes.
+More than 196 commits since the previous release, including 69 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Mon Dec 16 02:44:48 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Tue Dec 17 02:40:29 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -23,6 +23,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for hmac\_md5 and chachapoly ([3ac40b94c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ac40b94c))
   - Snort plugin
     - API functions for plugin ([e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68))
+- Python binding for the VPP API
+  - Vpp\_papi asyncio support ([0ad98a8c9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0ad98a8c9))
 - VNET
   - Bidirectional Forwarding Detection (BFD)
     - Add support for multihop ([17a918133](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=17a918133))
