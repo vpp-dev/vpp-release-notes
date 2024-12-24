@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 205 commits since the previous release, including 72 fixes.
+More than 208 commits since the previous release, including 73 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Mon Dec 23 02:31:08 UTC 2024.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Tue Dec 24 02:22:46 UTC 2024.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -35,6 +35,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Adding support to SRv6 uA behavior ([3462950ae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3462950ae))
   - Session Layer
     - Add support for vcl transport attributes ([28955ceb8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28955ceb8))
+    - Add auto sdl ([6d4dbd4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d4dbd4f2))
   - TLS and TLS engine plugins
     - Add async processing support ([b8af24b26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b8af24b26))
 
@@ -63,6 +64,8 @@ af_xdp_create                                                | only in file
 af_xdp_create_reply                                          | only in file
 af_xdp_create_v2                                             | only in file
 af_xdp_create_v2_reply                                       | only in file
+auto_sdl_config                                              | only in image
+auto_sdl_config_reply                                        | only in image
 bfd_udp_enable_multihop                                      | only in image
 bfd_udp_enable_multihop_reply                                | only in image
 dev_create_port_if                                           | definition changed
@@ -108,7 +111,7 @@ snort_interface_get_reply                                    | only in image
 sw_interface_ip4_enable_disable                              | only in image
 sw_interface_ip4_enable_disable_reply                        | only in image
 
-Found 48 api message signature differences
+Found 50 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -521,6 +524,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/snort/snort.api ||
 | ------- | ------- |
 | [e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68) | snort: API functions for plugin |
+
+| @c src/plugins/auto_sdl/auto_sdl.api ||
+| ------- | ------- |
+| [6d4dbd4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d4dbd4f2) | session: add auto sdl |
 
 | @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
