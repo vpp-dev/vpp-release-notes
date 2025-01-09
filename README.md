@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 215 commits since the previous release, including 77 fixes.
+More than 222 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Jan  8 02:22:25 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Jan  9 02:55:24 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -113,6 +113,10 @@ http_static_enable                                           | only in file
 http_static_enable_reply                                     | only in file
 http_static_enable_v3                                        | only in image
 http_static_enable_v3_reply                                  | only in image
+ikev2_get_sleep_interval                                     | only in image
+ikev2_get_sleep_interval_reply                               | only in image
+ikev2_plugin_set_sleep_interval                              | only in image
+ikev2_plugin_set_sleep_interval_reply                        | only in image
 pg_delete_interface                                          | only in image
 pg_delete_interface_reply                                    | only in image
 session_rules_v2_details                                     | only in image
@@ -151,7 +155,7 @@ snort_interface_get_reply                                    | only in image
 sw_interface_ip4_enable_disable                              | only in image
 sw_interface_ip4_enable_disable_reply                        | only in image
 
-Found 50 api message signature differences
+Found 54 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -576,5 +580,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/http_static/http_static.api ||
 | ------- | ------- |
 | [a4597a74a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a4597a74a) | http_static: api add keepalive-timeout |
+
+| @c src/plugins/ikev2/ikev2.api ||
+| ------- | ------- |
+| [379a454aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379a454aa) | tests: reduce sleep interval in ikev2 sa rekey test |
 
 
