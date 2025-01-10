@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 222 commits since the previous release, including 82 fixes.
+More than 228 commits since the previous release, including 83 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Jan  9 02:55:24 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Fri Jan 10 02:32:10 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -15,6 +15,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Bump to ipsecmb v2.0 ([de020ab47](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=de020ab47))
   - Host Stack Applications
     - Added request repeating to http client ([d74e440f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d74e440f2))
+    - Proxying UDP in HTTP/1.1 ([c19cca931](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c19cca931))
   - Marvell Armada device driver
     - Initial DSA support ([99eed5ec6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99eed5ec6))
   - Marvell Octeon device driver
