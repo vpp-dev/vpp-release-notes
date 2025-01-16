@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 235 commits since the previous release, including 86 fixes.
+More than 240 commits since the previous release, including 88 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Jan 15 02:19:42 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Jan 16 02:18:41 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -62,6 +62,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Enable h/w vlan tagging support ([e07c5fe46](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e07c5fe46))
     - Add crypto framework ([6937c0b2d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6937c0b2d))
     - Add support for hmac\_md5 and chachapoly ([3ac40b94c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ac40b94c))
+    - Update octeon roc version ([d023a7e26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d023a7e26))
   - Snort plugin
     - API functions for plugin ([e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68))
 - Python binding for the VPP API
