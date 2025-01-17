@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 240 commits since the previous release, including 88 fixes.
+More than 246 commits since the previous release, including 92 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Thu Jan 16 02:18:41 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Fri Jan 17 02:18:05 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -498,9 +498,18 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/vnet/dev/dev.api ||
+| @c src/vnet/devices/tap/tapv2.api ||
 | ------- | ------- |
-| [825691419](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=825691419) | dev: introduce consistent_qp feature |
+| [91e63915e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91e63915e) | tap: update tap_flags |
+
+| @c src/vnet/session/session.api ||
+| ------- | ------- |
+| [e0c4e6e32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e0c4e6e32) | session: session table holding free appns index |
+| [6f173171b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f173171b) | session: fix SDL to use remote instead local |
+
+| @c src/vnet/srv6/sr_types.api ||
+| ------- | ------- |
+| [c68c97083](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c68c97083) | sr : enable SRv6 uSID in the SRv6 API |
 
 | @c src/vnet/bfd/bfd.api ||
 | ------- | ------- |
@@ -510,22 +519,17 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [0b1bd9df3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b1bd9df3) | pg: add support to delete pg interface |
 
-| @c src/vnet/srv6/sr_types.api ||
+| @c src/vnet/dev/dev.api ||
 | ------- | ------- |
-| [c68c97083](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c68c97083) | sr : enable SRv6 uSID in the SRv6 API |
-
-| @c src/vnet/devices/tap/tapv2.api ||
-| ------- | ------- |
-| [91e63915e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91e63915e) | tap: update tap_flags |
+| [825691419](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=825691419) | dev: introduce consistent_qp feature |
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [18eedde9f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18eedde9f) | ip: add enable ip4 api |
 
-| @c src/vnet/session/session.api ||
+| @c src/plugins/ikev2/ikev2.api ||
 | ------- | ------- |
-| [e0c4e6e32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e0c4e6e32) | session: session table holding free appns index |
-| [6f173171b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f173171b) | session: fix SDL to use remote instead local |
+| [379a454aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379a454aa) | tests: reduce sleep interval in ikev2 sa rekey test |
 
 | @c src/plugins/snort/snort.api ||
 | ------- | ------- |
@@ -542,9 +546,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/http_static/http_static.api ||
 | ------- | ------- |
 | [a4597a74a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a4597a74a) | http_static: api add keepalive-timeout |
-
-| @c src/plugins/ikev2/ikev2.api ||
-| ------- | ------- |
-| [379a454aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379a454aa) | tests: reduce sleep interval in ikev2 sa rekey test |
 
 
