@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 246 commits since the previous release, including 92 fixes.
+More than 255 commits since the previous release, including 95 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Fri Jan 17 02:18:05 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Sat Jan 18 02:15:34 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - Crypto - ipsecmb
     - Bump to ipsecmb v2.0 ([de020ab47](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=de020ab47))
+  - DPDK
+    - Update rdma-core to 55.0 ([eaf1059c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=eaf1059c8))
   - Host Stack Applications
     - Added request repeating to http client ([d74e440f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d74e440f2))
     - Proxying UDP in HTTP/1.1 ([c19cca931](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c19cca931))
