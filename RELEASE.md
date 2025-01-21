@@ -1,10 +1,10 @@
 @page release_notes_2502 Release notes for VPP 25.02
 
-More than 255 commits since the previous release, including 95 fixes.
+More than 261 commits since the previous release, including 99 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Mon Jan 20 02:21:10 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Tue Jan 21 02:19:18 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -91,6 +91,22 @@ session_sdl_v2_details                                       | only in image
 session_sdl_v2_dump                                          | only in image
 session_sdl_v3_details                                       | only in image
 session_sdl_v3_dump                                          | only in image
+sflow_enable_disable                                         | only in image
+sflow_enable_disable_reply                                   | only in image
+sflow_header_bytes_get                                       | only in image
+sflow_header_bytes_get_reply                                 | only in image
+sflow_header_bytes_set                                       | only in image
+sflow_header_bytes_set_reply                                 | only in image
+sflow_interface_details                                      | only in image
+sflow_interface_dump                                         | only in image
+sflow_polling_interval_get                                   | only in image
+sflow_polling_interval_get_reply                             | only in image
+sflow_polling_interval_set                                   | only in image
+sflow_polling_interval_set_reply                             | only in image
+sflow_sampling_rate_get                                      | only in image
+sflow_sampling_rate_get_reply                                | only in image
+sflow_sampling_rate_set                                      | only in image
+sflow_sampling_rate_set_reply                                | only in image
 snort_client_details                                         | only in image
 snort_client_disconnect                                      | only in image
 snort_client_disconnect_reply                                | only in image
@@ -119,7 +135,7 @@ snort_interface_get_reply                                    | only in image
 sw_interface_ip4_enable_disable                              | only in image
 sw_interface_ip4_enable_disable_reply                        | only in image
 
-Found 54 api message signature differences
+Found 70 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -428,6 +444,22 @@ please collaborate with the feature maintainer on their productization.
 - sample_macswap_enable_disable_reply
 - set_ip_flow_hash_v3
 - set_ip_flow_hash_v3_reply
+- sflow_enable_disable
+- sflow_enable_disable_reply
+- sflow_header_bytes_get
+- sflow_header_bytes_get_reply
+- sflow_header_bytes_set
+- sflow_header_bytes_set_reply
+- sflow_interface_details
+- sflow_interface_dump
+- sflow_polling_interval_get
+- sflow_polling_interval_get_reply
+- sflow_polling_interval_set
+- sflow_polling_interval_set_reply
+- sflow_sampling_rate_get
+- sflow_sampling_rate_get_reply
+- sflow_sampling_rate_set
+- sflow_sampling_rate_set_reply
 - sr_localsids_with_packet_stats_details
 - sr_localsids_with_packet_stats_dump
 - sr_mobile_localsid_add_del
@@ -540,6 +572,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/auto_sdl/auto_sdl.api ||
 | ------- | ------- |
 | [6d4dbd4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d4dbd4f2) | session: add auto sdl |
+
+| @c src/plugins/sflow/sflow.api ||
+| ------- | ------- |
+| [e40f8a90b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e40f8a90b) | sflow: initial checkin |
 
 | @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
