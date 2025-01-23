@@ -38,54 +38,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 # Draft Release Notes below
 
 
-@page release_notes_2502 Release notes for VPP 25.02
+@page release_notes_2506 Release notes for VPP 25.06
 
-More than 269 commits since the previous release, including 100 fixes.
+More than 6 commits since the previous release, including 1 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.02 release, generated as on Wed Jan 22 02:21:29 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Thu Jan 23 02:19:18 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Plugins
-  - Crypto - ipsecmb
-    - Bump to ipsecmb v2.0 ([de020ab47](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=de020ab47))
-  - DPDK
-    - Update rdma-core to 55.0 ([eaf1059c8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=eaf1059c8))
-    - Bump to DPDK 24.11.1 ([82f9167e4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=82f9167e4))
-  - Host Stack Applications
-    - Added request repeating to http client ([d74e440f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d74e440f2))
-    - Proxying UDP in HTTP/1.1 ([c19cca931](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c19cca931))
-  - Marvell Armada device driver
-    - Initial DSA support ([99eed5ec6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=99eed5ec6))
-  - Marvell Octeon device driver
-    - Enable h/w vlan tagging support ([e07c5fe46](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e07c5fe46))
-    - Add crypto framework ([6937c0b2d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6937c0b2d))
-    - Add support for hmac\_md5 and chachapoly ([3ac40b94c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3ac40b94c))
-    - Update octeon roc version ([d023a7e26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d023a7e26))
-    - Add direct mode changes in crypto datapath ([d3df84523](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d3df84523))
-  - Snort plugin
-    - API functions for plugin ([e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68))
-- Python binding for the VPP API
-  - Vpp\_papi asyncio support ([0ad98a8c9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0ad98a8c9))
-- VNET
-  - Bidirectional Forwarding Detection (BFD)
-    - Add support for multihop ([17a918133](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=17a918133))
-  - Crypto Infra
-    - Add async algo macros for ctr sha2 ([9b58a8ec0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9b58a8ec0))
-  - New Device Drivers Infra
-    - Introduce consistent\_qp feature ([825691419](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=825691419))
-    - Secondary interfaces support ([61e287b9f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=61e287b9f))
-  - Segment Routing (IPv6 and MPLS)
-    - Adding support to SRv6 uA behavior ([3462950ae](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3462950ae))
-  - Session Layer
-    - Add support for vcl transport attributes ([28955ceb8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28955ceb8))
-    - Add auto sdl ([6d4dbd4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d4dbd4f2))
-  - TLS and TLS engine plugins
-    - Add async processing support ([b8af24b26](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b8af24b26))
 
 ## Known issues
 
@@ -108,78 +72,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-af_xdp_create                                                | only in file
-af_xdp_create_reply                                          | only in file
-af_xdp_create_v2                                             | only in file
-af_xdp_create_v2_reply                                       | only in file
-auto_sdl_config                                              | only in image
-auto_sdl_config_reply                                        | only in image
-bfd_udp_enable_multihop                                      | only in image
-bfd_udp_enable_multihop_reply                                | only in image
-dev_create_port_if                                           | definition changed
-http_static_enable                                           | only in file
-http_static_enable_reply                                     | only in file
-http_static_enable_v3                                        | only in image
-http_static_enable_v3_reply                                  | only in image
-ikev2_get_sleep_interval                                     | only in image
-ikev2_get_sleep_interval_reply                               | only in image
-ikev2_plugin_set_sleep_interval                              | only in image
-ikev2_plugin_set_sleep_interval_reply                        | only in image
-pg_delete_interface                                          | only in image
-pg_delete_interface_reply                                    | only in image
-session_rules_v2_details                                     | only in image
-session_rules_v2_dump                                        | only in image
-session_sdl_add_del_v2                                       | only in image
-session_sdl_add_del_v2_reply                                 | only in image
-session_sdl_v2_details                                       | only in image
-session_sdl_v2_dump                                          | only in image
-session_sdl_v3_details                                       | only in image
-session_sdl_v3_dump                                          | only in image
-sflow_enable_disable                                         | only in image
-sflow_enable_disable_reply                                   | only in image
-sflow_header_bytes_get                                       | only in image
-sflow_header_bytes_get_reply                                 | only in image
-sflow_header_bytes_set                                       | only in image
-sflow_header_bytes_set_reply                                 | only in image
-sflow_interface_details                                      | only in image
-sflow_interface_dump                                         | only in image
-sflow_polling_interval_get                                   | only in image
-sflow_polling_interval_get_reply                             | only in image
-sflow_polling_interval_set                                   | only in image
-sflow_polling_interval_set_reply                             | only in image
-sflow_sampling_rate_get                                      | only in image
-sflow_sampling_rate_get_reply                                | only in image
-sflow_sampling_rate_set                                      | only in image
-sflow_sampling_rate_set_reply                                | only in image
-snort_client_details                                         | only in image
-snort_client_disconnect                                      | only in image
-snort_client_disconnect_reply                                | only in image
-snort_client_get                                             | only in image
-snort_client_get_reply                                       | only in image
-snort_input_mode_get                                         | only in image
-snort_input_mode_get_reply                                   | only in image
-snort_input_mode_set                                         | only in image
-snort_input_mode_set_reply                                   | only in image
-snort_instance_create                                        | only in image
-snort_instance_create_reply                                  | only in image
-snort_instance_delete                                        | only in image
-snort_instance_delete_reply                                  | only in image
-snort_instance_details                                       | only in image
-snort_instance_disconnect                                    | only in image
-snort_instance_disconnect_reply                              | only in image
-snort_instance_get                                           | only in image
-snort_instance_get_reply                                     | only in image
-snort_interface_attach                                       | only in image
-snort_interface_attach_reply                                 | only in image
-snort_interface_detach                                       | only in image
-snort_interface_detach_reply                                 | only in image
-snort_interface_details                                      | only in image
-snort_interface_get                                          | only in image
-snort_interface_get_reply                                    | only in image
-sw_interface_ip4_enable_disable                              | only in image
-sw_interface_ip4_enable_disable_reply                        | only in image
-
-Found 70 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -187,18 +80,6 @@ Found 70 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- http_static_enable_v2
-- http_static_enable_v2_reply
-- http_static_enable_v3
-- http_static_enable_v3_reply
-- session_rules_details
-- session_rules_dump
-- session_sdl_add_del
-- session_sdl_add_del_reply
-- session_sdl_details
-- session_sdl_dump
-- session_sdl_v2_details
-- session_sdl_v2_dump
 
 ### In-progress API messages
 
@@ -575,58 +456,5 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
-
-| @c src/plugins/snort/snort.api ||
-| ------- | ------- |
-| [e3ad5aa68](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e3ad5aa68) | snort: API functions for plugin |
-
-| @c src/plugins/auto_sdl/auto_sdl.api ||
-| ------- | ------- |
-| [6d4dbd4f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d4dbd4f2) | session: add auto sdl |
-
-| @c src/plugins/http_static/http_static.api ||
-| ------- | ------- |
-| [a4597a74a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a4597a74a) | http_static: api add keepalive-timeout |
-
-| @c src/plugins/af_xdp/af_xdp.api ||
-| ------- | ------- |
-| [0dd47bcf2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0dd47bcf2) | af_xdp: api cleanup |
-
-| @c src/plugins/ikev2/ikev2.api ||
-| ------- | ------- |
-| [379a454aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379a454aa) | tests: reduce sleep interval in ikev2 sa rekey test |
-
-| @c src/plugins/sflow/sflow.api ||
-| ------- | ------- |
-| [e40f8a90b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e40f8a90b) | sflow: initial checkin |
-
-| @c src/vnet/dev/dev.api ||
-| ------- | ------- |
-| [825691419](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=825691419) | dev: introduce consistent_qp feature |
-
-| @c src/vnet/session/session.api ||
-| ------- | ------- |
-| [e0c4e6e32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e0c4e6e32) | session: session table holding free appns index |
-| [6f173171b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6f173171b) | session: fix SDL to use remote instead local |
-
-| @c src/vnet/pg/pg.api ||
-| ------- | ------- |
-| [0b1bd9df3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b1bd9df3) | pg: add support to delete pg interface |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [18eedde9f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=18eedde9f) | ip: add enable ip4 api |
-
-| @c src/vnet/bfd/bfd.api ||
-| ------- | ------- |
-| [17a918133](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=17a918133) | bfd: add support for multihop |
-
-| @c src/vnet/devices/tap/tapv2.api ||
-| ------- | ------- |
-| [91e63915e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=91e63915e) | tap: update tap_flags |
-
-| @c src/vnet/srv6/sr_types.api ||
-| ------- | ------- |
-| [c68c97083](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c68c97083) | sr : enable SRv6 uSID in the SRv6 API |
 
 
