@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 6 commits since the previous release, including 1 fixes.
+More than 13 commits since the previous release, including 2 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Thu Jan 23 02:19:18 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Fri Jan 24 02:19:43 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -72,7 +72,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+http_static_enable_v4                                        | only in image
+http_static_enable_v4_reply                                  | only in image
+
+Found 2 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -456,5 +459,9 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/http_static/http_static.api ||
+| ------- | ------- |
+| [5e94895df](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5e94895df) | http_static: introduce max-body-size parameter |
 
 
