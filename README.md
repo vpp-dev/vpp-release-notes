@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 61 commits since the previous release, including 22 fixes.
+More than 65 commits since the previous release, including 23 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue Feb 18 02:20:54 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed Feb 19 02:22:19 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,10 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - Host Stack Applications
     - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
+- VNET
+  - IPSec
+    - Add support for bypass and discard policies for ipv6 ([9ab79f54d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ab79f54d))
+    - Enable support for ipv6 udp ipsec encapsulation in policy mode ([0b04d71ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b04d71ce))
 
 ## Known issues
 
