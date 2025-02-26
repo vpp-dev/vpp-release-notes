@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 70 commits since the previous release, including 26 fixes.
+More than 76 commits since the previous release, including 29 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue Feb 25 02:31:36 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed Feb 26 02:31:12 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,7 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - HTTP
     - Hpack primitive types ([5985e8683](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5985e8683))
+    - Hpack headers decoding ([58b6c4e6b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58b6c4e6b))
   - Host Stack Applications
     - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
 - VNET
@@ -468,6 +469,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/vxlan-gpe/vxlan_gpe.api ||
+| ------- | ------- |
+| [bb4858cdf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb4858cdf) | vxlan: move vxlan-gpe to a plugin |
 
 | @c src/plugins/http_static/http_static.api ||
 | ------- | ------- |
