@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 76 commits since the previous release, including 29 fixes.
+More than 77 commits since the previous release, including 29 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed Feb 26 02:31:12 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Thu Feb 27 02:32:23 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -469,6 +469,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [9543e2970](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9543e2970) | linux-cp: Add support for LACP packets |
 
 | @c src/plugins/vxlan-gpe/vxlan_gpe.api ||
 | ------- | ------- |
