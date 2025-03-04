@@ -1,10 +1,10 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 85 commits since the previous release, including 31 fixes.
+More than 88 commits since the previous release, including 31 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Mon Mar  3 02:34:27 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue Mar  4 02:33:36 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -15,6 +15,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Hpack primitive types ([5985e8683](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5985e8683))
     - Hpack headers decoding ([58b6c4e6b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58b6c4e6b))
     - Hpack headers encoding ([a013224b9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a013224b9))
+    - Http2 frames ([86abfc3e0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86abfc3e0))
   - Host Stack Applications
     - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
 - VNET
