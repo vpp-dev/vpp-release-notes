@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 112 commits since the previous release, including 45 fixes.
+More than 115 commits since the previous release, including 46 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Mon Mar 24 02:41:53 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue Mar 25 02:38:14 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -56,6 +56,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Hpack headers decoding ([58b6c4e6b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58b6c4e6b))
     - Hpack headers encoding ([a013224b9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a013224b9))
     - Http2 frames ([86abfc3e0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86abfc3e0))
+    - Http/2 core skeleton ([492d2c15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d2c15d))
   - Host Stack Applications
     - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
 - VNET
