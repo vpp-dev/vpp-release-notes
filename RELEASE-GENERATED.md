@@ -1,10 +1,10 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 118 commits since the previous release, including 46 fixes.
+More than 123 commits since the previous release, including 48 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed Mar 26 02:37:10 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Thu Mar 27 02:37:33 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -23,6 +23,8 @@ HIGHLIGHTS-PLACEHOLDER
   - IPSec
     - Add support for bypass and discard policies for ipv6 ([9ab79f54d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ab79f54d))
     - Enable support for ipv6 udp ipsec encapsulation in policy mode ([0b04d71ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b04d71ce))
+- Vector Library
+  - Add new node type - SCHED nodes ([8a5add5c0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a5add5c0))
 
 ## Known issues
 
