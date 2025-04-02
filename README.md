@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 131 commits since the previous release, including 51 fixes.
+More than 135 commits since the previous release, including 53 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue Apr  1 02:51:18 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed Apr  2 02:39:41 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -59,6 +59,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Http/2 core skeleton ([492d2c15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d2c15d))
   - Host Stack Applications
     - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
+  - Marvell Octeon device driver
+    - Set cpt descriptor count to 16k ([803eac3ef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=803eac3ef))
 - VNET
   - IPSec
     - Add support for bypass and discard policies for ipv6 ([9ab79f54d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ab79f54d))
