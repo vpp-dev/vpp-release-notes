@@ -1,10 +1,10 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 139 commits since the previous release, including 55 fixes.
+More than 144 commits since the previous release, including 56 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Fri Apr  4 02:38:23 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Sat Apr  5 02:35:52 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -22,6 +22,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Marvell Octeon device driver
     - Set cpt descriptor count to 16k ([803eac3ef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=803eac3ef))
 - VNET
+  - Crypto Infra
+    - Make configurable crypto engines ([f479eeb76](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f479eeb76))
   - IPSec
     - Add support for bypass and discard policies for ipv6 ([9ab79f54d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ab79f54d))
     - Enable support for ipv6 udp ipsec encapsulation in policy mode ([0b04d71ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b04d71ce))
