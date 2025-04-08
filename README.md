@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 144 commits since the previous release, including 56 fixes.
+More than 149 commits since the previous release, including 56 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Mon Apr  7 02:43:10 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue Apr  8 02:39:23 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -57,10 +57,14 @@ HIGHLIGHTS-PLACEHOLDER
     - Hpack headers encoding ([a013224b9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a013224b9))
     - Http2 frames ([86abfc3e0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86abfc3e0))
     - Http/2 core skeleton ([492d2c15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d2c15d))
+    - Http/2 stream state machine ([24668f2a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=24668f2a3))
+    - Http/2 starting tcp connection ([b43c7090f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b43c7090f))
   - Host Stack Applications
     - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
   - Marvell Octeon device driver
     - Set cpt descriptor count to 16k ([803eac3ef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=803eac3ef))
+  - Http\_static
+    - Support multiple listeners ([0a897eb8d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0a897eb8d))
 - VNET
   - Crypto Infra
     - Make configurable crypto engines ([f479eeb76](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f479eeb76))
