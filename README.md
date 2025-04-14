@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 161 commits since the previous release, including 61 fixes.
+More than 166 commits since the previous release, including 65 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Sun Apr 13 03:48:29 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Mon Apr 14 02:45:13 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -73,6 +73,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Enable support for ipv6 udp ipsec encapsulation in policy mode ([0b04d71ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b04d71ce))
 - Vector Library
   - Add new node type - SCHED nodes ([8a5add5c0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a5add5c0))
+  - Add 'relative' keyword for cpu configuration ([9b2015150](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9b2015150))
 
 ## Known issues
 
