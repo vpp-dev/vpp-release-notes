@@ -1,15 +1,17 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 166 commits since the previous release, including 65 fixes.
+More than 170 commits since the previous release, including 66 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Mon Apr 14 02:45:13 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue Apr 15 02:43:42 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Host stack test framework
+  - Added basic performance testing infra ([7cd37a9d8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cd37a9d8))
 - Plugins
   - HTTP
     - Hpack primitive types ([5985e8683](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5985e8683))
