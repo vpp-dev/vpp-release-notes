@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 181 commits since the previous release, including 70 fixes.
+More than 182 commits since the previous release, including 70 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Thu Apr 17 02:41:44 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Fri Apr 18 02:38:39 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -70,6 +70,7 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Crypto Infra
     - Make configurable crypto engines ([f479eeb76](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f479eeb76))
+    - Add support for aes-cbc with hmac ([fba37eea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fba37eea8))
   - IPSec
     - Add support for bypass and discard policies for ipv6 ([9ab79f54d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ab79f54d))
     - Enable support for ipv6 udp ipsec encapsulation in policy mode ([0b04d71ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b04d71ce))
