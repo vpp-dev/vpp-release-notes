@@ -1,15 +1,17 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 186 commits since the previous release, including 71 fixes.
+More than 190 commits since the previous release, including 71 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed Apr 23 02:42:37 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Thu Apr 24 02:44:11 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Build System
+  - Update VPP-opt-deps to openssl 3.5.0 ([8a5a8de71](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a5a8de71))
 - Host stack test framework
   - Added basic performance testing infra ([7cd37a9d8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cd37a9d8))
 - Plugins
@@ -59,10 +61,16 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+http_static_enable_v2                                        | only in file
+http_static_enable_v2_reply                                  | only in file
+http_static_enable_v3                                        | only in file
+http_static_enable_v3_reply                                  | only in file
 http_static_enable_v4                                        | only in image
 http_static_enable_v4_reply                                  | only in image
+http_static_enable_v5                                        | only in image
+http_static_enable_v5_reply                                  | only in image
 
-Found 2 api message signature differences
+Found 8 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -70,6 +78,8 @@ Found 2 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- http_static_enable_v4
+- http_static_enable_v4_reply
 
 ### In-progress API messages
 
@@ -447,6 +457,11 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/http_static/http_static.api ||
+| ------- | ------- |
+| [c3bbeb93b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c3bbeb93b) | http_static: url handler buffer large POST body |
+| [5e94895df](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5e94895df) | http_static: introduce max-body-size parameter |
+
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [9543e2970](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9543e2970) | linux-cp: Add support for LACP packets |
@@ -454,9 +469,5 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/vxlan-gpe/vxlan_gpe.api ||
 | ------- | ------- |
 | [bb4858cdf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb4858cdf) | vxlan: move vxlan-gpe to a plugin |
-
-| @c src/plugins/http_static/http_static.api ||
-| ------- | ------- |
-| [5e94895df](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5e94895df) | http_static: introduce max-body-size parameter |
 
 
