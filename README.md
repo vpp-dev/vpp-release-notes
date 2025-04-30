@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 209 commits since the previous release, including 77 fixes.
+More than 211 commits since the previous release, including 77 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue Apr 29 02:44:25 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed Apr 30 02:44:00 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -109,8 +109,10 @@ http_static_enable_v4                                        | only in image
 http_static_enable_v4_reply                                  | only in image
 http_static_enable_v5                                        | only in image
 http_static_enable_v5_reply                                  | only in image
+pnat_flow_lookup                                             | only in image
+pnat_flow_lookup_reply                                       | only in image
 
-Found 8 api message signature differences
+Found 10 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -396,6 +398,8 @@ please collaborate with the feature maintainer on their productization.
 - pnat_bindings_details
 - pnat_bindings_get
 - pnat_bindings_get_reply
+- pnat_flow_lookup
+- pnat_flow_lookup_reply
 - pnat_interfaces_details
 - pnat_interfaces_get
 - pnat_interfaces_get_reply
@@ -496,6 +500,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/nat/pnat/pnat.api ||
+| ------- | ------- |
+| [406232920](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=406232920) | pnat: expose binding_index over API |
 
 | @c src/plugins/http_static/http_static.api ||
 | ------- | ------- |
