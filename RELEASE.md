@@ -1,10 +1,10 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 214 commits since the previous release, including 79 fixes.
+More than 218 commits since the previous release, including 81 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Fri May  2 02:45:04 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Sat May  3 02:41:14 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -61,6 +61,8 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+feature_is_enabled                                           | only in image
+feature_is_enabled_reply                                     | only in image
 http_static_enable_v2                                        | only in file
 http_static_enable_v2_reply                                  | only in file
 http_static_enable_v3                                        | only in file
@@ -72,7 +74,7 @@ http_static_enable_v5_reply                                  | only in image
 pnat_flow_lookup                                             | only in image
 pnat_flow_lookup_reply                                       | only in image
 
-Found 10 api message signature differences
+Found 12 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -460,6 +462,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/vnet/feature/feature.api ||
+| ------- | ------- |
+| [6022e9566](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6022e9566) | vnet: add vapi interface feature enablement check function |
 
 | @c src/plugins/nat/pnat/pnat.api ||
 | ------- | ------- |
