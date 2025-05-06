@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 218 commits since the previous release, including 81 fixes.
+More than 223 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Mon May  5 02:50:27 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue May  6 02:46:21 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -76,6 +76,8 @@ HIGHLIGHTS-PLACEHOLDER
   - IPSec
     - Add support for bypass and discard policies for ipv6 ([9ab79f54d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ab79f54d))
     - Enable support for ipv6 udp ipsec encapsulation in policy mode ([0b04d71ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b04d71ce))
+  - Session Layer
+    - Add session eventing infra for apps ([9ed4013fd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ed4013fd))
 - Vector Library
   - Add new node type - SCHED nodes ([8a5add5c0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a5add5c0))
   - Add 'relative' keyword for cpu configuration ([9b2015150](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9b2015150))
