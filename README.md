@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 223 commits since the previous release, including 82 fixes.
+More than 228 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue May  6 02:46:21 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed May  7 02:47:49 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -63,6 +63,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Http/2 core skeleton ([492d2c15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d2c15d))
     - Http/2 stream state machine ([24668f2a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=24668f2a3))
     - Http/2 starting tcp connection ([b43c7090f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b43c7090f))
+    - Http/2 flow control ([ad5159837](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ad5159837))
   - Host Stack Applications
     - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
   - Marvell Octeon device driver
@@ -113,10 +114,12 @@ http_static_enable_v4                                        | only in image
 http_static_enable_v4_reply                                  | only in image
 http_static_enable_v5                                        | only in image
 http_static_enable_v5_reply                                  | only in image
+ip_session_redirect_details                                  | only in image
+ip_session_redirect_dump                                     | only in image
 pnat_flow_lookup                                             | only in image
 pnat_flow_lookup_reply                                       | only in image
 
-Found 12 api message signature differences
+Found 14 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -312,6 +315,8 @@ please collaborate with the feature maintainer on their productization.
 - ip_session_redirect_add_v2_reply
 - ip_session_redirect_del
 - ip_session_redirect_del_reply
+- ip_session_redirect_details
+- ip_session_redirect_dump
 - l2_emulation
 - l2_emulation_reply
 - lcp_default_ns_get_reply
@@ -508,6 +513,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/feature/feature.api ||
 | ------- | ------- |
 | [6022e9566](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6022e9566) | vnet: add vapi interface feature enablement check function |
+
+| @c src/plugins/ip_session_redirect/ip_session_redirect.api ||
+| ------- | ------- |
+| [eca860c85](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=eca860c85) | ip_session_redirect: add dump api for session redirects |
 
 | @c src/plugins/nat/pnat/pnat.api ||
 | ------- | ------- |
