@@ -1,10 +1,10 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 235 commits since the previous release, including 86 fixes.
+More than 240 commits since the previous release, including 87 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Fri May  9 02:47:30 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Sat May 10 02:41:22 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -28,6 +28,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
   - Marvell Octeon device driver
     - Set cpt descriptor count to 16k ([803eac3ef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=803eac3ef))
+    - Flush CQ buffers on stop ([c8d431ea2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8d431ea2))
+    - Update roc version ([2eb3240d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2eb3240d1))
   - Http\_static
     - Support multiple listeners ([0a897eb8d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0a897eb8d))
 - VNET
