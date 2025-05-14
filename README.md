@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 241 commits since the previous release, including 87 fixes.
+More than 245 commits since the previous release, including 88 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue May 13 02:49:22 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed May 14 02:47:49 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -64,6 +64,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Http/2 stream state machine ([24668f2a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=24668f2a3))
     - Http/2 starting tcp connection ([b43c7090f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b43c7090f))
     - Http/2 flow control ([ad5159837](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ad5159837))
+    - Http/2 multiplexing ([2d6b545f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d6b545f2))
   - Host Stack Applications
     - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
   - Marvell Octeon device driver
