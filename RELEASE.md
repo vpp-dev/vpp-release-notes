@@ -1,10 +1,10 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 245 commits since the previous release, including 88 fixes.
+More than 248 commits since the previous release, including 90 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed May 14 02:47:49 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Thu May 15 02:46:52 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -31,6 +31,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Set cpt descriptor count to 16k ([803eac3ef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=803eac3ef))
     - Flush CQ buffers on stop ([c8d431ea2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8d431ea2))
     - Update roc version ([2eb3240d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2eb3240d1))
+  - QUIC protocol
+    - Quic engine api ([a94fab2fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a94fab2fb))
   - Http\_static
     - Support multiple listeners ([0a897eb8d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0a897eb8d))
 - VNET
@@ -477,25 +479,25 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [6022e9566](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6022e9566) | vnet: add vapi interface feature enablement check function |
 
-| @c src/plugins/nat/pnat/pnat.api ||
-| ------- | ------- |
-| [406232920](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=406232920) | pnat: expose binding_index over API |
-
 | @c src/plugins/ip_session_redirect/ip_session_redirect.api ||
 | ------- | ------- |
 | [eca860c85](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=eca860c85) | ip_session_redirect: add dump api for session redirects |
+
+| @c src/plugins/nat/pnat/pnat.api ||
+| ------- | ------- |
+| [406232920](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=406232920) | pnat: expose binding_index over API |
 
 | @c src/plugins/http_static/http_static.api ||
 | ------- | ------- |
 | [c3bbeb93b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c3bbeb93b) | http_static: url handler buffer large POST body |
 | [5e94895df](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5e94895df) | http_static: introduce max-body-size parameter |
 
-| @c src/plugins/vxlan-gpe/vxlan_gpe.api ||
-| ------- | ------- |
-| [bb4858cdf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb4858cdf) | vxlan: move vxlan-gpe to a plugin |
-
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
 | [9543e2970](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9543e2970) | linux-cp: Add support for LACP packets |
+
+| @c src/plugins/vxlan-gpe/vxlan_gpe.api ||
+| ------- | ------- |
+| [bb4858cdf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb4858cdf) | vxlan: move vxlan-gpe to a plugin |
 
 
