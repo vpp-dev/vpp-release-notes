@@ -1,10 +1,10 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 248 commits since the previous release, including 90 fixes.
+More than 249 commits since the previous release, including 90 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Thu May 15 02:46:52 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Fri May 16 02:49:44 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -39,6 +39,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Crypto Infra
     - Make configurable crypto engines ([f479eeb76](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f479eeb76))
     - Add support for aes-cbc with hmac ([fba37eea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fba37eea8))
+    - Add new handlers for cbc/ctr+hmac ([659b78d46](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=659b78d46))
   - IPSec
     - Add support for bypass and discard policies for ipv6 ([9ab79f54d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ab79f54d))
     - Enable support for ipv6 udp ipsec encapsulation in policy mode ([0b04d71ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b04d71ce))
