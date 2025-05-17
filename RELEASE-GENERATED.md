@@ -1,10 +1,10 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 249 commits since the previous release, including 90 fixes.
+More than 252 commits since the previous release, including 91 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Fri May 16 02:49:44 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Sat May 17 02:44:17 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -480,25 +480,25 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [6022e9566](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6022e9566) | vnet: add vapi interface feature enablement check function |
 
-| @c src/plugins/ip_session_redirect/ip_session_redirect.api ||
+| @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
-| [eca860c85](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=eca860c85) | ip_session_redirect: add dump api for session redirects |
+| [9543e2970](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9543e2970) | linux-cp: Add support for LACP packets |
 
 | @c src/plugins/nat/pnat/pnat.api ||
 | ------- | ------- |
 | [406232920](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=406232920) | pnat: expose binding_index over API |
+
+| @c src/plugins/vxlan-gpe/vxlan_gpe.api ||
+| ------- | ------- |
+| [bb4858cdf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb4858cdf) | vxlan: move vxlan-gpe to a plugin |
 
 | @c src/plugins/http_static/http_static.api ||
 | ------- | ------- |
 | [c3bbeb93b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c3bbeb93b) | http_static: url handler buffer large POST body |
 | [5e94895df](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5e94895df) | http_static: introduce max-body-size parameter |
 
-| @c src/plugins/linux-cp/lcp.api ||
+| @c src/plugins/ip_session_redirect/ip_session_redirect.api ||
 | ------- | ------- |
-| [9543e2970](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9543e2970) | linux-cp: Add support for LACP packets |
-
-| @c src/plugins/vxlan-gpe/vxlan_gpe.api ||
-| ------- | ------- |
-| [bb4858cdf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb4858cdf) | vxlan: move vxlan-gpe to a plugin |
+| [eca860c85](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=eca860c85) | ip_session_redirect: add dump api for session redirects |
 
 
