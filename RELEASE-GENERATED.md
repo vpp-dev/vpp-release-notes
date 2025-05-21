@@ -1,10 +1,10 @@
 @page release_notes_2506 Release notes for VPP 25.06
 
-More than 254 commits since the previous release, including 91 fixes.
+More than 260 commits since the previous release, including 92 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Tue May 20 02:49:48 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed May 21 02:49:35 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -31,6 +31,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Set cpt descriptor count to 16k ([803eac3ef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=803eac3ef))
     - Flush CQ buffers on stop ([c8d431ea2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8d431ea2))
     - Update roc version ([2eb3240d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2eb3240d1))
+    - Configure max npa pools using driver arg ([06df0ac7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06df0ac7a))
   - QUIC protocol
     - Quic engine api ([a94fab2fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a94fab2fb))
   - Http\_static
@@ -47,6 +48,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support to configure driver arguments ([0e811a0d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e811a0d4))
   - Session Layer
     - Add session eventing infra for apps ([9ed4013fd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ed4013fd))
+  - TLS and TLS engine plugins
+    - Add ALPN support ([0b039ae97](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b039ae97))
 - Vector Library
   - Add new node type - SCHED nodes ([8a5add5c0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a5add5c0))
   - Add 'relative' keyword for cpu configuration ([9b2015150](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9b2015150))
