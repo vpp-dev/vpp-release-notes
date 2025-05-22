@@ -1,58 +1,15 @@
-@page release_notes_2506 Release notes for VPP 25.06
+@page release_notes_2510 Release notes for VPP 25.10
 
-More than 260 commits since the previous release, including 92 fixes.
+More than 5 commits since the previous release, including 2 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.06 release, generated as on Wed May 21 02:49:35 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Thu May 22 02:48:59 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Build System
-  - Update VPP-opt-deps to openssl 3.5.0 ([8a5a8de71](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a5a8de71))
-- Host stack test framework
-  - Added basic performance testing infra ([7cd37a9d8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7cd37a9d8))
-- Plugins
-  - HTTP
-    - Hpack primitive types ([5985e8683](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5985e8683))
-    - Hpack headers decoding ([58b6c4e6b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=58b6c4e6b))
-    - Hpack headers encoding ([a013224b9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a013224b9))
-    - Http2 frames ([86abfc3e0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=86abfc3e0))
-    - Http/2 core skeleton ([492d2c15d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=492d2c15d))
-    - Http/2 stream state machine ([24668f2a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=24668f2a3))
-    - Http/2 starting tcp connection ([b43c7090f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b43c7090f))
-    - Http/2 flow control ([ad5159837](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ad5159837))
-    - Http/2 multiplexing ([2d6b545f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2d6b545f2))
-  - Host Stack Applications
-    - Http client parallel sessions ([c8174f366](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8174f366))
-  - Marvell Octeon device driver
-    - Set cpt descriptor count to 16k ([803eac3ef](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=803eac3ef))
-    - Flush CQ buffers on stop ([c8d431ea2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c8d431ea2))
-    - Update roc version ([2eb3240d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2eb3240d1))
-    - Configure max npa pools using driver arg ([06df0ac7a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=06df0ac7a))
-  - QUIC protocol
-    - Quic engine api ([a94fab2fb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a94fab2fb))
-  - Http\_static
-    - Support multiple listeners ([0a897eb8d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0a897eb8d))
-- VNET
-  - Crypto Infra
-    - Make configurable crypto engines ([f479eeb76](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f479eeb76))
-    - Add support for aes-cbc with hmac ([fba37eea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fba37eea8))
-    - Add new handlers for cbc/ctr+hmac ([659b78d46](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=659b78d46))
-  - IPSec
-    - Add support for bypass and discard policies for ipv6 ([9ab79f54d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ab79f54d))
-    - Enable support for ipv6 udp ipsec encapsulation in policy mode ([0b04d71ce](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b04d71ce))
-  - New Device Drivers Infra
-    - Add support to configure driver arguments ([0e811a0d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0e811a0d4))
-  - Session Layer
-    - Add session eventing infra for apps ([9ed4013fd](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9ed4013fd))
-  - TLS and TLS engine plugins
-    - Add ALPN support ([0b039ae97](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b039ae97))
-- Vector Library
-  - Add new node type - SCHED nodes ([8a5add5c0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8a5add5c0))
-  - Add 'relative' keyword for cpu configuration ([9b2015150](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9b2015150))
 
 ## Known issues
 
@@ -75,22 +32,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-feature_is_enabled                                           | only in image
-feature_is_enabled_reply                                     | only in image
-http_static_enable_v2                                        | only in file
-http_static_enable_v2_reply                                  | only in file
-http_static_enable_v3                                        | only in file
-http_static_enable_v3_reply                                  | only in file
-http_static_enable_v4                                        | only in image
-http_static_enable_v4_reply                                  | only in image
-http_static_enable_v5                                        | only in image
-http_static_enable_v5_reply                                  | only in image
-ip_session_redirect_details                                  | only in image
-ip_session_redirect_dump                                     | only in image
-pnat_flow_lookup                                             | only in image
-pnat_flow_lookup_reply                                       | only in image
-
-Found 14 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -98,8 +40,6 @@ Found 14 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- http_static_enable_v4
-- http_static_enable_v4_reply
 
 ### In-progress API messages
 
@@ -480,30 +420,5 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
-
-| @c src/vnet/feature/feature.api ||
-| ------- | ------- |
-| [6022e9566](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6022e9566) | vnet: add vapi interface feature enablement check function |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [9543e2970](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9543e2970) | linux-cp: Add support for LACP packets |
-
-| @c src/plugins/nat/pnat/pnat.api ||
-| ------- | ------- |
-| [406232920](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=406232920) | pnat: expose binding_index over API |
-
-| @c src/plugins/vxlan-gpe/vxlan_gpe.api ||
-| ------- | ------- |
-| [bb4858cdf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=bb4858cdf) | vxlan: move vxlan-gpe to a plugin |
-
-| @c src/plugins/http_static/http_static.api ||
-| ------- | ------- |
-| [c3bbeb93b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c3bbeb93b) | http_static: url handler buffer large POST body |
-| [5e94895df](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5e94895df) | http_static: introduce max-body-size parameter |
-
-| @c src/plugins/ip_session_redirect/ip_session_redirect.api ||
-| ------- | ------- |
-| [eca860c85](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=eca860c85) | ip_session_redirect: add dump api for session redirects |
 
 
