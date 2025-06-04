@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 32 commits since the previous release, including 9 fixes.
+More than 35 commits since the previous release, including 9 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Tue Jun  3 02:53:11 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Wed Jun  4 02:53:15 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -72,7 +72,16 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+sflow_direction_get                                          | only in image
+sflow_direction_get_reply                                    | only in image
+sflow_direction_set                                          | only in image
+sflow_direction_set_reply                                    | only in image
+sflow_drop_monitoring_get                                    | only in image
+sflow_drop_monitoring_get_reply                              | only in image
+sflow_drop_monitoring_set                                    | only in image
+sflow_drop_monitoring_set_reply                              | only in image
+
+Found 8 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -373,6 +382,14 @@ please collaborate with the feature maintainer on their productization.
 - sample_macswap_enable_disable_reply
 - set_ip_flow_hash_v3
 - set_ip_flow_hash_v3_reply
+- sflow_direction_get
+- sflow_direction_get_reply
+- sflow_direction_set
+- sflow_direction_set_reply
+- sflow_drop_monitoring_get
+- sflow_drop_monitoring_get_reply
+- sflow_drop_monitoring_set
+- sflow_drop_monitoring_set_reply
 - sflow_enable_disable
 - sflow_enable_disable_reply
 - sflow_header_bytes_get
@@ -460,5 +477,9 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/sflow/sflow.api ||
+| ------- | ------- |
+| [8d6879403](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8d6879403) | sflow: add feature-arc at error-drop, drop-monitoring, egress-sampling |
 
 
