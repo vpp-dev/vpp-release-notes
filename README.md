@@ -40,16 +40,19 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 59 commits since the previous release, including 22 fixes.
+More than 65 commits since the previous release, including 24 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Wed Jun 11 02:54:10 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Thu Jun 12 02:53:00 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - HTTP
+    - Http/2 connect method ([4d9e8e6b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4d9e8e6b3))
 
 ## Known issues
 
