@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 102 commits since the previous release, including 35 fixes.
+More than 106 commits since the previous release, including 35 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Tue Jun 24 02:55:34 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Wed Jun 25 02:56:07 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,9 @@ HIGHLIGHTS-PLACEHOLDER
     - Http/2 connect method ([4d9e8e6b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4d9e8e6b3))
     - Implement HTTP PUT method ([897615764](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=897615764))
     - Http/2 extended connect method ([2eb0e479b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2eb0e479b))
+- VNET
+  - GRE
+    - Add support for GRE keys in the GRE plugin ([74cf96576](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74cf96576))
 
 ## Known issues
 
@@ -77,6 +80,12 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+gre_tunnel_add_del_v2                                        | only in image
+gre_tunnel_add_del_v2_reply                                  | only in image
+gre_tunnel_details_v2                                        | only in image
+gre_tunnel_dump_reply                                        | only in image
+gre_tunnel_dump_v2                                           | only in image
+gre_tunnel_dump_v2_reply                                     | only in image
 sflow_direction_get                                          | only in image
 sflow_direction_get_reply                                    | only in image
 sflow_direction_set                                          | only in image
@@ -86,7 +95,7 @@ sflow_drop_monitoring_get_reply                              | only in image
 sflow_drop_monitoring_set                                    | only in image
 sflow_drop_monitoring_set_reply                              | only in image
 
-Found 8 api message signature differences
+Found 14 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -482,6 +491,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/gre/gre.api ||
+| ------- | ------- |
+| [74cf96576](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74cf96576) | gre: Add support for GRE keys in the GRE plugin |
 
 | @c src/plugins/sflow/sflow.api ||
 | ------- | ------- |
