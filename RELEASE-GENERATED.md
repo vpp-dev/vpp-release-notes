@@ -1,10 +1,10 @@
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 113 commits since the previous release, including 39 fixes.
+More than 114 commits since the previous release, including 40 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Thu Jun 26 02:54:37 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Fri Jun 27 02:55:40 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
