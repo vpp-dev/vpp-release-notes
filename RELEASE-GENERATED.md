@@ -1,10 +1,10 @@
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 161 commits since the previous release, including 56 fixes.
+More than 163 commits since the previous release, including 56 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Tue Jul 22 03:06:16 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Wed Jul 23 03:06:33 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -22,6 +22,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for GRE keys in the GRE plugin ([74cf96576](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74cf96576))
   - Native Virtio Drivers
     - Add option to set interface name ([84f09f471](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84f09f471))
+  - Session Layer
+    - Set maximum memory for fifos ([7a08d9200](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7a08d9200))
   - TAP Drivers
     - Add option to specify interface name ([f2223b6fc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2223b6fc))
 
