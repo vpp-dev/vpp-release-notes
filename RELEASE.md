@@ -1,10 +1,10 @@
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 195 commits since the previous release, including 70 fixes.
+More than 198 commits since the previous release, including 71 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Mon Aug  4 03:22:46 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Tue Aug  5 03:15:59 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -56,6 +56,8 @@ gre_tunnel_details_v2                                        | only in image
 gre_tunnel_dump_reply                                        | only in image
 gre_tunnel_dump_v2                                           | only in image
 gre_tunnel_dump_v2_reply                                     | only in image
+pg_create_interface_v3                                       | only in image
+pg_create_interface_v3_reply                                 | only in image
 sflow_direction_get                                          | only in image
 sflow_direction_get_reply                                    | only in image
 sflow_direction_set                                          | only in image
@@ -65,7 +67,7 @@ sflow_drop_monitoring_get_reply                              | only in image
 sflow_drop_monitoring_set                                    | only in image
 sflow_drop_monitoring_set_reply                              | only in image
 
-Found 14 api message signature differences
+Found 16 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -73,6 +75,8 @@ Found 14 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- pg_create_interface_v2
+- pg_create_interface_v2_reply
 
 ### In-progress API messages
 
@@ -461,6 +465,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/vnet/pg/pg.api ||
+| ------- | ------- |
+| [513c6bf8f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=513c6bf8f) | pg: add support for checksum offload |
 
 | @c src/plugins/gre/gre.api ||
 | ------- | ------- |
