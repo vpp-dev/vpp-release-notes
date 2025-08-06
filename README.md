@@ -40,17 +40,19 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 198 commits since the previous release, including 71 fixes.
+More than 206 commits since the previous release, including 74 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Tue Aug  5 03:15:59 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Wed Aug  6 03:13:27 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
 - Plugins
+  - AF\_XDP driver
+    - Bump xdp-tools to 1.5.5 ([d21309c22](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d21309c22))
   - DPDK
     - Bump to DPDK 25.07 and rdma-core 58.0 ([6a038c3aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a038c3aa))
   - HTTP
