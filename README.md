@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 211 commits since the previous release, including 78 fixes.
+More than 212 commits since the previous release, including 78 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Thu Aug  7 03:13:40 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Fri Aug  8 03:12:24 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -68,6 +68,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add option to set interface name ([84f09f471](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84f09f471))
   - Session Layer
     - Set maximum memory for fifos ([7a08d9200](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7a08d9200))
+    - Session\_cb\_vft add proxy\_write\_early\_data ([73354a241](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=73354a241))
   - TAP Drivers
     - Add option to specify interface name ([f2223b6fc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2223b6fc))
 
