@@ -1,10 +1,10 @@
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 212 commits since the previous release, including 78 fixes.
+More than 215 commits since the previous release, including 79 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Fri Aug  8 03:12:24 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Sat Aug  9 02:55:22 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -473,12 +473,12 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [513c6bf8f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=513c6bf8f) | pg: add support for checksum offload |
 
-| @c src/plugins/gre/gre.api ||
-| ------- | ------- |
-| [74cf96576](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74cf96576) | gre: Add support for GRE keys in the GRE plugin |
-
 | @c src/plugins/sflow/sflow.api ||
 | ------- | ------- |
 | [8d6879403](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8d6879403) | sflow: add feature-arc at error-drop, drop-monitoring, egress-sampling |
+
+| @c src/plugins/gre/gre.api ||
+| ------- | ------- |
+| [74cf96576](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74cf96576) | gre: Add support for GRE keys in the GRE plugin |
 
 
