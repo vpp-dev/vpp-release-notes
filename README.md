@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 260 commits since the previous release, including 109 fixes.
+More than 266 commits since the previous release, including 110 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Thu Aug 28 02:40:00 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Fri Aug 29 02:40:18 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -61,6 +61,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Http/2 extended connect method ([2eb0e479b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2eb0e479b))
     - Tunneling UDP over HTTP/2 ([f72488b32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f72488b32))
     - Http2 client side ([b6cc662e4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b6cc662e4))
+  - Marvell Octeon device driver
+    - Add L4 checksum flags ([273d20cd7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=273d20cd7))
 - VNET
   - GRE
     - Add support for GRE keys in the GRE plugin ([74cf96576](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74cf96576))
