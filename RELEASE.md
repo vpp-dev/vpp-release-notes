@@ -1,10 +1,10 @@
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 266 commits since the previous release, including 110 fixes.
+More than 271 commits since the previous release, including 111 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Fri Aug 29 02:40:18 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Sat Aug 30 02:33:37 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -33,6 +33,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Session\_cb\_vft add proxy\_write\_early\_data ([73354a241](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=73354a241))
   - TAP Drivers
     - Add option to specify interface name ([f2223b6fc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2223b6fc))
+  - UDP
+    - Add input nolookup node ([32a2287ba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=32a2287ba))
 
 ## Known issues
 
