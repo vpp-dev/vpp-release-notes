@@ -1,10 +1,10 @@
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 277 commits since the previous release, including 113 fixes.
+More than 278 commits since the previous release, including 113 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Fri Sep  5 02:36:41 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Sat Sep  6 02:31:41 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -23,6 +23,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Http2 client side ([b6cc662e4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b6cc662e4))
   - Marvell Octeon device driver
     - Add L4 checksum flags ([273d20cd7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=273d20cd7))
+  - Snort plugin
+    - Plugin rework ([e070068b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e070068b7))
 - VNET
   - GRE
     - Add support for GRE keys in the GRE plugin ([74cf96576](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74cf96576))
