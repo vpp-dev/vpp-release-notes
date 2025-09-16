@@ -1,10 +1,10 @@
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 288 commits since the previous release, including 116 fixes.
+More than 301 commits since the previous release, including 120 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Mon Sep 15 02:44:45 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Tue Sep 16 02:35:34 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -33,6 +33,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Session Layer
     - Set maximum memory for fifos ([7a08d9200](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7a08d9200))
     - Session\_cb\_vft add proxy\_write\_early\_data ([73354a241](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=73354a241))
+    - Add support for configurable trusted cas ([3012d1b8a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3012d1b8a))
   - TAP Drivers
     - Add option to specify interface name ([f2223b6fc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2223b6fc))
   - UDP
