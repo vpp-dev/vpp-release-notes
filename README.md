@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2510 Release notes for VPP 25.10
 
-More than 311 commits since the previous release, including 122 fixes.
+More than 313 commits since the previous release, including 123 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Fri Sep 19 02:40:04 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Sat Sep 20 02:31:44 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -102,6 +102,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+bfd_udp_get_tos                                              | only in image
+bfd_udp_get_tos_reply                                        | only in image
+bfd_udp_set_tos                                              | only in image
+bfd_udp_set_tos_reply                                        | only in image
 gre_tunnel_add_del_v2                                        | only in image
 gre_tunnel_add_del_v2_reply                                  | only in image
 gre_tunnel_details_v2                                        | only in image
@@ -119,7 +123,7 @@ sflow_drop_monitoring_get_reply                              | only in image
 sflow_drop_monitoring_set                                    | only in image
 sflow_drop_monitoring_set_reply                              | only in image
 
-Found 16 api message signature differences
+Found 20 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -521,6 +525,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/pg/pg.api ||
 | ------- | ------- |
 | [513c6bf8f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=513c6bf8f) | pg: add support for checksum offload |
+
+| @c src/vnet/bfd/bfd.api ||
+| ------- | ------- |
+| [c98ec5a0f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c98ec5a0f) | bfd: add API to configure TOS for IP of BFD packets |
 
 | @c src/plugins/gre/gre.api ||
 | ------- | ------- |
