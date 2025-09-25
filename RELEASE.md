@@ -1,45 +1,15 @@
-@page release_notes_2510 Release notes for VPP 25.10
+@page release_notes_2602 Release notes for VPP 26.02
 
-More than 322 commits since the previous release, including 129 fixes.
+More than 0 commits since the previous release, including 0 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 25.10 release, generated as on Wed Sep 24 02:37:25 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Sep 25 02:38:21 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Build System
-  - Update octeon-roc version ([fe4ff09ad](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fe4ff09ad))
-- Plugins
-  - AF\_XDP driver
-    - Bump xdp-tools to 1.5.5 ([d21309c22](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d21309c22))
-  - DPDK
-    - Bump to DPDK 25.07 and rdma-core 58.0 ([6a038c3aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6a038c3aa))
-  - HTTP
-    - Http/2 connect method ([4d9e8e6b3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4d9e8e6b3))
-    - Implement HTTP PUT method ([897615764](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=897615764))
-    - Http/2 extended connect method ([2eb0e479b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2eb0e479b))
-    - Tunneling UDP over HTTP/2 ([f72488b32](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f72488b32))
-    - Http2 client side ([b6cc662e4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b6cc662e4))
-  - Marvell Octeon device driver
-    - Add L4 checksum flags ([273d20cd7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=273d20cd7))
-  - Snort plugin
-    - Plugin rework ([e070068b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e070068b7))
-- VNET
-  - GRE
-    - Add support for GRE keys in the GRE plugin ([74cf96576](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74cf96576))
-  - Native Virtio Drivers
-    - Add option to set interface name ([84f09f471](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=84f09f471))
-  - Session Layer
-    - Set maximum memory for fifos ([7a08d9200](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=7a08d9200))
-    - Session\_cb\_vft add proxy\_write\_early\_data ([73354a241](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=73354a241))
-    - Add support for configurable trusted cas ([3012d1b8a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3012d1b8a))
-  - TAP Drivers
-    - Add option to specify interface name ([f2223b6fc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f2223b6fc))
-  - UDP
-    - Add input nolookup node ([32a2287ba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=32a2287ba))
 
 ## Known issues
 
@@ -62,28 +32,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-bfd_udp_get_tos                                              | only in image
-bfd_udp_get_tos_reply                                        | only in image
-bfd_udp_set_tos                                              | only in image
-bfd_udp_set_tos_reply                                        | only in image
-gre_tunnel_add_del_v2                                        | only in image
-gre_tunnel_add_del_v2_reply                                  | only in image
-gre_tunnel_details_v2                                        | only in image
-gre_tunnel_dump_reply                                        | only in image
-gre_tunnel_dump_v2                                           | only in image
-gre_tunnel_dump_v2_reply                                     | only in image
-pg_create_interface_v3                                       | only in image
-pg_create_interface_v3_reply                                 | only in image
-sflow_direction_get                                          | only in image
-sflow_direction_get_reply                                    | only in image
-sflow_direction_set                                          | only in image
-sflow_direction_set_reply                                    | only in image
-sflow_drop_monitoring_get                                    | only in image
-sflow_drop_monitoring_get_reply                              | only in image
-sflow_drop_monitoring_set                                    | only in image
-sflow_drop_monitoring_set_reply                              | only in image
-
-Found 20 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -91,8 +40,6 @@ Found 20 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- pg_create_interface_v2
-- pg_create_interface_v2_reply
 
 ### In-progress API messages
 
@@ -481,21 +428,5 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
-
-| @c src/vnet/pg/pg.api ||
-| ------- | ------- |
-| [513c6bf8f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=513c6bf8f) | pg: add support for checksum offload |
-
-| @c src/vnet/bfd/bfd.api ||
-| ------- | ------- |
-| [c98ec5a0f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c98ec5a0f) | bfd: add API to configure TOS for IP of BFD packets |
-
-| @c src/plugins/gre/gre.api ||
-| ------- | ------- |
-| [74cf96576](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=74cf96576) | gre: Add support for GRE keys in the GRE plugin |
-
-| @c src/plugins/sflow/sflow.api ||
-| ------- | ------- |
-| [8d6879403](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8d6879403) | sflow: add feature-arc at error-drop, drop-monitoring, egress-sampling |
 
 
