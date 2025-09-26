@@ -1,15 +1,18 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 0 commits since the previous release, including 0 fixes.
+More than 10 commits since the previous release, including 2 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Sep 25 02:38:21 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Sep 26 02:36:59 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - Host Stack Applications
+    - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
 
 ## Known issues
 
