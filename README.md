@@ -40,19 +40,24 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 12 commits since the previous release, including 2 fixes.
+More than 20 commits since the previous release, including 3 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Mon Sep 29 02:41:12 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Tue Sep 30 02:35:16 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
 - Plugins
+  - HTTP
+    - QPACK header decoding w/o dynamic table ([46813ba73](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=46813ba73))
+    - QPACK decoding request and response ([023ea1152](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=023ea1152))
   - Host Stack Applications
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
+- Vector Library
+  - Native fuse filesystem implementation ([188280037](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=188280037))
 
 ## Known issues
 
@@ -73,9 +78,6 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
-Message Name                                                 | Result
--------------------------------------------------------------|------------------
-No api message signature differences found.
 
 
 ### Newly deprecated API messages
