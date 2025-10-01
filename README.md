@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 20 commits since the previous release, including 3 fixes.
+More than 29 commits since the previous release, including 4 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Tue Sep 30 02:35:16 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Wed Oct  1 02:47:58 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -54,8 +54,13 @@ HIGHLIGHTS-PLACEHOLDER
   - HTTP
     - QPACK header decoding w/o dynamic table ([46813ba73](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=46813ba73))
     - QPACK decoding request and response ([023ea1152](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=023ea1152))
+    - QPACK header encoding w/o dynamic table ([130697c1f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=130697c1f))
+    - QPACK encoding response ([fa905f032](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fa905f032))
+    - QPACK encoding request ([036f00d04](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=036f00d04))
   - Host Stack Applications
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
+  - Snort plugin
+    - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
 - Vector Library
   - Native fuse filesystem implementation ([188280037](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=188280037))
 
