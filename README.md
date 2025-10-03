@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 34 commits since the previous release, including 5 fixes.
+More than 39 commits since the previous release, including 5 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Oct  2 02:34:18 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Oct  3 02:33:40 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -57,6 +57,7 @@ HIGHLIGHTS-PLACEHOLDER
     - QPACK header encoding w/o dynamic table ([130697c1f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=130697c1f))
     - QPACK encoding response ([fa905f032](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fa905f032))
     - QPACK encoding request ([036f00d04](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=036f00d04))
+    - Http/3 framing layer ([cddc11b31](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cddc11b31))
   - Host Stack Applications
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
   - Snort plugin
