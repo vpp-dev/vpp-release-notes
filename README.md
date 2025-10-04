@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 39 commits since the previous release, including 5 fixes.
+More than 44 commits since the previous release, including 7 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Oct  3 02:33:40 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Sat Oct  4 02:20:34 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -60,6 +60,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Http/3 framing layer ([cddc11b31](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cddc11b31))
   - Host Stack Applications
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
+  - IGE Device driver
+    - Native driver for Intel Gigabit Adapters (i211, i225, i226) ([b86e7f6d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b86e7f6d4))
   - Snort plugin
     - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
 - Vector Library
