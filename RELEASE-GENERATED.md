@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 56 commits since the previous release, including 7 fixes.
+More than 64 commits since the previous release, including 8 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Wed Oct  8 02:35:23 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Oct  9 02:37:39 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -26,6 +26,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
 - Vector Library
   - Native fuse filesystem implementation ([188280037](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=188280037))
+  - Expose function to switch elog\_main ([914013e03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=914013e03))
 
 ## Known issues
 
@@ -344,6 +345,16 @@ please collaborate with the feature maintainer on their productization.
 - pvti_interface_dump
 - sample_macswap_enable_disable
 - sample_macswap_enable_disable_reply
+- selog_event_type_details
+- selog_event_type_dump
+- selog_event_type_string_details
+- selog_event_type_string_dump
+- selog_get_shm
+- selog_get_shm_reply
+- selog_get_string_table
+- selog_get_string_table_reply
+- selog_track_details
+- selog_track_dump
 - set_ip_flow_hash_v3
 - set_ip_flow_hash_v3_reply
 - sflow_direction_get
@@ -441,5 +452,9 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/selog/selog.api ||
+| ------- | ------- |
+| [085d6de44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=085d6de44) | selog: introduce the Shared Elog plugin |
 
 
