@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 84 commits since the previous release, including 12 fixes.
+More than 88 commits since the previous release, including 13 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Oct 17 02:38:53 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Sat Oct 18 02:32:13 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -64,6 +64,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Native driver for Intel Gigabit Adapters (i211, i225, i226) ([b86e7f6d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b86e7f6d4))
   - Snort plugin
     - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
+    - Add support for packet injection ([379f3ebba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379f3ebba))
 - Vector Library
   - Native fuse filesystem implementation ([188280037](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=188280037))
   - Expose function to switch elog\_main ([914013e03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=914013e03))
@@ -87,6 +88,20 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+selog_event_type_details                                     | only in image
+selog_event_type_dump                                        | only in image
+selog_event_type_string_details                              | only in image
+selog_event_type_string_dump                                 | only in image
+selog_get_shm                                                | only in image
+selog_get_shm_reply                                          | only in image
+selog_get_string_table                                       | only in image
+selog_get_string_table_reply                                 | only in image
+selog_track_details                                          | only in image
+selog_track_dump                                             | only in image
+
+Found 10 api message signature differences
 
 
 ### Newly deprecated API messages
