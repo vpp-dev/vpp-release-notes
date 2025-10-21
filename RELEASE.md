@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 90 commits since the previous release, including 13 fixes.
+More than 91 commits since the previous release, including 13 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Mon Oct 20 02:51:06 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Tue Oct 21 02:42:33 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -22,6 +22,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
   - IGE Device driver
     - Native driver for Intel Gigabit Adapters (i211, i225, i226) ([b86e7f6d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b86e7f6d4))
+  - NPol
+    - Network Policies plugin ([f40fcee5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40fcee5b))
   - Snort plugin
     - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
     - Add support for packet injection ([379f3ebba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379f3ebba))
@@ -50,6 +52,28 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+npol_configure_policies                                      | only in image
+npol_configure_policies_reply                                | only in image
+npol_get_version                                             | only in image
+npol_get_version_reply                                       | only in image
+npol_ipset_add_del_members                                   | only in image
+npol_ipset_add_del_members_reply                             | only in image
+npol_ipset_create                                            | only in image
+npol_ipset_create_reply                                      | only in image
+npol_ipset_delete                                            | only in image
+npol_ipset_delete_reply                                      | only in image
+npol_policy_create                                           | only in image
+npol_policy_create_reply                                     | only in image
+npol_policy_delete                                           | only in image
+npol_policy_delete_reply                                     | only in image
+npol_policy_update                                           | only in image
+npol_policy_update_reply                                     | only in image
+npol_rule_create                                             | only in image
+npol_rule_create_reply                                       | only in image
+npol_rule_delete                                             | only in image
+npol_rule_delete_reply                                       | only in image
+npol_rule_update                                             | only in image
+npol_rule_update_reply                                       | only in image
 selog_event_type_details                                     | only in image
 selog_event_type_dump                                        | only in image
 selog_event_type_string_details                              | only in image
@@ -61,7 +85,7 @@ selog_get_string_table_reply                                 | only in image
 selog_track_details                                          | only in image
 selog_track_dump                                             | only in image
 
-Found 10 api message signature differences
+Found 32 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -327,6 +351,28 @@ please collaborate with the feature maintainer on their productization.
 - nat44_ei_worker_dump
 - nat64_plugin_enable_disable
 - nat64_plugin_enable_disable_reply
+- npol_configure_policies
+- npol_configure_policies_reply
+- npol_get_version
+- npol_get_version_reply
+- npol_ipset_add_del_members
+- npol_ipset_add_del_members_reply
+- npol_ipset_create
+- npol_ipset_create_reply
+- npol_ipset_delete
+- npol_ipset_delete_reply
+- npol_policy_create
+- npol_policy_create_reply
+- npol_policy_delete
+- npol_policy_delete_reply
+- npol_policy_update
+- npol_policy_update_reply
+- npol_rule_create
+- npol_rule_create_reply
+- npol_rule_delete
+- npol_rule_delete_reply
+- npol_rule_update
+- npol_rule_update_reply
 - npt66_binding_add_del
 - npt66_binding_add_del_reply
 - oddbuf_enable_disable
@@ -467,6 +513,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/npol/npol.api ||
+| ------- | ------- |
+| [f40fcee5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40fcee5b) | npol: Network Policies plugin |
 
 | @c src/plugins/selog/selog.api ||
 | ------- | ------- |
