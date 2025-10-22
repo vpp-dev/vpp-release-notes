@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 91 commits since the previous release, including 13 fixes.
+More than 92 commits since the previous release, including 13 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Tue Oct 21 02:42:33 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Wed Oct 22 02:46:46 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -27,6 +27,9 @@ HIGHLIGHTS-PLACEHOLDER
   - Snort plugin
     - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
     - Add support for packet injection ([379f3ebba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379f3ebba))
+- VNET
+  - StateFul Data Plane
+    - StateFul Data Plane ([a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a))
 - Vector Library
   - Native fuse filesystem implementation ([188280037](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=188280037))
   - Expose function to switch elog\_main ([914013e03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=914013e03))
@@ -84,8 +87,22 @@ selog_get_string_table                                       | only in image
 selog_get_string_table_reply                                 | only in image
 selog_track_details                                          | only in image
 selog_track_dump                                             | only in image
+sfdp_session_details                                         | only in image
+sfdp_session_dump                                            | only in image
+sfdp_set_icmp_error_node                                     | only in image
+sfdp_set_icmp_error_node_reply                               | only in image
+sfdp_set_services                                            | only in image
+sfdp_set_services_reply                                      | only in image
+sfdp_set_sp_node                                             | only in image
+sfdp_set_sp_node_reply                                       | only in image
+sfdp_set_timeout                                             | only in image
+sfdp_set_timeout_reply                                       | only in image
+sfdp_tenant_add_del                                          | only in image
+sfdp_tenant_add_del_reply                                    | only in image
+sfdp_tenant_details                                          | only in image
+sfdp_tenant_dump                                             | only in image
 
-Found 32 api message signature differences
+Found 46 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -418,6 +435,20 @@ please collaborate with the feature maintainer on their productization.
 - selog_track_dump
 - set_ip_flow_hash_v3
 - set_ip_flow_hash_v3_reply
+- sfdp_session_details
+- sfdp_session_dump
+- sfdp_set_icmp_error_node
+- sfdp_set_icmp_error_node_reply
+- sfdp_set_services
+- sfdp_set_services_reply
+- sfdp_set_sp_node
+- sfdp_set_sp_node_reply
+- sfdp_set_timeout
+- sfdp_set_timeout_reply
+- sfdp_tenant_add_del
+- sfdp_tenant_add_del_reply
+- sfdp_tenant_details
+- sfdp_tenant_dump
 - sflow_direction_get
 - sflow_direction_get_reply
 - sflow_direction_set
@@ -521,5 +552,13 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/selog/selog.api ||
 | ------- | ------- |
 | [085d6de44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=085d6de44) | selog: introduce the Shared Elog plugin |
+
+| @c src/vnet/sfdp/sfdp.api ||
+| ------- | ------- |
+| [a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a) | sfdp: StateFul Data Plane |
+
+| @c src/vnet/sfdp/sfdp_types.api ||
+| ------- | ------- |
+| [a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a) | sfdp: StateFul Data Plane |
 
 
