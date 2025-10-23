@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 92 commits since the previous release, including 13 fixes.
+More than 98 commits since the previous release, including 18 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Wed Oct 22 02:46:46 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Oct 23 02:40:55 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -27,6 +27,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Snort plugin
     - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
     - Add support for packet injection ([379f3ebba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379f3ebba))
+- Plugin StateFul Data Plane Services
+  - Plugin with basic SFDP services ([28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee))
 - VNET
   - StateFul Data Plane
     - StateFul Data Plane ([a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a))
@@ -87,6 +89,18 @@ selog_get_string_table                                       | only in image
 selog_get_string_table_reply                                 | only in image
 selog_track_details                                          | only in image
 selog_track_dump                                             | only in image
+sfdp_gateway_geneve_input_enable_disable                     | only in image
+sfdp_gateway_geneve_input_enable_disable_reply               | only in image
+sfdp_gateway_set_geneve_output                               | only in image
+sfdp_gateway_set_geneve_output_reply                         | only in image
+sfdp_interface_input_set                                     | only in image
+sfdp_interface_input_set_reply                               | only in image
+sfdp_nat_alloc_pool_add_del                                  | only in image
+sfdp_nat_alloc_pool_add_del_reply                            | only in image
+sfdp_nat_set_external_interface                              | only in image
+sfdp_nat_set_external_interface_reply                        | only in image
+sfdp_nat_snat_set_unset                                      | only in image
+sfdp_nat_snat_set_unset_reply                                | only in image
 sfdp_session_details                                         | only in image
 sfdp_session_dump                                            | only in image
 sfdp_set_icmp_error_node                                     | only in image
@@ -97,12 +111,14 @@ sfdp_set_sp_node                                             | only in image
 sfdp_set_sp_node_reply                                       | only in image
 sfdp_set_timeout                                             | only in image
 sfdp_set_timeout_reply                                       | only in image
+sfdp_tcp_session_details                                     | only in image
+sfdp_tcp_session_dump                                        | only in image
 sfdp_tenant_add_del                                          | only in image
 sfdp_tenant_add_del_reply                                    | only in image
 sfdp_tenant_details                                          | only in image
 sfdp_tenant_dump                                             | only in image
 
-Found 46 api message signature differences
+Found 60 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -435,6 +451,18 @@ please collaborate with the feature maintainer on their productization.
 - selog_track_dump
 - set_ip_flow_hash_v3
 - set_ip_flow_hash_v3_reply
+- sfdp_gateway_geneve_input_enable_disable
+- sfdp_gateway_geneve_input_enable_disable_reply
+- sfdp_gateway_set_geneve_output
+- sfdp_gateway_set_geneve_output_reply
+- sfdp_interface_input_set
+- sfdp_interface_input_set_reply
+- sfdp_nat_alloc_pool_add_del
+- sfdp_nat_alloc_pool_add_del_reply
+- sfdp_nat_set_external_interface
+- sfdp_nat_set_external_interface_reply
+- sfdp_nat_snat_set_unset
+- sfdp_nat_snat_set_unset_reply
 - sfdp_session_details
 - sfdp_session_dump
 - sfdp_set_icmp_error_node
@@ -445,6 +473,8 @@ please collaborate with the feature maintainer on their productization.
 - sfdp_set_sp_node_reply
 - sfdp_set_timeout
 - sfdp_set_timeout_reply
+- sfdp_tcp_session_details
+- sfdp_tcp_session_dump
 - sfdp_tenant_add_del
 - sfdp_tenant_add_del_reply
 - sfdp_tenant_details
@@ -552,6 +582,22 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/selog/selog.api ||
 | ------- | ------- |
 | [085d6de44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=085d6de44) | selog: introduce the Shared Elog plugin |
+
+| @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
+| ------- | ------- |
+| [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
+
+| @c src/plugins/sfdp_services/base/tcp-check/tcp_check.api ||
+| ------- | ------- |
+| [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
+
+| @c src/plugins/sfdp_services/base/nat/nat.api ||
+| ------- | ------- |
+| [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
+
+| @c src/plugins/sfdp_services/geneve/gateway.api ||
+| ------- | ------- |
+| [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
