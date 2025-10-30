@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 128 commits since the previous release, including 27 fixes.
+More than 136 commits since the previous release, including 27 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Wed Oct 29 02:51:07 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Oct 30 02:47:28 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -32,6 +32,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - StateFul Data Plane
     - StateFul Data Plane ([a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a))
+- VPP Comms Library
+  - Add api that supports dynamic configuration ([1d822cc24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d822cc24))
 - Vector Library
   - Native fuse filesystem implementation ([188280037](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=188280037))
   - Expose function to switch elog\_main ([914013e03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=914013e03))
