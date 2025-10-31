@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 136 commits since the previous release, including 27 fixes.
+More than 148 commits since the previous release, including 33 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Oct 30 02:47:28 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Oct 31 02:46:33 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -24,6 +24,9 @@ HIGHLIGHTS-PLACEHOLDER
     - Native driver for Intel Gigabit Adapters (i211, i225, i226) ([b86e7f6d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b86e7f6d4))
   - NPol
     - Network Policies plugin ([f40fcee5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40fcee5b))
+  - Shared Elog
+    - Introduce the Shared Elog plugin ([085d6de44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=085d6de44))
+    - Selog client lib ([ba4eee76f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ba4eee76f))
   - Snort plugin
     - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
     - Add support for packet injection ([379f3ebba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379f3ebba))
