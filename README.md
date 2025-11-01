@@ -40,16 +40,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 148 commits since the previous release, including 33 fixes.
+More than 156 commits since the previous release, including 37 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Oct 31 02:46:33 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Sat Nov  1 02:47:57 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Infrastructure Library
+  - Libc alloc/free intercept ([615a4c82c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=615a4c82c))
 - Plugins
   - HTTP
     - QPACK header decoding w/o dynamic table ([46813ba73](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=46813ba73))
@@ -67,6 +69,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Shared Elog
     - Introduce the Shared Elog plugin ([085d6de44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=085d6de44))
     - Selog client lib ([ba4eee76f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ba4eee76f))
+  - Soft RSS
+    - Software RSS plugin ([abbc4c02f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abbc4c02f))
   - Snort plugin
     - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
     - Add support for packet injection ([379f3ebba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379f3ebba))
@@ -643,6 +647,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/sfdp_services/geneve/gateway.api ||
 | ------- | ------- |
 | [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
+
+| @c src/plugins/sasc/sasc.api ||
+| ------- | ------- |
+| [92efc8a22](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=92efc8a22) | sasc: session-aware service chaining |
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
