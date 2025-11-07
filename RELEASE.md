@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 174 commits since the previous release, including 41 fixes.
+More than 180 commits since the previous release, including 42 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Nov  6 02:49:14 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Nov  7 02:46:35 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -37,6 +37,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugin StateFul Data Plane Services
   - Plugin with basic SFDP services ([28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee))
 - VNET
+  - IPSec
+    - Unify crypto+HMAC in single op for ESP ([9eed09d0f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9eed09d0f))
   - StateFul Data Plane
     - StateFul Data Plane ([a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a))
 - VPP Comms Library
