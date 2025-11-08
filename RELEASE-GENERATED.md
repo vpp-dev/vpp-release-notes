@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 180 commits since the previous release, including 42 fixes.
+More than 187 commits since the previous release, including 43 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Nov  7 02:46:35 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Sat Nov  8 02:38:34 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -20,6 +20,7 @@ HIGHLIGHTS-PLACEHOLDER
     - QPACK encoding response ([fa905f032](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fa905f032))
     - QPACK encoding request ([036f00d04](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=036f00d04))
     - Http/3 framing layer ([cddc11b31](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cddc11b31))
+    - Http/3 core skeleton ([c0f4f9ce7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0f4f9ce7))
   - Host Stack Applications
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
   - IGE Device driver
