@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 240 commits since the previous release, including 70 fixes.
+More than 244 commits since the previous release, including 70 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Wed Nov 26 02:50:55 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Nov 27 02:47:44 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -23,6 +23,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Http/3 core skeleton ([c0f4f9ce7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0f4f9ce7))
   - Host Stack Applications
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
+    - Basic redirect support for http client ([b7ef26e21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b7ef26e21))
   - IGE Device driver
     - Native driver for Intel Gigabit Adapters (i211, i225, i226) ([b86e7f6d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b86e7f6d4))
   - NPol
@@ -40,6 +41,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - IPSec
     - Unify crypto+HMAC in single op for ESP ([9eed09d0f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9eed09d0f))
+  - Session Layer
+    - Add cli to format session tree ([d1c82ffaf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1c82ffaf))
   - StateFul Data Plane
     - StateFul Data Plane ([a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a))
 - VPP Comms Library
