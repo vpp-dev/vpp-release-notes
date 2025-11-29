@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 245 commits since the previous release, including 71 fixes.
+More than 246 commits since the previous release, including 71 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Nov 28 02:46:57 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Sat Nov 29 02:46:19 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -665,5 +665,13 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/sfdp/sfdp_types.api ||
 | ------- | ------- |
 | [a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a) | sfdp: StateFul Data Plane |
+
+| @c src/vnet/devices/virtio/virtio_types.api ||
+| ------- | ------- |
+| [c9d32e020](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9d32e020) | virtio: remove legacy pre-1.0 virtio support |
+
+| @c src/vnet/devices/virtio/virtio.api ||
+| ------- | ------- |
+| [c9d32e020](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9d32e020) | virtio: remove legacy pre-1.0 virtio support |
 
 
