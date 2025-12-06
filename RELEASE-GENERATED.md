@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 272 commits since the previous release, including 79 fixes.
+More than 292 commits since the previous release, including 79 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Dec  5 02:54:32 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Sat Dec  6 02:45:16 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -38,6 +38,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add support for packet injection ([379f3ebba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379f3ebba))
 - Plugin StateFul Data Plane Services
   - Plugin with basic SFDP services ([28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee))
+- SASC
+  - Session-aware service chaining ([92efc8a22](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=92efc8a22))
 - VNET
   - IPSec
     - Unify crypto+HMAC in single op for ESP ([9eed09d0f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9eed09d0f))
