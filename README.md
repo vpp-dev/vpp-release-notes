@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 328 commits since the previous release, including 85 fixes.
+More than 336 commits since the previous release, including 85 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Dec 11 02:59:45 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Dec 12 02:58:18 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Infrastructure Library
   - Libc alloc/free intercept ([615a4c82c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=615a4c82c))
 - Plugins
+  - DPDK
+    - Bump to DPDK 25.11 and rdma-core 60.0 ([af2a4e31d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af2a4e31d))
   - HTTP
     - QPACK header decoding w/o dynamic table ([46813ba73](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=46813ba73))
     - QPACK decoding request and response ([023ea1152](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=023ea1152))
@@ -183,6 +185,8 @@ Found 60 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- tap_create_v2
+- tap_create_v2_reply
 
 ### In-progress API messages
 
@@ -635,6 +639,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/npol/npol.api ||
 | ------- | ------- |
 | [f40fcee5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40fcee5b) | npol: Network Policies plugin |
+
+| @c src/plugins/tap/tapv2.api ||
+| ------- | ------- |
+| [cb19c526d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cb19c526d) | tap: rework and move to plugins |
 
 | @c src/plugins/selog/selog.api ||
 | ------- | ------- |
