@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 336 commits since the previous release, including 85 fixes.
+More than 348 commits since the previous release, including 87 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Dec 12 02:58:18 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Sat Dec 13 02:50:02 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -596,9 +596,17 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/crypto_sw_scheduler/crypto_sw_scheduler.api ||
+| ------- | ------- |
+| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
+
 | @c src/plugins/npol/npol.api ||
 | ------- | ------- |
 | [f40fcee5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40fcee5b) | npol: Network Policies plugin |
+
+| @c src/plugins/srmpls/sr_mpls.api ||
+| ------- | ------- |
+| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
 
 | @c src/plugins/tap/tapv2.api ||
 | ------- | ------- |
@@ -607,6 +615,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/selog/selog.api ||
 | ------- | ------- |
 | [085d6de44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=085d6de44) | selog: introduce the Shared Elog plugin |
+
+| @c src/plugins/cnat/cnat.api ||
+| ------- | ------- |
+| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
 
 | @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
 | ------- | ------- |
@@ -624,6 +636,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
 
+| @c src/plugins/urpf/urpf.api ||
+| ------- | ------- |
+| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
+
 | @c src/plugins/sasc/sasc.api ||
 | ------- | ------- |
 | [92efc8a22](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=92efc8a22) | sasc: session-aware service chaining |
@@ -635,6 +651,14 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/sfdp/sfdp_types.api ||
 | ------- | ------- |
 | [a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a) | sfdp: StateFul Data Plane |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [27fca32bc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27fca32bc) | misc: convert copyright headers to SPDX |
+
+| @c src/vnet/interface_types.api ||
+| ------- | ------- |
+| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
 
 | @c src/vnet/devices/virtio/virtio_types.api ||
 | ------- | ------- |
