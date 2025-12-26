@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 426 commits since the previous release, including 96 fixes.
+More than 428 commits since the previous release, including 97 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Dec 25 03:01:23 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Dec 26 02:59:19 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -63,6 +63,7 @@ HIGHLIGHTS-PLACEHOLDER
     - QPACK encoding request ([036f00d04](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=036f00d04))
     - Http/3 framing layer ([cddc11b31](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cddc11b31))
     - Http/3 core skeleton ([c0f4f9ce7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0f4f9ce7))
+    - H3 client side ([365a134c9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=365a134c9))
   - Host Stack Applications
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
     - Basic redirect support for http client ([b7ef26e21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b7ef26e21))
