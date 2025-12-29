@@ -40,16 +40,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 433 commits since the previous release, including 98 fixes.
+More than 434 commits since the previous release, including 98 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Sun Dec 28 03:15:01 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Mon Dec 29 03:15:23 UTC 2025.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- IGE Device driver
+  - Native driver for Intel Gigabit Adapters (i211, i225, i226) ([b86e7f6d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b86e7f6d4))
 - Infrastructure Library
   - Libc alloc/free intercept ([615a4c82c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=615a4c82c))
 - Plugins
@@ -67,8 +69,6 @@ HIGHLIGHTS-PLACEHOLDER
   - Host Stack Applications
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
     - Basic redirect support for http client ([b7ef26e21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b7ef26e21))
-  - IGE Device driver
-    - Native driver for Intel Gigabit Adapters (i211, i225, i226) ([b86e7f6d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b86e7f6d4))
   - NPol
     - Network Policies plugin ([f40fcee5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40fcee5b))
   - Shared Elog
