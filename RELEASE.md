@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 436 commits since the previous release, including 98 fixes.
+More than 438 commits since the previous release, including 99 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Wed Dec 31 03:01:11 UTC 2025.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Jan  1 03:16:23 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -77,6 +77,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+avf_create                                                   | only in file
+avf_create_reply                                             | only in file
+avf_delete                                                   | only in file
+avf_delete_reply                                             | only in file
 npol_configure_policies                                      | only in image
 npol_configure_policies_reply                                | only in image
 npol_get_version                                             | only in image
@@ -138,7 +142,7 @@ sfdp_tenant_add_del_reply                                    | only in image
 sfdp_tenant_details                                          | only in image
 sfdp_tenant_dump                                             | only in image
 
-Found 60 api message signature differences
+Found 64 api message signature differences
 
 
 ### Newly deprecated API messages
