@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 438 commits since the previous release, including 99 fixes.
+More than 447 commits since the previous release, including 102 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Jan  2 03:04:23 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Sat Jan  3 02:55:47 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -50,11 +50,16 @@ HIGHLIGHTS-PLACEHOLDER
     - Add cli to format session tree ([d1c82ffaf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1c82ffaf))
   - StateFul Data Plane
     - StateFul Data Plane ([a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a))
+  - TLS and TLS engine plugins
+    - Support retrieving peer cert ([b4cb85a41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b4cb85a41))
+    - Server side mtls support ([db7db9209](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db7db9209))
 - VPP Comms Library
   - Add api that supports dynamic configuration ([1d822cc24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d822cc24))
 - Vector Library
   - Native fuse filesystem implementation ([188280037](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=188280037))
   - Expose function to switch elog\_main ([914013e03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=914013e03))
+  - Add pointer based next frame macros ([daa068680](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=daa068680))
+  - Show runtime "time" option. ([e0835a7f4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e0835a7f4))
 
 ## Known issues
 
