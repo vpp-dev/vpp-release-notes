@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 461 commits since the previous release, including 108 fixes.
+More than 464 commits since the previous release, including 110 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Thu Jan  8 03:03:44 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Fri Jan  9 03:04:45 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
