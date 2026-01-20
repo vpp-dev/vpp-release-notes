@@ -1,10 +1,10 @@
 @page release_notes_2602 Release notes for VPP 26.02
 
-More than 503 commits since the previous release, including 117 fixes.
+More than 508 commits since the previous release, including 120 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Mon Jan 19 03:15:36 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Tue Jan 20 03:07:31 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -29,6 +29,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Host Stack Applications
     - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
     - Basic redirect support for http client ([b7ef26e21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b7ef26e21))
+  - Marvell Octeon device driver
+    - Update octeon roc version ([48b84d4a2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=48b84d4a2))
   - NPol
     - Network Policies plugin ([f40fcee5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40fcee5b))
   - Shared Elog
