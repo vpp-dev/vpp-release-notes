@@ -38,70 +38,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 # Draft Release Notes below
 
 
-@page release_notes_2602 Release notes for VPP 26.02
+@page release_notes_2606 Release notes for VPP 26.06
 
-More than 516 commits since the previous release, including 123 fixes.
+More than 6 commits since the previous release, including 1 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.02 release, generated as on Wed Jan 21 03:06:08 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Jan 22 03:14:18 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- IGE Device driver
-  - Native driver for Intel Gigabit Adapters (i211, i225, i226) ([b86e7f6d4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b86e7f6d4))
-- Infrastructure Library
-  - Libc alloc/free intercept ([615a4c82c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=615a4c82c))
-- Plugins
-  - DPDK
-    - Bump to DPDK 25.11 and rdma-core 60.0 ([af2a4e31d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=af2a4e31d))
-  - HTTP
-    - QPACK header decoding w/o dynamic table ([46813ba73](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=46813ba73))
-    - QPACK decoding request and response ([023ea1152](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=023ea1152))
-    - QPACK header encoding w/o dynamic table ([130697c1f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=130697c1f))
-    - QPACK encoding response ([fa905f032](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fa905f032))
-    - QPACK encoding request ([036f00d04](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=036f00d04))
-    - Http/3 framing layer ([cddc11b31](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cddc11b31))
-    - Http/3 core skeleton ([c0f4f9ce7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c0f4f9ce7))
-    - H3 client side ([365a134c9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=365a134c9))
-  - Host Stack Applications
-    - Http connect proxy client ([545fca0a3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=545fca0a3))
-    - Basic redirect support for http client ([b7ef26e21](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b7ef26e21))
-  - Marvell Octeon device driver
-    - Update octeon roc version ([48b84d4a2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=48b84d4a2))
-  - NPol
-    - Network Policies plugin ([f40fcee5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40fcee5b))
-  - Shared Elog
-    - Introduce the Shared Elog plugin ([085d6de44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=085d6de44))
-    - Selog client lib ([ba4eee76f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ba4eee76f))
-  - Soft RSS
-    - Software RSS plugin ([abbc4c02f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abbc4c02f))
-  - Snort plugin
-    - Add support for daq-VPP msg dump ([60c86051e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=60c86051e))
-    - Add support for packet injection ([379f3ebba](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=379f3ebba))
-- Plugin StateFul Data Plane Services
-  - Plugin with basic SFDP services ([28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee))
-- SASC
-  - Session-aware service chaining ([92efc8a22](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=92efc8a22))
-- VNET
-  - IPSec
-    - Unify crypto+HMAC in single op for ESP ([9eed09d0f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9eed09d0f))
-  - Session Layer
-    - Add cli to format session tree ([d1c82ffaf](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d1c82ffaf))
-  - StateFul Data Plane
-    - StateFul Data Plane ([a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a))
-  - TLS and TLS engine plugins
-    - Support retrieving peer cert ([b4cb85a41](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b4cb85a41))
-    - Server side mtls support ([db7db9209](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db7db9209))
-- VPP Comms Library
-  - Add api that supports dynamic configuration ([1d822cc24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d822cc24))
-- Vector Library
-  - Native fuse filesystem implementation ([188280037](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=188280037))
-  - Expose function to switch elog\_main ([914013e03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=914013e03))
-  - Add pointer based next frame macros ([daa068680](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=daa068680))
-  - Show runtime "time" option. ([e0835a7f4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e0835a7f4))
 
 ## Known issues
 
@@ -124,72 +72,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-avf_create                                                   | only in file
-avf_create_reply                                             | only in file
-avf_delete                                                   | only in file
-avf_delete_reply                                             | only in file
-npol_configure_policies                                      | only in image
-npol_configure_policies_reply                                | only in image
-npol_get_version                                             | only in image
-npol_get_version_reply                                       | only in image
-npol_ipset_add_del_members                                   | only in image
-npol_ipset_add_del_members_reply                             | only in image
-npol_ipset_create                                            | only in image
-npol_ipset_create_reply                                      | only in image
-npol_ipset_delete                                            | only in image
-npol_ipset_delete_reply                                      | only in image
-npol_policy_create                                           | only in image
-npol_policy_create_reply                                     | only in image
-npol_policy_delete                                           | only in image
-npol_policy_delete_reply                                     | only in image
-npol_policy_update                                           | only in image
-npol_policy_update_reply                                     | only in image
-npol_rule_create                                             | only in image
-npol_rule_create_reply                                       | only in image
-npol_rule_delete                                             | only in image
-npol_rule_delete_reply                                       | only in image
-npol_rule_update                                             | only in image
-npol_rule_update_reply                                       | only in image
-selog_event_type_details                                     | only in image
-selog_event_type_dump                                        | only in image
-selog_event_type_string_details                              | only in image
-selog_event_type_string_dump                                 | only in image
-selog_get_shm                                                | only in image
-selog_get_shm_reply                                          | only in image
-selog_get_string_table                                       | only in image
-selog_get_string_table_reply                                 | only in image
-selog_track_details                                          | only in image
-selog_track_dump                                             | only in image
-sfdp_gateway_geneve_input_enable_disable                     | only in image
-sfdp_gateway_geneve_input_enable_disable_reply               | only in image
-sfdp_gateway_set_geneve_output                               | only in image
-sfdp_gateway_set_geneve_output_reply                         | only in image
-sfdp_interface_input_set                                     | only in image
-sfdp_interface_input_set_reply                               | only in image
-sfdp_nat_alloc_pool_add_del                                  | only in image
-sfdp_nat_alloc_pool_add_del_reply                            | only in image
-sfdp_nat_set_external_interface                              | only in image
-sfdp_nat_set_external_interface_reply                        | only in image
-sfdp_nat_snat_set_unset                                      | only in image
-sfdp_nat_snat_set_unset_reply                                | only in image
-sfdp_session_details                                         | only in image
-sfdp_session_dump                                            | only in image
-sfdp_set_icmp_error_node                                     | only in image
-sfdp_set_icmp_error_node_reply                               | only in image
-sfdp_set_services                                            | only in image
-sfdp_set_services_reply                                      | only in image
-sfdp_set_sp_node                                             | only in image
-sfdp_set_sp_node_reply                                       | only in image
-sfdp_set_timeout                                             | only in image
-sfdp_set_timeout_reply                                       | only in image
-sfdp_tcp_session_details                                     | only in image
-sfdp_tcp_session_dump                                        | only in image
-sfdp_tenant_add_del                                          | only in image
-sfdp_tenant_add_del_reply                                    | only in image
-sfdp_tenant_details                                          | only in image
-sfdp_tenant_dump                                             | only in image
-
-Found 64 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -197,8 +80,6 @@ Found 64 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- tap_create_v2
-- tap_create_v2_reply
 
 ### In-progress API messages
 
@@ -647,77 +528,5 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
-
-| @c src/plugins/crypto_sw_scheduler/crypto_sw_scheduler.api ||
-| ------- | ------- |
-| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
-
-| @c src/plugins/npol/npol.api ||
-| ------- | ------- |
-| [f40fcee5b](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f40fcee5b) | npol: Network Policies plugin |
-
-| @c src/plugins/srmpls/sr_mpls.api ||
-| ------- | ------- |
-| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
-
-| @c src/plugins/tap/tapv2.api ||
-| ------- | ------- |
-| [cb19c526d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cb19c526d) | tap: rework and move to plugins |
-
-| @c src/plugins/selog/selog.api ||
-| ------- | ------- |
-| [085d6de44](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=085d6de44) | selog: introduce the Shared Elog plugin |
-
-| @c src/plugins/cnat/cnat.api ||
-| ------- | ------- |
-| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
-
-| @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
-| ------- | ------- |
-| [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
-
-| @c src/plugins/sfdp_services/base/tcp-check/tcp_check.api ||
-| ------- | ------- |
-| [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
-
-| @c src/plugins/sfdp_services/base/nat/nat.api ||
-| ------- | ------- |
-| [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
-
-| @c src/plugins/sfdp_services/geneve/gateway.api ||
-| ------- | ------- |
-| [28dbf5aee](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=28dbf5aee) | sfdp_services: plugin with basic SFDP services |
-
-| @c src/plugins/urpf/urpf.api ||
-| ------- | ------- |
-| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
-
-| @c src/plugins/sasc/sasc.api ||
-| ------- | ------- |
-| [92efc8a22](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=92efc8a22) | sasc: session-aware service chaining |
-
-| @c src/vnet/sfdp/sfdp.api ||
-| ------- | ------- |
-| [a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a) | sfdp: StateFul Data Plane |
-
-| @c src/vnet/sfdp/sfdp_types.api ||
-| ------- | ------- |
-| [a74f0ef0a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a74f0ef0a) | sfdp: StateFul Data Plane |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [27fca32bc](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=27fca32bc) | misc: convert copyright headers to SPDX |
-
-| @c src/vnet/interface_types.api ||
-| ------- | ------- |
-| [3f7d1ffa6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3f7d1ffa6) | misc: remove gnu indent footers |
-
-| @c src/vnet/devices/virtio/virtio_types.api ||
-| ------- | ------- |
-| [c9d32e020](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9d32e020) | virtio: remove legacy pre-1.0 virtio support |
-
-| @c src/vnet/devices/virtio/virtio.api ||
-| ------- | ------- |
-| [c9d32e020](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c9d32e020) | virtio: remove legacy pre-1.0 virtio support |
 
 
