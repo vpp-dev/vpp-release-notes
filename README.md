@@ -40,16 +40,19 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 11 commits since the previous release, including 2 fixes.
+More than 22 commits since the previous release, including 7 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Fri Jan 23 03:06:28 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Sat Jan 24 03:00:43 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- VNET
+  - StateFul Data Plane
+    - Add a kill session API/CLI ([e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4))
 
 ## Known issues
 
@@ -72,7 +75,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+sfdp_kill_session                                            | only in image
+sfdp_kill_session_reply                                      | only in image
+
+Found 2 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -411,6 +417,8 @@ please collaborate with the feature maintainer on their productization.
 - sfdp_gateway_set_geneve_output_reply
 - sfdp_interface_input_set
 - sfdp_interface_input_set_reply
+- sfdp_kill_session
+- sfdp_kill_session_reply
 - sfdp_nat_alloc_pool_add_del
 - sfdp_nat_alloc_pool_add_del_reply
 - sfdp_nat_set_external_interface
@@ -528,5 +536,9 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/vnet/sfdp/sfdp.api ||
+| ------- | ------- |
+| [e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4) | sfdp: add a kill session API/CLI |
 
 
