@@ -1,15 +1,17 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 44 commits since the previous release, including 9 fixes.
+More than 55 commits since the previous release, including 11 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Jan 29 03:33:26 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Fri Jan 30 03:34:10 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugin StateFul Data Plane Services
+  - Add snort service ([21da13734](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=21da13734))
 - VNET
   - StateFul Data Plane
     - Add a kill session API/CLI ([e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4))
