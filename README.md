@@ -40,16 +40,19 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 66 commits since the previous release, including 16 fixes.
+More than 72 commits since the previous release, including 17 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Sat Jan 31 03:28:44 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Sun Feb  1 04:03:06 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - UDP Echo
+    - Add udp-echo plugin ([07a3134b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07a3134b7))
 - Plugin StateFul Data Plane Services
   - Add snort service ([21da13734](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=21da13734))
 - VNET
