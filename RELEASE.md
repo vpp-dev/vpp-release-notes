@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 76 commits since the previous release, including 19 fixes.
+More than 89 commits since the previous release, including 26 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue Feb  3 03:41:11 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Feb  4 03:38:19 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -42,8 +42,10 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 sfdp_kill_session                                            | only in image
 sfdp_kill_session_reply                                      | only in image
+sfdp_session_details                                         | definition changed
+sfdp_tcp_session_details                                     | definition changed
 
-Found 2 api message signature differences
+Found 4 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -505,5 +507,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
 | [e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4) | sfdp: add a kill session API/CLI |
+
+| @c src/vnet/sfdp/sfdp_types.api ||
+| ------- | ------- |
+| [53f640a3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f640a3c) | sfdp: fix format function for session detail |
 
 
