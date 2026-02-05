@@ -40,17 +40,19 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 89 commits since the previous release, including 26 fixes.
+More than 92 commits since the previous release, including 27 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Feb  4 03:38:19 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Feb  5 03:39:38 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
 - Plugins
+  - HTTP
+    - Http/3 connect method ([a81fb5e0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a81fb5e0e))
   - UDP Echo
     - Add udp-echo plugin ([07a3134b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07a3134b7))
 - Plugin StateFul Data Plane Services
@@ -82,10 +84,12 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 sfdp_kill_session                                            | only in image
 sfdp_kill_session_reply                                      | only in image
+sfdp_service_details                                         | only in image
+sfdp_service_dump                                            | only in image
 sfdp_session_details                                         | definition changed
 sfdp_tcp_session_details                                     | definition changed
 
-Found 4 api message signature differences
+Found 6 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -432,6 +436,8 @@ please collaborate with the feature maintainer on their productization.
 - sfdp_nat_set_external_interface_reply
 - sfdp_nat_snat_set_unset
 - sfdp_nat_snat_set_unset_reply
+- sfdp_service_details
+- sfdp_service_dump
 - sfdp_session_details
 - sfdp_session_dump
 - sfdp_set_icmp_error_node
@@ -546,6 +552,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
+| [14cd11e6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14cd11e6a) | sfdp: add API to dump services |
 | [e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4) | sfdp: add a kill session API/CLI |
 
 | @c src/vnet/sfdp/sfdp_types.api ||
