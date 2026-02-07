@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 102 commits since the previous release, including 32 fixes.
+More than 106 commits since the previous release, including 32 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Fri Feb  6 03:38:08 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Sat Feb  7 03:32:14 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,10 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - HTTP
     - Http/3 connect method ([a81fb5e0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a81fb5e0e))
+  - Host Stack Applications
+    - Add http3 support to http static server ([ca39b350c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca39b350c))
+  - QUIC protocol
+    - Mtls and cert retrieval apis ([e48f0c542](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e48f0c542))
   - UDP Echo
     - Add udp-echo plugin ([07a3134b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07a3134b7))
 - Plugin StateFul Data Plane Services
