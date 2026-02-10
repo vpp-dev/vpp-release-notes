@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 107 commits since the previous release, including 33 fixes.
+More than 115 commits since the previous release, including 36 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Mon Feb  9 03:49:43 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue Feb 10 04:05:17 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,7 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - HTTP
     - Http/3 connect method ([a81fb5e0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a81fb5e0e))
+    - Proxying UDP in HTTP/3 ([5f2e00baa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f2e00baa))
   - Host Stack Applications
     - Add http3 support to http static server ([ca39b350c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca39b350c))
   - QUIC protocol
