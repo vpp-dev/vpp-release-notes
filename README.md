@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 115 commits since the previous release, including 36 fixes.
+More than 126 commits since the previous release, including 45 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue Feb 10 04:05:17 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Feb 11 04:02:16 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -87,6 +87,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+sfdp_interface_input_set                                     | definition changed
 sfdp_kill_session                                            | only in image
 sfdp_kill_session_reply                                      | only in image
 sfdp_service_details                                         | only in image
@@ -94,7 +95,7 @@ sfdp_service_dump                                            | only in image
 sfdp_session_details                                         | definition changed
 sfdp_tcp_session_details                                     | definition changed
 
-Found 6 api message signature differences
+Found 7 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -554,6 +555,10 @@ please collaborate with the feature maintainer on their productization.
 - want_ping_finished_events_reply
 
 ### Patches that changed API definitions
+
+| @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
+| ------- | ------- |
+| [9dc67ec24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9dc67ec24) | sfdp_services: add ip6 support in interface_input |
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
