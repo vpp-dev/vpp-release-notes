@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 138 commits since the previous release, including 53 fixes.
+More than 143 commits since the previous release, including 55 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Feb 12 03:49:48 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Fri Feb 13 03:46:11 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -94,8 +94,10 @@ sfdp_service_details                                         | only in image
 sfdp_service_dump                                            | only in image
 sfdp_session_details                                         | definition changed
 sfdp_tcp_session_details                                     | definition changed
+sr_localsid_add_del_v2                                       | only in image
+sr_localsid_add_del_v2_reply                                 | only in image
 
-Found 7 api message signature differences
+Found 9 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -484,6 +486,8 @@ please collaborate with the feature maintainer on their productization.
 - sflow_sampling_rate_get_reply
 - sflow_sampling_rate_set
 - sflow_sampling_rate_set_reply
+- sr_localsid_add_del_v2
+- sr_localsid_add_del_v2_reply
 - sr_localsids_with_packet_stats_details
 - sr_localsids_with_packet_stats_dump
 - sr_mobile_localsid_add_del
@@ -556,17 +560,25 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [466fb6da7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=466fb6da7) | linux-cp: allow skipping unnumbered sync to Linux |
+
 | @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
 | ------- | ------- |
 | [9dc67ec24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9dc67ec24) | sfdp_services: add ip6 support in interface_input |
+
+| @c src/vnet/sfdp/sfdp_types.api ||
+| ------- | ------- |
+| [53f640a3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f640a3c) | sfdp: fix format function for session detail |
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
 | [14cd11e6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14cd11e6a) | sfdp: add API to dump services |
 | [e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4) | sfdp: add a kill session API/CLI |
 
-| @c src/vnet/sfdp/sfdp_types.api ||
+| @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
-| [53f640a3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f640a3c) | sfdp: fix format function for session detail |
+| [fdfee1890](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fdfee1890) | sr: add v2 localsid api. |
 
 
