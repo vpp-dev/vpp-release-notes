@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 143 commits since the previous release, including 55 fixes.
+More than 149 commits since the previous release, including 56 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Fri Feb 13 03:46:11 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Sat Feb 14 03:35:16 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
