@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 162 commits since the previous release, including 62 fixes.
+More than 177 commits since the previous release, including 69 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Feb 18 03:45:34 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Feb 19 03:44:54 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -524,9 +524,21 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [466fb6da7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=466fb6da7) | linux-cp: allow skipping unnumbered sync to Linux |
 
+| @c src/plugins/policer/policer_types.api ||
+| ------- | ------- |
+| [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
+
+| @c src/plugins/policer/policer.api ||
+| ------- | ------- |
+| [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
+
 | @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
 | ------- | ------- |
 | [9dc67ec24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9dc67ec24) | sfdp_services: add ip6 support in interface_input |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
 
 | @c src/vnet/sfdp/sfdp_types.api ||
 | ------- | ------- |
