@@ -1,15 +1,17 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 193 commits since the previous release, including 81 fixes.
+More than 195 commits since the previous release, including 81 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Mon Feb 23 03:46:44 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue Feb 24 03:43:29 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Marvel Scalable mGig NICs Device driver
+  - Driver for Marvell (ex Aquantia) Scalable mGig NICs (AQC113-AQC116) ([df4f891b1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df4f891b1))
 - Plugins
   - HTTP
     - Http/3 connect method ([a81fb5e0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a81fb5e0e))
