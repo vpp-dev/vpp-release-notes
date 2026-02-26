@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 200 commits since the previous release, including 83 fixes.
+More than 203 commits since the previous release, including 84 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Feb 25 03:43:59 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Feb 26 03:40:12 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -562,6 +562,10 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [466fb6da7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=466fb6da7) | linux-cp: allow skipping unnumbered sync to Linux |
+
 | @c src/plugins/policer/policer_types.api ||
 | ------- | ------- |
 | [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
@@ -574,22 +578,18 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [9dc67ec24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9dc67ec24) | sfdp_services: add ip6 support in interface_input |
 
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [466fb6da7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=466fb6da7) | linux-cp: allow skipping unnumbered sync to Linux |
-
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
+
+| @c src/vnet/sfdp/sfdp_types.api ||
+| ------- | ------- |
+| [53f640a3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f640a3c) | sfdp: fix format function for session detail |
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
 | [14cd11e6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14cd11e6a) | sfdp: add API to dump services |
 | [e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4) | sfdp: add a kill session API/CLI |
-
-| @c src/vnet/sfdp/sfdp_types.api ||
-| ------- | ------- |
-| [53f640a3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f640a3c) | sfdp: fix format function for session detail |
 
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
