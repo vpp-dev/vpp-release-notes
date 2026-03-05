@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 216 commits since the previous release, including 91 fixes.
+More than 253 commits since the previous release, including 105 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Mar  4 03:31:30 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Mar  5 03:35:43 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Marvel Scalable mGig NICs Device driver
   - Driver for Marvell (ex Aquantia) Scalable mGig NICs (AQC113-AQC116) ([df4f891b1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df4f891b1))
 - Plugins
+  - CNat
+    - Add SNAT DNAT policy support and egress SNAT ([077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03))
   - HTTP
     - Http/3 connect method ([a81fb5e0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a81fb5e0e))
     - Proxying UDP in HTTP/3 ([5f2e00baa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f2e00baa))
@@ -25,6 +27,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugin StateFul Data Plane Services
   - Add snort service ([21da13734](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=21da13734))
 - VNET
+  - - IP6 Neighbor Discovery
+    - Add Duplicate Address Detection (DAD) ([1f7348b6d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f7348b6d))
   - Crypto Infra
     - Per-engine per-alg key data size tracking ([2a0e76584](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a0e76584))
   - StateFul Data Plane
@@ -51,6 +55,15 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+cnat_session_details                                         | definition changed
+cnat_set_snat_policy                                         | definition changed
+cnat_snat_addresses_details                                  | only in image
+cnat_snat_addresses_dump                                     | only in image
+ip6_dad_details                                              | only in image
+ip6_dad_dump                                                 | only in image
+ip6_dad_enable_disable                                       | only in image
+ip6_dad_enable_disable_reply                                 | only in image
+ip6_dad_event                                                | only in image
 sfdp_interface_input_set                                     | definition changed
 sfdp_kill_session                                            | only in image
 sfdp_kill_session_reply                                      | only in image
@@ -60,8 +73,10 @@ sfdp_session_details                                         | definition change
 sfdp_tcp_session_details                                     | definition changed
 sr_localsid_add_del_v2                                       | only in image
 sr_localsid_add_del_v2_reply                                 | only in image
+want_ip6_dad_events                                          | only in image
+want_ip6_dad_events_reply                                    | only in image
 
-Found 9 api message signature differences
+Found 20 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -108,6 +123,8 @@ please collaborate with the feature maintainer on their productization.
 - cnat_set_snat_addresses_reply
 - cnat_set_snat_policy
 - cnat_set_snat_policy_reply
+- cnat_snat_addresses_details
+- cnat_snat_addresses_dump
 - cnat_snat_policy_add_del_exclude_pfx
 - cnat_snat_policy_add_del_exclude_pfx_reply
 - cnat_snat_policy_add_del_if
@@ -528,6 +545,12 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [466fb6da7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=466fb6da7) | linux-cp: allow skipping unnumbered sync to Linux |
 
+| @c src/plugins/cnat/cnat.api ||
+| ------- | ------- |
+| [077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03) | cnat: add SNAT DNAT policy support and egress SNAT |
+| [ff6e4a562](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff6e4a562) | cnat: add snat address dump |
+| [abc0aeb1a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abc0aeb1a) | cnat: add single lookup |
+
 | @c src/plugins/policer/policer_types.api ||
 | ------- | ------- |
 | [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
@@ -539,6 +562,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
 | ------- | ------- |
 | [9dc67ec24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9dc67ec24) | sfdp_services: add ip6 support in interface_input |
+
+| @c src/vnet/ip6-nd/ip6_dad.api ||
+| ------- | ------- |
+| [1f7348b6d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f7348b6d) | ip6-nd: add Duplicate Address Detection (DAD) |
 
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
