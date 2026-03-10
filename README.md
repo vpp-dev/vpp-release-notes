@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 280 commits since the previous release, including 119 fixes.
+More than 287 commits since the previous release, including 123 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Mon Mar  9 03:40:46 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue Mar 10 03:32:50 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -64,6 +64,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Mtls and cert retrieval apis ([e48f0c542](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e48f0c542))
   - UDP Echo
     - Add udp-echo plugin ([07a3134b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07a3134b7))
+  - Linux-cp
+    - Add support to pass through an OSI proto ([85dddcb53](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=85dddcb53))
 - Plugin StateFul Data Plane Services
   - Add snort service ([21da13734](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=21da13734))
 - VNET
@@ -583,6 +585,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
+| [85dddcb53](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=85dddcb53) | linux-cp: add support to pass through an OSI proto |
 | [466fb6da7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=466fb6da7) | linux-cp: allow skipping unnumbered sync to Linux |
 
 | @c src/plugins/cnat/cnat.api ||
