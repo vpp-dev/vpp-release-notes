@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 294 commits since the previous release, including 123 fixes.
+More than 298 commits since the previous release, including 124 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Mar 11 03:32:46 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Mar 12 03:39:12 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -71,6 +71,7 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - - IP6 Neighbor Discovery
     - Add Duplicate Address Detection (DAD) ([1f7348b6d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f7348b6d))
+    - Add automatic duplicate address removal plugin ([6d40e40e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d40e40e3))
   - Crypto Infra
     - Per-engine per-alg key data size tracking ([2a0e76584](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a0e76584))
   - StateFul Data Plane
