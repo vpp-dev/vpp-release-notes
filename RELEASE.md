@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 345 commits since the previous release, including 145 fixes.
+More than 352 commits since the previous release, including 149 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Sun Mar 22 03:45:15 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue Mar 24 03:41:14 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -34,6 +34,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add automatic duplicate address removal plugin ([6d40e40e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d40e40e3))
   - Crypto Infra
     - Per-engine per-alg key data size tracking ([2a0e76584](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a0e76584))
+  - Session Layer
+    - Support for tls profile configuration ([1d31732c2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d31732c2))
   - StateFul Data Plane
     - Add a kill session API/CLI ([e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4))
 
@@ -583,6 +585,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [14cd11e6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14cd11e6a) | sfdp: add API to dump services |
 | [e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4) | sfdp: add a kill session API/CLI |
+
+| @c src/vnet/flow/flow.api ||
+| ------- | ------- |
+| [53f968549](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f968549) | flow: rename cli |
 
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
