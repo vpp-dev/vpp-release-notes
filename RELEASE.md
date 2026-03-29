@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 381 commits since the previous release, including 164 fixes.
+More than 384 commits since the previous release, including 164 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Sat Mar 28 03:43:33 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Sun Mar 29 04:09:08 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -69,6 +69,14 @@ ip6_dad_dump                                                 | only in image
 ip6_dad_enable_disable                                       | only in image
 ip6_dad_enable_disable_reply                                 | only in image
 ip6_dad_event                                                | only in image
+l2_flags_get                                                 | only in image
+l2_flags_get_reply                                           | only in image
+l2_flags_set                                                 | only in image
+l2_flags_set_reply                                           | only in image
+l2_interface_feat_flags_get                                  | only in image
+l2_interface_feat_flags_get_reply                            | only in image
+l2_interface_feat_flags_set                                  | only in image
+l2_interface_feat_flags_set_reply                            | only in image
 sfdp_interface_input_set                                     | definition changed
 sfdp_kill_session                                            | only in image
 sfdp_kill_session_reply                                      | only in image
@@ -81,7 +89,7 @@ sr_localsid_add_del_v2_reply                                 | only in image
 want_ip6_dad_events                                          | only in image
 want_ip6_dad_events_reply                                    | only in image
 
-Found 20 api message signature differences
+Found 28 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -582,8 +590,13 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
 
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [1bede6f63](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1bede6f63) | l2: Add API for input/output features |
+
 | @c src/vnet/srv6/sr.api ||
 | ------- | ------- |
+| [3fa8907d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3fa8907d3) | sr: implement sub-int L2 encap and DX2 |
 | [fdfee1890](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fdfee1890) | sr: add v2 localsid api. |
 
 | @c src/vnet/flow/flow.api ||
