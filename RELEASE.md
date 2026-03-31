@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 388 commits since the previous release, including 168 fixes.
+More than 401 commits since the previous release, including 173 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Mon Mar 30 04:15:14 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue Mar 31 04:06:01 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -24,6 +24,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Mtls and cert retrieval apis ([e48f0c542](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e48f0c542))
   - UDP Echo
     - Add udp-echo plugin ([07a3134b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07a3134b7))
+  - Wireguard
+    - Support for psk via v2 API messages ([191f96a15](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=191f96a15))
   - Linux-cp
     - Add support to pass through an OSI proto ([85dddcb53](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=85dddcb53))
 - Plugin StateFul Data Plane Services
@@ -88,8 +90,12 @@ sr_localsid_add_del_v2                                       | only in image
 sr_localsid_add_del_v2_reply                                 | only in image
 want_ip6_dad_events                                          | only in image
 want_ip6_dad_events_reply                                    | only in image
+wireguard_peer_add_v2                                        | only in image
+wireguard_peer_add_v2_reply                                  | only in image
+wireguard_peers_v2_details                                   | only in image
+wireguard_peers_v2_dump                                      | only in image
 
-Found 28 api message signature differences
+Found 32 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -97,6 +103,10 @@ Found 28 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- wireguard_peer_add
+- wireguard_peer_add_reply
+- wireguard_peers_details
+- wireguard_peers_dump
 
 ### In-progress API messages
 
@@ -551,8 +561,16 @@ please collaborate with the feature maintainer on their productization.
 - vxlan_gbp_tunnel_dump
 - want_ping_finished_events
 - want_ping_finished_events_reply
+- wireguard_peer_add_v2
+- wireguard_peer_add_v2_reply
+- wireguard_peers_v2_details
+- wireguard_peers_v2_dump
 
 ### Patches that changed API definitions
+
+| @c src/plugins/wireguard/wireguard.api ||
+| ------- | ------- |
+| [191f96a15](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=191f96a15) | wireguard: support for psk via v2 API messages |
 
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
