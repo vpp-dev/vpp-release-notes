@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 405 commits since the previous release, including 174 fixes.
+More than 416 commits since the previous release, including 177 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Apr  1 04:18:35 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Apr  2 03:51:35 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -60,6 +60,12 @@ HIGHLIGHTS-PLACEHOLDER
     - Proxying UDP in HTTP/3 ([5f2e00baa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f2e00baa))
   - Host Stack Applications
     - Add http3 support to http static server ([ca39b350c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca39b350c))
+  - Internet Key Exchange (IKEv2) Protocol
+    - Add null encryption support ([c5908d647](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c5908d647))
+    - Add AES-CTR child SA support ([03aaf6e74](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=03aaf6e74))
+    - Add AES-GMAC child SA support ([a0fac1e70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a0fac1e70))
+    - Add AES-CMAC PRF support ([fd113cdec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd113cdec))
+    - Add AES-CMAC integrity support ([b19d345d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b19d345d1))
   - QUIC protocol
     - Mtls and cert retrieval apis ([e48f0c542](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e48f0c542))
   - UDP Echo
@@ -106,6 +112,8 @@ cnat_session_details                                         | definition change
 cnat_set_snat_policy                                         | definition changed
 cnat_snat_addresses_details                                  | only in image
 cnat_snat_addresses_dump                                     | only in image
+ikev2_profile_details                                        | definition changed
+ikev2_set_ike_transforms                                     | definition changed
 ip6_dad_details                                              | only in image
 ip6_dad_dump                                                 | only in image
 ip6_dad_enable_disable                                       | only in image
@@ -135,7 +143,7 @@ wireguard_peer_add_v2_reply                                  | only in image
 wireguard_peers_v2_details                                   | only in image
 wireguard_peers_v2_dump                                      | only in image
 
-Found 32 api message signature differences
+Found 34 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -634,6 +642,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/policer/policer.api ||
 | ------- | ------- |
 | [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
+
+| @c src/plugins/ikev2/ikev2_types.api ||
+| ------- | ------- |
+| [fd113cdec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd113cdec) | ikev2: add AES-CMAC PRF support |
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
