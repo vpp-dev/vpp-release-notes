@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 445 commits since the previous release, including 185 fixes.
+More than 454 commits since the previous release, including 187 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Apr  8 04:06:48 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Apr  9 04:02:40 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -46,6 +46,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Per-engine per-alg key data size tracking ([2a0e76584](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a0e76584))
   - Session Layer
     - Support for tls profile configuration ([1d31732c2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d31732c2))
+    - Api to do connects from workers ([d8c359359](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d8c359359))
   - StateFul Data Plane
     - Add a kill session API/CLI ([e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4))
 
@@ -578,6 +579,36 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/vnet/l2/l2.api ||
+| ------- | ------- |
+| [1bede6f63](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1bede6f63) | l2: Add API for input/output features |
+
+| @c src/vnet/sfdp/sfdp_types.api ||
+| ------- | ------- |
+| [53f640a3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f640a3c) | sfdp: fix format function for session detail |
+
+| @c src/vnet/sfdp/sfdp.api ||
+| ------- | ------- |
+| [14cd11e6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14cd11e6a) | sfdp: add API to dump services |
+| [e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4) | sfdp: add a kill session API/CLI |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [3fa8907d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3fa8907d3) | sr: implement sub-int L2 encap and DX2 |
+| [fdfee1890](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fdfee1890) | sr: add v2 localsid api. |
+
+| @c src/vnet/ip6-nd/ip6_dad.api ||
+| ------- | ------- |
+| [1f7348b6d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f7348b6d) | ip6-nd: add Duplicate Address Detection (DAD) |
+
+| @c src/vnet/flow/flow.api ||
+| ------- | ------- |
+| [53f968549](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f968549) | flow: rename cli |
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
+
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
 | [191f96a15](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=191f96a15) | wireguard: support for psk via v2 API messages |
@@ -587,16 +618,6 @@ please collaborate with the feature maintainer on their productization.
 | [85dddcb53](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=85dddcb53) | linux-cp: add support to pass through an OSI proto |
 | [466fb6da7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=466fb6da7) | linux-cp: allow skipping unnumbered sync to Linux |
 
-| @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
-| ------- | ------- |
-| [9dc67ec24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9dc67ec24) | sfdp_services: add ip6 support in interface_input |
-
-| @c src/plugins/cnat/cnat.api ||
-| ------- | ------- |
-| [077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03) | cnat: add SNAT DNAT policy support and egress SNAT |
-| [ff6e4a562](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff6e4a562) | cnat: add snat address dump |
-| [abc0aeb1a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abc0aeb1a) | cnat: add single lookup |
-
 | @c src/plugins/policer/policer_types.api ||
 | ------- | ------- |
 | [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
@@ -605,38 +626,18 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
 
+| @c src/plugins/cnat/cnat.api ||
+| ------- | ------- |
+| [077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03) | cnat: add SNAT DNAT policy support and egress SNAT |
+| [ff6e4a562](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff6e4a562) | cnat: add snat address dump |
+| [abc0aeb1a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abc0aeb1a) | cnat: add single lookup |
+
+| @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
+| ------- | ------- |
+| [9dc67ec24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9dc67ec24) | sfdp_services: add ip6 support in interface_input |
+
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
 | [fd113cdec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd113cdec) | ikev2: add AES-CMAC PRF support |
-
-| @c src/vnet/sfdp/sfdp.api ||
-| ------- | ------- |
-| [14cd11e6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14cd11e6a) | sfdp: add API to dump services |
-| [e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4) | sfdp: add a kill session API/CLI |
-
-| @c src/vnet/sfdp/sfdp_types.api ||
-| ------- | ------- |
-| [53f640a3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f640a3c) | sfdp: fix format function for session detail |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
-
-| @c src/vnet/l2/l2.api ||
-| ------- | ------- |
-| [1bede6f63](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1bede6f63) | l2: Add API for input/output features |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [3fa8907d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3fa8907d3) | sr: implement sub-int L2 encap and DX2 |
-| [fdfee1890](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fdfee1890) | sr: add v2 localsid api. |
-
-| @c src/vnet/flow/flow.api ||
-| ------- | ------- |
-| [53f968549](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f968549) | flow: rename cli |
-
-| @c src/vnet/ip6-nd/ip6_dad.api ||
-| ------- | ------- |
-| [1f7348b6d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f7348b6d) | ip6-nd: add Duplicate Address Detection (DAD) |
 
 
