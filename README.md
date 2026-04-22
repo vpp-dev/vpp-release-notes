@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 494 commits since the previous release, including 200 fixes.
+More than 501 commits since the previous release, including 205 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue Apr 21 04:18:28 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Apr 22 04:14:44 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -116,6 +116,9 @@ cnat_session_details                                         | definition change
 cnat_set_snat_policy                                         | definition changed
 cnat_snat_addresses_details                                  | only in image
 cnat_snat_addresses_dump                                     | only in image
+gre_tunnel_v2_details                                        | only in image
+gre_tunnel_v2_dump                                           | only in image
+gre_tunnel_v2_dump_reply                                     | only in image
 ikev2_profile_details                                        | definition changed
 ikev2_set_ike_transforms                                     | definition changed
 ip6_dad_details                                              | only in image
@@ -147,7 +150,7 @@ wireguard_peer_add_v2_reply                                  | only in image
 wireguard_peers_v2_details                                   | only in image
 wireguard_peers_v2_dump                                      | only in image
 
-Found 34 api message signature differences
+Found 37 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -155,6 +158,12 @@ Found 34 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- gre_tunnel_details
+- gre_tunnel_details_v2
+- gre_tunnel_dump
+- gre_tunnel_dump_reply
+- gre_tunnel_dump_v2
+- gre_tunnel_dump_v2_reply
 - wireguard_peer_add
 - wireguard_peer_add_reply
 - wireguard_peers_details
@@ -676,6 +685,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
 | ------- | ------- |
 | [9dc67ec24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9dc67ec24) | sfdp_services: add ip6 support in interface_input |
+
+| @c src/plugins/gre/gre.api ||
+| ------- | ------- |
+| [5f7b05abb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f7b05abb) | gre: fix tunnel dump issues |
 
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
