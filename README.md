@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 501 commits since the previous release, including 205 fixes.
+More than 517 commits since the previous release, including 206 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Apr 22 04:14:44 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Apr 23 04:19:41 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -85,6 +85,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add automatic duplicate address removal plugin ([6d40e40e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d40e40e3))
   - Crypto Infra
     - Per-engine per-alg key data size tracking ([2a0e76584](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a0e76584))
+  - Interface Common
+    - Add global default rx-mode setting ([757c79e8e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=757c79e8e))
   - Session Layer
     - Support for tls profile configuration ([1d31732c2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d31732c2))
     - Api to do connects from workers ([d8c359359](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d8c359359))
@@ -143,6 +145,10 @@ sfdp_session_details                                         | definition change
 sfdp_tcp_session_details                                     | definition changed
 sr_localsid_add_del_v2                                       | only in image
 sr_localsid_add_del_v2_reply                                 | only in image
+sw_interface_get_default_rx_mode                             | only in image
+sw_interface_get_default_rx_mode_reply                       | only in image
+sw_interface_set_default_rx_mode                             | only in image
+sw_interface_set_default_rx_mode_reply                       | only in image
 want_ip6_dad_events                                          | only in image
 want_ip6_dad_events_reply                                    | only in image
 wireguard_peer_add_v2                                        | only in image
@@ -150,7 +156,7 @@ wireguard_peer_add_v2_reply                                  | only in image
 wireguard_peers_v2_details                                   | only in image
 wireguard_peers_v2_dump                                      | only in image
 
-Found 37 api message signature differences
+Found 41 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -632,6 +638,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/l2/l2.api ||
 | ------- | ------- |
 | [1bede6f63](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1bede6f63) | l2: Add API for input/output features |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [757c79e8e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=757c79e8e) | interface: add global default rx-mode setting |
 
 | @c src/vnet/sfdp/sfdp_types.api ||
 | ------- | ------- |
