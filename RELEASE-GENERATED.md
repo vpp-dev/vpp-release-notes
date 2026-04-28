@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 528 commits since the previous release, including 212 fixes.
+More than 533 commits since the previous release, including 215 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Mon Apr 27 04:37:18 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue Apr 28 04:43:00 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -15,6 +15,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - CNat
     - Add SNAT DNAT policy support and egress SNAT ([077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03))
+  - Crypto - ipsecmb
+    - Bump to ipsecmb v2.0.2 ([c58dd06a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c58dd06a9))
   - DPDK
     - Add representor device flag ([c5a13fcec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c5a13fcec))
     - Bump to DPDK 26.03 and rdma-core 62.0 ([2e0062c08](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e0062c08))
