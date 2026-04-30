@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 540 commits since the previous release, including 219 fixes.
+More than 547 commits since the previous release, including 220 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed Apr 29 04:37:39 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu Apr 30 04:40:37 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -77,9 +77,13 @@ Description of results:
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 cnat_session_details                                         | definition changed
+cnat_set_snat_addresses_v2                                   | only in image
+cnat_set_snat_addresses_v2_reply                             | only in image
 cnat_set_snat_policy                                         | definition changed
 cnat_snat_addresses_details                                  | only in image
 cnat_snat_addresses_dump                                     | only in image
+feature_cnat_enable_disable                                  | only in image
+feature_cnat_enable_disable_reply                            | only in image
 gre_tunnel_v2_details                                        | only in image
 gre_tunnel_v2_dump                                           | only in image
 gre_tunnel_v2_dump_reply                                     | only in image
@@ -118,7 +122,7 @@ wireguard_peer_add_v2_reply                                  | only in image
 wireguard_peers_v2_details                                   | only in image
 wireguard_peers_v2_dump                                      | only in image
 
-Found 41 api message signature differences
+Found 45 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -173,6 +177,8 @@ please collaborate with the feature maintainer on their productization.
 - cnat_session_purge_reply
 - cnat_set_snat_addresses
 - cnat_set_snat_addresses_reply
+- cnat_set_snat_addresses_v2
+- cnat_set_snat_addresses_v2_reply
 - cnat_set_snat_policy
 - cnat_set_snat_policy_reply
 - cnat_snat_addresses_details
@@ -198,6 +204,8 @@ please collaborate with the feature maintainer on their productization.
 - dev_detach_reply
 - dev_remove_port_if
 - dev_remove_port_if_reply
+- feature_cnat_enable_disable
+- feature_cnat_enable_disable_reply
 - flowprobe_get_params
 - flowprobe_get_params_reply
 - flowprobe_interface_add_del
@@ -650,6 +658,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
+| [0b1590650](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b1590650) | cnat: support encapsulation and session cleanup on backend deletion |
 | [077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03) | cnat: add SNAT DNAT policy support and egress SNAT |
 | [ff6e4a562](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff6e4a562) | cnat: add snat address dump |
 | [abc0aeb1a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abc0aeb1a) | cnat: add single lookup |
