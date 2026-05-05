@@ -1,10 +1,10 @@
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 555 commits since the previous release, including 220 fixes.
+More than 572 commits since the previous release, including 227 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Mon May  4 04:48:47 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue May  5 04:24:52 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -109,6 +109,22 @@ sfdp_service_details                                         | only in image
 sfdp_service_dump                                            | only in image
 sfdp_session_details                                         | definition changed
 sfdp_tcp_session_details                                     | definition changed
+snort_client_v2_details                                      | only in image
+snort_client_v2_get                                          | only in image
+snort_client_v2_get_reply                                    | only in image
+snort_instance_create_v2                                     | only in image
+snort_instance_create_v2_reply                               | only in image
+snort_instance_v2_details                                    | only in image
+snort_instance_v2_details_reply                              | only in image
+snort_instance_v2_get                                        | only in image
+snort_instance_v2_get_reply                                  | only in image
+snort_interface_detach_v2                                    | only in image
+snort_interface_detach_v2_reply                              | only in image
+snort_interface_v2_details                                   | only in image
+snort_interface_v2_get                                       | only in image
+snort_interface_v2_get_reply                                 | only in image
+snort_set_drop_bitmap                                        | only in image
+snort_set_drop_bitmap_reply                                  | only in image
 sr_localsid_add_del_v2                                       | only in image
 sr_localsid_add_del_v2_reply                                 | only in image
 sw_interface_get_default_rx_mode                             | only in image
@@ -122,7 +138,7 @@ wireguard_peer_add_v2_reply                                  | only in image
 wireguard_peers_v2_details                                   | only in image
 wireguard_peers_v2_dump                                      | only in image
 
-Found 45 api message signature differences
+Found 61 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -136,6 +152,23 @@ will disappear in the next release.
 - gre_tunnel_dump_reply
 - gre_tunnel_dump_v2
 - gre_tunnel_dump_v2_reply
+- snort_client_details
+- snort_client_get
+- snort_client_get_reply
+- snort_input_mode_get
+- snort_input_mode_get_reply
+- snort_input_mode_set
+- snort_input_mode_set_reply
+- snort_instance_create
+- snort_instance_create_reply
+- snort_instance_details
+- snort_instance_get
+- snort_instance_get_reply
+- snort_interface_detach
+- snort_interface_detach_reply
+- snort_interface_details
+- snort_interface_get
+- snort_interface_get_reply
 - wireguard_peer_add
 - wireguard_peer_add_reply
 - wireguard_peers_details
@@ -639,6 +672,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
 
+| @c src/plugins/snort/snort.api ||
+| ------- | ------- |
+| [e83522822](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e83522822) | snort: upgrade a few snort API and CLI calls |
+
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
 | [191f96a15](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=191f96a15) | wireguard: support for psk via v2 API messages |
@@ -662,6 +699,10 @@ please collaborate with the feature maintainer on their productization.
 | [077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03) | cnat: add SNAT DNAT policy support and egress SNAT |
 | [ff6e4a562](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff6e4a562) | cnat: add snat address dump |
 | [abc0aeb1a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abc0aeb1a) | cnat: add single lookup |
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [67d4bd2af](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=67d4bd2af) | af_xdp: add mac-reuse option |
 
 | @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
 | ------- | ------- |
