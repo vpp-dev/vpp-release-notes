@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 572 commits since the previous release, including 227 fixes.
+More than 590 commits since the previous release, including 238 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Tue May  5 04:24:52 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed May  6 04:40:32 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -73,6 +73,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add AES-CMAC integrity support ([b19d345d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b19d345d1))
   - QUIC protocol
     - Mtls and cert retrieval apis ([e48f0c542](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e48f0c542))
+  - Trace path
+    - Introduce tracepath plugin ([b2a168b48](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b2a168b48))
   - UDP Echo
     - Add udp-echo plugin ([07a3134b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07a3134b7))
   - Wireguard
@@ -94,6 +96,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Api to do connects from workers ([d8c359359](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d8c359359))
   - StateFul Data Plane
     - Add a kill session API/CLI ([e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4))
+- Vector Library
+  - Add API to query PCI BAR region size ([b511aedf1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b511aedf1))
 
 ## Known issues
 
@@ -704,13 +708,25 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [1f7348b6d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f7348b6d) | ip6-nd: add Duplicate Address Detection (DAD) |
 
+| @c src/vnet/flow/flow_types.api ||
+| ------- | ------- |
+| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
+
 | @c src/vnet/flow/flow.api ||
 | ------- | ------- |
 | [53f968549](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f968549) | flow: rename cli |
 
+| @c src/vnet/ip/punt.api ||
+| ------- | ------- |
+| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
+
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
+
+| @c src/vnet/ip/ip_types.api ||
+| ------- | ------- |
+| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
 
 | @c src/plugins/snort/snort.api ||
 | ------- | ------- |
@@ -719,6 +735,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/wireguard/wireguard.api ||
 | ------- | ------- |
 | [191f96a15](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=191f96a15) | wireguard: support for psk via v2 API messages |
+
+| @c src/plugins/npol/npol.api ||
+| ------- | ------- |
+| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
 
 | @c src/plugins/linux-cp/lcp.api ||
 | ------- | ------- |
@@ -751,6 +771,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/gre/gre.api ||
 | ------- | ------- |
 | [5f7b05abb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f7b05abb) | gre: fix tunnel dump issues |
+
+| @c src/plugins/lisp/lisp-cp/lisp_types.api ||
+| ------- | ------- |
+| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
 
 | @c src/plugins/ikev2/ikev2_types.api ||
 | ------- | ------- |
