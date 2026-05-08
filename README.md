@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2606 Release notes for VPP 26.06
 
-More than 597 commits since the previous release, including 241 fixes.
+More than 605 commits since the previous release, including 245 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Thu May  7 04:43:26 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Fri May  8 04:23:15 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -246,30 +246,6 @@ please collaborate with the feature maintainer on their productization.
 - bpf_trace_filter_set_reply
 - bpf_trace_filter_set_v2
 - bpf_trace_filter_set_v2_reply
-- cnat_get_snat_addresses
-- cnat_get_snat_addresses_reply
-- cnat_session_details
-- cnat_session_dump
-- cnat_session_purge
-- cnat_session_purge_reply
-- cnat_set_snat_addresses
-- cnat_set_snat_addresses_reply
-- cnat_set_snat_addresses_v2
-- cnat_set_snat_addresses_v2_reply
-- cnat_set_snat_policy
-- cnat_set_snat_policy_reply
-- cnat_snat_addresses_details
-- cnat_snat_addresses_dump
-- cnat_snat_policy_add_del_exclude_pfx
-- cnat_snat_policy_add_del_exclude_pfx_reply
-- cnat_snat_policy_add_del_if
-- cnat_snat_policy_add_del_if_reply
-- cnat_translation_del
-- cnat_translation_del_reply
-- cnat_translation_details
-- cnat_translation_dump
-- cnat_translation_update
-- cnat_translation_update_reply
 - det44_get_timeouts_reply
 - det44_set_timeouts
 - det44_set_timeouts_reply
@@ -281,8 +257,6 @@ please collaborate with the feature maintainer on their productization.
 - dev_detach_reply
 - dev_remove_port_if
 - dev_remove_port_if_reply
-- feature_cnat_enable_disable
-- feature_cnat_enable_disable_reply
 - flowprobe_get_params
 - flowprobe_get_params_reply
 - flowprobe_interface_add_del
@@ -755,6 +729,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/cnat/cnat.api ||
 | ------- | ------- |
+| [31d112cb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=31d112cb0) | cnat: update api version |
 | [0b1590650](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b1590650) | cnat: support encapsulation and session cleanup on backend deletion |
 | [077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03) | cnat: add SNAT DNAT policy support and egress SNAT |
 | [ff6e4a562](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff6e4a562) | cnat: add snat address dump |
