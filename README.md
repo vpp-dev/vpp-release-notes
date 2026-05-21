@@ -38,66 +38,26 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 # Draft Release Notes below
 
 
-@page release_notes_2606 Release notes for VPP 26.06
+@page release_notes_2610 Release notes for VPP 26.10
 
-More than 632 commits since the previous release, including 265 fixes.
+More than 9 commits since the previous release, including 2 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.06 release, generated as on Wed May 20 05:14:00 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu May 21 05:17:57 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Marvel Scalable mGig NICs Device driver
-  - Driver for Marvell (ex Aquantia) Scalable mGig NICs (AQC113-AQC116) ([df4f891b1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=df4f891b1))
+- Marvell Octeon device driver
+  - Implement hardware traffic management ([40d1f5cd7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40d1f5cd7))
 - Plugins
-  - CNat
-    - Add SNAT DNAT policy support and egress SNAT ([077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03))
-  - Crypto - ipsecmb
-    - Bump to ipsecmb v2.0.2 ([c58dd06a9](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c58dd06a9))
   - DPDK
-    - Add representor device flag ([c5a13fcec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c5a13fcec))
-    - Bump to DPDK 26.03 and rdma-core 62.0 ([2e0062c08](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2e0062c08))
-  - HTTP
-    - Http/3 connect method ([a81fb5e0e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a81fb5e0e))
-    - Proxying UDP in HTTP/3 ([5f2e00baa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f2e00baa))
-  - Host Stack Applications
-    - Add http3 support to http static server ([ca39b350c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca39b350c))
-  - Internet Key Exchange (IKEv2) Protocol
-    - Add null encryption support ([c5908d647](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c5908d647))
-    - Add AES-CTR child SA support ([03aaf6e74](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=03aaf6e74))
-    - Add AES-GMAC child SA support ([a0fac1e70](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a0fac1e70))
-    - Add AES-CMAC PRF support ([fd113cdec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd113cdec))
-    - Add AES-CMAC integrity support ([b19d345d1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b19d345d1))
-  - QUIC protocol
-    - Mtls and cert retrieval apis ([e48f0c542](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e48f0c542))
-  - Trace path
-    - Introduce tracepath plugin ([b2a168b48](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b2a168b48))
-  - UDP Echo
-    - Add udp-echo plugin ([07a3134b7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=07a3134b7))
-  - Wireguard
-    - Support for psk via v2 API messages ([191f96a15](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=191f96a15))
-  - Linux-cp
-    - Add support to pass through an OSI proto ([85dddcb53](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=85dddcb53))
-- Plugin StateFul Data Plane Services
-  - Add snort service ([21da13734](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=21da13734))
+    - Add Intel QAT 420xx series support ([830331ea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=830331ea8))
 - VNET
-  - - IP6 Neighbor Discovery
-    - Add Duplicate Address Detection (DAD) ([1f7348b6d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f7348b6d))
-    - Add automatic duplicate address removal plugin ([6d40e40e3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d40e40e3))
-  - Crypto Infra
-    - Per-engine per-alg key data size tracking ([2a0e76584](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2a0e76584))
-  - Interface Common
-    - Add global default rx-mode setting ([757c79e8e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=757c79e8e))
-  - Session Layer
-    - Support for tls profile configuration ([1d31732c2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1d31732c2))
-    - Api to do connects from workers ([d8c359359](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=d8c359359))
-  - StateFul Data Plane
-    - Add a kill session API/CLI ([e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4))
-- Vector Library
-  - Add API to query PCI BAR region size ([b511aedf1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b511aedf1))
+  - Traffic Management
+    - Add 'mark\_flow' action for traffic management ([4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79))
 
 ## Known issues
 
@@ -120,69 +80,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-cnat_session_details                                         | definition changed
-cnat_set_snat_addresses_v2                                   | only in image
-cnat_set_snat_addresses_v2_reply                             | only in image
-cnat_set_snat_policy                                         | definition changed
-cnat_snat_addresses_details                                  | only in image
-cnat_snat_addresses_dump                                     | only in image
-feature_cnat_enable_disable                                  | only in image
-feature_cnat_enable_disable_reply                            | only in image
-gre_tunnel_v2_details                                        | only in image
-gre_tunnel_v2_dump                                           | only in image
-gre_tunnel_v2_dump_reply                                     | only in image
-ikev2_profile_details                                        | definition changed
-ikev2_set_ike_transforms                                     | definition changed
-ip6_dad_details                                              | only in image
-ip6_dad_dump                                                 | only in image
-ip6_dad_enable_disable                                       | only in image
-ip6_dad_enable_disable_reply                                 | only in image
-ip6_dad_event                                                | only in image
-l2_flags_get                                                 | only in image
-l2_flags_get_reply                                           | only in image
-l2_flags_set                                                 | only in image
-l2_flags_set_reply                                           | only in image
-l2_interface_feat_flags_get                                  | only in image
-l2_interface_feat_flags_get_reply                            | only in image
-l2_interface_feat_flags_set                                  | only in image
-l2_interface_feat_flags_set_reply                            | only in image
-sfdp_interface_input_set                                     | definition changed
-sfdp_kill_session                                            | only in image
-sfdp_kill_session_reply                                      | only in image
-sfdp_service_details                                         | only in image
-sfdp_service_dump                                            | only in image
-sfdp_session_details                                         | definition changed
-sfdp_tcp_session_details                                     | definition changed
-snort_client_v2_details                                      | only in image
-snort_client_v2_get                                          | only in image
-snort_client_v2_get_reply                                    | only in image
-snort_instance_create_v2                                     | only in image
-snort_instance_create_v2_reply                               | only in image
-snort_instance_v2_details                                    | only in image
-snort_instance_v2_details_reply                              | only in image
-snort_instance_v2_get                                        | only in image
-snort_instance_v2_get_reply                                  | only in image
-snort_interface_detach_v2                                    | only in image
-snort_interface_detach_v2_reply                              | only in image
-snort_interface_v2_details                                   | only in image
-snort_interface_v2_get                                       | only in image
-snort_interface_v2_get_reply                                 | only in image
-snort_set_drop_bitmap                                        | only in image
-snort_set_drop_bitmap_reply                                  | only in image
-sr_localsid_add_del_v2                                       | only in image
-sr_localsid_add_del_v2_reply                                 | only in image
-sw_interface_get_default_rx_mode                             | only in image
-sw_interface_get_default_rx_mode_reply                       | only in image
-sw_interface_set_default_rx_mode                             | only in image
-sw_interface_set_default_rx_mode_reply                       | only in image
-want_ip6_dad_events                                          | only in image
-want_ip6_dad_events_reply                                    | only in image
-wireguard_peer_add_v2                                        | only in image
-wireguard_peer_add_v2_reply                                  | only in image
-wireguard_peers_v2_details                                   | only in image
-wireguard_peers_v2_dump                                      | only in image
-
-Found 61 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -190,33 +88,6 @@ Found 61 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- gre_tunnel_details
-- gre_tunnel_details_v2
-- gre_tunnel_dump
-- gre_tunnel_dump_reply
-- gre_tunnel_dump_v2
-- gre_tunnel_dump_v2_reply
-- snort_client_details
-- snort_client_get
-- snort_client_get_reply
-- snort_input_mode_get
-- snort_input_mode_get_reply
-- snort_input_mode_set
-- snort_input_mode_set_reply
-- snort_instance_create
-- snort_instance_create_reply
-- snort_instance_details
-- snort_instance_get
-- snort_instance_get_reply
-- snort_interface_detach
-- snort_interface_detach_reply
-- snort_interface_details
-- snort_interface_get
-- snort_interface_get_reply
-- wireguard_peer_add
-- wireguard_peer_add_reply
-- wireguard_peers_details
-- wireguard_peers_dump
 
 ### In-progress API messages
 
@@ -624,6 +495,32 @@ please collaborate with the feature maintainer on their productization.
 - test_vla5
 - test_vla5_reply
 - test_vla_reply
+- tm_sys_get_capabilities
+- tm_sys_get_capabilities_reply
+- tm_sys_level_get_capabilities
+- tm_sys_level_get_capabilities_reply
+- tm_sys_node_add
+- tm_sys_node_add_reply
+- tm_sys_node_delete
+- tm_sys_node_delete_reply
+- tm_sys_node_read_stats
+- tm_sys_node_read_stats_reply
+- tm_sys_node_resume
+- tm_sys_node_resume_reply
+- tm_sys_node_sched_weight_update
+- tm_sys_node_sched_weight_update_reply
+- tm_sys_node_shaper_update
+- tm_sys_node_shaper_update_reply
+- tm_sys_node_suspend
+- tm_sys_node_suspend_reply
+- tm_sys_shaper_profile_create
+- tm_sys_shaper_profile_create_reply
+- tm_sys_shaper_profile_delete
+- tm_sys_shaper_profile_delete_reply
+- tm_sys_start_tm
+- tm_sys_start_tm_reply
+- tm_sys_stop_tm
+- tm_sys_stop_tm_reply
 - trace_capture_packets
 - trace_capture_packets_reply
 - trace_clear_cache
@@ -656,103 +553,8 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/snort/snort.api ||
+| @c src/vnet/classify/classify.api ||
 | ------- | ------- |
-| [e83522822](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e83522822) | snort: upgrade a few snort API and CLI calls |
-
-| @c src/plugins/gre/gre.api ||
-| ------- | ------- |
-| [5f7b05abb](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=5f7b05abb) | gre: fix tunnel dump issues |
-
-| @c src/plugins/cnat/cnat.api ||
-| ------- | ------- |
-| [31d112cb0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=31d112cb0) | cnat: update api version |
-| [0b1590650](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0b1590650) | cnat: support encapsulation and session cleanup on backend deletion |
-| [077619d03](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=077619d03) | cnat: add SNAT DNAT policy support and egress SNAT |
-| [ff6e4a562](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ff6e4a562) | cnat: add snat address dump |
-| [abc0aeb1a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=abc0aeb1a) | cnat: add single lookup |
-
-| @c src/plugins/af_xdp/af_xdp.api ||
-| ------- | ------- |
-| [67d4bd2af](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=67d4bd2af) | af_xdp: add mac-reuse option |
-
-| @c src/plugins/wireguard/wireguard.api ||
-| ------- | ------- |
-| [191f96a15](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=191f96a15) | wireguard: support for psk via v2 API messages |
-
-| @c src/plugins/lisp/lisp-cp/lisp_types.api ||
-| ------- | ------- |
-| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [85dddcb53](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=85dddcb53) | linux-cp: add support to pass through an OSI proto |
-| [466fb6da7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=466fb6da7) | linux-cp: allow skipping unnumbered sync to Linux |
-
-| @c src/plugins/policer/policer.api ||
-| ------- | ------- |
-| [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
-
-| @c src/plugins/policer/policer_types.api ||
-| ------- | ------- |
-| [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
-
-| @c src/plugins/sfdp_services/base/interface_input/interface_input.api ||
-| ------- | ------- |
-| [9dc67ec24](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=9dc67ec24) | sfdp_services: add ip6 support in interface_input |
-
-| @c src/plugins/ikev2/ikev2_types.api ||
-| ------- | ------- |
-| [fd113cdec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fd113cdec) | ikev2: add AES-CMAC PRF support |
-
-| @c src/plugins/npol/npol.api ||
-| ------- | ------- |
-| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
-
-| @c src/vnet/ip6-nd/ip6_dad.api ||
-| ------- | ------- |
-| [1f7348b6d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1f7348b6d) | ip6-nd: add Duplicate Address Detection (DAD) |
-
-| @c src/vnet/flow/flow_types.api ||
-| ------- | ------- |
-| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
-
-| @c src/vnet/flow/flow.api ||
-| ------- | ------- |
-| [53f968549](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f968549) | flow: rename cli |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [3fa8907d3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3fa8907d3) | sr: implement sub-int L2 encap and DX2 |
-| [fdfee1890](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=fdfee1890) | sr: add v2 localsid api. |
-
-| @c src/vnet/l2/l2.api ||
-| ------- | ------- |
-| [1bede6f63](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=1bede6f63) | l2: Add API for input/output features |
-
-| @c src/vnet/sfdp/sfdp_types.api ||
-| ------- | ------- |
-| [53f640a3c](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=53f640a3c) | sfdp: fix format function for session detail |
-
-| @c src/vnet/sfdp/sfdp.api ||
-| ------- | ------- |
-| [14cd11e6a](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=14cd11e6a) | sfdp: add API to dump services |
-| [e568080c4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e568080c4) | sfdp: add a kill session API/CLI |
-
-| @c src/vnet/ip/ip.api ||
-| ------- | ------- |
-| [68c2966f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=68c2966f1) | policer: pluginify policer |
-
-| @c src/vnet/ip/punt.api ||
-| ------- | ------- |
-| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
-
-| @c src/vnet/ip/ip_types.api ||
-| ------- | ------- |
-| [b84c8091f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b84c8091f) | vppapigen: union endian generation |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [757c79e8e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=757c79e8e) | interface: add global default rx-mode setting |
+| [4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79) | tm: add 'mark_flow' action for traffic management |
 
 
