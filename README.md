@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 9 commits since the previous release, including 2 fixes.
+More than 12 commits since the previous release, including 3 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu May 21 05:17:57 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri May 22 05:11:52 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -80,7 +80,16 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+lb_add_del_as_v2                                             | only in image
+lb_add_del_as_v2_reply                                       | only in image
+lb_as_set_weight                                             | only in image
+lb_as_set_weight_reply                                       | only in image
+lb_as_v2_details                                             | only in image
+lb_as_v2_dump                                                | only in image
+lb_conf_get                                                  | only in image
+lb_conf_get_reply                                            | only in image
+
+Found 8 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -552,6 +561,11 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_v2_dump
 
 ### Patches that changed API definitions
+
+| @c src/plugins/lb/lb.api ||
+| ------- | ------- |
+| [ca870e99f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca870e99f) | lb: Allow setting weight on AS |
+| [db44addb6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db44addb6) | lb: API bugfix |
 
 | @c src/vnet/classify/classify.api ||
 | ------- | ------- |
