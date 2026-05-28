@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 14 commits since the previous release, including 5 fixes.
+More than 21 commits since the previous release, including 7 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed May 27 05:40:40 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu May 28 05:18:39 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - DPDK
     - Add Intel QAT 420xx series support ([830331ea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=830331ea8))
+- VNET
+  - Add set interface link speed API ([b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec))
 - VNET
   - Traffic Management
     - Add 'mark\_flow' action for traffic management ([4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79))
@@ -88,8 +90,12 @@ lb_as_v2_details                                             | only in image
 lb_as_v2_dump                                                | only in image
 lb_conf_get                                                  | only in image
 lb_conf_get_reply                                            | only in image
+sw_interface_get_speed_capa                                  | only in image
+sw_interface_get_speed_capa_reply                            | only in image
+sw_interface_set_link_speed                                  | only in image
+sw_interface_set_link_speed_reply                            | only in image
 
-Found 8 api message signature differences
+Found 12 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -570,5 +576,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/classify/classify.api ||
 | ------- | ------- |
 | [4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79) | tm: add 'mark_flow' action for traffic management |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec) | vnet: add set interface link speed API |
 
 
