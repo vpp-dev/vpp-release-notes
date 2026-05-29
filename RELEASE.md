@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 21 commits since the previous release, including 7 fixes.
+More than 26 commits since the previous release, including 8 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu May 28 05:18:39 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri May 29 05:21:09 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -533,12 +533,12 @@ please collaborate with the feature maintainer on their productization.
 | [ca870e99f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca870e99f) | lb: Allow setting weight on AS |
 | [db44addb6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db44addb6) | lb: API bugfix |
 
-| @c src/vnet/classify/classify.api ||
-| ------- | ------- |
-| [4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79) | tm: add 'mark_flow' action for traffic management |
-
 | @c src/vnet/interface.api ||
 | ------- | ------- |
 | [b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec) | vnet: add set interface link speed API |
+
+| @c src/vnet/classify/classify.api ||
+| ------- | ------- |
+| [4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79) | tm: add 'mark_flow' action for traffic management |
 
 
