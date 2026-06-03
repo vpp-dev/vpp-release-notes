@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 43 commits since the previous release, including 12 fixes.
+More than 52 commits since the previous release, including 14 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Tue Jun  2 06:00:37 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed Jun  3 06:14:54 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -82,6 +82,8 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+flow_disable_v2                                              | only in image
+flow_disable_v2_reply                                        | only in image
 lb_add_del_as_v2                                             | only in image
 lb_add_del_as_v2_reply                                       | only in image
 lb_as_set_weight                                             | only in image
@@ -95,7 +97,7 @@ sw_interface_get_speed_capa_reply                            | only in image
 sw_interface_set_link_speed                                  | only in image
 sw_interface_set_link_speed_reply                            | only in image
 
-Found 12 api message signature differences
+Found 14 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -103,6 +105,8 @@ Found 12 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- flow_disable
+- flow_disable_reply
 
 ### In-progress API messages
 
@@ -576,6 +580,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/interface.api ||
 | ------- | ------- |
 | [b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec) | vnet: add set interface link speed API |
+
+| @c src/vnet/flow/flow.api ||
+| ------- | ------- |
+| [6d974b9aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d974b9aa) | flow: single-interface-per-flow model |
 
 | @c src/vnet/classify/classify.api ||
 | ------- | ------- |
