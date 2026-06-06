@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 77 commits since the previous release, including 27 fixes.
+More than 83 commits since the previous release, including 28 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Jun  5 05:45:56 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Sat Jun  6 05:03:30 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - DPDK
     - Add Intel QAT 420xx series support ([830331ea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=830331ea8))
+  - HSI
+    - Basic support for session tracking ([ddaacff4e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddaacff4e))
 - VNET
   - Add set interface link speed API ([b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec))
 - VNET
