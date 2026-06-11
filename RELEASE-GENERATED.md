@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 105 commits since the previous release, including 36 fixes.
+More than 114 commits since the previous release, including 38 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed Jun 10 05:46:31 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu Jun 11 06:03:29 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -534,21 +534,21 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/lb/lb.api ||
-| ------- | ------- |
-| [ca870e99f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca870e99f) | lb: Allow setting weight on AS |
-| [db44addb6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db44addb6) | lb: API bugfix |
-
 | @c src/vnet/interface.api ||
 | ------- | ------- |
 | [b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec) | vnet: add set interface link speed API |
+
+| @c src/vnet/classify/classify.api ||
+| ------- | ------- |
+| [4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79) | tm: add 'mark_flow' action for traffic management |
 
 | @c src/vnet/flow/flow.api ||
 | ------- | ------- |
 | [6d974b9aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d974b9aa) | flow: single-interface-per-flow model |
 
-| @c src/vnet/classify/classify.api ||
+| @c src/plugins/lb/lb.api ||
 | ------- | ------- |
-| [4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79) | tm: add 'mark_flow' action for traffic management |
+| [ca870e99f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca870e99f) | lb: Allow setting weight on AS |
+| [db44addb6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db44addb6) | lb: API bugfix |
 
 
