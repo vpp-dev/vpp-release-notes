@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 129 commits since the previous release, including 45 fixes.
+More than 132 commits since the previous release, including 47 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Tue Jun 16 06:41:45 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed Jun 17 06:25:17 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -58,8 +58,10 @@ sw_interface_get_speed_capa                                  | only in image
 sw_interface_get_speed_capa_reply                            | only in image
 sw_interface_set_link_speed                                  | only in image
 sw_interface_set_link_speed_reply                            | only in image
+tracepath_details                                            | only in image
+tracepath_dump                                               | only in image
 
-Found 14 api message signature differences
+Found 16 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -521,6 +523,8 @@ please collaborate with the feature maintainer on their productization.
 - trace_v2_dump
 - tracenode_enable_disable
 - tracenode_enable_disable_reply
+- tracepath_details
+- tracepath_dump
 - vxlan_gbp_tunnel_add_del
 - vxlan_gbp_tunnel_add_del_reply
 - vxlan_gbp_tunnel_details
@@ -545,6 +549,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/flow/flow.api ||
 | ------- | ------- |
 | [6d974b9aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d974b9aa) | flow: single-interface-per-flow model |
+
+| @c src/plugins/tracepath/tracepath.api ||
+| ------- | ------- |
+| [47dcef757](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47dcef757) | tracepath: add api to dump trace paths |
 
 | @c src/plugins/lb/lb.api ||
 | ------- | ------- |
