@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 184 commits since the previous release, including 68 fixes.
+More than 187 commits since the previous release, including 70 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Mon Jun 29 06:03:45 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Tue Jun 30 05:15:47 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -17,6 +17,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add Intel QAT 420xx series support ([830331ea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=830331ea8))
   - HSI
     - Basic support for session tracking ([ddaacff4e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddaacff4e))
+  - Http\_static
+    - Support disabling the server via the API ([be0ece802](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be0ece802))
 - VNET
   - Add set interface link speed API ([b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec))
 - VNET
@@ -46,6 +48,8 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 flow_disable_v2                                              | only in image
 flow_disable_v2_reply                                        | only in image
+http_static_disable                                          | only in image
+http_static_disable_reply                                    | only in image
 lb_add_del_as_v2                                             | only in image
 lb_add_del_as_v2_reply                                       | only in image
 lb_as_set_weight                                             | only in image
@@ -61,7 +65,7 @@ sw_interface_set_link_speed_reply                            | only in image
 tracepath_details                                            | only in image
 tracepath_dump                                               | only in image
 
-Found 16 api message signature differences
+Found 18 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -558,5 +562,9 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [ca870e99f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca870e99f) | lb: Allow setting weight on AS |
 | [db44addb6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db44addb6) | lb: API bugfix |
+
+| @c src/plugins/http_static/http_static.api ||
+| ------- | ------- |
+| [be0ece802](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be0ece802) | http_static: support disabling the server via the API |
 
 
