@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 191 commits since the previous release, including 72 fixes.
+More than 194 commits since the previous release, including 73 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed Jul  1 05:52:16 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu Jul  2 05:07:59 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -19,6 +19,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Basic support for session tracking ([ddaacff4e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddaacff4e))
   - Http\_static
     - Support disabling the server via the API ([be0ece802](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be0ece802))
+    - Retrieve status information ([0c2f7a88d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0c2f7a88d))
 - VNET
   - Add set interface link speed API ([b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec))
 - VNET
@@ -50,6 +51,8 @@ flow_disable_v2                                              | only in image
 flow_disable_v2_reply                                        | only in image
 http_static_disable                                          | only in image
 http_static_disable_reply                                    | only in image
+http_static_get                                              | only in image
+http_static_get_reply                                        | only in image
 lb_add_del_as_v2                                             | only in image
 lb_add_del_as_v2_reply                                       | only in image
 lb_as_set_weight                                             | only in image
@@ -65,7 +68,7 @@ sw_interface_set_link_speed_reply                            | only in image
 tracepath_details                                            | only in image
 tracepath_dump                                               | only in image
 
-Found 18 api message signature differences
+Found 20 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -565,6 +568,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/http_static/http_static.api ||
 | ------- | ------- |
+| [0c2f7a88d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0c2f7a88d) | http_static: retrieve status information |
 | [be0ece802](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be0ece802) | http_static: support disabling the server via the API |
 
 
