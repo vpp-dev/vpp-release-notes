@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 198 commits since the previous release, including 74 fixes.
+More than 199 commits since the previous release, including 74 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Jul  3 04:53:42 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Sat Jul  4 04:47:33 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -61,6 +61,7 @@ lb_as_v2_details                                             | only in image
 lb_as_v2_dump                                                | only in image
 lb_conf_get                                                  | only in image
 lb_conf_get_reply                                            | only in image
+sfdp_set_timeout                                             | definition changed
 sw_interface_get_speed_capa                                  | only in image
 sw_interface_get_speed_capa_reply                            | only in image
 sw_interface_set_link_speed                                  | only in image
@@ -68,7 +69,7 @@ sw_interface_set_link_speed_reply                            | only in image
 tracepath_details                                            | only in image
 tracepath_dump                                               | only in image
 
-Found 20 api message signature differences
+Found 21 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -544,6 +545,14 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_v2_dump
 
 ### Patches that changed API definitions
+
+| @c src/vnet/sfdp/sfdp_types.api ||
+| ------- | ------- |
+| [2c4994432](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c4994432) | sfdp: add api enum for timeouts |
+
+| @c src/vnet/sfdp/sfdp.api ||
+| ------- | ------- |
+| [2c4994432](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c4994432) | sfdp: add api enum for timeouts |
 
 | @c src/vnet/interface.api ||
 | ------- | ------- |
