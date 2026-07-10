@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 225 commits since the previous release, including 85 fixes.
+More than 231 commits since the previous release, including 86 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu Jul  9 05:03:41 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Jul 10 05:04:26 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -13,6 +13,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Marvell Octeon device driver
   - Implement hardware traffic management ([40d1f5cd7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40d1f5cd7))
 - Plugins
+  - DHCP
+    - Export DHCPv6 runtime state for PPPoE observability ([0a143dac6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0a143dac6))
   - DPDK
     - Add Intel QAT 420xx series support ([830331ea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=830331ea8))
   - HSI
@@ -61,6 +63,7 @@ lb_as_v2_details                                             | only in image
 lb_as_v2_dump                                                | only in image
 lb_conf_get                                                  | only in image
 lb_conf_get_reply                                            | only in image
+lldp_details                                                 | definition changed
 sfdp_set_timeout                                             | definition changed
 sw_interface_get_speed_capa                                  | only in image
 sw_interface_get_speed_capa_reply                            | only in image
@@ -69,7 +72,7 @@ sw_interface_set_link_speed_reply                            | only in image
 tracepath_details                                            | only in image
 tracepath_dump                                               | only in image
 
-Found 21 api message signature differences
+Found 22 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -565,6 +568,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/flow/flow.api ||
 | ------- | ------- |
 | [6d974b9aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d974b9aa) | flow: single-interface-per-flow model |
+
+| @c src/plugins/lldp/lldp.api ||
+| ------- | ------- |
+| [47a8ae9c3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47a8ae9c3) | lldp: extend data returned by lldp-dump API |
 
 | @c src/plugins/tracepath/tracepath.api ||
 | ------- | ------- |
