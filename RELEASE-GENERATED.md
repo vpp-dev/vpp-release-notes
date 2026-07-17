@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 251 commits since the previous release, including 92 fixes.
+More than 255 commits since the previous release, including 94 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu Jul 16 04:21:43 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Jul 17 04:19:48 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -65,6 +65,8 @@ lb_conf_get                                                  | only in image
 lb_conf_get_reply                                            | only in image
 lldp_details                                                 | definition changed
 sfdp_set_timeout                                             | definition changed
+sfdp_timeout_details                                         | only in image
+sfdp_timeout_dump                                            | only in image
 sw_interface_get_speed_capa                                  | only in image
 sw_interface_get_speed_capa_reply                            | only in image
 sw_interface_set_link_speed                                  | only in image
@@ -72,7 +74,7 @@ sw_interface_set_link_speed_reply                            | only in image
 tracepath_details                                            | only in image
 tracepath_dump                                               | only in image
 
-Found 22 api message signature differences
+Found 24 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -393,32 +395,14 @@ please collaborate with the feature maintainer on their productization.
 - sfdp_gateway_set_geneve_output_reply
 - sfdp_interface_input_set
 - sfdp_interface_input_set_reply
-- sfdp_kill_session
-- sfdp_kill_session_reply
 - sfdp_nat_alloc_pool_add_del
 - sfdp_nat_alloc_pool_add_del_reply
 - sfdp_nat_set_external_interface
 - sfdp_nat_set_external_interface_reply
 - sfdp_nat_snat_set_unset
 - sfdp_nat_snat_set_unset_reply
-- sfdp_service_details
-- sfdp_service_dump
-- sfdp_session_details
-- sfdp_session_dump
-- sfdp_set_icmp_error_node
-- sfdp_set_icmp_error_node_reply
-- sfdp_set_services
-- sfdp_set_services_reply
-- sfdp_set_sp_node
-- sfdp_set_sp_node_reply
-- sfdp_set_timeout
-- sfdp_set_timeout_reply
 - sfdp_tcp_session_details
 - sfdp_tcp_session_dump
-- sfdp_tenant_add_del
-- sfdp_tenant_add_del_reply
-- sfdp_tenant_details
-- sfdp_tenant_dump
 - sflow_direction_get
 - sflow_direction_get_reply
 - sflow_direction_set
@@ -577,10 +561,14 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
+| [a80fce357](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a80fce357) | sfdp: bump APIs to v1.0.0 |
+| [c399babd5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c399babd5) | sfdp: improve generic timeout registration |
 | [2c4994432](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c4994432) | sfdp: add api enum for timeouts |
 
 | @c src/vnet/sfdp/sfdp_types.api ||
 | ------- | ------- |
+| [a80fce357](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a80fce357) | sfdp: bump APIs to v1.0.0 |
+| [c399babd5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c399babd5) | sfdp: improve generic timeout registration |
 | [2c4994432](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c4994432) | sfdp: add api enum for timeouts |
 
 | @c src/vnet/classify/classify.api ||
