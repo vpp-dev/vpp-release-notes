@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 271 commits since the previous release, including 99 fixes.
+More than 278 commits since the previous release, including 103 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Jul 24 04:27:39 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Sat Jul 25 04:23:20 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Marvell Octeon device driver
   - Implement hardware traffic management ([40d1f5cd7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40d1f5cd7))
 - Plugins
+  - AF\_XDP driver
+    - Add support for multi-buffer ([345071c78](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=345071c78))
   - DHCP
     - Export DHCPv6 runtime state for PPPoE observability ([0a143dac6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0a143dac6))
   - DPDK
@@ -572,6 +574,10 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_v2_dump
 
 ### Patches that changed API definitions
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [345071c78](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=345071c78) | af_xdp: add support for multi-buffer |
 
 | @c src/plugins/lb/lb.api ||
 | ------- | ------- |
