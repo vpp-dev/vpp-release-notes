@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 284 commits since the previous release, including 104 fixes.
+More than 288 commits since the previous release, including 106 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Mon Jul 27 04:48:52 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Tue Jul 28 04:23:08 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -67,6 +67,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Add set interface link speed API ([b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec))
 - VNET
+  - TCP
+    - Dsack receiver (RFC 2883) ([dd2e033f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd2e033f1))
   - Traffic Management
     - Add 'mark\_flow' action for traffic management ([4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79))
 
