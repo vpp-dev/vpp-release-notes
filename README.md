@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 304 commits since the previous release, including 117 fixes.
+More than 309 commits since the previous release, including 120 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Jul 31 04:34:31 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Sat Aug  1 04:31:08 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -598,6 +598,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [0c2f7a88d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0c2f7a88d) | http_static: retrieve status information |
 | [be0ece802](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be0ece802) | http_static: support disabling the server via the API |
+
+| @c src/plugins/ipip/ipip.api ||
+| ------- | ------- |
+| [11c5a0d6e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=11c5a0d6e) | ipip: move to a plugin |
 
 | @c src/vnet/flow/flow.api ||
 | ------- | ------- |
