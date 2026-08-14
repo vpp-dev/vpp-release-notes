@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 336 commits since the previous release, including 131 fixes.
+More than 340 commits since the previous release, including 131 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu Aug 13 03:31:01 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Aug 14 03:28:17 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -577,39 +577,13 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/af_xdp/af_xdp.api ||
-| ------- | ------- |
-| [345071c78](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=345071c78) | af_xdp: add support for multi-buffer |
-
-| @c src/plugins/lb/lb.api ||
-| ------- | ------- |
-| [ca870e99f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca870e99f) | lb: Allow setting weight on AS |
-| [db44addb6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db44addb6) | lb: API bugfix |
-
-| @c src/plugins/tracepath/tracepath.api ||
-| ------- | ------- |
-| [47dcef757](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47dcef757) | tracepath: add api to dump trace paths |
-
-| @c src/plugins/lldp/lldp.api ||
-| ------- | ------- |
-| [47a8ae9c3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47a8ae9c3) | lldp: extend data returned by lldp-dump API |
-
-| @c src/plugins/http_static/http_static.api ||
-| ------- | ------- |
-| [0c2f7a88d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0c2f7a88d) | http_static: retrieve status information |
-| [be0ece802](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be0ece802) | http_static: support disabling the server via the API |
-
-| @c src/plugins/ipip/ipip.api ||
-| ------- | ------- |
-| [11c5a0d6e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=11c5a0d6e) | ipip: move to a plugin |
-
-| @c src/vnet/flow/flow.api ||
-| ------- | ------- |
-| [6d974b9aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d974b9aa) | flow: single-interface-per-flow model |
-
 | @c src/vnet/classify/classify.api ||
 | ------- | ------- |
 | [4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79) | tm: add 'mark_flow' action for traffic management |
+
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec) | vnet: add set interface link speed API |
 
 | @c src/vnet/sfdp/sfdp_types.api ||
 | ------- | ------- |
@@ -623,8 +597,34 @@ please collaborate with the feature maintainer on their productization.
 | [c399babd5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c399babd5) | sfdp: improve generic timeout registration |
 | [2c4994432](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c4994432) | sfdp: add api enum for timeouts |
 
-| @c src/vnet/interface.api ||
+| @c src/vnet/flow/flow.api ||
 | ------- | ------- |
-| [b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec) | vnet: add set interface link speed API |
+| [6d974b9aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d974b9aa) | flow: single-interface-per-flow model |
+
+| @c src/plugins/ipip/ipip.api ||
+| ------- | ------- |
+| [11c5a0d6e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=11c5a0d6e) | ipip: move to a plugin |
+
+| @c src/plugins/lldp/lldp.api ||
+| ------- | ------- |
+| [47a8ae9c3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47a8ae9c3) | lldp: extend data returned by lldp-dump API |
+
+| @c src/plugins/lb/lb.api ||
+| ------- | ------- |
+| [ca870e99f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca870e99f) | lb: Allow setting weight on AS |
+| [db44addb6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db44addb6) | lb: API bugfix |
+
+| @c src/plugins/af_xdp/af_xdp.api ||
+| ------- | ------- |
+| [345071c78](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=345071c78) | af_xdp: add support for multi-buffer |
+
+| @c src/plugins/http_static/http_static.api ||
+| ------- | ------- |
+| [0c2f7a88d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0c2f7a88d) | http_static: retrieve status information |
+| [be0ece802](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be0ece802) | http_static: support disabling the server via the API |
+
+| @c src/plugins/tracepath/tracepath.api ||
+| ------- | ------- |
+| [47dcef757](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47dcef757) | tracepath: add api to dump trace paths |
 
 
