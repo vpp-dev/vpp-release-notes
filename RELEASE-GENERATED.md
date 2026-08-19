@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 353 commits since the previous release, including 136 fixes.
+More than 359 commits since the previous release, including 140 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Tue Aug 18 02:19:42 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed Aug 19 02:22:23 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -536,6 +536,10 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_v2_dump
 
 ### Patches that changed API definitions
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [8ffeb3667](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8ffeb3667) | vlib crypto ipsec: preserve scalar frame metadata |
 
 | @c src/vnet/classify/classify.api ||
 | ------- | ------- |
