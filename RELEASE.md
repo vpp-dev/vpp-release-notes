@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 362 commits since the previous release, including 142 fixes.
+More than 364 commits since the previous release, including 144 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu Aug 20 02:21:10 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Aug 21 02:35:28 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -539,6 +539,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
+| [4f9eb4ea0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4f9eb4ea0) | ipsec: remove esp_encrypt next node check |
 | [8ffeb3667](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8ffeb3667) | vlib crypto ipsec: preserve scalar frame metadata |
 
 | @c src/vnet/classify/classify.api ||
