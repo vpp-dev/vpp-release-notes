@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 364 commits since the previous release, including 144 fixes.
+More than 373 commits since the previous release, including 148 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Aug 21 02:35:28 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Sat Aug 22 02:19:19 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -19,6 +19,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Export DHCPv6 runtime state for PPPoE observability ([0a143dac6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0a143dac6))
   - DPDK
     - Add Intel QAT 420xx series support ([830331ea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=830331ea8))
+    - Bump to DPDK 26.07 and rdma-core 64.0 ([dd6c72f23](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd6c72f23))
   - HSI
     - Basic support for session tracking ([ddaacff4e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddaacff4e))
   - Http\_static
@@ -51,34 +52,6 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
-Message Name                                                 | Result
--------------------------------------------------------------|------------------
-flow_disable_v2                                              | only in image
-flow_disable_v2_reply                                        | only in image
-http_static_disable                                          | only in image
-http_static_disable_reply                                    | only in image
-http_static_get                                              | only in image
-http_static_get_reply                                        | only in image
-lb_add_del_as_v2                                             | only in image
-lb_add_del_as_v2_reply                                       | only in image
-lb_as_set_weight                                             | only in image
-lb_as_set_weight_reply                                       | only in image
-lb_as_v2_details                                             | only in image
-lb_as_v2_dump                                                | only in image
-lb_conf_get                                                  | only in image
-lb_conf_get_reply                                            | only in image
-lldp_details                                                 | definition changed
-sfdp_set_timeout                                             | definition changed
-sfdp_timeout_details                                         | only in image
-sfdp_timeout_dump                                            | only in image
-sw_interface_get_speed_capa                                  | only in image
-sw_interface_get_speed_capa_reply                            | only in image
-sw_interface_set_link_speed                                  | only in image
-sw_interface_set_link_speed_reply                            | only in image
-tracepath_details                                            | only in image
-tracepath_dump                                               | only in image
-
-Found 24 api message signature differences
 
 
 ### Newly deprecated API messages
