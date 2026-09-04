@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 441 commits since the previous release, including 167 fixes.
+More than 456 commits since the previous release, including 171 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu Sep  3 05:44:20 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Sep  4 05:50:11 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -30,6 +30,7 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - TCP
     - Dsack receiver (RFC 2883) ([dd2e033f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd2e033f1))
+    - RACK loss detection (RFC 8985) ([8494103c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8494103c1))
   - Traffic Management
     - Add 'mark\_flow' action for traffic management ([4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79))
 
@@ -52,6 +53,34 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+flow_disable_v2                                              | only in image
+flow_disable_v2_reply                                        | only in image
+http_static_disable                                          | only in image
+http_static_disable_reply                                    | only in image
+http_static_get                                              | only in image
+http_static_get_reply                                        | only in image
+lb_add_del_as_v2                                             | only in image
+lb_add_del_as_v2_reply                                       | only in image
+lb_as_set_weight                                             | only in image
+lb_as_set_weight_reply                                       | only in image
+lb_as_v2_details                                             | only in image
+lb_as_v2_dump                                                | only in image
+lb_conf_get                                                  | only in image
+lb_conf_get_reply                                            | only in image
+lldp_details                                                 | definition changed
+sfdp_set_timeout                                             | definition changed
+sfdp_timeout_details                                         | only in image
+sfdp_timeout_dump                                            | only in image
+sw_interface_get_speed_capa                                  | only in image
+sw_interface_get_speed_capa_reply                            | only in image
+sw_interface_set_link_speed                                  | only in image
+sw_interface_set_link_speed_reply                            | only in image
+tracepath_details                                            | only in image
+tracepath_dump                                               | only in image
+
+Found 24 api message signature differences
 
 
 ### Newly deprecated API messages
