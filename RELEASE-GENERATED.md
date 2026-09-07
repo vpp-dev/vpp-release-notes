@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 458 commits since the previous release, including 172 fixes.
+More than 460 commits since the previous release, including 172 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Sun Sep  6 05:53:33 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Mon Sep  7 06:02:18 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -31,6 +31,7 @@ HIGHLIGHTS-PLACEHOLDER
   - TCP
     - Dsack receiver (RFC 2883) ([dd2e033f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd2e033f1))
     - RACK loss detection (RFC 8985) ([8494103c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8494103c1))
+    - Add tail loss probe (RFC 8985) ([a0807aade](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a0807aade))
   - Traffic Management
     - Add 'mark\_flow' action for traffic management ([4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79))
 
