@@ -1,10 +1,10 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 491 commits since the previous release, including 185 fixes.
+More than 499 commits since the previous release, including 188 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Sep 11 05:55:05 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Sat Sep 12 05:43:43 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -28,12 +28,16 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - Add set interface link speed API ([b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec))
 - VNET
+  - FLOW
+    - Add flow template and async range infrastructure ([629fe2764](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=629fe2764))
   - TCP
     - Dsack receiver (RFC 2883) ([dd2e033f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd2e033f1))
     - RACK loss detection (RFC 8985) ([8494103c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8494103c1))
     - Add tail loss probe (RFC 8985) ([a0807aade](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a0807aade))
   - Traffic Management
     - Add 'mark\_flow' action for traffic management ([4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79))
+- Vector Library
+  - Add per-thread index pool cache ([3381b9557](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3381b9557))
 
 ## Known issues
 
@@ -56,8 +60,22 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
+af_xdp_create_v4                                             | only in image
+af_xdp_create_v4_reply                                       | only in image
+flow_async_range_disable                                     | only in image
+flow_async_range_disable_reply                               | only in image
+flow_async_range_enable                                      | only in image
+flow_async_range_enable_reply                                | only in image
 flow_disable_v2                                              | only in image
 flow_disable_v2_reply                                        | only in image
+flow_template_add                                            | only in image
+flow_template_add_reply                                      | only in image
+flow_template_del                                            | only in image
+flow_template_del_reply                                      | only in image
+flow_template_disable                                        | only in image
+flow_template_disable_reply                                  | only in image
+flow_template_enable                                         | only in image
+flow_template_enable_reply                                   | only in image
 http_static_disable                                          | only in image
 http_static_disable_reply                                    | only in image
 http_static_get                                              | only in image
@@ -81,7 +99,7 @@ sw_interface_set_link_speed_reply                            | only in image
 tracepath_details                                            | only in image
 tracepath_dump                                               | only in image
 
-Found 24 api message signature differences
+Found 38 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -89,6 +107,7 @@ Found 24 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
+- af_xdp_create_v3
 - flow_disable
 - flow_disable_reply
 
@@ -546,6 +565,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
+| [cbcb2f5f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cbcb2f5f2) | af_xdp: add optional socket busy polling |
 | [345071c78](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=345071c78) | af_xdp: add support for multi-buffer |
 
 | @c src/plugins/ipip/ipip.api ||
@@ -593,6 +613,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/flow/flow.api ||
 | ------- | ------- |
+| [629fe2764](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=629fe2764) | flow: add flow template and async range infrastructure |
 | [6d974b9aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d974b9aa) | flow: single-interface-per-flow model |
 
 
