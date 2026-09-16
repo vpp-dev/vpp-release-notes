@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 511 commits since the previous release, including 197 fixes.
+More than 518 commits since the previous release, including 202 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Tue Sep 15 06:08:07 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed Sep 16 05:58:10 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -129,6 +129,8 @@ lb_as_v2_dump                                                | only in image
 lb_conf_get                                                  | only in image
 lb_conf_get_reply                                            | only in image
 lldp_details                                                 | definition changed
+rdma_create_v5                                               | only in image
+rdma_create_v5_reply                                         | only in image
 sfdp_set_timeout                                             | definition changed
 sfdp_timeout_details                                         | only in image
 sfdp_timeout_dump                                            | only in image
@@ -139,7 +141,7 @@ sw_interface_set_link_speed_reply                            | only in image
 tracepath_details                                            | only in image
 tracepath_dump                                               | only in image
 
-Found 38 api message signature differences
+Found 40 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -150,6 +152,7 @@ will disappear in the next release.
 - af_xdp_create_v3
 - flow_disable
 - flow_disable_reply
+- rdma_create_v4
 
 ### In-progress API messages
 
@@ -615,6 +618,10 @@ please collaborate with the feature maintainer on their productization.
 | @c src/plugins/tracepath/tracepath.api ||
 | ------- | ------- |
 | [47dcef757](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47dcef757) | tracepath: add api to dump trace paths |
+
+| @c src/plugins/rdma/rdma.api ||
+| ------- | ------- |
+| [f96a3d699](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f96a3d699) | rdma: fix verbs port selection |
 
 | @c src/plugins/lb/lb.api ||
 | ------- | ------- |
