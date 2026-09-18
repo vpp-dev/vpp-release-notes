@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 527 commits since the previous release, including 210 fixes.
+More than 539 commits since the previous release, including 219 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Thu Sep 17 06:06:33 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Fri Sep 18 05:52:36 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -52,6 +52,8 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Marvell Octeon device driver
   - Implement hardware traffic management ([40d1f5cd7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40d1f5cd7))
+  - Update octeon roc version ([12fd8e97f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=12fd8e97f))
+  - Add support to set link-speed ([2f6fc11c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2f6fc11c1))
 - Plugins
   - AF\_XDP driver
     - Add support for multi-buffer ([345071c78](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=345071c78))
@@ -70,6 +72,8 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - FLOW
     - Add flow template and async range infrastructure ([629fe2764](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=629fe2764))
+  - New Device Drivers Infra
+    - Add port attribute for speed capability ([e1c793db4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1c793db4))
   - TCP
     - Dsack receiver (RFC 2883) ([dd2e033f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd2e033f1))
     - RACK loss detection (RFC 8985) ([8494103c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8494103c1))
