@@ -1,57 +1,56 @@
 @page release_notes_2610 Release notes for VPP 26.10
 
-More than 555 commits since the previous release, including 227 fixes.
+More than 556 commits since the previous release, including 228 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed Sep 23 05:55:11 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed Sep 23 07:55:37 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
 - Marvell Octeon device driver
-  - Implement hardware traffic management ([40d1f5cd7](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=40d1f5cd7))
-  - Update octeon roc version ([12fd8e97f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=12fd8e97f))
-  - Add support to set link-speed ([2f6fc11c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2f6fc11c1))
+  - Implement hardware traffic management ([40d1f5cd7](https://github.com/fdio/vpp/commit/40d1f5cd7))
+  - Update octeon roc version ([12fd8e97f](https://github.com/fdio/vpp/commit/12fd8e97f))
+  - Add support to set link-speed ([2f6fc11c1](https://github.com/fdio/vpp/commit/2f6fc11c1))
 - Plugins
   - AF\_XDP driver
-    - Add support for multi-buffer ([345071c78](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=345071c78))
+    - Add support for multi-buffer ([345071c78](https://github.com/fdio/vpp/commit/345071c78))
   - DHCP
-    - Export DHCPv6 runtime state for PPPoE observability ([0a143dac6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0a143dac6))
+    - Export DHCPv6 runtime state for PPPoE observability ([0a143dac6](https://github.com/fdio/vpp/commit/0a143dac6))
   - DPDK
-    - Add Intel QAT 420xx series support ([830331ea8](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=830331ea8))
-    - Bump to DPDK 26.07 and rdma-core 64.0 ([dd6c72f23](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd6c72f23))
+    - Add Intel QAT 420xx series support ([830331ea8](https://github.com/fdio/vpp/commit/830331ea8))
+    - Bump to DPDK 26.07 and rdma-core 64.0 ([dd6c72f23](https://github.com/fdio/vpp/commit/dd6c72f23))
   - HSI
-    - Basic support for session tracking ([ddaacff4e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ddaacff4e))
+    - Basic support for session tracking ([ddaacff4e](https://github.com/fdio/vpp/commit/ddaacff4e))
   - Http\_static
-    - Support disabling the server via the API ([be0ece802](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be0ece802))
-    - Retrieve status information ([0c2f7a88d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0c2f7a88d))
+    - Support disabling the server via the API ([be0ece802](https://github.com/fdio/vpp/commit/be0ece802))
+    - Retrieve status information ([0c2f7a88d](https://github.com/fdio/vpp/commit/0c2f7a88d))
 - VNET
-  - Add set interface link speed API ([b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec))
-- VNET
+  - Add set interface link speed API ([b83c7d9ec](https://github.com/fdio/vpp/commit/b83c7d9ec))
   - FLOW
-    - Add flow template and async range infrastructure ([629fe2764](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=629fe2764))
+    - Add flow template and async range infrastructure ([629fe2764](https://github.com/fdio/vpp/commit/629fe2764))
   - New Device Drivers Infra
-    - Add port attribute for speed capability ([e1c793db4](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=e1c793db4))
+    - Add port attribute for speed capability ([e1c793db4](https://github.com/fdio/vpp/commit/e1c793db4))
   - TCP
-    - Dsack receiver (RFC 2883) ([dd2e033f1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=dd2e033f1))
-    - RACK loss detection (RFC 8985) ([8494103c1](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8494103c1))
-    - Add tail loss probe (RFC 8985) ([a0807aade](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a0807aade))
-    - Add BBRv3 congestion control ([b7249de38](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b7249de38))
+    - Dsack receiver (RFC 2883) ([dd2e033f1](https://github.com/fdio/vpp/commit/dd2e033f1))
+    - RACK loss detection (RFC 8985) ([8494103c1](https://github.com/fdio/vpp/commit/8494103c1))
+    - Add tail loss probe (RFC 8985) ([a0807aade](https://github.com/fdio/vpp/commit/a0807aade))
+    - Add BBRv3 congestion control ([b7249de38](https://github.com/fdio/vpp/commit/b7249de38))
   - Traffic Management
-    - Add 'mark\_flow' action for traffic management ([4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79))
+    - Add 'mark\_flow' action for traffic management ([4b2416d79](https://github.com/fdio/vpp/commit/4b2416d79))
 - Vector Library
-  - Add per-thread index pool cache ([3381b9557](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=3381b9557))
+  - Add per-thread index pool cache ([3381b9557](https://github.com/fdio/vpp/commit/3381b9557))
 
 ## Known issues
 
-For the full list of issues please refer to fd.io [JIRA](https://jira.fd.io).
+For the full list of issues please refer to fd.io [GitHub](https://github.com/fdio/vpp/issues).
 
 ## Fixed issues
 
 For the full list of fixed issues please refer to:
-- fd.io [JIRA](https://jira.fd.io)
+- fd.io [GitHub](https://github.com/fdio/vpp/issues)
 - git [commit log](https://git.fd.io/vpp/log/?h=master)
 
 
@@ -569,63 +568,63 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/lldp/lldp.api ||
 | ------- | ------- |
-| [47a8ae9c3](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47a8ae9c3) | lldp: extend data returned by lldp-dump API |
+| [47a8ae9c3](https://github.com/fdio/vpp/commit/47a8ae9c3) | lldp: extend data returned by lldp-dump API |
 
 | @c src/plugins/af_xdp/af_xdp.api ||
 | ------- | ------- |
-| [cbcb2f5f2](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=cbcb2f5f2) | af_xdp: add optional socket busy polling |
-| [345071c78](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=345071c78) | af_xdp: add support for multi-buffer |
+| [cbcb2f5f2](https://github.com/fdio/vpp/commit/cbcb2f5f2) | af_xdp: add optional socket busy polling |
+| [345071c78](https://github.com/fdio/vpp/commit/345071c78) | af_xdp: add support for multi-buffer |
 
 | @c src/plugins/ipip/ipip.api ||
 | ------- | ------- |
-| [11c5a0d6e](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=11c5a0d6e) | ipip: move to a plugin |
+| [11c5a0d6e](https://github.com/fdio/vpp/commit/11c5a0d6e) | ipip: move to a plugin |
 
 | @c src/plugins/tracepath/tracepath.api ||
 | ------- | ------- |
-| [47dcef757](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=47dcef757) | tracepath: add api to dump trace paths |
+| [47dcef757](https://github.com/fdio/vpp/commit/47dcef757) | tracepath: add api to dump trace paths |
 
 | @c src/plugins/rdma/rdma.api ||
 | ------- | ------- |
-| [f96a3d699](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=f96a3d699) | rdma: fix verbs port selection |
+| [f96a3d699](https://github.com/fdio/vpp/commit/f96a3d699) | rdma: fix verbs port selection |
 
 | @c src/plugins/lb/lb.api ||
 | ------- | ------- |
-| [ca870e99f](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=ca870e99f) | lb: Allow setting weight on AS |
-| [db44addb6](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=db44addb6) | lb: API bugfix |
+| [ca870e99f](https://github.com/fdio/vpp/commit/ca870e99f) | lb: Allow setting weight on AS |
+| [db44addb6](https://github.com/fdio/vpp/commit/db44addb6) | lb: API bugfix |
 
 | @c src/plugins/http_static/http_static.api ||
 | ------- | ------- |
-| [0c2f7a88d](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=0c2f7a88d) | http_static: retrieve status information |
-| [be0ece802](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=be0ece802) | http_static: support disabling the server via the API |
+| [0c2f7a88d](https://github.com/fdio/vpp/commit/0c2f7a88d) | http_static: retrieve status information |
+| [be0ece802](https://github.com/fdio/vpp/commit/be0ece802) | http_static: support disabling the server via the API |
 
 | @c src/vnet/classify/classify.api ||
 | ------- | ------- |
-| [4b2416d79](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4b2416d79) | tm: add 'mark_flow' action for traffic management |
+| [4b2416d79](https://github.com/fdio/vpp/commit/4b2416d79) | tm: add 'mark_flow' action for traffic management |
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
-| [4f9eb4ea0](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=4f9eb4ea0) | ipsec: remove esp_encrypt next node check |
-| [8ffeb3667](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=8ffeb3667) | vlib crypto ipsec: preserve scalar frame metadata |
+| [4f9eb4ea0](https://github.com/fdio/vpp/commit/4f9eb4ea0) | ipsec: remove esp_encrypt next node check |
+| [8ffeb3667](https://github.com/fdio/vpp/commit/8ffeb3667) | vlib crypto ipsec: preserve scalar frame metadata |
 
 | @c src/vnet/interface.api ||
 | ------- | ------- |
-| [b83c7d9ec](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=b83c7d9ec) | vnet: add set interface link speed API |
+| [b83c7d9ec](https://github.com/fdio/vpp/commit/b83c7d9ec) | vnet: add set interface link speed API |
 
 | @c src/vnet/sfdp/sfdp_types.api ||
 | ------- | ------- |
-| [a80fce357](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a80fce357) | sfdp: bump APIs to v1.0.0 |
-| [c399babd5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c399babd5) | sfdp: improve generic timeout registration |
-| [2c4994432](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c4994432) | sfdp: add api enum for timeouts |
+| [a80fce357](https://github.com/fdio/vpp/commit/a80fce357) | sfdp: bump APIs to v1.0.0 |
+| [c399babd5](https://github.com/fdio/vpp/commit/c399babd5) | sfdp: improve generic timeout registration |
+| [2c4994432](https://github.com/fdio/vpp/commit/2c4994432) | sfdp: add api enum for timeouts |
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
-| [a80fce357](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=a80fce357) | sfdp: bump APIs to v1.0.0 |
-| [c399babd5](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=c399babd5) | sfdp: improve generic timeout registration |
-| [2c4994432](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=2c4994432) | sfdp: add api enum for timeouts |
+| [a80fce357](https://github.com/fdio/vpp/commit/a80fce357) | sfdp: bump APIs to v1.0.0 |
+| [c399babd5](https://github.com/fdio/vpp/commit/c399babd5) | sfdp: improve generic timeout registration |
+| [2c4994432](https://github.com/fdio/vpp/commit/2c4994432) | sfdp: add api enum for timeouts |
 
 | @c src/vnet/flow/flow.api ||
 | ------- | ------- |
-| [629fe2764](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=629fe2764) | flow: add flow template and async range infrastructure |
-| [6d974b9aa](https://gerrit.fd.io/r/gitweb?p=vpp.git;a=commit;h=6d974b9aa) | flow: single-interface-per-flow model |
+| [629fe2764](https://github.com/fdio/vpp/commit/629fe2764) | flow: add flow template and async range infrastructure |
+| [6d974b9aa](https://github.com/fdio/vpp/commit/6d974b9aa) | flow: single-interface-per-flow model |
 
 
