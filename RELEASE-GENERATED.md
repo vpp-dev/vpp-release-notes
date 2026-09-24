@@ -1,47 +1,15 @@
-@page release_notes_2610 Release notes for VPP 26.10
+@page release_notes_2702 Release notes for VPP 27.02
 
-More than 556 commits since the previous release, including 228 fixes.
+More than 3 commits since the previous release, including 3 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 26.10 release, generated as on Wed Sep 23 07:55:37 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Sep 24 06:07:51 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
-- Marvell Octeon device driver
-  - Implement hardware traffic management ([40d1f5cd7](https://github.com/fdio/vpp/commit/40d1f5cd7))
-  - Update octeon roc version ([12fd8e97f](https://github.com/fdio/vpp/commit/12fd8e97f))
-  - Add support to set link-speed ([2f6fc11c1](https://github.com/fdio/vpp/commit/2f6fc11c1))
-- Plugins
-  - AF\_XDP driver
-    - Add support for multi-buffer ([345071c78](https://github.com/fdio/vpp/commit/345071c78))
-  - DHCP
-    - Export DHCPv6 runtime state for PPPoE observability ([0a143dac6](https://github.com/fdio/vpp/commit/0a143dac6))
-  - DPDK
-    - Add Intel QAT 420xx series support ([830331ea8](https://github.com/fdio/vpp/commit/830331ea8))
-    - Bump to DPDK 26.07 and rdma-core 64.0 ([dd6c72f23](https://github.com/fdio/vpp/commit/dd6c72f23))
-  - HSI
-    - Basic support for session tracking ([ddaacff4e](https://github.com/fdio/vpp/commit/ddaacff4e))
-  - Http\_static
-    - Support disabling the server via the API ([be0ece802](https://github.com/fdio/vpp/commit/be0ece802))
-    - Retrieve status information ([0c2f7a88d](https://github.com/fdio/vpp/commit/0c2f7a88d))
-- VNET
-  - Add set interface link speed API ([b83c7d9ec](https://github.com/fdio/vpp/commit/b83c7d9ec))
-  - FLOW
-    - Add flow template and async range infrastructure ([629fe2764](https://github.com/fdio/vpp/commit/629fe2764))
-  - New Device Drivers Infra
-    - Add port attribute for speed capability ([e1c793db4](https://github.com/fdio/vpp/commit/e1c793db4))
-  - TCP
-    - Dsack receiver (RFC 2883) ([dd2e033f1](https://github.com/fdio/vpp/commit/dd2e033f1))
-    - RACK loss detection (RFC 8985) ([8494103c1](https://github.com/fdio/vpp/commit/8494103c1))
-    - Add tail loss probe (RFC 8985) ([a0807aade](https://github.com/fdio/vpp/commit/a0807aade))
-    - Add BBRv3 congestion control ([b7249de38](https://github.com/fdio/vpp/commit/b7249de38))
-  - Traffic Management
-    - Add 'mark\_flow' action for traffic management ([4b2416d79](https://github.com/fdio/vpp/commit/4b2416d79))
-- Vector Library
-  - Add per-thread index pool cache ([3381b9557](https://github.com/fdio/vpp/commit/3381b9557))
 
 ## Known issues
 
@@ -64,48 +32,7 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-af_xdp_create_v4                                             | only in image
-af_xdp_create_v4_reply                                       | only in image
-flow_async_range_disable                                     | only in image
-flow_async_range_disable_reply                               | only in image
-flow_async_range_enable                                      | only in image
-flow_async_range_enable_reply                                | only in image
-flow_disable_v2                                              | only in image
-flow_disable_v2_reply                                        | only in image
-flow_template_add                                            | only in image
-flow_template_add_reply                                      | only in image
-flow_template_del                                            | only in image
-flow_template_del_reply                                      | only in image
-flow_template_disable                                        | only in image
-flow_template_disable_reply                                  | only in image
-flow_template_enable                                         | only in image
-flow_template_enable_reply                                   | only in image
-http_static_disable                                          | only in image
-http_static_disable_reply                                    | only in image
-http_static_get                                              | only in image
-http_static_get_reply                                        | only in image
-lb_add_del_as_v2                                             | only in image
-lb_add_del_as_v2_reply                                       | only in image
-lb_as_set_weight                                             | only in image
-lb_as_set_weight_reply                                       | only in image
-lb_as_v2_details                                             | only in image
-lb_as_v2_dump                                                | only in image
-lb_conf_get                                                  | only in image
-lb_conf_get_reply                                            | only in image
-lldp_details                                                 | definition changed
-rdma_create_v5                                               | only in image
-rdma_create_v5_reply                                         | only in image
-sfdp_set_timeout                                             | definition changed
-sfdp_timeout_details                                         | only in image
-sfdp_timeout_dump                                            | only in image
-sw_interface_get_speed_capa                                  | only in image
-sw_interface_get_speed_capa_reply                            | only in image
-sw_interface_set_link_speed                                  | only in image
-sw_interface_set_link_speed_reply                            | only in image
-tracepath_details                                            | only in image
-tracepath_dump                                               | only in image
-
-Found 40 api message signature differences
+No api message signature differences found.
 
 
 ### Newly deprecated API messages
@@ -113,10 +40,6 @@ Found 40 api message signature differences
 These messages are still there in the API, but can and probably
 will disappear in the next release.
 
-- af_xdp_create_v3
-- flow_disable
-- flow_disable_reply
-- rdma_create_v4
 
 ### In-progress API messages
 
@@ -565,66 +488,5 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_v2_dump
 
 ### Patches that changed API definitions
-
-| @c src/plugins/lldp/lldp.api ||
-| ------- | ------- |
-| [47a8ae9c3](https://github.com/fdio/vpp/commit/47a8ae9c3) | lldp: extend data returned by lldp-dump API |
-
-| @c src/plugins/af_xdp/af_xdp.api ||
-| ------- | ------- |
-| [cbcb2f5f2](https://github.com/fdio/vpp/commit/cbcb2f5f2) | af_xdp: add optional socket busy polling |
-| [345071c78](https://github.com/fdio/vpp/commit/345071c78) | af_xdp: add support for multi-buffer |
-
-| @c src/plugins/ipip/ipip.api ||
-| ------- | ------- |
-| [11c5a0d6e](https://github.com/fdio/vpp/commit/11c5a0d6e) | ipip: move to a plugin |
-
-| @c src/plugins/tracepath/tracepath.api ||
-| ------- | ------- |
-| [47dcef757](https://github.com/fdio/vpp/commit/47dcef757) | tracepath: add api to dump trace paths |
-
-| @c src/plugins/rdma/rdma.api ||
-| ------- | ------- |
-| [f96a3d699](https://github.com/fdio/vpp/commit/f96a3d699) | rdma: fix verbs port selection |
-
-| @c src/plugins/lb/lb.api ||
-| ------- | ------- |
-| [ca870e99f](https://github.com/fdio/vpp/commit/ca870e99f) | lb: Allow setting weight on AS |
-| [db44addb6](https://github.com/fdio/vpp/commit/db44addb6) | lb: API bugfix |
-
-| @c src/plugins/http_static/http_static.api ||
-| ------- | ------- |
-| [0c2f7a88d](https://github.com/fdio/vpp/commit/0c2f7a88d) | http_static: retrieve status information |
-| [be0ece802](https://github.com/fdio/vpp/commit/be0ece802) | http_static: support disabling the server via the API |
-
-| @c src/vnet/classify/classify.api ||
-| ------- | ------- |
-| [4b2416d79](https://github.com/fdio/vpp/commit/4b2416d79) | tm: add 'mark_flow' action for traffic management |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [4f9eb4ea0](https://github.com/fdio/vpp/commit/4f9eb4ea0) | ipsec: remove esp_encrypt next node check |
-| [8ffeb3667](https://github.com/fdio/vpp/commit/8ffeb3667) | vlib crypto ipsec: preserve scalar frame metadata |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [b83c7d9ec](https://github.com/fdio/vpp/commit/b83c7d9ec) | vnet: add set interface link speed API |
-
-| @c src/vnet/sfdp/sfdp_types.api ||
-| ------- | ------- |
-| [a80fce357](https://github.com/fdio/vpp/commit/a80fce357) | sfdp: bump APIs to v1.0.0 |
-| [c399babd5](https://github.com/fdio/vpp/commit/c399babd5) | sfdp: improve generic timeout registration |
-| [2c4994432](https://github.com/fdio/vpp/commit/2c4994432) | sfdp: add api enum for timeouts |
-
-| @c src/vnet/sfdp/sfdp.api ||
-| ------- | ------- |
-| [a80fce357](https://github.com/fdio/vpp/commit/a80fce357) | sfdp: bump APIs to v1.0.0 |
-| [c399babd5](https://github.com/fdio/vpp/commit/c399babd5) | sfdp: improve generic timeout registration |
-| [2c4994432](https://github.com/fdio/vpp/commit/2c4994432) | sfdp: add api enum for timeouts |
-
-| @c src/vnet/flow/flow.api ||
-| ------- | ------- |
-| [629fe2764](https://github.com/fdio/vpp/commit/629fe2764) | flow: add flow template and async range infrastructure |
-| [6d974b9aa](https://github.com/fdio/vpp/commit/6d974b9aa) | flow: single-interface-per-flow model |
 
 
