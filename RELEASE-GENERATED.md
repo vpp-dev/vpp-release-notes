@@ -1,15 +1,18 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 3 commits since the previous release, including 3 fixes.
+More than 7 commits since the previous release, including 5 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Sep 24 06:07:51 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Sep 25 06:08:04 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Plugins
+  - Network Delay Simulator
+    - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
 
 ## Known issues
 
