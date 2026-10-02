@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 31 commits since the previous release, including 19 fixes.
+More than 33 commits since the previous release, including 20 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Oct  1 07:09:13 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Oct  2 06:58:11 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
