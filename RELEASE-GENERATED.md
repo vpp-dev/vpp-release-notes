@@ -4,7 +4,7 @@ More than 33 commits since the previous release, including 20 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Oct  2 06:58:11 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sat Oct  3 06:26:01 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
