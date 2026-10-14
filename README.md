@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 75 commits since the previous release, including 47 fixes.
+More than 85 commits since the previous release, including 50 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Tue Oct 13 07:39:37 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Wed Oct 14 06:05:35 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -53,6 +53,9 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - Network Delay Simulator
     - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
+- VNET
+  - TCP
+    - Add cubic hystart++ support RFC 9406 ([243b86ffb](https://github.com/fdio/vpp/commit/243b86ffb))
 
 ## Known issues
 
@@ -75,7 +78,10 @@ Description of results:
 
 Message Name                                                 | Result
 -------------------------------------------------------------|------------------
-No api message signature differences found.
+sfdp_kill_session_batch                                      | only in image
+sfdp_kill_session_batch_reply                                | only in image
+
+Found 2 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -531,5 +537,9 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_v2_dump
 
 ### Patches that changed API definitions
+
+| @c src/vnet/sfdp/sfdp.api ||
+| ------- | ------- |
+| [07f9966f0](https://github.com/fdio/vpp/commit/07f9966f0) | sfdp: add api sfdp_kill_session_batch |
 
 
