@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 119 commits since the previous release, including 71 fixes.
+More than 129 commits since the previous release, including 76 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Wed Oct 21 05:58:41 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Oct 22 06:04:30 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -14,6 +14,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Network Delay Simulator
     - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
 - VNET
+  - New Device Drivers Infra
+    - Allow drivers to specify DMA address space constraints ([0029d0d30](https://github.com/fdio/vpp/commit/0029d0d30))
   - TCP
     - Add cubic hystart++ support RFC 9406 ([243b86ffb](https://github.com/fdio/vpp/commit/243b86ffb))
 
