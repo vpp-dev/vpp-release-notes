@@ -40,16 +40,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 129 commits since the previous release, including 76 fixes.
+More than 144 commits since the previous release, including 82 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Oct 22 06:04:30 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Oct 23 05:59:54 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- Infrastructure Library
+  - Add coherent physmem allocation ([f47fd843e](https://github.com/fdio/vpp/commit/f47fd843e))
 - Plugins
   - Network Delay Simulator
     - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
