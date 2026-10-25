@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 155 commits since the previous release, including 88 fixes.
+More than 163 commits since the previous release, including 90 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sat Oct 24 05:46:08 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sun Oct 25 06:01:35 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -15,6 +15,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Plugins
   - Network Delay Simulator
     - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
+  - SPDK NVMe/TCP Target
+    - Add in-process NVMe/TCP target plugin ([03b2171cf](https://github.com/fdio/vpp/commit/03b2171cf))
 - VNET
   - New Device Drivers Infra
     - Allow drivers to specify DMA address space constraints ([0029d0d30](https://github.com/fdio/vpp/commit/0029d0d30))
