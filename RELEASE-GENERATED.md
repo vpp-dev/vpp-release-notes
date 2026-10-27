@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 166 commits since the previous release, including 92 fixes.
+More than 172 commits since the previous release, including 96 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Mon Oct 26 06:05:44 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Tue Oct 27 06:13:14 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -22,6 +22,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Allow drivers to specify DMA address space constraints ([0029d0d30](https://github.com/fdio/vpp/commit/0029d0d30))
   - TCP
     - Add cubic hystart++ support RFC 9406 ([243b86ffb](https://github.com/fdio/vpp/commit/243b86ffb))
+    - Report duplicate segments with dsack ([84e2d0ad6](https://github.com/fdio/vpp/commit/84e2d0ad6))
 
 ## Known issues
 
