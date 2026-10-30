@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 183 commits since the previous release, including 99 fixes.
+More than 195 commits since the previous release, including 106 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Oct 29 07:00:06 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Oct 30 07:02:21 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -504,6 +504,10 @@ please collaborate with the feature maintainer on their productization.
 - wireguard_peers_v2_dump
 
 ### Patches that changed API definitions
+
+| @c src/vnet/ip/ip.api ||
+| ------- | ------- |
+| [9b852008f](https://github.com/fdio/vpp/commit/9b852008f) | ip6-nd: do not learn our own addresses |
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
