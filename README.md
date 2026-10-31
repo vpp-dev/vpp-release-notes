@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 195 commits since the previous release, including 106 fixes.
+More than 207 commits since the previous release, including 113 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Oct 30 07:02:21 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sat Oct 31 06:56:24 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -87,8 +87,10 @@ Message Name                                                 | Result
 -------------------------------------------------------------|------------------
 sfdp_kill_session_batch                                      | only in image
 sfdp_kill_session_batch_reply                                | only in image
+sfdp_status                                                  | only in image
+sfdp_status_reply                                            | only in image
 
-Found 2 api message signature differences
+Found 4 api message signature differences
 
 
 ### Newly deprecated API messages
@@ -551,6 +553,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
+| [7ca90c0c7](https://github.com/fdio/vpp/commit/7ca90c0c7) | sfdp: add sfdp status API |
 | [07f9966f0](https://github.com/fdio/vpp/commit/07f9966f0) | sfdp: add api sfdp_kill_session_batch |
 
 
