@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 211 commits since the previous release, including 115 fixes.
+More than 227 commits since the previous release, including 122 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Mon Nov  2 07:37:06 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Tue Nov  3 07:51:51 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -20,6 +20,7 @@ HIGHLIGHTS-PLACEHOLDER
 - VNET
   - New Device Drivers Infra
     - Allow drivers to specify DMA address space constraints ([0029d0d30](https://github.com/fdio/vpp/commit/0029d0d30))
+    - Add generic SFP/QSFP module EEPROM read support ([ae2774f1a](https://github.com/fdio/vpp/commit/ae2774f1a))
   - TCP
     - Add cubic hystart++ support RFC 9406 ([243b86ffb](https://github.com/fdio/vpp/commit/243b86ffb))
     - Report duplicate segments with dsack ([84e2d0ad6](https://github.com/fdio/vpp/commit/84e2d0ad6))
