@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 276 commits since the previous release, including 151 fixes.
+More than 293 commits since the previous release, including 160 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Nov  6 07:52:50 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sat Nov  7 07:02:46 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -52,6 +52,8 @@ HIGHLIGHTS-PLACEHOLDER
 
 - Infrastructure Library
   - Add coherent physmem allocation ([f47fd843e](https://github.com/fdio/vpp/commit/f47fd843e))
+- Intel E8xx (ice) device driver
+  - Add Intel E8xx native driver ([1a7edff22](https://github.com/fdio/vpp/commit/1a7edff22))
 - Plugins
   - Network Delay Simulator
     - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
