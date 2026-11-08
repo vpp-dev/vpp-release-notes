@@ -1,19 +1,29 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 293 commits since the previous release, including 160 fixes.
+More than 320 commits since the previous release, including 175 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sat Nov  7 07:02:46 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sun Nov  8 07:15:20 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- IGE Device driver
+  - Add rx checksum offload ([bcc5b95d7](https://github.com/fdio/vpp/commit/bcc5b95d7))
+  - Add tx checksum offload ([d2b1ccee1](https://github.com/fdio/vpp/commit/d2b1ccee1))
+  - Add rx interrupt mode ([7a6f9dfd6](https://github.com/fdio/vpp/commit/7a6f9dfd6))
+  - Add rss ([69fa80e9f](https://github.com/fdio/vpp/commit/69fa80e9f))
 - Infrastructure Library
   - Add coherent physmem allocation ([f47fd843e](https://github.com/fdio/vpp/commit/f47fd843e))
 - Intel E8xx (ice) device driver
   - Add Intel E8xx native driver ([1a7edff22](https://github.com/fdio/vpp/commit/1a7edff22))
+- Marvel Scalable mGig NICs Device driver
+  - Add rx checksum offload ([b182aa30e](https://github.com/fdio/vpp/commit/b182aa30e))
+  - Add tx checksum offload ([af21e8675](https://github.com/fdio/vpp/commit/af21e8675))
+  - Add rx interrupt mode ([311b4f5d7](https://github.com/fdio/vpp/commit/311b4f5d7))
+  - Add runtime rss configuration ([113717d2a](https://github.com/fdio/vpp/commit/113717d2a))
 - Plugins
   - Network Delay Simulator
     - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
