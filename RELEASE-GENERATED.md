@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 320 commits since the previous release, including 175 fixes.
+More than 333 commits since the previous release, including 180 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sun Nov  8 07:15:20 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Mon Nov  9 07:53:37 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -24,6 +24,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Add tx checksum offload ([af21e8675](https://github.com/fdio/vpp/commit/af21e8675))
   - Add rx interrupt mode ([311b4f5d7](https://github.com/fdio/vpp/commit/311b4f5d7))
   - Add runtime rss configuration ([113717d2a](https://github.com/fdio/vpp/commit/113717d2a))
+  - Add tcp segmentation offload ([79a495adc](https://github.com/fdio/vpp/commit/79a495adc))
 - Plugins
   - Network Delay Simulator
     - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
