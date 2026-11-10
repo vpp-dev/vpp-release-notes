@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 333 commits since the previous release, including 180 fixes.
+More than 389 commits since the previous release, including 218 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Mon Nov  9 07:53:37 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Tue Nov 10 08:21:32 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -55,6 +55,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Add tx checksum offload ([d2b1ccee1](https://github.com/fdio/vpp/commit/d2b1ccee1))
   - Add rx interrupt mode ([7a6f9dfd6](https://github.com/fdio/vpp/commit/7a6f9dfd6))
   - Add rss ([69fa80e9f](https://github.com/fdio/vpp/commit/69fa80e9f))
+  - Add tcp segmentation offload ([2f94b0ac8](https://github.com/fdio/vpp/commit/2f94b0ac8))
 - Infrastructure Library
   - Add coherent physmem allocation ([f47fd843e](https://github.com/fdio/vpp/commit/f47fd843e))
 - Intel E8xx (ice) device driver
