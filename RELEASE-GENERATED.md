@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 440 commits since the previous release, including 243 fixes.
+More than 471 commits since the previous release, including 260 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Nov 13 07:52:10 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sat Nov 14 07:33:41 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -36,6 +36,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Allow drivers to specify DMA address space constraints ([0029d0d30](https://github.com/fdio/vpp/commit/0029d0d30))
     - Add generic SFP/QSFP module EEPROM read support ([ae2774f1a](https://github.com/fdio/vpp/commit/ae2774f1a))
     - Add plain\_text format argument ([339099531](https://github.com/fdio/vpp/commit/339099531))
+    - Add DMA slab allocator ([5a49f0275](https://github.com/fdio/vpp/commit/5a49f0275))
   - TCP
     - Add cubic hystart++ support RFC 9406 ([243b86ffb](https://github.com/fdio/vpp/commit/243b86ffb))
     - Report duplicate segments with dsack ([84e2d0ad6](https://github.com/fdio/vpp/commit/84e2d0ad6))
@@ -61,6 +62,14 @@ Description of results:
 * _Only in image_: indicates the API is new for this release.
 * _Only in file_: indicates the API has been removed in this release.
 
+Message Name                                                 | Result
+-------------------------------------------------------------|------------------
+sfdp_kill_session_batch                                      | only in image
+sfdp_kill_session_batch_reply                                | only in image
+sfdp_status                                                  | only in image
+sfdp_status_reply                                            | only in image
+
+Found 4 api message signature differences
 
 
 ### Newly deprecated API messages
