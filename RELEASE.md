@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 471 commits since the previous release, including 260 fixes.
+More than 518 commits since the previous release, including 282 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Mon Nov 16 07:55:27 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Tue Nov 17 09:09:08 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -27,16 +27,21 @@ HIGHLIGHTS-PLACEHOLDER
   - Add runtime rss configuration ([113717d2a](https://github.com/fdio/vpp/commit/113717d2a))
   - Add tcp segmentation offload ([79a495adc](https://github.com/fdio/vpp/commit/79a495adc))
 - Plugins
+  - HSI
+    - Time out idle tcp pairs ([cb7f8cefd](https://github.com/fdio/vpp/commit/cb7f8cefd))
   - Network Delay Simulator
     - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
   - SPDK NVMe/TCP Target
     - Add in-process NVMe/TCP target plugin ([03b2171cf](https://github.com/fdio/vpp/commit/03b2171cf))
 - VNET
+  - Crypto Infra
+    - Add async engines with enqueue and dequeue nodes ([44f7b7682](https://github.com/fdio/vpp/commit/44f7b7682))
   - New Device Drivers Infra
     - Allow drivers to specify DMA address space constraints ([0029d0d30](https://github.com/fdio/vpp/commit/0029d0d30))
     - Add generic SFP/QSFP module EEPROM read support ([ae2774f1a](https://github.com/fdio/vpp/commit/ae2774f1a))
     - Add plain\_text format argument ([339099531](https://github.com/fdio/vpp/commit/339099531))
     - Add DMA slab allocator ([5a49f0275](https://github.com/fdio/vpp/commit/5a49f0275))
+    - Add crypto accelerator device support ([337624632](https://github.com/fdio/vpp/commit/337624632))
   - TCP
     - Add cubic hystart++ support RFC 9406 ([243b86ffb](https://github.com/fdio/vpp/commit/243b86ffb))
     - Report duplicate segments with dsack ([84e2d0ad6](https://github.com/fdio/vpp/commit/84e2d0ad6))
