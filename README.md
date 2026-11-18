@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 518 commits since the previous release, including 282 fixes.
+More than 558 commits since the previous release, including 303 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Tue Nov 17 09:09:08 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Wed Nov 18 08:29:15 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -60,6 +60,8 @@ HIGHLIGHTS-PLACEHOLDER
   - Add coherent physmem allocation ([f47fd843e](https://github.com/fdio/vpp/commit/f47fd843e))
 - Intel E8xx (ice) device driver
   - Add Intel E8xx native driver ([1a7edff22](https://github.com/fdio/vpp/commit/1a7edff22))
+- Intel QuickAssist (qat) crypto device driver
+  - Add Intel QuickAssist crypto driver ([cbe944815](https://github.com/fdio/vpp/commit/cbe944815))
 - Marvel Scalable mGig NICs Device driver
   - Add rx checksum offload ([b182aa30e](https://github.com/fdio/vpp/commit/b182aa30e))
   - Add tx checksum offload ([af21e8675](https://github.com/fdio/vpp/commit/af21e8675))
@@ -579,5 +581,9 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [7ca90c0c7](https://github.com/fdio/vpp/commit/7ca90c0c7) | sfdp: add sfdp status API |
 | [07f9966f0](https://github.com/fdio/vpp/commit/07f9966f0) | sfdp: add api sfdp_kill_session_batch |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [00ecab4b1](https://github.com/fdio/vpp/commit/00ecab4b1) | crypto: make the async path dropless |
 
 
