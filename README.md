@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 558 commits since the previous release, including 303 fixes.
+More than 572 commits since the previous release, including 309 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Wed Nov 18 08:29:15 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Nov 19 08:42:09 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -585,5 +585,9 @@ please collaborate with the feature maintainer on their productization.
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [00ecab4b1](https://github.com/fdio/vpp/commit/00ecab4b1) | crypto: make the async path dropless |
+
+| @c src/plugins/mactime/mactime.api ||
+| ------- | ------- |
+| [46bd64c96](https://github.com/fdio/vpp/commit/46bd64c96) | mactime: upstream bugfixes |
 
 
