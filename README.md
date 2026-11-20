@@ -40,16 +40,18 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 572 commits since the previous release, including 309 fixes.
+More than 593 commits since the previous release, including 316 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Nov 19 08:42:09 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Nov 20 08:27:59 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
 ## Features
 
+- IBVERBS Device driver
+  - Add generic ibverbs device driver ([47fa204b4](https://github.com/fdio/vpp/commit/47fa204b4))
 - IGE Device driver
   - Add rx checksum offload ([bcc5b95d7](https://github.com/fdio/vpp/commit/bcc5b95d7))
   - Add tx checksum offload ([d2b1ccee1](https://github.com/fdio/vpp/commit/d2b1ccee1))
@@ -62,12 +64,16 @@ HIGHLIGHTS-PLACEHOLDER
   - Add Intel E8xx native driver ([1a7edff22](https://github.com/fdio/vpp/commit/1a7edff22))
 - Intel QuickAssist (qat) crypto device driver
   - Add Intel QuickAssist crypto driver ([cbe944815](https://github.com/fdio/vpp/commit/cbe944815))
+- MLX5 Device driver
+  - Add mlx5 device driver ([1f5b1a922](https://github.com/fdio/vpp/commit/1f5b1a922))
 - Marvel Scalable mGig NICs Device driver
   - Add rx checksum offload ([b182aa30e](https://github.com/fdio/vpp/commit/b182aa30e))
   - Add tx checksum offload ([af21e8675](https://github.com/fdio/vpp/commit/af21e8675))
   - Add rx interrupt mode ([311b4f5d7](https://github.com/fdio/vpp/commit/311b4f5d7))
   - Add runtime rss configuration ([113717d2a](https://github.com/fdio/vpp/commit/113717d2a))
   - Add tcp segmentation offload ([79a495adc](https://github.com/fdio/vpp/commit/79a495adc))
+- Marvell Octeon device drivers
+  - Add RX interrupt mode ([226cadfaf](https://github.com/fdio/vpp/commit/226cadfaf))
 - Plugins
   - HSI
     - Time out idle tcp pairs ([cb7f8cefd](https://github.com/fdio/vpp/commit/cb7f8cefd))
@@ -573,21 +579,21 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
+| @c src/plugins/mactime/mactime.api ||
+| ------- | ------- |
+| [46bd64c96](https://github.com/fdio/vpp/commit/46bd64c96) | mactime: upstream bugfixes |
+
 | @c src/vnet/ip/ip.api ||
 | ------- | ------- |
 | [9b852008f](https://github.com/fdio/vpp/commit/9b852008f) | ip6-nd: do not learn our own addresses |
-
-| @c src/vnet/sfdp/sfdp.api ||
-| ------- | ------- |
-| [7ca90c0c7](https://github.com/fdio/vpp/commit/7ca90c0c7) | sfdp: add sfdp status API |
-| [07f9966f0](https://github.com/fdio/vpp/commit/07f9966f0) | sfdp: add api sfdp_kill_session_batch |
 
 | @c src/vnet/ipsec/ipsec.api ||
 | ------- | ------- |
 | [00ecab4b1](https://github.com/fdio/vpp/commit/00ecab4b1) | crypto: make the async path dropless |
 
-| @c src/plugins/mactime/mactime.api ||
+| @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
-| [46bd64c96](https://github.com/fdio/vpp/commit/46bd64c96) | mactime: upstream bugfixes |
+| [7ca90c0c7](https://github.com/fdio/vpp/commit/7ca90c0c7) | sfdp: add sfdp status API |
+| [07f9966f0](https://github.com/fdio/vpp/commit/07f9966f0) | sfdp: add api sfdp_kill_session_batch |
 
 
