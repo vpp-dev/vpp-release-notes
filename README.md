@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 593 commits since the previous release, including 316 fixes.
+More than 619 commits since the previous release, including 324 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Nov 20 08:27:59 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sat Nov 21 08:13:25 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -95,6 +95,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Report duplicate segments with dsack ([84e2d0ad6](https://github.com/fdio/vpp/commit/84e2d0ad6))
 - Vector Library
   - Add timestamps to log output ([75299e8a3](https://github.com/fdio/vpp/commit/75299e8a3))
+- Virtio PCI Ethernet device driver
+  - Add native virtio PCI driver ([b9bc80ff6](https://github.com/fdio/vpp/commit/b9bc80ff6))
 
 ## Known issues
 
