@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 671 commits since the previous release, including 351 fixes.
+More than 700 commits since the previous release, including 357 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Mon Nov 23 08:57:29 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Tue Nov 24 10:51:43 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -75,6 +75,8 @@ HIGHLIGHTS-PLACEHOLDER
 - Marvell Octeon device drivers
   - Add RX interrupt mode ([226cadfaf](https://github.com/fdio/vpp/commit/226cadfaf))
 - Plugins
+  - Crypto - ipsecmb
+    - Upgrade to ipsecmb v3.0.1 ([0069e7e19](https://github.com/fdio/vpp/commit/0069e7e19))
   - HSI
     - Time out idle tcp pairs ([cb7f8cefd](https://github.com/fdio/vpp/commit/cb7f8cefd))
   - Network Delay Simulator
@@ -90,9 +92,13 @@ HIGHLIGHTS-PLACEHOLDER
     - Add plain\_text format argument ([339099531](https://github.com/fdio/vpp/commit/339099531))
     - Add DMA slab allocator ([5a49f0275](https://github.com/fdio/vpp/commit/5a49f0275))
     - Add crypto accelerator device support ([337624632](https://github.com/fdio/vpp/commit/337624632))
+  - Session Layer
+    - Make app event flush limit configurable ([7b21d4786](https://github.com/fdio/vpp/commit/7b21d4786))
   - TCP
     - Add cubic hystart++ support RFC 9406 ([243b86ffb](https://github.com/fdio/vpp/commit/243b86ffb))
     - Report duplicate segments with dsack ([84e2d0ad6](https://github.com/fdio/vpp/commit/84e2d0ad6))
+  - UDP
+    - Add S-BFD port 7784 to the UDP port lists ([480ce8d2f](https://github.com/fdio/vpp/commit/480ce8d2f))
 - Vector Library
   - Add timestamps to log output ([75299e8a3](https://github.com/fdio/vpp/commit/75299e8a3))
 - Virtio PCI Ethernet device driver
@@ -581,55 +587,7 @@ please collaborate with the feature maintainer on their productization.
 
 ### Patches that changed API definitions
 
-| @c src/plugins/policer/policer.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/wireguard/wireguard.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/nsh/nsh.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/snort/snort.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/vmxnet3/vmxnet3.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/vrrp/vrrp.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/dhcp/dhcp.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/dhcp/dhcp6_pd_client_cp.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/l2tp/l2tp.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/abf/abf.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/linux-cp/lcp.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/stn/stn.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/tracedump/graph.api ||
+| @c src/plugins/nsim/nsim.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
@@ -637,39 +595,11 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
-| @c src/plugins/urpf/urpf.api ||
+| @c src/plugins/ioam/udp-ping/udp_ping.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
-| @c src/plugins/map/map.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/lisp/lisp-gpe/lisp_gpe.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/lisp/lisp-cp/one.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/lisp/lisp-cp/lisp.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/pvti/pvti.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/l3xc/l3xc.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/lldp/lldp.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/gtpu/gtpu.api ||
+| @c src/plugins/ioam/lib-pot/pot.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
@@ -677,11 +607,99 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
+| @c src/plugins/policer/policer.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/map/map.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/dns/dns.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/l2tp/l2tp.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/lldp/lldp.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/snort/snort.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/srv6-mobile/sr_mobile.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/stn/stn.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/srmpls/sr_mpls.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/tracedump/graph.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/gtpu/gtpu.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
 | @c src/plugins/mactime/mactime.api ||
 | ------- | ------- |
 | [46bd64c96](https://github.com/fdio/vpp/commit/46bd64c96) | mactime: upstream bugfixes |
 
-| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
+| @c src/plugins/vmxnet3/vmxnet3.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/wireguard/wireguard.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/urpf/urpf.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/l3xc/l3xc.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/lisp/lisp-gpe/lisp_gpe.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/lisp/lisp-cp/lisp.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/lisp/lisp-cp/one.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/linux-cp/lcp.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/abf/abf.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/nsh/nsh.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/pvti/pvti.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/plugins/vrrp/vrrp.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
@@ -693,27 +711,15 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
-| @c src/plugins/ioam/lib-pot/pot.api ||
+| @c src/plugins/nat/nat44-ei/nat44_ei.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
-| @c src/plugins/ioam/udp-ping/udp_ping.api ||
+| @c src/plugins/dhcp/dhcp.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
-| @c src/plugins/nsim/nsim.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/dns/dns.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/srmpls/sr_mpls.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/plugins/srv6-mobile/sr_mobile.api ||
+| @c src/plugins/dhcp/dhcp6_pd_client_cp.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
@@ -721,36 +727,11 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
-| @c src/vnet/ipfix-export/ipfix_export.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/vnet/tcp/tcp.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
 | @c src/vnet/ip-neighbor/ip_neighbor.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
-| @c src/vnet/bonding/bond.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/vnet/bfd/bfd.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/vnet/ipsec/ipsec.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-| [00ecab4b1](https://github.com/fdio/vpp/commit/00ecab4b1) | crypto: make the async path dropless |
-
-| @c src/vnet/interface.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/vnet/l2/l2.api ||
+| @c src/vnet/bier/bier.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
@@ -758,19 +739,7 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
-| @c src/vnet/pg/pg.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/vnet/qos/qos.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/vnet/srv6/sr.api ||
-| ------- | ------- |
-| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
-
-| @c src/vnet/bier/bier.api ||
+| @c src/vnet/l2/l2.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
@@ -787,10 +756,47 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
+| @c src/vnet/interface.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/vnet/ipsec/ipsec.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+| [00ecab4b1](https://github.com/fdio/vpp/commit/00ecab4b1) | crypto: make the async path dropless |
+
+| @c src/vnet/bfd/bfd.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/vnet/ipfix-export/ipfix_export.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/vnet/bonding/bond.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/vnet/pg/pg.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/vnet/qos/qos.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
+| @c src/vnet/tcp/tcp.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
+
 | @c src/vnet/sfdp/sfdp.api ||
 | ------- | ------- |
 | [7ca90c0c7](https://github.com/fdio/vpp/commit/7ca90c0c7) | sfdp: add sfdp status API |
 | [07f9966f0](https://github.com/fdio/vpp/commit/07f9966f0) | sfdp: add api sfdp_kill_session_batch |
+
+| @c src/vnet/srv6/sr.api ||
+| ------- | ------- |
+| [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
 | @c src/vnet/mpls/mpls.api ||
 | ------- | ------- |
