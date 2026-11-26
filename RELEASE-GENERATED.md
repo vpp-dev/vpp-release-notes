@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 736 commits since the previous release, including 379 fixes.
+More than 766 commits since the previous release, including 387 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Wed Nov 25 09:46:27 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Nov 26 09:27:15 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -43,6 +43,8 @@ HIGHLIGHTS-PLACEHOLDER
     - Add reproducible variable-rate simulation ([977949112](https://github.com/fdio/vpp/commit/977949112))
   - SPDK NVMe/TCP Target
     - Add in-process NVMe/TCP target plugin ([03b2171cf](https://github.com/fdio/vpp/commit/03b2171cf))
+  - Ssh plugin
+    - Add ssh plugin ([19ee362ba](https://github.com/fdio/vpp/commit/19ee362ba))
 - VNET
   - Crypto Infra
     - Add async engines with enqueue and dequeue nodes ([44f7b7682](https://github.com/fdio/vpp/commit/44f7b7682))
