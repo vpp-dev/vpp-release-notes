@@ -1,10 +1,10 @@
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 766 commits since the previous release, including 387 fixes.
+More than 807 commits since the previous release, including 413 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Thu Nov 26 09:27:15 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Nov 27 09:37:36 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -20,6 +20,7 @@ HIGHLIGHTS-PLACEHOLDER
   - Add tcp segmentation offload ([2f94b0ac8](https://github.com/fdio/vpp/commit/2f94b0ac8))
 - Infrastructure Library
   - Add coherent physmem allocation ([f47fd843e](https://github.com/fdio/vpp/commit/f47fd843e))
+  - Add styled\_text ([54661d7f6](https://github.com/fdio/vpp/commit/54661d7f6))
 - Intel E8xx (ice) device driver
   - Add Intel E8xx native driver ([1a7edff22](https://github.com/fdio/vpp/commit/1a7edff22))
 - Intel QuickAssist (qat) crypto device driver
@@ -617,6 +618,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [46bd64c96](https://github.com/fdio/vpp/commit/46bd64c96) | mactime: upstream bugfixes |
 
+| @c src/plugins/ikev2/ikev2.api ||
+| ------- | ------- |
+| [20e713d01](https://github.com/fdio/vpp/commit/20e713d01) | api: format, size and byte order of messages using the descriptors |
+
 | @c src/plugins/vmxnet3/vmxnet3.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
@@ -653,6 +658,10 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
+| @c src/plugins/npol/npol.api ||
+| ------- | ------- |
+| [20e713d01](https://github.com/fdio/vpp/commit/20e713d01) | api: format, size and byte order of messages using the descriptors |
+
 | @c src/plugins/nsh/nsh.api ||
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
@@ -665,8 +674,13 @@ please collaborate with the feature maintainer on their productization.
 | ------- | ------- |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
+| @c src/plugins/nat/pnat/pnat.api ||
+| ------- | ------- |
+| [20e713d01](https://github.com/fdio/vpp/commit/20e713d01) | api: format, size and byte order of messages using the descriptors |
+
 | @c src/plugins/nat/nat44-ed/nat44_ed.api ||
 | ------- | ------- |
+| [20e713d01](https://github.com/fdio/vpp/commit/20e713d01) | api: format, size and byte order of messages using the descriptors |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
 | @c src/plugins/nat/nat64/nat64.api ||
@@ -675,6 +689,7 @@ please collaborate with the feature maintainer on their productization.
 
 | @c src/plugins/nat/nat44-ei/nat44_ei.api ||
 | ------- | ------- |
+| [20e713d01](https://github.com/fdio/vpp/commit/20e713d01) | api: format, size and byte order of messages using the descriptors |
 | [b93011f64](https://github.com/fdio/vpp/commit/b93011f64) | api: fix the descriptions of the fields in the comments |
 
 | @c src/plugins/dhcp/dhcp.api ||
