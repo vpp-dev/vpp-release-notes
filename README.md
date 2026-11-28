@@ -40,11 +40,11 @@ Andrew Yourtchenko ayourtch@gmail.com or @ayourtch on twitter
 
 @page release_notes_2702 Release notes for VPP 27.02
 
-More than 807 commits since the previous release, including 413 fixes.
+More than 856 commits since the previous release, including 433 fixes.
 
 ## Release Highlights
 
-These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Fri Nov 27 09:37:36 UTC 2026.
+These are the *DRAFT* release notes for the upcoming VPP 27.02 release, generated as on Sat Nov 28 08:52:34 UTC 2026.
 
 HIGHLIGHTS-PLACEHOLDER
 
@@ -95,6 +95,7 @@ HIGHLIGHTS-PLACEHOLDER
     - Add plain\_text format argument ([339099531](https://github.com/fdio/vpp/commit/339099531))
     - Add DMA slab allocator ([5a49f0275](https://github.com/fdio/vpp/commit/5a49f0275))
     - Add crypto accelerator device support ([337624632](https://github.com/fdio/vpp/commit/337624632))
+    - Add rss hash fields and function ([335c7d4fa](https://github.com/fdio/vpp/commit/335c7d4fa))
   - Session Layer
     - Make app event flush limit configurable ([7b21d4786](https://github.com/fdio/vpp/commit/7b21d4786))
   - TCP
